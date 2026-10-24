@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "known_issue",
+    "topic_id": "saml_sso",
+    "department": "Support",
+    "audience": "support",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["saml", "sso", "known_issue"],
+    "contains_table": false
+  }
+}

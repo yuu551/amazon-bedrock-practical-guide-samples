@@ -1,0 +1,12 @@
+[project]
+name = "bedrock-guide-appendix"
+version = "0.1.0"
+description = "Amazon Bedrock実践ガイド 付録: S3 Vectors / Managed Knowledge Base サンプルコード"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3[crt]>=1.43.32",
+    "strands-agents>=1.0.0",
+]
+
+[tool.uv]
+package = false

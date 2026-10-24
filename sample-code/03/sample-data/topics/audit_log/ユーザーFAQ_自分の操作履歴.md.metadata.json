@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "topic_id": "audit_log",
+    "department": "Support",
+    "audience": "user",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["audit_log", "user", "privacy"],
+    "contains_table": false
+  }
+}

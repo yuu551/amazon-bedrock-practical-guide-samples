@@ -1,0 +1,11 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "department": "Support",
+    "audience": "user",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["sla", "support", "standard", "business_hours"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "metadataAttributes": {
+    "document_type": "release_note",
+    "department": "Product",
+    "audience": "user",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["release", "saml", "audit_log"]
+  }
+}

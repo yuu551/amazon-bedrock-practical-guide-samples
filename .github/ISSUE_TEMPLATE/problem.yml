@@ -1,0 +1,28 @@
+name: 動作・記述の問題
+description: コードが動かない場合や、説明の誤りを報告する場合
+body:
+  - type: input
+    id: chapter
+    attributes:
+      label: 章・ファイル名
+      placeholder: 第2章 sample-code/02/...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 実行した操作と、期待した結果
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 実際の結果
+      description: 認証情報、署名付きURL、業務資料は除いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 実行環境
+      description: OS、Codespacesの利用有無、Python・Node.js・SDKのバージョン、AWSリージョン

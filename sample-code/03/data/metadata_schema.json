@@ -1,0 +1,84 @@
+{
+  "description": "第3章のドキュメント取り込みとフィルタリング例で使用する、SampleConnect Platformのメタデータスキーマ。",
+  "attributes": [
+    {
+      "key": "document_type",
+      "type": "STRING",
+      "description": "検索フィルタリングで使用する文書区分。",
+      "allowed_values": [
+        "faq",
+        "manual",
+        "policy",
+        "release_note",
+        "incident_report",
+        "admin_guide",
+        "change_log",
+        "known_issue"
+      ]
+    },
+    {
+      "key": "department",
+      "type": "STRING",
+      "description": "SampleConnect Platformのサポート文脈における担当部門またはチーム。",
+      "allowed_values": [
+        "Support",
+        "Product",
+        "Billing",
+        "Security",
+        "Sales"
+      ]
+    },
+    {
+      "key": "product",
+      "type": "STRING",
+      "description": "主な製品名またはサービス名。"
+    },
+    {
+      "key": "audience",
+      "type": "STRING",
+      "description": "文書の主な対象読者。",
+      "allowed_values": [
+        "user",
+        "admin",
+        "support",
+        "manager"
+      ]
+    },
+    {
+      "key": "effective_date",
+      "type": "NUMBER",
+      "description": "検索対象として有効になった日付。YYYYMMDD形式。"
+    },
+    {
+      "key": "language",
+      "type": "STRING",
+      "description": "文書の主な言語。",
+      "allowed_values": [
+        "ja",
+        "en"
+      ]
+    },
+    {
+      "key": "tags",
+      "type": "STRING_LIST",
+      "description": "文書から抽出した短い検索用タグ。"
+    },
+    {
+      "key": "contains_table",
+      "type": "BOOLEAN",
+      "description": "重要な事実の記載に表を使用しているか。"
+    },
+    {
+      "key": "topic_id",
+      "type": "STRING",
+      "description": "まとめて検索すべき文書をグループ化する機能トピックID。",
+      "allowed_values": [
+        "api_rate_limit",
+        "saml_sso",
+        "audit_log",
+        "billing",
+        "data_residency"
+      ]
+    }
+  ]
+}

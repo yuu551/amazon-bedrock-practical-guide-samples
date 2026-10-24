@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "change_log",
+    "topic_id": "audit_log",
+    "department": "IT",
+    "audience": "admin",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["audit_log", "changelog"],
+    "contains_table": false
+  }
+}

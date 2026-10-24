@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="470" viewBox="0 0 1160 470">
+<title>CLASSICは近い候補を探してから条件を確認するため件数が欠けることがあり、ENHANCEDは先に条件で絞ってから検索するため件数が欠けにくい</title>
+<rect width="1160" height="470" fill="white"/>
+<rect x="760" y="18" width="20" height="20" rx="3" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<text x="788" y="35" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="18" text-anchor="start" font-weight="400" fill="#232F3E">条件に合うベクトル</text>
+<rect x="960" y="18" width="20" height="20" rx="3" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<text x="988" y="35" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="18" text-anchor="start" font-weight="400" fill="#232F3E">合わないベクトル</text>
+<text x="24" y="130" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="24" text-anchor="start" font-weight="700" fill="#232F3E">CLASSIC</text>
+<text x="24" y="158" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="19" text-anchor="start" font-weight="400" fill="#232F3E">従来の方式</text>
+<text x="365" y="86" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="21" text-anchor="middle" font-weight="400" fill="#232F3E">近い順に候補を探す</text>
+<rect x="180" y="100" width="370" height="64" rx="6" fill="#F5F5F5" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="200" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="235" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="270" y="118" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="305" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="340" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="375" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="410" y="118" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="445" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="480" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="515" y="118" width="28" height="28" rx="4" fill="white" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<line x1="550" y1="132" x2="650" y2="132" stroke="#545B64" stroke-width="1.4"/>
+<path d="M648,126 L660,132 L648,138 Z" fill="#545B64"/>
+<text x="605.0" y="120" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="17" text-anchor="middle" font-weight="400" fill="#232F3E">条件を確認</text>
+<text x="845" y="86" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="21" text-anchor="middle" font-weight="400" fill="#232F3E">条件に合うものを残す</text>
+<rect x="660" y="100" width="370" height="64" rx="6" fill="#F5F5F5" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="680" y="118" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="715" y="118" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="750" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<rect x="785" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<rect x="820" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<rect x="855" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<rect x="890" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<rect x="925" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<rect x="960" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<rect x="995" y="118" width="28" height="28" rx="4" fill="none" stroke="#545B64" stroke-width="1.2" stroke-dasharray="5 4" opacity="0.6"/>
+<text x="845" y="200" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="21" text-anchor="middle" font-weight="700" fill="#232F3E">topK=10でも2件しか返らない</text>
+<line x1="24" y1="250" x2="1136" y2="250" stroke="#D5DBDB" stroke-width="1"/>
+<text x="24" y="340" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="24" text-anchor="start" font-weight="700" fill="#232F3E">ENHANCED</text>
+<text x="24" y="368" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="19" text-anchor="start" font-weight="400" fill="#232F3E">新方式</text>
+<text x="365" y="296" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="21" text-anchor="middle" font-weight="400" fill="#232F3E">先に条件で絞る</text>
+<rect x="180" y="310" width="370" height="64" rx="6" fill="#F5F5F5" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="200" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="235" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="270" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="305" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="340" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="375" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="410" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="445" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="480" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<text x="529" y="350" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="22" text-anchor="middle" font-weight="400" fill="#232F3E">…</text>
+<line x1="550" y1="342" x2="650" y2="342" stroke="#545B64" stroke-width="1.4"/>
+<path d="M648,336 L660,342 L648,348 Z" fill="#545B64"/>
+<text x="605.0" y="330" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="17" text-anchor="middle" font-weight="400" fill="#232F3E">検索</text>
+<text x="845" y="296" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="21" text-anchor="middle" font-weight="400" fill="#232F3E">近い順に10件</text>
+<rect x="660" y="310" width="370" height="64" rx="6" fill="#F5F5F5" stroke="#545B64" stroke-width="1.2" opacity="1"/>
+<rect x="680" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="715" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="750" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="785" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="820" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="855" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="890" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="925" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="960" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<rect x="995" y="328" width="28" height="28" rx="4" fill="#232F3E" stroke="#232F3E" stroke-width="1.2" opacity="1"/>
+<text x="845" y="410" font-family="Noto Sans JP, Hiragino Sans, sans-serif" font-size="21" text-anchor="middle" font-weight="700" fill="#232F3E">10件そろって返る</text>
+</svg>

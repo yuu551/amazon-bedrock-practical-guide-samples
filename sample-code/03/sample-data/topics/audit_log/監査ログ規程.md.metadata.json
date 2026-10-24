@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "policy",
+    "topic_id": "audit_log",
+    "department": "Sales",
+    "audience": "admin",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["audit_log", "compliance", "policy"],
+    "contains_table": true
+  }
+}

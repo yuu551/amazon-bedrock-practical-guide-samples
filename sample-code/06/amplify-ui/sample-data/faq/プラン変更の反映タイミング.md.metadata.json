@@ -1,0 +1,12 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "department": "Billing",
+    "audience": "user",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["billing", "plan_change", "timing"],
+    "topic_id": "billing"
+  }
+}

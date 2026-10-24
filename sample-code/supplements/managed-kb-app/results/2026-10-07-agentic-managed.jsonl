@@ -1,0 +1,198 @@
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:15.687879+00:00", "type": "status", "elapsed_seconds": 0.0, "message": "検索を開始しました。"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:16.969465+00:00", "type": "trace", "elapsed_seconds": 1.282, "step": "SpeculativeRetrieval", "status": "IN_PROGRESS", "queries": [], "warnings": 0, "failures": 0}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:17.890885+00:00", "type": "trace", "elapsed_seconds": 2.203, "step": "SpeculativeRetrieval", "status": "SUCCEEDED", "queries": [], "warnings": 0, "failures": 0}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:18.721412+00:00", "type": "trace", "elapsed_seconds": 3.034, "step": "Planning", "status": "IN_PROGRESS", "queries": [], "warnings": 0, "failures": 0}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:18.721561+00:00", "type": "trace", "elapsed_seconds": 3.034, "step": "Planning", "status": "SUCCEEDED", "queries": [], "warnings": 0, "failures": 0}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.981800+00:00", "type": "text", "elapsed_seconds": 14.294, "text": "##"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.983871+00:00", "type": "text", "elapsed_seconds": 14.296, "text": " Enterpr"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.983969+00:00", "type": "text", "elapsed_seconds": 14.296, "text": "is"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.984014+00:00", "type": "text", "elapsed_seconds": 14.296, "text": "eプ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.984063+00:00", "type": "text", "elapsed_seconds": 14.296, "text": "ランの監査ログ保存"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.984099+00:00", "type": "text", "elapsed_seconds": 14.296, "text": "期間\n\n資料"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.984134+00:00", "type": "text", "elapsed_seconds": 14.296, "text": "によって記載されてい"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.984168+00:00", "type": "text", "elapsed_seconds": 14.296, "text": "る数値に差"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990125+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "異があります。\n"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990240+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "\n| 資"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990284+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "料 | Enterpr"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990322+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "ise"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990356+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "プランの保持期間 |"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990386+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "\n|---"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990416+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "|-"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:29.990447+00:00", "type": "text", "elapsed_seconds": 14.302, "text": "--|"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158540+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "\n| FA"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158652+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "Q「監査ログの"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158698+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "保持期"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158734+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "間」 | 730"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158769+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "日間（24ヶ月）"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158822+00:00", "type": "text", "elapsed_seconds": 14.471, "text": " |\n| ポ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158862+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "リシー「監査"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158896+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "ログ保存ポリシー2"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158928+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "025年版"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158958+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "」 | 365日間"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.158986+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "  |\n| 「Ent"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159015+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "er"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159045+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "priseプラン機"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159068+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "能ガイド」 | 2年"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159291+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "間  |"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159440+00:00", "type": "text", "elapsed_seconds": 14.471, "text": "\n\n- FAQ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159490+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "および機能ガイドでは「7"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159530+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "30日（2"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159566+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "4ヶ月）＝2"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159599+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "年間」という一致した記載"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159629+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "がありま"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159658+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "す"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159688+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "。\n- 一方"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159717+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "で2025年4月1日に初"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.159746+00:00", "type": "text", "elapsed_seconds": 14.472, "text": "版適用された「監査ロ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169148+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "グ保存ポリシ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169249+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "ー20"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169291+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "25年版」では3"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169326+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "65日となっ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169360+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "ており、ポリシー改訂に"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169392+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "より"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169421+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "期間が変更された可能"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169450+00:00", "type": "text", "elapsed_seconds": 14.481, "text": "性があります。"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169495+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "\n\n正式な根"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169523+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "拠として参照すべき"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169551+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "は「監"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169581+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "査ログ保存ポリ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169609+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "シー」とされている"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169637+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "ため、最新"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169664+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "のポリシー文書"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169691+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "（365日）が現"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169718+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "時点での正式な数値で"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169745+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "ある可能"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169773+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "性があり"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169799+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "ますが"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.169825+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "、FA"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170416+00:00", "type": "text", "elapsed_seconds": 14.482, "text": "Q側の情報"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170480+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "が未更"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170521+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "新のまま"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170558+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "の可能性もあります"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170591+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "。**正確な現"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170622+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "在の保持期"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170652+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "間については"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170682+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "、どちらが最新"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170712+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "・正式な値かをサ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170741+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "ポート"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.170768+00:00", "type": "text", "elapsed_seconds": 14.483, "text": "窓口"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179338+00:00", "type": "text", "elapsed_seconds": 14.491, "text": "や契約内容と"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179432+00:00", "type": "text", "elapsed_seconds": 14.491, "text": "合わせてご確認いただ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179470+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "くことをお"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179516+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "勧めします。**\n"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179548+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "\nなお"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179577+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "、Ent"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179607+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "erprise"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179635+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "プランでは保持"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179665+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "期間内の"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179692+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "ログを"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179720+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "CSV・JSON L"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179747+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "ines形式でエクス"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179773+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "ポートでき、Amaz"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179799+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "on S3連携によりニア"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179826+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "リアルタイムでの取"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179852+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "り出しも可能です（長"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179879+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "期保管が必要な場合"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179905+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "はS3側"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179930+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "の保存ポリシーをお"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179956+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "客様側で設定す"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.179981+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "る必要があり"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180007+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "ます）"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180033+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "。"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180059+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "\n\n##"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180085+00:00", "type": "text", "elapsed_seconds": 14.492, "text": " SAML SSOでログ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180111+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "インできない場合"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180136+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "の確認手"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180162+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "順\n\nログ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180188+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "インで"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180214+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "きない場"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180251+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "合は、以下の順で確認"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.180272+00:00", "type": "text", "elapsed_seconds": 14.492, "text": "してください。\n"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188152+00:00", "type": "text", "elapsed_seconds": 14.5, "text": "\n1."}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188291+00:00", "type": "text", "elapsed_seconds": 14.5, "text": " **"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188338+00:00", "type": "text", "elapsed_seconds": 14.5, "text": "IdP側のユ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188378+00:00", "type": "text", "elapsed_seconds": 14.5, "text": "ーザ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188412+00:00", "type": "text", "elapsed_seconds": 14.5, "text": "ー割り当て確認**：対象"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188445+00:00", "type": "text", "elapsed_seconds": 14.5, "text": "ユーザ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188475+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "ーがSampleCo"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188505+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "nn"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188536+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "ect Platf"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188564+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "orm用のS"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188595+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "AMLアプリに割り当て"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188624+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "られているかを"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188653+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "確認する。\n2."}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188681+00:00", "type": "text", "elapsed_seconds": 14.501, "text": " **"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188708+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "ACS URL"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188736+00:00", "type": "text", "elapsed_seconds": 14.501, "text": " / Entity I"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188764+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "Dの一致確"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188790+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "認**：Sample"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188816+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "Con"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188841+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "nect管理コンソー"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188867+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "ルに表示されているA"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188893+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "CS"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188919+00:00", "type": "text", "elapsed_seconds": 14.501, "text": " URLとEntity"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188946+00:00", "type": "text", "elapsed_seconds": 14.501, "text": " ID（"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188972+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "SP En"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.188998+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "tit"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.189035+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "yID）が"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.189061+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "、IdP側の設定"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.189087+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "と一致している"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.189113+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "かを確認"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.189139+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "する。\n3"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.189164+00:00", "type": "text", "elapsed_seconds": 14.501, "text": ". **"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.189190+00:00", "type": "text", "elapsed_seconds": 14.501, "text": "IdP証明書の有効期"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196300+00:00", "type": "text", "elapsed_seconds": 14.508, "text": "限確"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196387+00:00", "type": "text", "elapsed_seconds": 14.508, "text": "認*"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196426+00:00", "type": "text", "elapsed_seconds": 14.508, "text": "*：IdP証明書が期"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196459+00:00", "type": "text", "elapsed_seconds": 14.508, "text": "限切れになって"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196489+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "いない"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196519+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "かを"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196548+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "確認する。"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196577+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "\n4. *"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196606+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "*SAML"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196634+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "ログの確認*"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196660+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "*：管理コ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196692+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "ンソールの「SSO設定」"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196719+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "→「SAM"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196746+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "Lログ」から、直近30"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196773+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "件のSAM"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196799+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "Lレスポンスとエ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196827+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "ラー理由を確認する"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196854+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "。\n"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196880+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "   - `"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196907+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "Inva"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196933+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "lidN"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196971+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "ame"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.196997+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "ID`、`Sign"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.197023+00:00", "type": "text", "elapsed_seconds": 14.509, "text": "atureValidat"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198094+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "io"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198184+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "nFailed`、"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198229+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "`As"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198265+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "sertionExpir"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198298+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "ed` などの典型"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198330+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "エラ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198354+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "ーが出ている場合は"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198383+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "、該当のログ行を"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.198412+00:00", "type": "text", "elapsed_seconds": 14.51, "text": "サポート窓"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204450+00:00", "type": "text", "elapsed_seconds": 14.516, "text": "口に共有すると"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204517+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "調査が"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204549+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "スムー"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204578+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "ズで"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204607+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "す。\n"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204635+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "\nより詳"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204662+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "細なIdP側の"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204688+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "設定手順は"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204716+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "「SAML認証設"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204742+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "定ガイ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204768+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "ド」、サポート担当者"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204794+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "向けの調査フローは「S"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204820+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "AM"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204846+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "Lトラブルシューテ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204872+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "ィング手順」に記"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.204898+00:00", "type": "text", "elapsed_seconds": 14.517, "text": "載されていますので、"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.205863+00:00", "type": "text", "elapsed_seconds": 14.518, "text": "必要に応じてそちら"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.205935+00:00", "type": "text", "elapsed_seconds": 14.518, "text": "もご確"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.205970+00:00", "type": "text", "elapsed_seconds": 14.518, "text": "認くだ"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.206001+00:00", "type": "text", "elapsed_seconds": 14.518, "text": "さい。"}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.207107+00:00", "type": "sources", "elapsed_seconds": 14.519, "documents": [{"index": 0, "text": "# SAML SSOでログインできない場合の確認項目\n\n質問: SAML SSOでログインできない場合、最初に何を確認しますか。\n\n回答: まず、IdP側で対象ユーザーがSampleConnect Platform用のSAMLアプリに割り当てられているかを確認します。次に、SampleConnect管理コンソールに表示されるACS URLとEntity ID（SP EntityID）が、IdP側の設定と一致しているかを確認します。あわせて、IdP証明書の有効期限が切れていないかも確認してください。失敗の詳細は、SampleConnect管理コンソールの「SSO設定」→「SAMLログ」から、直近30件のSAMLレスポンスとエラー理由を参照できます。", "source": "", "retriever": "EXAMPLE_RETRIEVER", "title": "文書 1"}, {"index": 1, "text": "# 監査ログの保持期間\n\n質問: 監査ログはプランごとに何日保存されますか。\n\n回答: SampleConnect Platformの監査ログ保持期間は、プランによって異なります。Freeプランは7日間、Standardプランは90日間、Enterpriseプランは730日間（24ヶ月）です。保持期間を超えたログは、自動的に削除されます。保持期間内のログは、SampleConnect管理コンソールの「セキュリティ」→「監査ログ」から閲覧でき、長期保管が必要な場合は監査ログのエクスポート機能でCSVまたはJSON Lines形式に書き出せます。\n\n補足: 保持期間の正式な根拠は「監査ログ保存ポリシー」、エクスポートやSIEM連携の方法は「監査ログのエクスポート方法」を参照してください。", "source": "", "retriever": "EXAMPLE_RETRIEVER", "title": "文書 2"}, {"index": 2, "text": "失敗の詳細は、SampleConnect管理コンソールの「SSO設定」→「SAMLログ」から、直近30件のSAMLレスポンスとエラー理由を参照できます。`InvalidNameID`、`SignatureValidationFailed`、`AssertionExpired`のような典型エラーは、SAMLログの該当行をサポート窓口へ共有してください。\n\n補足: IdP側の具体的な設定手順は「SAML認証設定ガイド」、サポート担当者の調査フローは「SAMLトラブルシューティング手順」を参照してください。", "source": "", "retriever": "EXAMPLE_RETRIEVER", "title": "文書 3"}, {"index": 3, "text": "## プラン別の保持期間\n\n| プラン | 保持期間 | エクスポート |\n|---|---|---|\n| Free | 7日 | 不可（コンソール閲覧のみ） |\n| Standard | 30日 | CSV/JSON Linesエクスポート（手動のみ） |\n| Enterprise | 365日 | CSV/JSON Lines、Amazon S3連携 |\n\n## エクスポートと長期保管\n\nEnterpriseプランは、Amazon S3連携によりニアリアルタイムで監査ログを取り出せます。お客様側で長期保管が必要な場合は、S3バケット上での保存ポリシーをお客様が定めることになります。\n\n## 改訂履歴\n\n- 2025年4月1日 初版適用", "source": "", "retriever": "EXAMPLE_RETRIEVER", "title": "文書 4"}, {"index": 4, "text": "# Enterpriseプラン機能ガイド\n\n## 概要\n\nSampleConnect PlatformのEnterpriseプランは、大規模組織向けに設計された最上位プランです。セキュリティ、コンプライアンス、運用管理の各領域で、StandardプランやFreeプランにはない高度な機能を提供します。本ガイドでは、Enterpriseプランで利用できる主要機能とその仕様を説明します。\n\n## 監査ログ\n\nEnterpriseプランでは、監査ログの保持期間は2年間です。Standardプランの90日、Freeプランの30日と比較して、長期間にわたる操作履歴の追跡が可能です。監査ログには、ユーザーの認証イベント、権限変更、データの作成・更新・削除、管理画面での設定変更など、すべての操作が記録されます。\n\n", "source": "", "retriever": "EXAMPLE_RETRIEVER", "title": "文書 5"}], "has_more_results": false}
+{"mode": "agentic-managed", "recorded_at": "2026-10-07T11:22:30.207201+00:00", "type": "done", "elapsed_seconds": 14.519, "answer": "## Enterpriseプランの監査ログ保存期間\n\n資料によって記載されている数値に差異があります。\n\n| 資料 | Enterpriseプランの保持期間 |\n|---|---|\n| FAQ「監査ログの保持期間」 | 730日間（24ヶ月） |\n| ポリシー「監査ログ保存ポリシー2025年版」 | 365日間  |\n| 「Enterpriseプラン機能ガイド」 | 2年間  |\n\n- FAQおよび機能ガイドでは「730日（24ヶ月）＝2年間」という一致した記載があります。\n- 一方で2025年4月1日に初版適用された「監査ログ保存ポリシー2025年版」では365日となっており、ポリシー改訂により期間が変更された可能性があります。\n\n正式な根拠として参照すべきは「監査ログ保存ポリシー」とされているため、最新のポリシー文書（365日）が現時点での正式な数値である可能性がありますが、FAQ側の情報が未更新のままの可能性もあります。**正確な現在の保持期間については、どちらが最新・正式な値かをサポート窓口や契約内容と合わせてご確認いただくことをお勧めします。**\n\nなお、Enterpriseプランでは保持期間内のログをCSV・JSON Lines形式でエクスポートでき、Amazon S3連携によりニアリアルタイムでの取り出しも可能です（長期保管が必要な場合はS3側の保存ポリシーをお客様側で設定する必要があります）。\n\n## SAML SSOでログインできない場合の確認手順\n\nログインできない場合は、以下の順で確認してください。\n\n1. **IdP側のユーザー割り当て確認**：対象ユーザーがSampleConnect Platform用のSAMLアプリに割り当てられているかを確認する。\n2. **ACS URL / Entity IDの一致確認**：SampleConnect管理コンソールに表示されているACS URLとEntity ID（SP EntityID）が、IdP側の設定と一致しているかを確認する。\n3. **IdP証明書の有効期限確認**：IdP証明書が期限切れになっていないかを確認する。\n4. **SAMLログの確認**：管理コンソールの「SSO設定」→「SAMLログ」から、直近30件のSAMLレスポンスとエラー理由を確認する。\n   - `InvalidNameID`、`SignatureValidationFailed`、`AssertionExpired` などの典型エラーが出ている場合は、該当のログ行をサポート窓口に共有すると調査がスムーズです。\n\nより詳細なIdP側の設定手順は「SAML認証設定ガイド」、サポート担当者向けの調査フローは「SAMLトラブルシューティング手順」に記載されていますので、必要に応じてそちらもご確認ください。", "citations": [{"endIndex": 121, "references": [{"resultIndex": 0}], "startIndex": 0}, {"endIndex": 157, "references": [{"resultIndex": 3}], "startIndex": 122}, {"endIndex": 189, "references": [{"resultIndex": 4}], "startIndex": 158}, {"endIndex": 239, "references": [{"resultIndex": 0}, {"resultIndex": 4}], "startIndex": 190}, {"endIndex": 319, "references": [{"resultIndex": 3}], "startIndex": 240}, {"endIndex": 356, "references": [{"resultIndex": 1}], "startIndex": 321}, {"endIndex": 614, "references": [{"resultIndex": 3}], "startIndex": 356}, {"endIndex": 751, "references": [{"resultIndex": 0}], "startIndex": 616}, {"endIndex": 865, "references": [{"resultIndex": 0}], "startIndex": 752}, {"endIndex": 912, "references": [{"resultIndex": 0}], "startIndex": 866}, {"endIndex": 984, "references": [{"resultIndex": 0}, {"resultIndex": 2}], "startIndex": 913}, {"endIndex": 1099, "references": [{"resultIndex": 2}], "startIndex": 988}, {"endIndex": 1195, "references": [{"resultIndex": 2}], "startIndex": 1101}], "model": "AWS managed", "usage": null, "metrics": {"first_event_seconds": 1.282, "first_text_seconds": 14.294, "total_seconds": 14.519, "trace_events": 4, "text_events": 191}}

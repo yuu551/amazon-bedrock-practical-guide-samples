@@ -1,0 +1,12 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "department": "Security",
+    "audience": "user",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["audit_log", "retention"],
+    "topic_id": "audit_log"
+  }
+}

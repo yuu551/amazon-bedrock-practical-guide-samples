@@ -1,0 +1,20 @@
+[project]
+name = "bedrock-eval-loop"
+version = "0.1.0"
+description = "第5章: RAG・AIエージェントの品質評価と改善サイクル"
+requires-python = ">=3.11"
+dependencies = [
+    "boto3[crt]",
+    "langchain-aws>=1.4.4",
+    # Ragas 0.4.3 imports a module removed in langchain-community 0.4.1.
+    "langchain-community==0.4.0",
+    "mcp-proxy-for-aws>=0.1.4",
+    "openpyxl",
+    "ragas>=0.4.3,<1.0",
+    "requests",
+    "strands-agents>=1.36.0",
+    "strands-agents-evals>=0.1.15",
+]
+
+[tool.uv]
+package = false

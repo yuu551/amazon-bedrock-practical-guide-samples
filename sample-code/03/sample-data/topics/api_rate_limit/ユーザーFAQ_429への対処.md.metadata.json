@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "topic_id": "api_rate_limit",
+    "department": "Support",
+    "audience": "user",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["api", "rate_limit", "429", "retry"],
+    "contains_table": false
+  }
+}

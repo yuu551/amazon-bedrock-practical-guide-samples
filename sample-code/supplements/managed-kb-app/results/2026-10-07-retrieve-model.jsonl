@@ -1,0 +1,157 @@
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:43.711834+00:00", "type": "status", "elapsed_seconds": 0.0, "message": "検索を開始しました。"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:45.156337+00:00", "type": "sources", "elapsed_seconds": 1.445, "documents": [{"index": 0, "text": "# SAML SSOでログインできない場合の確認項目\n\n質問: SAML SSOでログインできない場合、最初に何を確認しますか。\n\n回答: まず、IdP側で対象ユーザーがSampleConnect Platform用のSAMLアプリに割り当てられているかを確認します。次に、SampleConnect管理コンソールに表示されるACS URLとEntity ID（SP EntityID）が、IdP側の設定と一致しているかを確認します。あわせて、IdP証明書の有効期限が切れていないかも確認してください。失敗の詳細は、SampleConnect管理コンソールの「SSO設定」→「SAMLログ」から、直近30件のSAMLレスポンスとエラー理由を参照できます。", "source": "https://sampleconnect-managed-kb-example.s3.amazonaws.com/sample-data/faq/SAML_SSO%E3%81%A7%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AE%E7%A2%BA%E8%AA%8D%E9%A0%85%E7%9B%AE.md", "retriever": "", "title": "文書 1"}, {"index": 1, "text": "# 監査ログの保持期間\n\n質問: 監査ログはプランごとに何日保存されますか。\n\n回答: SampleConnect Platformの監査ログ保持期間は、プランによって異なります。Freeプランは7日間、Standardプランは90日間、Enterpriseプランは730日間（24ヶ月）です。保持期間を超えたログは、自動的に削除されます。保持期間内のログは、SampleConnect管理コンソールの「セキュリティ」→「監査ログ」から閲覧でき、長期保管が必要な場合は監査ログのエクスポート機能でCSVまたはJSON Lines形式に書き出せます。\n\n補足: 保持期間の正式な根拠は「監査ログ保存ポリシー」、エクスポートやSIEM連携の方法は「監査ログのエクスポート方法」を参照してください。", "source": "https://sampleconnect-managed-kb-example.s3.amazonaws.com/sample-data/faq/%E7%9B%A3%E6%9F%BB%E3%83%AD%E3%82%B0%E3%81%AE%E4%BF%9D%E6%8C%81%E6%9C%9F%E9%96%93.md", "retriever": "", "title": "文書 2"}, {"index": 2, "text": "失敗の詳細は、SampleConnect管理コンソールの「SSO設定」→「SAMLログ」から、直近30件のSAMLレスポンスとエラー理由を参照できます。`InvalidNameID`、`SignatureValidationFailed`、`AssertionExpired`のような典型エラーは、SAMLログの該当行をサポート窓口へ共有してください。\n\n補足: IdP側の具体的な設定手順は「SAML認証設定ガイド」、サポート担当者の調査フローは「SAMLトラブルシューティング手順」を参照してください。", "source": "https://sampleconnect-managed-kb-example.s3.amazonaws.com/sample-data/faq/SAML_SSO%E3%81%A7%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E5%A0%B4%E5%90%88%E3%81%AE%E7%A2%BA%E8%AA%8D%E9%A0%85%E7%9B%AE.md", "retriever": "", "title": "文書 3"}, {"index": 3, "text": "## プラン別の保持期間\n\n| プラン | 保持期間 | エクスポート |\n|---|---|---|\n| Free | 7日 | 不可（コンソール閲覧のみ） |\n| Standard | 30日 | CSV/JSON Linesエクスポート（手動のみ） |\n| Enterprise | 365日 | CSV/JSON Lines、Amazon S3連携 |\n\n## エクスポートと長期保管\n\nEnterpriseプランは、Amazon S3連携によりニアリアルタイムで監査ログを取り出せます。お客様側で長期保管が必要な場合は、S3バケット上での保存ポリシーをお客様が定めることになります。\n\n## 改訂履歴\n\n- 2025年4月1日 初版適用", "source": "https://sampleconnect-managed-kb-example.s3.amazonaws.com/sample-data/policies/%E7%9B%A3%E6%9F%BB%E3%83%AD%E3%82%B0%E4%BF%9D%E5%AD%98%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC2025%E5%B9%B4%E7%89%88.md", "retriever": "", "title": "文書 4"}, {"index": 4, "text": "# Enterpriseプラン機能ガイド\n\n## 概要\n\nSampleConnect PlatformのEnterpriseプランは、大規模組織向けに設計された最上位プランです。セキュリティ、コンプライアンス、運用管理の各領域で、StandardプランやFreeプランにはない高度な機能を提供します。本ガイドでは、Enterpriseプランで利用できる主要機能とその仕様を説明します。\n\n## 監査ログ\n\nEnterpriseプランでは、監査ログの保持期間は2年間です。Standardプランの90日、Freeプランの30日と比較して、長期間にわたる操作履歴の追跡が可能です。監査ログには、ユーザーの認証イベント、権限変更、データの作成・更新・削除、管理画面での設定変更など、すべての操作が記録されます。\n\n", "source": "https://sampleconnect-managed-kb-example.s3.amazonaws.com/sample-data/product/Enterprise%E3%83%97%E3%83%A9%E3%83%B3%E6%A9%9F%E8%83%BD%E3%82%AC%E3%82%A4%E3%83%89.md", "retriever": "", "title": "文書 5"}], "has_more_results": false}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:45.156467+00:00", "type": "status", "elapsed_seconds": 1.445, "message": "検索した文書から回答を作成しています。"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:45.156495+00:00", "type": "context", "elapsed_seconds": 1.445, "truncated": false, "characters": 1603}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:46.957010+00:00", "type": "text", "elapsed_seconds": 3.245, "text": "##"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:46.985223+00:00", "type": "text", "elapsed_seconds": 3.273, "text": " Enterpriseプラン"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.012576+00:00", "type": "text", "elapsed_seconds": 3.301, "text": "の監査ログ保存"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.064458+00:00", "type": "text", "elapsed_seconds": 3.353, "text": "期間"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.132506+00:00", "type": "text", "elapsed_seconds": 3.421, "text": "\n\nEnterpriseプランの"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.250916+00:00", "type": "text", "elapsed_seconds": 3.539, "text": "監査ログ保存期"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.276161+00:00", "type": "text", "elapsed_seconds": 3.564, "text": "間については"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.276270+00:00", "type": "text", "elapsed_seconds": 3.564, "text": "、資"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.298872+00:00", "type": "text", "elapsed_seconds": 3.587, "text": "料によ"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.342689+00:00", "type": "text", "elapsed_seconds": 3.631, "text": "って"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.376779+00:00", "type": "text", "elapsed_seconds": 3.665, "text": "記"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.483007+00:00", "type": "text", "elapsed_seconds": 3.771, "text": "載が異なっ"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.491228+00:00", "type": "text", "elapsed_seconds": 3.779, "text": "ています。"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.502445+00:00", "type": "text", "elapsed_seconds": 3.791, "text": "\n\n|"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.541673+00:00", "type": "text", "elapsed_seconds": 3.83, "text": " "}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.588459+00:00", "type": "text", "elapsed_seconds": 3.877, "text": "資"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.618201+00:00", "type": "text", "elapsed_seconds": 3.906, "text": "料 | 保存期間"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.792058+00:00", "type": "text", "elapsed_seconds": 4.08, "text": " |"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.822322+00:00", "type": "text", "elapsed_seconds": 4.11, "text": "\n|---"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.822455+00:00", "type": "text", "elapsed_seconds": 4.111, "text": "---|----------|\n| 文"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.847306+00:00", "type": "text", "elapsed_seconds": 4.135, "text": "書2"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.896438+00:00", "type": "text", "elapsed_seconds": 4.185, "text": " | **"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.919968+00:00", "type": "text", "elapsed_seconds": 4.208, "text": "730"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:47.959760+00:00", "type": "text", "elapsed_seconds": 4.248, "text": "日間（24ヶ"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.026559+00:00", "type": "text", "elapsed_seconds": 4.315, "text": "月）** |\n| 文"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.047007+00:00", "type": "text", "elapsed_seconds": 4.335, "text": "書4"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.080538+00:00", "type": "text", "elapsed_seconds": 4.369, "text": " | **365日**"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.138450+00:00", "type": "text", "elapsed_seconds": 4.427, "text": " |\n| 文書5 "}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.159911+00:00", "type": "text", "elapsed_seconds": 4.448, "text": "| **2年間** |"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.203745+00:00", "type": "text", "elapsed_seconds": 4.492, "text": "\n\n文"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.298888+00:00", "type": "text", "elapsed_seconds": 4.587, "text": "書2と文書5"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.322186+00:00", "type": "text", "elapsed_seconds": 4.61, "text": "は「"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.330120+00:00", "type": "text", "elapsed_seconds": 4.618, "text": "730"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.373335+00:00", "type": "text", "elapsed_seconds": 4.661, "text": "日/"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.399732+00:00", "type": "text", "elapsed_seconds": 4.688, "text": "2"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.455506+00:00", "type": "text", "elapsed_seconds": 4.744, "text": "年間」で"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.490744+00:00", "type": "text", "elapsed_seconds": 4.779, "text": "一"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.526861+00:00", "type": "text", "elapsed_seconds": 4.815, "text": "致してい"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.563567+00:00", "type": "text", "elapsed_seconds": 4.852, "text": "ますが、文書4では「"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.614891+00:00", "type": "text", "elapsed_seconds": 4.903, "text": "365日」と"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.643435+00:00", "type": "text", "elapsed_seconds": 4.932, "text": "異"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.697864+00:00", "type": "text", "elapsed_seconds": 4.986, "text": "なる"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.725587+00:00", "type": "text", "elapsed_seconds": 5.014, "text": "記"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.826743+00:00", "type": "text", "elapsed_seconds": 5.115, "text": "載があ"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.836773+00:00", "type": "text", "elapsed_seconds": 5.125, "text": "ります["}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.857927+00:00", "type": "text", "elapsed_seconds": 5.146, "text": "文書 2"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.890180+00:00", "type": "text", "elapsed_seconds": 5.178, "text": "]["}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.929197+00:00", "type": "text", "elapsed_seconds": 5.217, "text": "文書 4"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:48.975889+00:00", "type": "text", "elapsed_seconds": 5.264, "text": "]["}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.006986+00:00", "type": "text", "elapsed_seconds": 5.295, "text": "文書 5]。資"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.047266+00:00", "type": "text", "elapsed_seconds": 5.335, "text": "料間"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.098708+00:00", "type": "text", "elapsed_seconds": 5.387, "text": "で"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.166914+00:00", "type": "text", "elapsed_seconds": 5.455, "text": "矛盾があるため、正"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.219988+00:00", "type": "text", "elapsed_seconds": 5.508, "text": "確な保存期間については"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.247934+00:00", "type": "text", "elapsed_seconds": 5.536, "text": "公"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.344749+00:00", "type": "text", "elapsed_seconds": 5.633, "text": "式ドキュメントや"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.354362+00:00", "type": "text", "elapsed_seconds": 5.643, "text": "正"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.375833+00:00", "type": "text", "elapsed_seconds": 5.664, "text": "式な「"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.407986+00:00", "type": "text", "elapsed_seconds": 5.696, "text": "監査ログ保存"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.457882+00:00", "type": "text", "elapsed_seconds": 5.746, "text": "ポリシー」を"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.489752+00:00", "type": "text", "elapsed_seconds": 5.778, "text": "ご確認ください。\n\n---"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.538231+00:00", "type": "text", "elapsed_seconds": 5.826, "text": "\n\n## SAML SSOで"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.595544+00:00", "type": "text", "elapsed_seconds": 5.884, "text": "ログインできない場合の確"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.615790+00:00", "type": "text", "elapsed_seconds": 5.904, "text": "認手順\n\n以"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.650380+00:00", "type": "text", "elapsed_seconds": 5.938, "text": "下の手順で"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.708313+00:00", "type": "text", "elapsed_seconds": 5.996, "text": "確"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.731548+00:00", "type": "text", "elapsed_seconds": 6.02, "text": "認を"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.878803+00:00", "type": "text", "elapsed_seconds": 6.167, "text": "進"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.887533+00:00", "type": "text", "elapsed_seconds": 6.176, "text": "めてください。\n\n### "}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.887821+00:00", "type": "text", "elapsed_seconds": 6.176, "text": "①"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.901979+00:00", "type": "text", "elapsed_seconds": 6.19, "text": " IdP側の"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.940747+00:00", "type": "text", "elapsed_seconds": 6.229, "text": "ユ"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:49.972686+00:00", "type": "text", "elapsed_seconds": 6.261, "text": "ーザー割"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.022021+00:00", "type": "text", "elapsed_seconds": 6.31, "text": "り当て"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.287111+00:00", "type": "text", "elapsed_seconds": 6.575, "text": "確認"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.287246+00:00", "type": "text", "elapsed_seconds": 6.575, "text": "\nId"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.287294+00:00", "type": "text", "elapsed_seconds": 6.575, "text": "P（"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.287331+00:00", "type": "text", "elapsed_seconds": 6.575, "text": "Identity"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.287367+00:00", "type": "text", "elapsed_seconds": 6.576, "text": " Provider）側で、対象"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.287402+00:00", "type": "text", "elapsed_seconds": 6.576, "text": "ユーザーがSampleConnect"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.297919+00:00", "type": "text", "elapsed_seconds": 6.586, "text": " Platform用のSAMLアプ"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.394459+00:00", "type": "text", "elapsed_seconds": 6.683, "text": "リに**"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.403024+00:00", "type": "text", "elapsed_seconds": 6.691, "text": "割り当てられているか"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.426450+00:00", "type": "text", "elapsed_seconds": 6.715, "text": "**を確認します。["}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.459048+00:00", "type": "text", "elapsed_seconds": 6.747, "text": "文書 1]\n\n### "}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.509146+00:00", "type": "text", "elapsed_seconds": 6.797, "text": "② A"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.541520+00:00", "type": "text", "elapsed_seconds": 6.83, "text": "CS URLとEntity IDの一"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.585699+00:00", "type": "text", "elapsed_seconds": 6.874, "text": "致確認\nSampleConnect管"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.616071+00:00", "type": "text", "elapsed_seconds": 6.904, "text": "理コンソールに表示"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.666326+00:00", "type": "text", "elapsed_seconds": 6.954, "text": "される"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.773099+00:00", "type": "text", "elapsed_seconds": 7.061, "text": " **"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:50.773241+00:00", "type": "text", "elapsed_seconds": 7.061, "text": "ACS URL** と **Entity ID"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.124546+00:00", "type": "text", "elapsed_seconds": 7.413, "text": "（SP EntityID）** が、"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.126478+00:00", "type": "text", "elapsed_seconds": 7.415, "text": "IdP側の設定と一"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.126699+00:00", "type": "text", "elapsed_seconds": 7.415, "text": "致しているかを確認します"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.126843+00:00", "type": "text", "elapsed_seconds": 7.415, "text": "。["}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.126980+00:00", "type": "text", "elapsed_seconds": 7.415, "text": "文書 1]\n\n### "}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.127109+00:00", "type": "text", "elapsed_seconds": 7.415, "text": "③ IdP証明書の"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.127234+00:00", "type": "text", "elapsed_seconds": 7.415, "text": "有効期限確認\nId"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.127363+00:00", "type": "text", "elapsed_seconds": 7.415, "text": "P証"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.142451+00:00", "type": "text", "elapsed_seconds": 7.431, "text": "明書が"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.159074+00:00", "type": "text", "elapsed_seconds": 7.447, "text": "**"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.198879+00:00", "type": "text", "elapsed_seconds": 7.487, "text": "期"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.239006+00:00", "type": "text", "elapsed_seconds": 7.527, "text": "限切れ**になってい"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.266016+00:00", "type": "text", "elapsed_seconds": 7.554, "text": "ないか"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.323565+00:00", "type": "text", "elapsed_seconds": 7.612, "text": "を確認します。[文書"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.346215+00:00", "type": "text", "elapsed_seconds": 7.634, "text": " 1]\n\n### ④"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.442754+00:00", "type": "text", "elapsed_seconds": 7.731, "text": " SA"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.450330+00:00", "type": "text", "elapsed_seconds": 7.738, "text": "MLログで"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.478154+00:00", "type": "text", "elapsed_seconds": 7.766, "text": "エラー"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.548430+00:00", "type": "text", "elapsed_seconds": 7.837, "text": "詳細を"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.590101+00:00", "type": "text", "elapsed_seconds": 7.878, "text": "確認\n管"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.624224+00:00", "type": "text", "elapsed_seconds": 7.912, "text": "理コンソールの **「"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.677607+00:00", "type": "text", "elapsed_seconds": 7.966, "text": "SSO設定」→「SA"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.721635+00:00", "type": "text", "elapsed_seconds": 8.01, "text": "MLログ」** から、直"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.744885+00:00", "type": "text", "elapsed_seconds": 8.033, "text": "近30件のSAMLレ"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.791909+00:00", "type": "text", "elapsed_seconds": 8.08, "text": "スポンスとエラー"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.839373+00:00", "type": "text", "elapsed_seconds": 8.127, "text": "理由を参照できます。"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.864976+00:00", "type": "text", "elapsed_seconds": 8.153, "text": "[文書 1]["}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.972031+00:00", "type": "text", "elapsed_seconds": 8.26, "text": "文書 3"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.979177+00:00", "type": "text", "elapsed_seconds": 8.267, "text": "]\n\n以"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:51.987124+00:00", "type": "text", "elapsed_seconds": 8.275, "text": "下のような"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.025870+00:00", "type": "text", "elapsed_seconds": 8.314, "text": "典型エラーが"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.082832+00:00", "type": "text", "elapsed_seconds": 8.371, "text": "表示された"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.104560+00:00", "type": "text", "elapsed_seconds": 8.393, "text": "場合は"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.144422+00:00", "type": "text", "elapsed_seconds": 8.433, "text": "、該"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.195214+00:00", "type": "text", "elapsed_seconds": 8.483, "text": "当行をサポート窓"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.225948+00:00", "type": "text", "elapsed_seconds": 8.514, "text": "口に"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.277789+00:00", "type": "text", "elapsed_seconds": 8.566, "text": "共有してください。[文書"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.312216+00:00", "type": "text", "elapsed_seconds": 8.6, "text": " 3]"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.366128+00:00", "type": "text", "elapsed_seconds": 8.654, "text": "\n- `InvalidNameID`\n-"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.402229+00:00", "type": "text", "elapsed_seconds": 8.69, "text": " `SignatureValidationFailed`"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.498490+00:00", "type": "text", "elapsed_seconds": 8.787, "text": "\n- `AssertionExpired"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.498624+00:00", "type": "text", "elapsed_seconds": 8.787, "text": "`\n\n---"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.510049+00:00", "type": "text", "elapsed_seconds": 8.798, "text": "\n\n>"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.554215+00:00", "type": "text", "elapsed_seconds": 8.842, "text": " "}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.653065+00:00", "type": "text", "elapsed_seconds": 8.941, "text": "⚠️ **注"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.693092+00:00", "type": "text", "elapsed_seconds": 8.981, "text": "意**: 監"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.734083+00:00", "type": "text", "elapsed_seconds": 9.022, "text": "査ログの保存期間"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.769988+00:00", "type": "text", "elapsed_seconds": 9.058, "text": "については"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.797556+00:00", "type": "text", "elapsed_seconds": 9.086, "text": "資"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.851464+00:00", "type": "text", "elapsed_seconds": 9.14, "text": "料間"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.886327+00:00", "type": "text", "elapsed_seconds": 9.174, "text": "で数"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:52.921958+00:00", "type": "text", "elapsed_seconds": 9.21, "text": "値に"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.018352+00:00", "type": "text", "elapsed_seconds": 9.306, "text": "矛盾があるため、"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.030907+00:00", "type": "text", "elapsed_seconds": 9.319, "text": "正式"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.063328+00:00", "type": "text", "elapsed_seconds": 9.351, "text": "な「"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.085872+00:00", "type": "text", "elapsed_seconds": 9.374, "text": "監査ログ保存"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.134778+00:00", "type": "text", "elapsed_seconds": 9.423, "text": "ポリシー」での"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.170166+00:00", "type": "text", "elapsed_seconds": 9.458, "text": "確"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.216480+00:00", "type": "text", "elapsed_seconds": 9.505, "text": "認を"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.256599+00:00", "type": "text", "elapsed_seconds": 9.544, "text": "推奨します。"}
+{"mode": "retrieve-model", "recorded_at": "2026-10-07T11:22:53.444465+00:00", "type": "done", "elapsed_seconds": 9.733, "answer": "## Enterpriseプランの監査ログ保存期間\n\nEnterpriseプランの監査ログ保存期間については、資料によって記載が異なっています。\n\n| 資料 | 保存期間 |\n|------|----------|\n| 文書2 | **730日間（24ヶ月）** |\n| 文書4 | **365日** |\n| 文書5 | **2年間** |\n\n文書2と文書5は「730日/2年間」で一致していますが、文書4では「365日」と異なる記載があります[文書 2][文書 4][文書 5]。資料間で矛盾があるため、正確な保存期間については公式ドキュメントや正式な「監査ログ保存ポリシー」をご確認ください。\n\n---\n\n## SAML SSOでログインできない場合の確認手順\n\n以下の手順で確認を進めてください。\n\n### ① IdP側のユーザー割り当て確認\nIdP（Identity Provider）側で、対象ユーザーがSampleConnect Platform用のSAMLアプリに**割り当てられているか**を確認します。[文書 1]\n\n### ② ACS URLとEntity IDの一致確認\nSampleConnect管理コンソールに表示される **ACS URL** と **Entity ID（SP EntityID）** が、IdP側の設定と一致しているかを確認します。[文書 1]\n\n### ③ IdP証明書の有効期限確認\nIdP証明書が**期限切れ**になっていないかを確認します。[文書 1]\n\n### ④ SAMLログでエラー詳細を確認\n管理コンソールの **「SSO設定」→「SAMLログ」** から、直近30件のSAMLレスポンスとエラー理由を参照できます。[文書 1][文書 3]\n\n以下のような典型エラーが表示された場合は、該当行をサポート窓口に共有してください。[文書 3]\n- `InvalidNameID`\n- `SignatureValidationFailed`\n- `AssertionExpired`\n\n---\n\n> ⚠️ **注意**: 監査ログの保存期間については資料間で数値に矛盾があるため、正式な「監査ログ保存ポリシー」での確認を推奨します。", "citations": [], "model": "us.anthropic.claude-sonnet-4-6", "usage": {"input_tokens": 1323, "output_tokens": 660}, "metrics": {"first_event_seconds": 1.445, "first_text_seconds": 3.245, "total_seconds": 9.733, "trace_events": 0, "text_events": 152}}

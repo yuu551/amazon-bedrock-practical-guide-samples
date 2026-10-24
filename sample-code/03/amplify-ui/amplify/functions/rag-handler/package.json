@@ -1,0 +1,9 @@
+{
+  "name": "rag-handler",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@aws/aws-distro-opentelemetry-node-autoinstrumentation": "0.13.0"
+  }
+}

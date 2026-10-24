@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "policy",
+    "topic_id": "api_rate_limit",
+    "department": "Sales",
+    "audience": "admin",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["api", "rate_limit", "sla", "policy"],
+    "contains_table": true
+  }
+}

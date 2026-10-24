@@ -1,0 +1,278 @@
+{
+  "mode": "after",
+  "model_id": "us.anthropic.claude-sonnet-4-6",
+  "cases": [
+    {
+      "id": "agent-incident-502",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "text": "APIで`HTTP 502 Bad Gateway`が断続的に発生しています。プラットフォーム側の既知障害ですか。"
+            }
+          ],
+          "tracking_id": "bee29d92-830f-4a6e-aca3-445b0d5b525b"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "まず、サポートKBで基本情報を確認しつつ、最新の障害情報をConfluenceで並行検索します。"
+            },
+            {
+              "toolUse": {
+                "toolUseId": "tooluse_809G4frVNXjV47Tt6Z4efa",
+                "name": "search_support_kb",
+                "input": {
+                  "query": "HTTP 502 Bad Gateway API 障害"
+                }
+              }
+            },
+            {
+              "toolUse": {
+                "toolUseId": "tooluse_No1w4UQgOABIvXS8AwxveK",
+                "name": "confluence_search",
+                "input": {
+                  "query": "HTTP 502 API 断続的"
+                }
+              }
+            }
+          ],
+          "metadata": {
+            "usage": {
+              "inputTokens": 1206,
+              "outputTokens": 148,
+              "totalTokens": 1354,
+              "cacheReadInputTokens": 0,
+              "cacheWriteInputTokens": 0
+            },
+            "metrics": {
+              "latencyMs": 1966,
+              "timeToFirstByteMs": 2836
+            }
+          },
+          "tracking_id": "6ee6ff5e-4185-431f-944b-ddf63cbb8a51"
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "toolResult": {
+                "toolUseId": "tooluse_809G4frVNXjV47Tt6Z4efa",
+                "status": "success",
+                "content": [
+                  {
+                    "text": "s3://ch02-sample-data-bucket/sample-data/faq/APIレート制限に達した場合の挙動.md\n# APIレート制限に達した場合の挙動 質問: APIレート制限に達した場合、どのような応答になりますか。 回答: レート制限に達したリクエストは、HTTPステータス`429 Too Many Requests`を返します。レスポンスヘッダーには、再試行までの推奨待機秒数を示す`Retry-After`、現在のウィンドウでの残り回数を示す`X-RateLimit-Remaining`、ウィンドウのリセット時刻を示す`X-RateLimit-Reset`が含まれます。直近24時間のレート超過が累計1万回を超えた場合は、テナント単位で1時間の一時停止が自動適用されます。停止が発生すると、管理者宛てに警告メールが送信されます。 補足: 上限値はプランごとに異なります。\n\ns3://ch02-sample-data-bucket/sample-data/manuals/インシデント報告手順.md\n2. 「課題を作成」をクリックし、課題タイプで「インシデント」を選択します。 3. 以下の項目を入力します。 - **件名**: 「[YYYY-MM-DD] 障害の概要」の形式で記入します（例: [2026-04-01] API応答遅延によるタイムアウトエラー多発）。 - **重大度**: Critical（サービス停止）、Major（主要機能の障害）、Minor（軽微な機能障害）、Info（影響なし・予防的報告）から選択します。 - **発生日時**: 障害が最初に検知された日時をJST形式で記入します。 - **影響範囲**: 影響を受けたサービス、機能、顧客数を記載します。\n\ns3://ch02-sample-data-bucket/sample-data/faq/APIキー誤公開時の対応.md\n# APIキー誤公開時の対応 質問: APIキーを誤って公開した場合、どう対応しますか。 回答: 公開を検知したら、まずSampleConnect管理コンソールの「API設定」→「APIキー」から該当キーを即時失効してください。失効はリアルタイムで反映され、以降の認証は失敗します。続いて、新しいAPIキーを発行し、利用中のシステムへ差し替えます。GitHubなど公開リポジトリへ漏えいした場合は、コミット履歴の書き換えではなくキー失効・再発行を優先してください。失効後は、監査ログ（`api.key.used`イベント）から漏えい期間中の不正利用有無を確認し、必要に応じてサポート窓口へインシデントとして連絡します。\n\ns3://ch02-sample-data-bucket/sample-data/manuals/エスカレーション手順.md\n# エスカレーション手順\n## 概要\n本手順書は、サポート部門におけるインシデント対応のエスカレーションフローを定めたものです。L1（サポート部門）、L2（開発チーム）、L3（インフラチーム/外部ベンダー）の3段階のエスカレーション体制により、障害の迅速な解決を図ります。エスカレーションの判断基準と連絡方法を明確にし、対応の遅延を防ぐことを目的とします。\n## エスカレーションレベルと対応範囲\n### L1: サポート部門\nL1は障害の一次対応を担当します。対応範囲は以下のとおりです。\n- 障害の検知と初動確認\n- 既知の問題に対する手順書ベースの復旧対応\n- 顧客への一次連絡とStatusPageの更新\n- 障害情報のJiraチケット起票\nL1で対応完了とする基準は、ナレッジベースに記載された手順で復旧できる場合、またはAWSサービス側の障害で自社対応が不要な場合です。\n### L2: 開発チーム\nL2はアプリケーションレベルの障害対応を担当します。対応範囲は以下のとおりです。\n- アプリケーションログの詳細調査\n- コード起因の障害の原因特定と修正\n- デプロイのロールバック判断と実施\n- データベースの整合性確認と修復\n### L3: インフラチーム/外部ベンダー\nL3はインフラレベルの障害対応を担当します。対応範囲は以下のとおりです。\n- AWSインフラ構成の調査と復旧（VPC、ECS、RDS、ElastiCache等）\n- ネットワーク障害の調査\n- AWSサポートケースの起票と連携\n- セキュリティインシデントの対応\n## エスカレーション判断基準\n以下の基準に従ってエスカレーションを判断してください。\n### L1からL2へのエスカレーション基準\n次のいずれかに該当する場合、L2へエスカレーションします。\n- L1の一次対応で復旧しない\n- ナレッジベースに該当する手順がない\n- アプリケーションのエラーログに未知のエラーが記録されている\n- 検知から30分以上経過しても原因の特定ができない\n### L2からL3へのエスカレーション基準\n次のいずれかに該当する場合、L3へエスカレーションします。\n- アプリケーションに原因がなく、インフラ側の問題と判断される\n- ネットワークの到達性に問題がある\n- AWSマネージドサービスの異常動作が疑われる\n- セキュリティ侵害の兆候がある\n## 連絡方法\n### 営業時間内（9:00〜19:00 JST）\n| エスカレーション先 | 連絡方法 | 連絡先 |\n|-|-|-|\n| L2 開発チーム | Slack | #dev-oncall チャンネルで @dev-oncall をメンション |\n| L3 インフラチーム | Slack | #infra-oncall チャンネルで @infra-oncall をメンション |\n| 部門長 | Slack DM | 各部門長のSlackアカウントへDM |\n### 営業時間外（19:00〜翌9:00 JST、休日）\n| エスカレーション先 | 連絡方法 | 連絡先 |\n|-|-|-|\n| L2 開発チーム | PagerDuty | サービス「SampleConnect-Dev-OnCall」でインシデント作成 |\n| L3 インフラチーム | PagerDuty | サービス「SampleConnect-Infra-OnCall」でインシデント作成 |\n| 経営層（Criticalのみ） | PagerDuty | エスカレーションポリシー「Executive-Escalation」が自動発動 |\nPagerDutyでインシデントを作成する際は、以下の情報を含めてください。\n- JiraチケットのURL\n- 障害の概要（1〜2文で）\n- 現在の影響範囲\n- これまでに実施した対応\n## エスカレーション後の対応\nエスカレーション後も、L1担当者は以下の役割を継続します。\n- Slackの#incident-responseチャンネルでの情報集約\n- 顧客からの問い合わせ対応と状況アップデート\n- StatusPageの定期更新（30分ごと、または状況変化時）\n- Jiraチケットのタイムライン更新\n対応が完了したら、エスカレーション先の担当者がJiraチケットに対応結果を記載し、L1担当者が顧客への復旧連絡とStatusPageの更新を行います。\n\ns3://ch02-sample-data-bucket/sample-data/product/Enterpriseプラン機能ガイド.md\n容量の80%に達した時点で管理者にメール通知が送信されます。追加ストレージは100GB単位で購入可能です。 ## APIレート制限 EnterpriseプランのAPIレート制限は1,000リクエスト/秒です。Standardプランの100リクエスト/秒と比較して10倍のスループットに対応しています。レート制限を超過した場合、HTTPステータスコード429（Too Many Requests）が返却されます。APIの利用状況は管理画面の「API設定」→「使用状況」から確認できます。 ## SSO/SAML対応 SAML 2.0によるシングルサインオン（SSO）はEnterprise限定の機能です。Microsoft Entra ID、Okta、Google Workspaceなどの主要なIdP（Identity Provider）との連携に対応しています。"
+                  }
+                ]
+              }
+            },
+            {
+              "toolResult": {
+                "toolUseId": "tooluse_No1w4UQgOABIvXS8AwxveK",
+                "status": "success",
+                "content": [
+                  {
+                    "text": "{\"count\": 1, \"results\": [{\"title\": \"HTTP 502 Bad Gateway 既知障害 暫定回避策\", \"body\": \"5MBを超えるPOSTで発生しやすい既知事象。5MB以下への分割、5秒後の再試行（最大3回）、gzip圧縮を案内する。\"}]}"
+                  }
+                ]
+              }
+            }
+          ],
+          "tracking_id": "14ddba2d-c1d6-4dd0-82e0-8d01bff4b71b"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "検索結果をまとめます。ご質問の **HTTP 502 Bad Gateway** は、**プラットフォーム側の既知事象**として確認されています。\n\n---\n\n## ✅ 既知事象：HTTP 502 Bad Gateway（断続的発生）\n\n### 原因\n**5MBを超えるPOSTリクエスト**で発生しやすい既知の事象です。\n\n---\n\n### 🔧 暫定回避策（3点）\n\n| # | 対策 | 内容 |\n|---|------|------|\n| 1 | **ペイロードの分割** | POSTのリクエストボディを **5MB以下** に分割して送信する |\n| 2 | **リトライ実装** | エラー発生後、**5秒待機してから再試行**（最大3回）する |\n| 3 | **gzip圧縮** | リクエストボディを **gzip圧縮** してサイズを削減する |\n\n---\n\n### 📝 補足確認事項\n\n断続的な発生とのことですが、以下もあわせてご確認ください。\n\n- **リクエストサイズ**：POSTボディが5MBを超えていないか\n- **レート制限（429エラー）との混在**：`429 Too Many Requests` が同時に出ていないか。レート制限超過の場合は別の対応が必要です\n\n---\n\n回避策を試しても解消しない、または状況が異なる場合は、お気軽にお知らせください。必要であれば有人サポートへのエスカレーションも承ります。"
+            }
+          ],
+          "metadata": {
+            "usage": {
+              "inputTokens": 4174,
+              "outputTokens": 456,
+              "totalTokens": 4630,
+              "cacheReadInputTokens": 0,
+              "cacheWriteInputTokens": 0
+            },
+            "metrics": {
+              "latencyMs": 6535,
+              "timeToFirstByteMs": 7008
+            }
+          },
+          "tracking_id": "f751f808-f2ea-4307-b092-ff61c7ca0ddb"
+        }
+      ]
+    },
+    {
+      "id": "agent-sla-credit-noise",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "text": "Enterpriseプランで稼働率が99.5%まで落ちている日が続いています。サービスクレジットの計算方法を知りたいので、サポートに連絡したいです。"
+            }
+          ],
+          "tracking_id": "62182de9-039a-49ad-92c4-52fc26805f29"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "まずサポートKBでサービスクレジットの計算方法を確認します。"
+            },
+            {
+              "toolUse": {
+                "toolUseId": "tooluse_yDyXEbNxHLQ0BF10e6NJcB",
+                "name": "search_support_kb",
+                "input": {
+                  "query": "Enterpriseプラン サービスクレジット 計算方法 SLA"
+                }
+              }
+            }
+          ],
+          "metadata": {
+            "usage": {
+              "inputTokens": 1226,
+              "outputTokens": 101,
+              "totalTokens": 1327,
+              "cacheReadInputTokens": 0,
+              "cacheWriteInputTokens": 0
+            },
+            "metrics": {
+              "latencyMs": 1561,
+              "timeToFirstByteMs": 2439
+            }
+          },
+          "tracking_id": "759d8200-87df-44b3-8d48-7de6f1a3accc"
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "toolResult": {
+                "toolUseId": "tooluse_yDyXEbNxHLQ0BF10e6NJcB",
+                "status": "success",
+                "content": [
+                  {
+                    "text": "s3://ch02-sample-data-bucket/sample-data/faq/SLA違反時のサービスクレジット.md\n# SLA違反時のサービスクレジット 質問: SLA違反時のサービスクレジットはどう決まりますか。 回答: 月間稼働率が、Enterpriseプランの保証値（99.95%）を下回った場合、以下のとおりサービスクレジットを月額利用料に対して付与します。99.0%以上99.95%未満は10%、95.0%以上99.0%未満は25%、95.0%未満は50%です。Standardプランは保証値99.9%を基準に、同様の段階で算定します。サービスクレジットは現金返金ではなく、翌月以降の請求書から差し引く形で適用されます。\n\ns3://ch02-sample-data-bucket/sample-data/product/Enterpriseプラン機能ガイド.md\nSLA違反が発生した場合、稼働率に応じたサービスクレジットが適用されます。 - 稼働率99.0%以上99.95%未満: 月額利用料の10%をクレジット - 稼働率95.0%以上99.0%未満: 月額利用料の25%をクレジット - 稼働率95.0%未満: 月額利用料の50%をクレジット サービスクレジットの申請は、障害発生月の翌月末までにサポート窓口へご連絡ください。 ## ストレージ Enterpriseプランでは、テナントあたり500GBのストレージ容量が提供されます。Standardプランの100GBと比較して5倍の容量です。ストレージはドキュメント、添付ファイル、バックアップデータに使用されます。容量の80%に達した時点で管理者にメール通知が送信されます。\n\ns3://ch02-sample-data-bucket/sample-data/faq/プラン変更の反映タイミング.md\nプラン変更月の請求は日割りで調整され、サービスクレジットの計算もプラン変更日を境に分けて算定されます。 補足: 請求書反映の詳細は「課金請求ポリシー2026年版」、Enterprise契約手続きの流れは「Enterprise契約申し込みフロー」を参照してください。\n\ns3://ch02-sample-data-bucket/sample-data/faq/SLA違反時のサービスクレジット.md\nサービスクレジットは現金返金ではなく、翌月以降の請求書から差し引く形で適用されます。 補足: 稼働率の計算方法、対象外となる事象、申請に必要な情報は「SLAポリシー2026年版」、申請期限と窓口は「サービスクレジットの申請期限」を参照してください。\n\ns3://ch02-sample-data-bucket/sample-data/policies/SLAポリシー2026年版.md\n# SampleConnect Platform SLAポリシー\n本ポリシーは、SampleConnect Platform（以下、本サービス）の月間稼働率保証と、保証値を下回った場合のサービスクレジット付与条件を定めます。前版は本版の適用開始をもって失効します。\n## 適用範囲\n本ポリシーは、Standardプランおよびそれ以上のサブスクリプション契約に適用されます。Freeプランおよび評価利用には適用されません。Enterpriseプラン専用条項は別途記載します。\n## 月間稼働率の保証値\n| プラン | 月間稼働率の保証値 |\n|-|-|\n| Standard | 99.9% |\n| Enterprise | 99.95% |\n月間稼働率は、対象月の総分数から障害分数を差し引いた割合とします。計画メンテナンスは事前72時間以上前の告知があった場合に限り障害分数から除外します。緊急メンテナンスのうち、お客様事前承諾を伴うものは除外、伴わないものは障害分数に含めます。お客様起因の設定不備、IdP起因の障害は障害分数に含めません。\n## サービスクレジットの算定\n保証値を下回った場合、以下の段階で対象月の月額利用料に対するサービスクレジットを付与します。\n| プラン | 99.0%以上保証値未満 | 95.0%以上99.0%未満 | 95.0%未満 |\n|-|-|-|-|\n| Standard | 10% | 25% | 50% |\n| Enterprise | 10% | 25% | 50% |\nサービスクレジットは現金返金ではなく、翌月以降の請求から差し引きます。\n## 申請窓口と期限\nサービスクレジットの申請は、対象障害発生月の翌月末日（23:59 JST）までに、SampleConnectサポートポータルの「請求」→「サービスクレジット申請」フォーム、もしくはサポート窓口へお願いします。期限を過ぎた申請は受け付けません。"
+                  }
+                ]
+              }
+            }
+          ],
+          "tracking_id": "c6c8c40e-5242-4719-8264-0b410ad8b6d6"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "KBに必要な情報がすべて揃いました！ご質問の内容についてお答えします。\n\n---\n\n## Enterpriseプラン サービスクレジットの計算方法\n\n### 📋 SLA保証値（Enterpriseプラン）\nEnterpriseプランの月間稼働率保証値は **99.95%** です。\n\n現在の稼働率 **99.5%** は保証値を下回っているため、サービスクレジットの対象となります。\n\n---\n\n### 💰 サービスクレジットの段階的算定\n\n| 月間稼働率 | クレジット額 |\n|---|---|\n| **99.0%以上 ～ 99.95%未満** | 月額利用料の **10%** |\n| 95.0%以上 ～ 99.0%未満 | 月額利用料の 25% |\n| 95.0%未満 | 月額利用料の 50% |\n\n現在の稼働率 **99.5%** は「99.0%以上99.95%未満」の区分に該当するため、**月額利用料の10%** がクレジットとして付与されます。\n\n---\n\n### ⚠️ 注意事項\n- サービスクレジットは**現金返金ではなく**、翌月以降の請求書から差し引かれます\n- 以下は「障害分数」から**除外**されます（クレジット対象外）：\n  - 72時間以上前に告知された計画メンテナンス\n  - お客様事前承諾を伴う緊急メンテナンス\n  - お客様起因の設定不備・IdP起因の障害\n\n---\n\n### 📝 申請窓口と期限\n- **申請先：** SampleConnectサポートポータルの「請求」→「**サービスクレジット申請**」フォーム、またはサポート窓口\n- **申請期限：** 対象障害発生月の**翌月末日 23:59 JST まで**（期限超過は受付不可）\n\n---\n\n「サポートに連絡したい」とのことですが、上記のとおり申請は **サポートポータルの「請求」→「サービスクレジット申請」フォーム** から直接行っていただけます。もし申請フォームへのアクセスが難しい場合や、Jiraチケットによる有人対応を明示的にご希望の場合は、その旨をお知らせください。"
+            }
+          ],
+          "metadata": {
+            "usage": {
+              "inputTokens": 2901,
+              "outputTokens": 715,
+              "totalTokens": 3616,
+              "cacheReadInputTokens": 0,
+              "cacheWriteInputTokens": 0
+            },
+            "metrics": {
+              "latencyMs": 7450,
+              "timeToFirstByteMs": 7929
+            }
+          },
+          "tracking_id": "7379c852-f57d-47aa-948b-b3ca3e6c06b6"
+        }
+      ]
+    },
+    {
+      "id": "agent-saml-login-noise",
+      "messages": [
+        {
+          "role": "user",
+          "content": [
+            {
+              "text": "SAML SSOでログインできない顧客がいます。最初に確認すべき項目を教えてください。"
+            }
+          ],
+          "tracking_id": "cdb8e553-9591-4d1f-9bcc-6cf1e6ecc72d"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "まずKBでSAML SSOのトラブルシューティング情報を確認します。"
+            },
+            {
+              "toolUse": {
+                "toolUseId": "tooluse_Ok4Gz5jc4G25covFGI6AJx",
+                "name": "search_support_kb",
+                "input": {
+                  "query": "SAML SSO ログインできない トラブルシューティング"
+                }
+              }
+            }
+          ],
+          "metadata": {
+            "usage": {
+              "inputTokens": 1202,
+              "outputTokens": 99,
+              "totalTokens": 1301,
+              "cacheReadInputTokens": 0,
+              "cacheWriteInputTokens": 0
+            },
+            "metrics": {
+              "latencyMs": 1544,
+              "timeToFirstByteMs": 2396
+            }
+          },
+          "tracking_id": "48088df1-8951-4914-b636-59ebe8358ac9"
+        },
+        {
+          "role": "user",
+          "content": [
+            {
+              "toolResult": {
+                "toolUseId": "tooluse_Ok4Gz5jc4G25covFGI6AJx",
+                "status": "success",
+                "content": [
+                  {
+                    "text": "s3://ch02-sample-data-bucket/sample-data/product/SAML認証設定ガイド.md\n# SAML認証設定ガイド\n## 概要\n本ガイドでは、SampleConnect PlatformでSAML 2.0によるシングルサインオン（SSO）を設定する手順を説明します。SAML認証を有効化することで、企業の既存のIdP（Identity Provider）を利用した一元的な認証管理が実現できます。\n## 前提条件\nSAML認証の設定には以下の条件を満たしている必要があります。\n- SampleConnect PlatformのEnterpriseプランを契約していること\n- SampleConnect管理画面で「組織管理者」ロールを持つアカウントでログインしていること\n- 連携先のIdPの管理者権限を持っていること\n対応しているIdPは以下のとおりです。\n- Microsoft Entra ID（旧Azure AD）\n- Okta\n- Google Workspace\n- OneLogin\n- その他SAML 2.0準拠のIdP\n## 設定手順\n### ステップ1: SSO設定画面を開く\nSampleConnect管理画面にログインし、左メニューから「セキュリティ」→「SSO設定」を選択します。SSO設定画面が表示されたら「SAML 2.0」タブをクリックしてください。\n### ステップ2: SampleConnect側のSAML情報を確認する\nSSO設定画面に表示される以下の情報を控えてください。IdP側でSAMLアプリケーションを作成する際に必要になります。\n- **Entity ID（発行者）**: `https://auth.sampleconnect.example.co.jp/saml/metadata/{テナントID}`\n- **ACS URL（Assertion Consumer Service URL）**: `https://auth.sampleconnect.example.co.jp/saml/acs/{テナントID}`\n- **SLO URL（Single Logout URL）**: `https://auth.sampleconnect.example.co.jp/saml/slo/{テナントID}`\n「メタデータXMLをダウンロード」ボタンから、SampleConnect側のSPメタデータをXML形式でダウンロードすることもできます。IdPがメタデータのインポートに対応している場合は、このファイルを使用すると設定が簡略化されます。\n### ステップ3: IdP側でSAMLアプリケーションを作成する\nIdPの管理画面で新しいSAMLアプリケーションを作成し、ステップ2で確認したEntity IDとACS URLを入力します。IdPごとの設定方法は以下を参考にしてください。\n**Microsoft Entra IDの場合**: 「エンタープライズ アプリケーション」→「新しいアプリケーション」→「独自のアプリケーションの作成」から設定します。「シングルサインオン」→「SAML」を選択し、基本的なSAML構成にEntity IDとACS URLを入力してください。\n**Oktaの場合**: 「Applications」→「Create App Integration」→「SAML 2.0」を選択し、Single sign-on URLにACS URL、Audience URI（SP Entity ID）にEntity IDを入力してください。\n**Google Workspaceの場合**: 管理コンソールの「アプリ」→「ウェブアプリとモバイルアプリ」→「アプリを追加」→「カスタムSAMLアプリの追加」から設定します。\n### ステップ4: IdPメタデータをSampleConnectに登録する\nIdP側の設定が完了したら、SampleConnect管理画面のSSO設定画面に戻り、IdPの情報を登録します。登録方法は2通りあります。\n**メタデータXMLによる一括登録（推奨）**: 「IdPメタデータXMLをアップロード」からIdPが提供するメタデータXMLファイルをアップロードします。必要な情報が自動的に読み取られます。2026年4月のアップデートにより、メタデータURLを指定して自動取得する機能も追加されました。\n**手動登録**: 以下の情報を個別に入力します。\n- **IdP Entity ID**: IdPの識別子URL\n- **IdP SSO URL**: IdPのSAMLログインエンドポイントURL\n- **IdP証明書**: IdPが発行するX.509署名証明書（PEM形式）\n### ステップ5: 属性マッピングを設定する\nIdPからSampleConnectに送信されるSAMLアサーションの属性をマッピングします。以下の属性は必須です。\n| SAML属性名 | SampleConnectフィールド | 説明 |\n|-|-|-|\n| email | メールアドレス | ユーザーの一意識別に使用（必須） |\n| displayName | 表示名 | ユーザーの表示名（必須） |\n| department | 部署 | 組織内の部署名（任意） |\n| role | ロール | SampleConnect上のロール（任意） |\n属性名はIdPの設定に合わせてカスタマイズ可能です。たとえばMicrosoft Entra IDでは`user.mail`、`user.displayname`、`user.department`といった属性名が使われます。\n### ステップ6: 接続テストを実施する\n「テスト接続」ボタンをクリックして、IdPとの接続テストを実施します。テスト用のIdPアカウントでログインし、SampleConnect側でユーザー情報が正しく取得されることを確認してください。テスト結果は画面上に表示され、属性の受信状況やエラーの詳細を確認できます。\n### ステップ7: 強制SSOの有効化（オプション）\nすべてのユーザーにSAML認証を強制する場合は、「強制SSOを有効化」をオンにします。この設定を有効にすると、パスワードによる直接ログインが無効化され、IdP経由でのログインのみが許可されます。\n緊急時のアクセス手段として、組織管理者にはバイパスURLが提供されます。このURLは「SSO設定」→「緊急アクセス」から確認できます。IdPの障害時などにこのURLを使用してログインしてください。\n## トラブルシューティング\n### 証明書の期限切れ\nIdP証明書の有効期限が切れると、SAML認証が失敗します。SampleConnectは証明書の有効期限を監視し、期限の30日前から管理者にメール通知を送信します。証明書を更新する場合は、IdP側で新しい証明書を発行し、SampleConnect管理画面で証明書を差し替えてください。\n### 属性マッピングの不一致\nSAMLアサーションに必須属性（emailまたはdisplayName）が含まれていない場合、ログインに失敗します。「SSO設定」→「SAMLログ」から直近のSAMLレスポンスを確認し、IdP側の属性名とSampleConnect側のマッピング設定が一致しているか確認してください。\n### リダイレクトループ\nログイン時にリダイレクトが繰り返される場合、ACS URLの設定に誤りがある可能性があります。IdP側に登録したACS URLがSampleConnect管理画面に表示されているURLと完全に一致しているか確認してください。末尾のスラッシュの有無やHTTPS指定の違いも原因となります。\nログインの問題が解決しない場合は、enterprise-support@sampleconnect.example.co.jpまでお問い合わせください。\n\ns3://ch02-sample-data-bucket/sample-data/faq/SAML_SSOでログインできない場合の確認項目.md\n# SAML SSOでログインできない場合の確認項目 質問: SAML SSOでログインできない場合、最初に何を確認しますか。 回答: まず、IdP側で対象ユーザーがSampleConnect Platform用のSAMLアプリに割り当てられているかを確認します。次に、SampleConnect管理コンソールに表示されるACS URLとEntity ID（SP EntityID）が、IdP側の設定と一致しているかを確認します。あわせて、IdP証明書の有効期限が切れていないかも確認してください。失敗の詳細は、SampleConnect管理コンソールの「SSO設定」→「SAMLログ」から、直近30件のSAMLレスポンスとエラー理由を参照できます。\n\ns3://ch02-sample-data-bucket/sample-data/faq/SAML_SSOでログインできない場合の確認項目.md\n失敗の詳細は、SampleConnect管理コンソールの「SSO設定」→「SAMLログ」から、直近30件のSAMLレスポンスとエラー理由を参照できます。`InvalidNameID`、`SignatureValidationFailed`、`AssertionExpired`のような典型エラーは、SAMLログの該当行をサポート窓口へ共有してください。 補足: IdP側の具体的な設定手順は「SAML認証設定ガイド」、サポート担当者の調査フローは「SAMLトラブルシューティング手順」を参照してください。"
+                  }
+                ]
+              }
+            }
+          ],
+          "tracking_id": "f6eac089-c2d7-4d83-9711-a163a1796380"
+        },
+        {
+          "role": "assistant",
+          "content": [
+            {
+              "text": "KBに必要な情報が揃っています。以下の確認項目をご案内します。\n\n---\n\n## SAML SSO ログイン不可 — 最初に確認すべき項目\n\n### ① ユーザーのアプリ割り当て確認（最頻出の原因）\nIdP側（Entra ID / Okta / Google Workspace 等）の管理画面で、**対象ユーザーが SampleConnect Platform 用の SAML アプリに割り当てられているか**を確認してください。\n\n---\n\n### ② ACS URL と Entity ID の一致確認\n| 確認箇所 | 確認内容 |\n|---|---|\n| SampleConnect 管理画面「SSO設定」 | ACS URL・Entity ID（SP EntityID）を控える |\n| IdP 側のアプリ設定 | 上記と**完全一致**しているか確認（末尾スラッシュ・HTTP/HTTPS の違いも要注意）|\n\n---\n\n### ③ IdP 証明書の有効期限確認\nIdP 証明書が**期限切れ**の場合、SAML 認証が即時失敗します。IdP 管理画面と SampleConnect 側の登録証明書の両方で期限を確認してください。\n\n---\n\n### ④ SAMLログでエラー詳細を確認\n**SampleConnect 管理コンソール「SSO設定」→「SAMLログ」**から直近 30 件の SAML レスポンスとエラー理由を確認できます。\n\nよく見られる典型エラーは以下の通りです：\n- `InvalidNameID` — NameID の形式や値が不正\n- `SignatureValidationFailed` — 証明書不一致・改ざん検知\n- `AssertionExpired` — タイムスタンプのズレ（時刻同期の問題）\n\n---\n\n### ⑤ 属性マッピングの確認（必須属性）\nSAMLアサーションに以下の**必須属性**が含まれていない場合もログイン失敗となります：\n\n| SAML属性名 | SampleConnectフィールド |\n|---|---|\n| `email` | メールアドレス（ユーザー識別に使用） |\n| `displayName` | 表示名 |\n\n---\n\n### 🔧 解決しない場合のエスカレーション\n上記を確認しても解消しない場合は、**SAMLログの該当行**をコピーの上、エンタープライズサポート窓口（`enterprise-support@sampleconnect.example.co.jp`）へご共有ください。\n\nご不明な点があればお気軽にどうぞ！"
+            }
+          ],
+          "metadata": {
+            "usage": {
+              "inputTokens": 4045,
+              "outputTokens": 760,
+              "totalTokens": 4805,
+              "cacheReadInputTokens": 0,
+              "cacheWriteInputTokens": 0
+            },
+            "metrics": {
+              "latencyMs": 9510,
+              "timeToFirstByteMs": 9875
+            }
+          },
+          "tracking_id": "4af56df8-b5f7-4914-bd16-4be97094a588"
+        }
+      ]
+    }
+  ]
+}

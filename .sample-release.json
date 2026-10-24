@@ -1,0 +1,3077 @@
+{
+  "version": 1,
+  "files": {
+    ".agents/skills/bedrock-handson/SKILL.md": {
+      "sha256": "5fc305d5a863b71dc6e96c687b124f64272f0f2569e2ad96015af530918ebdad",
+      "mode": 420
+    },
+    ".agents/skills/bedrock-handson/references/chapters.md": {
+      "sha256": "c347359804639cc348c73d6b1dd52f1db1b15892c2881f8ea1b154193c1d7953",
+      "mode": 420
+    },
+    ".agents/skills/bedrock-handson/references/cleanup.md": {
+      "sha256": "88d19c944108dcfa41c488d19e296b1ff2d5f823895d05a8b6704366fbe07569",
+      "mode": 420
+    },
+    ".agents/skills/bedrock-handson/references/troubleshooting.md": {
+      "sha256": "943b9ef83e758a4158bf971d79685d1721a6d3e1c327cd7173d4db58fe79e910",
+      "mode": 420
+    },
+    ".agents/skills/bedrock-handson/scripts/check_env.sh": {
+      "sha256": "a2ea9c70949df7b4e69a85efeb8666896025c6227c3f9037c0770e75e7d521a8",
+      "mode": 493
+    },
+    ".agents/skills/bedrock-handson/scripts/find_leftovers.sh": {
+      "sha256": "3573b2dd302f53772a57bd6175994923f6b91e3a8689d0199f851e57fdb3fffd",
+      "mode": 493
+    },
+    ".claude/skills/bedrock-handson": {
+      "sha256": "91e080d2d3dbb2048b7062f73f3b0ad7b50a9e47f6191a83b8f52918c76ebc07",
+      "mode": 40960
+    },
+    ".devcontainer/devcontainer.json": {
+      "sha256": "47d05c17356b1aa8b95adf1a7af1cfbe740d656961acbb80930b218549277cb5",
+      "mode": 420
+    },
+    ".devcontainer/post-create.sh": {
+      "sha256": "095aceb614169e8837e29b7db42d9c039b238971c352751c3fce93e1b6f5b831",
+      "mode": 493
+    },
+    ".gitattributes": {
+      "sha256": "8b8a771176838c8106b3ad885b149b8e7e0b11f74deefa4cba486b6c53110728",
+      "mode": 420
+    },
+    ".github/ISSUE_TEMPLATE/problem.yml": {
+      "sha256": "549e0d4d230ad681dcc843fc3a5fbd616ef923ce2f8504f96b3ad045a510738c",
+      "mode": 420
+    },
+    ".github/PULL_REQUEST_TEMPLATE.md": {
+      "sha256": "7c73c59d31d134335d454300ae8ca1e5cf5cbf2af812a70375843aff9449949c",
+      "mode": 420
+    },
+    ".gitignore": {
+      "sha256": "6eb593a0f38743d39d5e4fdc3572ffbc6106254cb7574fa9f4819b55aa817016",
+      "mode": 420
+    },
+    ".kiro/skills/bedrock-handson": {
+      "sha256": "91e080d2d3dbb2048b7062f73f3b0ad7b50a9e47f6191a83b8f52918c76ebc07",
+      "mode": 40960
+    },
+    "AGENTS.md": {
+      "sha256": "92b17c94d729a36d7f002066ac2266b835d551df8ba87285698f8e2d73a9d33a",
+      "mode": 420
+    },
+    "CONTRIBUTING.md": {
+      "sha256": "5d5c9d70ee52adddb7298c7185671c581c77649e32aed21e1a1b63f0b3f46355",
+      "mode": 420
+    },
+    "LICENSE": {
+      "sha256": "6437c35930260e21d4d10cfbe27232d70566b645e4bfa939b55fe18850f10825",
+      "mode": 420
+    },
+    "README.md": {
+      "sha256": "1d6690ea88c02ca9b7cb8f630e06f88b468c1cc9b6ebd810602c9f3badc0bca3",
+      "mode": 420
+    },
+    "sample-code/01/.gitkeep": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    "sample-code/01/README.md": {
+      "sha256": "cc38f2d9a07662be1ff0bdfa4c76428fbb2e234fb437623e907558a0ab3f675b",
+      "mode": 420
+    },
+    "sample-code/01/basic_converse.py": {
+      "sha256": "2cd97b79791667318ffccf54725373a9e65ea7140b177a2eceb7d982c09c4a68",
+      "mode": 420
+    },
+    "sample-code/01/basic_mantle_responses.py": {
+      "sha256": "fa5ef927b6715b8bbfe8684673f1ee03eeb04e8e55dda9ea908a531e53606f6d",
+      "mode": 420
+    },
+    "sample-code/01/compare_models.py": {
+      "sha256": "4d24a447d13feff5c506505923871663f121f2c200f77fcb3182a0bb7e5edcd6",
+      "mode": 420
+    },
+    "sample-code/01/guardrails_converse.py": {
+      "sha256": "0c0d7dfa5a852532489c3ad20da06d3f814dd2db4b382db6a118905bbf03ca73",
+      "mode": 420
+    },
+    "sample-code/01/latest_models_converse.py": {
+      "sha256": "132055d13857209147a99087113c1cd3178ac846d55fd6250a7a51cf4faf28e1",
+      "mode": 420
+    },
+    "sample-code/01/pyproject.toml": {
+      "sha256": "62d554d9356b1c3ddbfcbb2c22bcd3424725220522fbcbac1f7c36400538758f",
+      "mode": 420
+    },
+    "sample-code/01/setup_guardrail.py": {
+      "sha256": "dc76f785a8b64d5b93ef78c98808d2234f95872c9d34ae4b7a0bd0bfaef2cd11",
+      "mode": 420
+    },
+    "sample-code/01/strands_agent_basic.py": {
+      "sha256": "3cb5d44851aa965d84a6c790ec13c1529a48bcb945be7525fdac920dfb3ffda5",
+      "mode": 420
+    },
+    "sample-code/01/strands_mantle_responses.py": {
+      "sha256": "3f5417b450aa5f6a3e531041b5186b5d4ccfda9a0ed7ce8e9c97c0bd5635a96c",
+      "mode": 420
+    },
+    "sample-code/01/test_guardrails_converse.py": {
+      "sha256": "8ec013f268b29dc2838febd88b6eb931cab870c1ac4781db666eab86468581c0",
+      "mode": 420
+    },
+    "sample-code/01/test_latest_models_converse.py": {
+      "sha256": "d28682f00d6be59944732230f6bf2be872c1ab3308f90af8529a1d6f43bfe86d",
+      "mode": 420
+    },
+    "sample-code/01/uv.lock": {
+      "sha256": "f70e00e5391aaaa23374a88a9a6f7b7b7859d82a4a7aaa1fe4cc0b20f37f8799",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/README.md": {
+      "sha256": "c3e90affe1a1a7164fae6bcd919e0f69a7f0235f797dac75c652bd452b58915b",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/.cli/deployed-state.json": {
+      "sha256": "fb6e0d1a275dce1bbb2b13b85199c7d2725b3860189b451de70432c987ba912e",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/.gitignore": {
+      "sha256": "c1e92d28d3906e98d6024f0d6f2c020fc8aa1795052947a1b10fded69eea789d",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/.llm-context/README.md": {
+      "sha256": "9ecbeda39e61831d210a5cb9e8c3d017554b335aa9164454cb46691010213509",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/.llm-context/agentcore.ts": {
+      "sha256": "82cbf8de000ef46359fde5ec8dd89aef4e9e8f7ebfe4c1a62dfd6dbe424b85b7",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/.llm-context/aws-targets.ts": {
+      "sha256": "7d26bd4117669bc2abc2ffe814eebd1e6c0f295aaf4f2bb606f630b9bc7f14df",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/agentcore.json": {
+      "sha256": "cd344822b925675cd562acc4cab750ba3a6f0fa807c49b9b2e50ad17c646ef00",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/aws-targets.json": {
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/.gitignore": {
+      "sha256": "0ac3f638bdf7011b014fbb0465d042250f1c0925687f5c1a937d319c27c99a25",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/.npmignore": {
+      "sha256": "8610ff2e37f5501913393f902e5bb07d0c0da081604f606945e1129b6f17367f",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/.prettierrc": {
+      "sha256": "dd5ee06b4b36bf19981abca564fd1bd295a72c055e70b23430a85185b3d0718a",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/README.md": {
+      "sha256": "578b4e85531121da9a592ef57c846debdddec94137d63e3f7b9013e85e044d33",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/bin/cdk.ts": {
+      "sha256": "77d807232ee032ec4d44e8ac86ef7b6c7f99fe29e9d45848bd975e26aaded63a",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/cdk.json": {
+      "sha256": "1029a341303ddcaae23a2caf5e7a39d164f326d159ed9404bdd50fe4e26a2d7e",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/jest.config.js": {
+      "sha256": "95d20167cc4c767fa885fb09e31dd7344e5f01c1af023ba3ffb3e18c7d6ef98d",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/lib/cdk-stack.ts": {
+      "sha256": "6daa70223c641882bb4531154c1c98d36e5cbe4f4e757d3e674235fe4b87b674",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/package.json": {
+      "sha256": "fce06a66b67867ec6b2e9f5adf943c08707e6f62da7878850177b26b4027a753",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/pnpm-lock.yaml": {
+      "sha256": "49a4ee9138b05c9f6bb6ac96ce99d4cf2a8ae9e5d98f1c00430cf93e5378e430",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/test/cdk.test.ts": {
+      "sha256": "88b0eaff6c4aa7ccd611c1fc85f41595451b39f907211ce194bd49cc8c310166",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/tsconfig.json": {
+      "sha256": "eccae8093ed8b11c532d0c40874d0942e1627be7e96af31b255f4db01a467335",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/.dockerignore": {
+      "sha256": "1dd23199b6159795977afa6ad57d0c593969abec73443abda939416308c330a8",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/.gitignore": {
+      "sha256": "70836537336ab3db837a30ecc924855f79700123492e0e250a52f4c81fd0b589",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/Dockerfile": {
+      "sha256": "989cb3e7ebfe2d8f4f55bf7b91ba7576eb0dfc413388d04bd7d66ca14b2cd282",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/README.md": {
+      "sha256": "a8a0479929a5ff745055bb435d3d4bf2b6b2d00316c08564271bcb7015c1307f",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/main.py": {
+      "sha256": "8840e536473cf623102cf51e805dab05547ea42320d6c2dc8f5f4c2036f2aaca",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/mcp_client/__init__.py": {
+      "sha256": "6cbe75d1c29523ae68d35d5561eadb8a03c9e50cc2cfb9ae645222ee21d2ef48",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/mcp_client/client.py": {
+      "sha256": "51ff82f24987c7687f5f4429a12232325a0e3541679107e7b22d4aa578a20589",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/memory/__init__.py": {
+      "sha256": "6cbe75d1c29523ae68d35d5561eadb8a03c9e50cc2cfb9ae645222ee21d2ef48",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/memory/session.py": {
+      "sha256": "bbd56039d44278618234c74aa29a4d0b7f7bf88fc816646e6069c6c2e182130c",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/model/__init__.py": {
+      "sha256": "6cbe75d1c29523ae68d35d5561eadb8a03c9e50cc2cfb9ae645222ee21d2ef48",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/model/load.py": {
+      "sha256": "5b3e177bfad73e528674dd608b3155c35e748b90e088a89fe8ce7977b373121d",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/model/mantle_compat.py": {
+      "sha256": "fed4099488dfc3c924b5d42b7fbe3c7608652fc1c35c983132ce5ef08ee133f0",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/pyproject.toml": {
+      "sha256": "62fb069c3064e580e7d55b607ee7d1c920a253f96b7fd9bb9246b57d7ab98fda",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/skills/fetcher.py": {
+      "sha256": "ce570a2f5b30a12f10120b8705c6ca024a99ee863c495a1a93050fe4d6e188ee",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/app/WeatherAgent/uv.lock": {
+      "sha256": "46055049c2bbd959071cce63e0f567b31be7069f82e0b6b9f9b39e04d0839080",
+      "mode": 420
+    },
+    "sample-code/02/.gitkeep": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    "sample-code/02/README.md": {
+      "sha256": "02c05d77b420b2d11913eae2fd8e2430ef05e7c3cdbcd1714e9c4f903818ad02",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/amplify/auth/resource.ts": {
+      "sha256": "81749f144263309699f33f3b0354aafbfb216bb655fd8fd70366fde970ad1eac",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/amplify/backend.ts": {
+      "sha256": "2c7379466e2d62856e9c1ce308540af291bc6386a93e6c16fe89d454ca841bf0",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/amplify/functions/rag-handler/handler.ts": {
+      "sha256": "43be34b12d7afb95b1571910ae0ca7a4408a6a53b455ae7978184d97334b7002",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/amplify/functions/rag-handler/model-settings.ts": {
+      "sha256": "2cbab66a13a9cb48d306d39a64f19e36174e5eb6eed4756b10cdf07a2cab5727",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/amplify/functions/rag-handler/package.json": {
+      "sha256": "6a2b4e2eefeef7b87cc83b8c7b5be953927f3e20551252e6e31f94f54356ebab",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/amplify/package.json": {
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/amplify/tsconfig.json": {
+      "sha256": "180815aaa647eff0b016c9d216d864a5dc01571e8744ae2c029571f0598f6d29",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/index.html": {
+      "sha256": "4a283dd368be0bf0237aa59fe13c127e81a84aeddc667a457d62a2df115140ee",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/mise.toml": {
+      "sha256": "f4e76711ff120302d3b0e45d941b8e2413f5be3604a6868a6e997edb36968251",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/package.json": {
+      "sha256": "f4fc887750818511f6e0139aa7d665d6b5d13e3131a175bd82432debed1905ad",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/pnpm-lock.yaml": {
+      "sha256": "0e2def927190b90a1aed5f605012126093f0a4cb2e4c5db6631a7213a77bba51",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/pnpm-workspace.yaml": {
+      "sha256": "99da4f338b77617c5a3911d84ff9915ca9977aaf35da5565f7c54c984111c244",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/App.tsx": {
+      "sha256": "ea5a10e051df0511eb30000349edcf78e7c2087f65c0983cf97edd9d53cc32a6",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/api.ts": {
+      "sha256": "befb6621ebc6f51aa9f5fa3c197c5fa81d247dbebea316aae0c6a0b86b017c1f",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/components/WorkspaceChrome.tsx": {
+      "sha256": "7072f6892bfdc8f2cb35c90a5079d8723166f15727a57269c4a70998d1914b2c",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/main.tsx": {
+      "sha256": "0b28edf894e4c2c85d091309364d3f07861e36c32de3aafe3d7e9dd29c5f7dab",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/streamdownPlugins.ts": {
+      "sha256": "b824ab892216e55317fab3c198a57977d047dbe1d35122399d6cdf5a04904498",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/styles.css": {
+      "sha256": "c9b53c4189673fda6a9c41189c352129fd2d8ffc099b16dfa36301a9f5f8373b",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/vite-env.d.ts": {
+      "sha256": "dd2dcb3d899b6fdbbf97391ad75c62533290159de3dbd3f16c715516276d83f7",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/workspace.css": {
+      "sha256": "26bf5923dbb435dcdd62af98af5bdf0762940a6fd752618c61b0b5bf97fb539d",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/src/workspace.ts": {
+      "sha256": "99408660372bc7bd89576b086019f51fc6c0a12c770d760c077e4d418c039956",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/tsconfig.json": {
+      "sha256": "d091ed9bda82474282ef062779102f4e751df388cfc89b78ddc5942749e3b38b",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/tsconfig.node.json": {
+      "sha256": "e82d87ed1e0613c7926731d8f54c9a3bbf23c074739e8e84ee50684a95455012",
+      "mode": 420
+    },
+    "sample-code/02/amplify-ui/vite.config.ts": {
+      "sha256": "bd4ebfa11cbaf8f571da438748af26b0f28c7d7721a0767b88ed2256162803b0",
+      "mode": 420
+    },
+    "sample-code/02/compare_low_cost_models.py": {
+      "sha256": "5fbad4be24913be6fc6a68bcc87aa4385a2e5a8132bced1ec834de91d79edf2b",
+      "mode": 420
+    },
+    "sample-code/02/infra/README.md": {
+      "sha256": "f33304009b03e573f12314e549f54b79fba0813c3eeeac0b26cb2956b54ebc6c",
+      "mode": 420
+    },
+    "sample-code/02/infra/setup-s3vectors.sh": {
+      "sha256": "215954aea81e6ff80b6cb48e4627d28d07025e314f8bed13b723265265ec0a10",
+      "mode": 493
+    },
+    "sample-code/02/infra/setup.sh": {
+      "sha256": "fead35e6996f290537e3dd5c2cd01d87774d9230e7f21c1b78ae917829dcfc5f",
+      "mode": 493
+    },
+    "sample-code/02/infra/teardown-s3vectors.sh": {
+      "sha256": "7456423f60fd4b6d43ad0b34648875d07a4b0a497d29364d89193a1d6ec94561",
+      "mode": 493
+    },
+    "sample-code/02/infra/teardown.sh": {
+      "sha256": "8114899d7e95ae7d23b6bc5e6b10bf8885b3cf74449847e0fa4dea12124b64f6",
+      "mode": 493
+    },
+    "sample-code/02/lambda/rag_handler.py": {
+      "sha256": "e7d35a66c8344dda0d46a80049f1fa2010e3e2cae7c2188a47c890656bb0c215",
+      "mode": 420
+    },
+    "sample-code/02/logs/20260827-nextgen/README.md": {
+      "sha256": "cc242fed09e0e328e1dd0c8a64e39e0ddc09ad53ba5135767b698e155dfcac29",
+      "mode": 420
+    },
+    "sample-code/02/nextgen_direct_retrieve.py": {
+      "sha256": "6db1c3dc04bb2f63762c4cf949aa2e56be2cd20f3d10d829a75b7ae5d45d0121",
+      "mode": 420
+    },
+    "sample-code/02/pyproject.toml": {
+      "sha256": "0ab72ef9986b259d054199c154fb245df618cee06511fc3063e54356cd3ab1d1",
+      "mode": 420
+    },
+    "sample-code/02/retrieve_and_converse.py": {
+      "sha256": "820e1664df914cbf1978e8ce530753e3ed8be82957562ea0bebe0af26c488135",
+      "mode": 420
+    },
+    "sample-code/02/retrieve_and_converse_luna.py": {
+      "sha256": "5337cfeb1d567da95d7f2cba0b8b108328002713003b6ee875dc0bf89df4c114",
+      "mode": 420
+    },
+    "sample-code/02/retrieve_and_generate.py": {
+      "sha256": "cf93361aa0931268c163044118f7536d45276990acdb987101671b7bc038ba1d",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/APIキーの発行上限.md": {
+      "sha256": "35fffdc454017288462615a6c8383d89f536a420fe5bd7d3ca458e3ff30f44cb",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/APIキーの発行上限.md.metadata.json": {
+      "sha256": "0315c831e5fda00f829fb2906fbb510221b603a82f6ff30c29fe757b09d0b93a",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/APIキー誤公開時の対応.md": {
+      "sha256": "bd0d4d43713c25aaf3b89c233103fa8184f931688560b4e8e68aab57ae7a4069",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/APIキー誤公開時の対応.md.metadata.json": {
+      "sha256": "51dc3ab025e72bdd56ee90a40aef05eb002775c4464494e8b045689d6a963d7a",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/APIレート制限に達した場合の挙動.md": {
+      "sha256": "4a1059111d33972efb4165062f18b0ba3d77752ddaa0ec752d8c2117b3ca2f29",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/APIレート制限に達した場合の挙動.md.metadata.json": {
+      "sha256": "90794a2d78ca3a94852eef699ea87643fd2ad002e540f60ad779479ccebd82ca",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/EnterpriseプランのAPIレート上限.md": {
+      "sha256": "fe16f9bdab7b7e4f990c11e85743a9edf5433d20e24238fd0b28dba94e27b6be",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/EnterpriseプランのAPIレート上限.md.metadata.json": {
+      "sha256": "0fa3ae1e27c1872e59002de1d27b113379d61df2b3607465fe86f48095d91f01",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/Enterpriseプランのサポート応答時間.md": {
+      "sha256": "8c7abfb07656e6740724f6ee5addfb55e014b1f511f7b80ff9e00122423bfbba",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/Enterpriseプランのサポート応答時間.md.metadata.json": {
+      "sha256": "fc25aab20774216f50610c73cb48b5edfcd6699987463010132b05317da4e59c",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/IPアドレス制限の設定範囲.md": {
+      "sha256": "936572de847e8a2207e0db518c935a445275b0bb8e9d4eca12066725f057bc6a",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/IPアドレス制限の設定範囲.md.metadata.json": {
+      "sha256": "ab91e22c390f1a07ced444c4c5a800ae6705ece2587ab49698ef62fc259a5b38",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SAML_SSOでログインできない場合の確認項目.md": {
+      "sha256": "9f0b29ce9dd9e0272f10ed8ab35714b333854a7b055edef469c42e157b4705c0",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SAML_SSOでログインできない場合の確認項目.md.metadata.json": {
+      "sha256": "fc9ee1c65e5d586202887eae62483c8848a89d90bf308f1953575badee1af8c1",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SAML_SSOで対応しているIdP.md": {
+      "sha256": "e362eb9452b584e64bf9a76f1416f6734088604e39216a4081062753d4a76076",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SAML_SSOで対応しているIdP.md.metadata.json": {
+      "sha256": "9b9cfb3135628846b3c0015670a3775711fe5079340f91ac9f13e835c8251bb9",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SAML証明書期限切れ時の対応.md": {
+      "sha256": "4829f3c6121d26747e004da2f1923221b49143cbe46c6e46eae50c4e2c415e38",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SAML証明書期限切れ時の対応.md.metadata.json": {
+      "sha256": "44123a5b13cc1b2580eea6e999066f980a5005cc4ccdb2717f0bc4bd1d2c5229",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SLA違反時のサービスクレジット.md": {
+      "sha256": "7ad95acb116ce1e73b3e29e144b204bdeec762eaed2d9c9747ee1a821c8c619d",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/SLA違反時のサービスクレジット.md.metadata.json": {
+      "sha256": "a3854cd12ba2d032039a0cc75c3c3d578357e90f109882d71611fe8aeb999d18",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/Standardプランのサポート営業時間.md": {
+      "sha256": "13e4dda68cb7cab96ee01831faa296081e35f694e0e0c8e6731d1a10d4eef1ee",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/Standardプランのサポート営業時間.md.metadata.json": {
+      "sha256": "de564368e86506daa369c378a2975d2d200cb8242b850ab81f4f0b5bb4397613",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/source/faq.xlsx": {
+      "sha256": "63ccd885929f4ae6a5fdfa9dccd1b872d025c37b5cadac99a3b3c19c3e781fe2",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/サービスクレジットの申請期限.md": {
+      "sha256": "792dd5087d1f04f98e1475decc8396855ce169a3c58763191a1fd116809f320a",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/サービスクレジットの申請期限.md.metadata.json": {
+      "sha256": "17eb8b60f353149c33290dbd338905be48753dbe5424118030c76af943f70ce3",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/プラン変更の反映タイミング.md": {
+      "sha256": "16eb5f065acdb12fd9a73889452b85d1f173b67e2f869f366f17fc6fd67760bb",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/プラン変更の反映タイミング.md.metadata.json": {
+      "sha256": "41120fddf7255926d7526458e7f2d6c373069ffa9937aecf34c5dd353d67d8a5",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/監査ログのエクスポート方法.md": {
+      "sha256": "5fbdbc587a4e60c7e7e572826ca72742b3f838534cc86823cff50e6e102d3b95",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/監査ログのエクスポート方法.md.metadata.json": {
+      "sha256": "369f306a0386d7447e2cb987fde1017fba86bddbd5865e82c55a139fd6d8584f",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/監査ログの保持期間.md": {
+      "sha256": "4bcac963c187fb3acea160538821bd6c80158e788beb29fbddd9f0ee893cc529",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/監査ログの保持期間.md.metadata.json": {
+      "sha256": "4aa17ae7880c25b8cbe2a95cfb33e5e961c9e1b71a64866ae57cfc0f22128fd4",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/緊急メンテナンスの通知方法.md": {
+      "sha256": "3e9d6c3921e115de9ae45f3f38a85a4fd2cc36167e3b7b1804cfa236a04732fa",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/緊急メンテナンスの通知方法.md.metadata.json": {
+      "sha256": "ebeaab59d0dd865d6e4750028c211756399d0462d184fd043073d192e6bd3fab",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/計画メンテナンスの通知方法.md": {
+      "sha256": "ea52e3a90007d03ce416e6ea05c066fa17a5cc27cac6f39bb54d67d436d7907a",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/計画メンテナンスの通知方法.md.metadata.json": {
+      "sha256": "1b724ebd2a23275e87c8f3660a4df4a1984444d25048f1f7f4bddc83d1b55eae",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/請求書払いの支払サイト.md": {
+      "sha256": "3d76cf2547d5531c7506fa3ccc1205877ebbaa5f4001acda5c21791a60ca04db",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/請求書払いの支払サイト.md.metadata.json": {
+      "sha256": "a30e37bc2814d7c5ce8eec70cc42bc2e1aa05c8b071f6ee631cd9d3091b4afd2",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/障害情報の確認方法.md": {
+      "sha256": "64a2aada6defb89cff6f3c17b5772077566a5f23aa5d0167847c706ac246b2e5",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/障害情報の確認方法.md.metadata.json": {
+      "sha256": "0f586af8a767ebf62ee326a9abb320f4f54ef2460df0f99f2a4a87b1fe2ee0c4",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/障害発生時の顧客向け初回案内.md": {
+      "sha256": "4f41a97e2e75a791cd8976795e977fc76b43c1837598d37bba4250511b83210e",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/faq/障害発生時の顧客向け初回案内.md.metadata.json": {
+      "sha256": "a9d182dbb78b04a73b9b2ef892b577d47c5cd1f794318eeb51edcf049a799e95",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/manuals/インシデント報告手順.md": {
+      "sha256": "729f33d5f1fe633cb304adc7a11d1d65a12a029e62e70ad8cd9ab202eac2d300",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/manuals/インシデント報告手順.md.metadata.json": {
+      "sha256": "cc45fdf507877d75f1033bbfbd5205f6279841f5774e9895bd887837f3c3b2e8",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/manuals/エスカレーション手順.md": {
+      "sha256": "e2c62f7ec430b0de1ba42998225b006d65166fd8c7267eee163263b7dfaa1a5e",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/manuals/エスカレーション手順.md.metadata.json": {
+      "sha256": "52e75e0b192ab6daae10e41b309f0a107723de659c8e76eecc5ccd9c0b58175e",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/manuals/障害一次対応手順.md": {
+      "sha256": "b4ac9552ad38358bf3722aa8f9885b0404311377a5a6d39645de267a007b044c",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/manuals/障害一次対応手順.md.metadata.json": {
+      "sha256": "823d7e075e4b289d907c73e1da7fff48fb867955ad506b93d60b05b99fc8d7f2",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/SLAポリシー2025年版.md": {
+      "sha256": "9673e0db7954b63d47d1b73e2cbed034167a93adb3cfd635a51574a9cba13815",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/SLAポリシー2025年版.md.metadata.json": {
+      "sha256": "664d84efed2b350c96bb0fbbb20b4650a650d3534129d1aac7fed151c32a2ae3",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/SLAポリシー2026年版.md": {
+      "sha256": "10e74434b295017372acf03ad4f65cb66e42b02670fe1cdffb3317948733eeb5",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/SLAポリシー2026年版.md.metadata.json": {
+      "sha256": "04a8699cb017857c76a713bcd07c60186912b54208ef442cf1dadab6a0c72531",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/監査ログ保存ポリシー2025年版.md": {
+      "sha256": "0e055394cdfe366dc94bbd667cd9e45670cd90baceb6c64d798091d57cd1c4d1",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/監査ログ保存ポリシー2025年版.md.metadata.json": {
+      "sha256": "8dae667f19fb6950615937a83f6f48d7edc5bab8bdaada3f4b99111120437ac7",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/監査ログ保存ポリシー2026年版.md": {
+      "sha256": "f2123fec9c46d9dea2c9f7a63e2327ab1bd481edad9a8638d3aa4203494dfeb3",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/監査ログ保存ポリシー2026年版.md.metadata.json": {
+      "sha256": "622cfc81eec57c95126401593bc9bd7cc2eff94f9f030ae264a9548b01e7be3b",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/課金請求ポリシー2026年版.md": {
+      "sha256": "8e680691d4866e51ed43b0f480429cb2159fdafb3db8fda757e511868f53b178",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/policies/課金請求ポリシー2026年版.md.metadata.json": {
+      "sha256": "b96cc896eeaf8d4ab8c6e8b3a1de1e2de05b4c52aaf5a7a462609bbab8593b2d",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/API認証・監査ログ管理ガイド.md": {
+      "sha256": "e2fbd692566fd526133d5abbc0edbb8a4ae33e3f7519d00e4424a928b7fa9e1c",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/API認証・監査ログ管理ガイド.md.metadata.json": {
+      "sha256": "cd0a333d2866d59bf5f457fd40f3ba5e52be74a1005c8ba248c3d2d32a8f0614",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/Enterpriseプラン機能ガイド.md": {
+      "sha256": "5e4a90cba2fe88e64afc56e7bc93500cd95f2a582dd24c81e0a2fa02dbd2e510",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/Enterpriseプラン機能ガイド.md.metadata.json": {
+      "sha256": "81ed3b905f57a7be4a7a04a9de2702d81536d3207685c3de56231d6b0ab6be07",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/SAML認証設定ガイド.md": {
+      "sha256": "2fe79c0de3eb916c84299b0bb59683d57dbbcd08a1596f47ab319ff798cf3631",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/SAML認証設定ガイド.md.metadata.json": {
+      "sha256": "3a595c87b35fc2957f6193edb8d2e8d0240853b4bb531c8846135e50be8653c5",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/プラン別機能比較.md": {
+      "sha256": "fdfc6bde363cee3fb68c1607106928292a2cb16da43a5ba942c15b836b244687",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/プラン別機能比較.md.metadata.json": {
+      "sha256": "0f709668f083cbfe4b99bbbe67b70df1cad404fd386393e58942af227b8c0b35",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/リリースノート2026年4月.md": {
+      "sha256": "0c79f7377ca721edd2007cc1cc7dbc2c203ead8a5f34608ff284e95312b04f59",
+      "mode": 420
+    },
+    "sample-code/02/sample-data/product/リリースノート2026年4月.md.metadata.json": {
+      "sha256": "20e2dfe2936517b34b9e331b489065cc66f093bd73d0875586dc90113337046d",
+      "mode": 420
+    },
+    "sample-code/02/scripts/run-paraphrase-eval.sh": {
+      "sha256": "b068005bd7891826808733e0ef22972195d103b7922accd09372bff967c2fc85",
+      "mode": 493
+    },
+    "sample-code/02/scripts/run-paraphrase-retrieval-eval.sh": {
+      "sha256": "c5aa27d75eaf59fed4cba1656ceb4cda398db357a3c1cfc59524d3792692685f",
+      "mode": 493
+    },
+    "sample-code/02/scripts/xlsx_to_faq_markdown.py": {
+      "sha256": "e5e270af2a423675b94e89c92a4197230e033eb862fcebec05fb0afe2e9e599f",
+      "mode": 420
+    },
+    "sample-code/02/tests/test_nextgen_direct_retrieve.py": {
+      "sha256": "d3fd9159e913cf8701cf8648f60a2a457db7f2131a8ec71b1fd609c6dbc4bd89",
+      "mode": 420
+    },
+    "sample-code/02/tests/test_rag_handler.py": {
+      "sha256": "ee71fc9df890e3fa516115828fd393dc79ac462345a6203e4c7dcce25d6d6823",
+      "mode": 420
+    },
+    "sample-code/02/tests/test_retrieve_and_converse.py": {
+      "sha256": "10bdd6a9a4c6e58cddd168f93c0f771ca2ff068dc50a09567972fa6d8bee5e39",
+      "mode": 420
+    },
+    "sample-code/02/uv.lock": {
+      "sha256": "7cd43ed30ea90e658736f8590071096546ac25f7527bf8bebb1939540a137a07",
+      "mode": 420
+    },
+    "sample-code/03/.gitkeep": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    "sample-code/03/README.md": {
+      "sha256": "93b3acfed13de2367a009b9ae492ef521351a8b9ae5e91e7732a0ff8b6ae13f0",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/.gitignore": {
+      "sha256": "b34ac056c4bea2413772028e3779e58b650477efe8e6f295a90a9c7a6e042a25",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/auth/resource.ts": {
+      "sha256": "81749f144263309699f33f3b0354aafbfb216bb655fd8fd70366fde970ad1eac",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/backend.ts": {
+      "sha256": "fc31bfba33119e6d94c513e8d572f5991e7486370edf69c12df9bd4550d54978",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/data/resource.ts": {
+      "sha256": "eb8cd2a8b76e7d501cfe4b6780a76046f1525b06ded68c2660ea75a2a8e84c82",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/functions/rag-handler/handler.ts": {
+      "sha256": "2228db99139a836fed2954d4c2ebb3038a5967a6e66e525b8725cb1f7947a88e",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/functions/rag-handler/instrumentation.ts": {
+      "sha256": "77c4dab559da73acbeae2a9c0743d225f9ccb1c982bc738dd103855a176775f7",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/functions/rag-handler/model-settings.ts": {
+      "sha256": "2cbab66a13a9cb48d306d39a64f19e36174e5eb6eed4756b10cdf07a2cab5727",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/functions/rag-handler/package.json": {
+      "sha256": "cbf871d44dc54ed0c681201092fcf518ad9310cabcc48e912c497fef11372808",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/package.json": {
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/amplify/tsconfig.json": {
+      "sha256": "180815aaa647eff0b016c9d216d864a5dc01571e8744ae2c029571f0598f6d29",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/index.html": {
+      "sha256": "4a283dd368be0bf0237aa59fe13c127e81a84aeddc667a457d62a2df115140ee",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/mise.toml": {
+      "sha256": "f4e76711ff120302d3b0e45d941b8e2413f5be3604a6868a6e997edb36968251",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/package.json": {
+      "sha256": "860a190b12d5d507f86d3890abe35497a96743a9487d7af1ee77c6f9950b0125",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/pnpm-lock.yaml": {
+      "sha256": "ef48d52fefcd5c743e61331c7a00031868363220d344187f90bd3bcacb7d95ce",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/pnpm-workspace.yaml": {
+      "sha256": "99da4f338b77617c5a3911d84ff9915ca9977aaf35da5565f7c54c984111c244",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/scripts/trace-rag.mjs": {
+      "sha256": "58caf5b905ad62f884dc35b9560393fb86b9a8602abaf39bf74aa958475a0950",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/App.tsx": {
+      "sha256": "fdb2914631096ccc466beb9917d8bfe582ba47781a8e6eb67c457348f9bd589f",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/ComparePanel.tsx": {
+      "sha256": "82b47527863ac99e181edd81437657ecfc6206a467cab724b5b543e25093b827",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/Select.tsx": {
+      "sha256": "f1d649e0d2c060eb38d8e9dedb7faae2477b8c219ec6314cf58e8165ffa61fbe",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/api.ts": {
+      "sha256": "943f5bb1657871fabf09f11e13bc9c1d7a60c2e52fe67197eb76e6607a87e740",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/components/WorkspaceChrome.tsx": {
+      "sha256": "7072f6892bfdc8f2cb35c90a5079d8723166f15727a57269c4a70998d1914b2c",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/main.tsx": {
+      "sha256": "0b28edf894e4c2c85d091309364d3f07861e36c32de3aafe3d7e9dd29c5f7dab",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/streamdownPlugins.ts": {
+      "sha256": "b824ab892216e55317fab3c198a57977d047dbe1d35122399d6cdf5a04904498",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/styles.css": {
+      "sha256": "135d898959b042c6b73a31d85ecaee55cf2747d71daedd2d5e7ed47ed19eeac7",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/vite-env.d.ts": {
+      "sha256": "dd2dcb3d899b6fdbbf97391ad75c62533290159de3dbd3f16c715516276d83f7",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/workspace.css": {
+      "sha256": "8e30fcd12cd4af4df5bb3195a48247a6a48aeaeff341841dd7ff1f09c1d279a7",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/src/workspace.ts": {
+      "sha256": "99408660372bc7bd89576b086019f51fc6c0a12c770d760c077e4d418c039956",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/tests/model-settings.test.mjs": {
+      "sha256": "8646d05985de7904a27c68c104366057f96974cb3bb7bfbf25ecc6ee44624d68",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/tests/rag-model-migration.test.mjs": {
+      "sha256": "a3b4e7b13b62ea5ca1c0b47cce429c7d3d077d86e729438323ed0408265c4d0e",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/tests/rag-tracing.test.mjs": {
+      "sha256": "f7092a95e9653ac33bb80e3a53742ded3297b4b0802f8fb8db081ae0d2faeb6b",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/tsconfig.json": {
+      "sha256": "d091ed9bda82474282ef062779102f4e751df388cfc89b78ddc5942749e3b38b",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/tsconfig.node.json": {
+      "sha256": "e82d87ed1e0613c7926731d8f54c9a3bbf23c074739e8e84ee50684a95455012",
+      "mode": 420
+    },
+    "sample-code/03/amplify-ui/vite.config.ts": {
+      "sha256": "bd4ebfa11cbaf8f571da438748af26b0f28c7d7721a0767b88ed2256162803b0",
+      "mode": 420
+    },
+    "sample-code/03/common.py": {
+      "sha256": "301602606aec8a8a31b693af132db5e33f3c1d29987a0b5d3c557442a271ae53",
+      "mode": 420
+    },
+    "sample-code/03/compare_kb_variants.py": {
+      "sha256": "2e3293281f3898505ea8945bfc4acc96bad8ace37e28f261085b05d4c4f4d27d",
+      "mode": 420
+    },
+    "sample-code/03/compare_metadata_modes.py": {
+      "sha256": "abc8cf788f69b1ad22fbf7f38a87aa88d25a02523c543def3378c348d36bb8d7",
+      "mode": 420
+    },
+    "sample-code/03/compare_rag_configs.py": {
+      "sha256": "babb1a1373b8fb9ac4f631be06cc3fb8540ffab6637ecd7e8210815688c9f36f",
+      "mode": 420
+    },
+    "sample-code/03/compare_topic_orchestration.py": {
+      "sha256": "5d892d6afc6a85c471b996626ffad5ceaa7da61ebeb09876aadddf9fd9dfa124",
+      "mode": 420
+    },
+    "sample-code/03/data/metadata_schema.json": {
+      "sha256": "a774c4e87fb657ccf9d6b13c9bef41a1cfc2fbb230d3ed8fc8af63095db275a8",
+      "mode": 420
+    },
+    "sample-code/03/data/questions.jsonl": {
+      "sha256": "9b8e57146d35b464f940e8cf87020c1421fec03f9960e9d31558a9c469ded5b9",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_chunking.jsonl": {
+      "sha256": "dbd185d1e72d64709529543321cee3fc51d1dfbb3b613d512c8291b2065281b0",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_decomposition.jsonl": {
+      "sha256": "07cc27ebdf1d5ba1b5f6374d890998dee63c36e35aeb461110ad40eb1834652f",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_faq.jsonl": {
+      "sha256": "3497717f3f32156ae0c87a7af2fcd3fb97009fda1140472335c5bb44503cf88d",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_parser.jsonl": {
+      "sha256": "8cc3c138ec16d7f99386d767e71c90a1958f6775a2a00a930a76151801493561",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_parser_focused.jsonl": {
+      "sha256": "7e51f528dc1b275c63865a3f56efd2041ffd360c6b87442d5aeec209e37c5794",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_parser_retention.jsonl": {
+      "sha256": "30b584957920ac0513683c097afbf138bd9e5864a53dc2752dc17d59f7292e68",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_rerank_hyp.jsonl": {
+      "sha256": "3d7ac618003b389d5bc69c21320c286e9be03f03db8e7c4824c96e00aac14e0b",
+      "mode": 420
+    },
+    "sample-code/03/data/questions_topic_orch.jsonl": {
+      "sha256": "05c623586383d069cfbe95e81802b3a4fdc4725b7a24a03bdfdc5f671fdb3d1d",
+      "mode": 420
+    },
+    "sample-code/03/data/topic_config.json": {
+      "sha256": "433bd81d4017c88c6607985d08a529dbac523b0f93e4fe540f3fc609a116fba5",
+      "mode": 420
+    },
+    "sample-code/03/generate_metadata_sidecars.py": {
+      "sha256": "69929e8303967bcae396964f1e5a06b622025d131dd39459ba3f894f73c08c2a",
+      "mode": 420
+    },
+    "sample-code/03/generate_sample_pdfs.py": {
+      "sha256": "25a3388b61044399aacdccde70822a9df54e501b1bb13a38399acb22d61e348b",
+      "mode": 420
+    },
+    "sample-code/03/glossary_demo.py": {
+      "sha256": "3aa55afe115d082af15d41337551b8d30b0d7725a3332d2e88e5c9b69240875d",
+      "mode": 420
+    },
+    "sample-code/03/infra/lambda/custom_chunking/main.py": {
+      "sha256": "14a67f2077b437eb01c6b52027c292131e0fc012c70d702fcbdc39f6ae0d998f",
+      "mode": 420
+    },
+    "sample-code/03/infra/setup-chunking-kbs.sh": {
+      "sha256": "11be15f039ce6290e727f37322983bbb6b104b0b596f7114d91ec845d7423e05",
+      "mode": 493
+    },
+    "sample-code/03/infra/setup-custom-chunking-kbs.sh": {
+      "sha256": "d72f74e494307795f778da57ed3db6fe9ffc3bdff05105999f57a222fe10202d",
+      "mode": 493
+    },
+    "sample-code/03/infra/setup-parser-kbs.sh": {
+      "sha256": "aecd9973c37f4afe72d30c17921d51151019257f3bbb9f1b917d9c6514262174",
+      "mode": 493
+    },
+    "sample-code/03/infra/spin-up-cheap-rag.sh": {
+      "sha256": "a815d784d5e750bf82f855137c092daff7a5f7b22899c62cda09f12c85f6a4da",
+      "mode": 493
+    },
+    "sample-code/03/infra/sync-topic-data.sh": {
+      "sha256": "ed3b34c48dd1693f85c50f07cc0e84f0f9ce403d6ad8024ec89f59eae6a79f26",
+      "mode": 493
+    },
+    "sample-code/03/infra/teardown-cheap-rag.sh": {
+      "sha256": "2ae7855937525bac9332ff50afddbadf557e04c83b7f7ac497cb5fc12fc20fd4",
+      "mode": 493
+    },
+    "sample-code/03/infra/teardown-chunking-kbs.sh": {
+      "sha256": "0e091a7f94f56931949a8f6d7cc937d8fba78180053367c81974e1ea9d260e51",
+      "mode": 493
+    },
+    "sample-code/03/infra/teardown-custom-chunking-kbs.sh": {
+      "sha256": "32dae370ce62c32ba9aa9458588c58795eb54ccc9b28d2e989ea5937b0c1fe86",
+      "mode": 493
+    },
+    "sample-code/03/infra/teardown-parser-kbs.sh": {
+      "sha256": "8732d96f454fa771a7097bac716faa77490a571aadbfbd4da1f2165a21f441f3",
+      "mode": 493
+    },
+    "sample-code/03/llm_document_parse.py": {
+      "sha256": "017e03f08b8d1d53922b8f0efcc14a6d1ff6132b98540d1da514b1811fe850d7",
+      "mode": 420
+    },
+    "sample-code/03/orchestrate_topic_rag.py": {
+      "sha256": "78f615484e6f6ef5e3dfc452ec5249f4f25e54da83f812fdf7d5d1dc3291a32a",
+      "mode": 420
+    },
+    "sample-code/03/probe_fm_parser.py": {
+      "sha256": "8be3a73353504d669e7a4e8eee3cbf0ce21ce76fdb681d740940b29a106d161d",
+      "mode": 420
+    },
+    "sample-code/03/pyproject.toml": {
+      "sha256": "f1b8bb3f5a0df14debf0582de0b2f4fc62f1d9ca2f94f7f66d0c8aed10ac1da6",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/chunking-comparison-report.md": {
+      "sha256": "1ed175434392fb712652ff479108ab54da51d20d46b4cfa7835718b5b60bbbb3",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c01.md": {
+      "sha256": "ee20929ed015f8b78a74703d975bce53ae0780ec66b5493bf9980d3edde4b048",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c02.md": {
+      "sha256": "448e1b5a26337eb3ab8e2684e277abbc0bfe82ad20cdea794467555df2a85443",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c03.md": {
+      "sha256": "51ddf930a5911b7f6da1f363b168fa695514a26e84e21b756b453a1d44148fe9",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c04.md": {
+      "sha256": "9fa3e154d144a231ef1c27498e147dc700b628247d6671af551a03cd06b463e6",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c05.md": {
+      "sha256": "139f8f350d3fa228b5ee44152a4148dc0e71eca077c58b2ad89eb734a4d44b0d",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c06.md": {
+      "sha256": "4a609028db32abb74a5a76b57b9ca66f25810880a44de9325ff32e09550de854",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c07.md": {
+      "sha256": "db95c7d7e72f8c9e35a739d57134fbf9f56055832eb508159fe4c99cf9c4057f",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c08.md": {
+      "sha256": "51cea30c7e92b85cc52939bffc9d21887389d887d116eab87e0d9d702f41a31f",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c09.md": {
+      "sha256": "2c53e77cdd722312ceb6a9206b204250790466ecb0d149a8186bf950913ccaa8",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/questions/c10.md": {
+      "sha256": "623cfba03a9b28e0852da9495ebc590f1742ec5485dbb471942d06584f7db570",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/results.jsonl": {
+      "sha256": "5865fc011b2cb46fba0035717cf1c574d748c2e18420e0f36002f61cb02884a6",
+      "mode": 420
+    },
+    "sample-code/03/results/chunk-strategy-comparison/summary.md": {
+      "sha256": "a97d32d510b1bcff2fc6a16c084c4832f196fc8f98a16335f553633e6f3c5a5a",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence.html": {
+      "sha256": "cf695cb3144b6c50d774acb2695eae41c4f8455754abf98b1afb9896cdea2e6b",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-1/20260822T010604Z/questions/retention01.md": {
+      "sha256": "645e296f90e67745fa47dbb3f29548f8123a33686c75abdedab778080a46cb7f",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-1/20260822T010604Z/questions/retention02.md": {
+      "sha256": "332115d9841c62e252f38e3b7a13795ffd62cda0d2713d93079fef900f8b3788",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-1/20260822T010604Z/results.jsonl": {
+      "sha256": "cb3815dc72bf38a3dba8d0ee78ca0a10d8557a0113da6679f31a606e451822ff",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-1/20260822T010604Z/summary.md": {
+      "sha256": "475bdd267a499851dc788dd70f05e423a1cd384532f5554e383464da3466c062",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-2/20260822T010602Z/questions/retention01.md": {
+      "sha256": "efc8cb9ccc7969b6ce55362575b2d77186fe0770d0bfd0189d74f8d4cd40be28",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-2/20260822T010602Z/questions/retention02.md": {
+      "sha256": "bee1bd67252d90a304f6c90482041969af79eccf365c6c352c319841353368bd",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-2/20260822T010602Z/results.jsonl": {
+      "sha256": "48b142516cba208e3d245510b9f7326cbb0b9a76168aab0164ad6cc39378e35d",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-2/20260822T010602Z/summary.md": {
+      "sha256": "30f725b19bbe24a5d74bf3f71917f3c01b13eb485652c1708a2ec826afdc6a91",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-3/20260822T010603Z/questions/retention01.md": {
+      "sha256": "1de944306e59a996aedae809c05ced3c7e561125c69969695e1b90754dea0d53",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-3/20260822T010603Z/questions/retention02.md": {
+      "sha256": "806026edf5bad098aef3b1340aa03ebdfed4ebe74e9c3a1a71b7623da4181249",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-3/20260822T010603Z/results.jsonl": {
+      "sha256": "d0e252ec15e31d51027e893cb1ff8c3d6f67645265d5b0048d7327b1ec615834",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/evidence/run-3/20260822T010603Z/summary.md": {
+      "sha256": "cdde720900162bfe0e9d7fe9fe41f6fa43e12fee4090a70438fea7c7cf2bd746",
+      "mode": 420
+    },
+    "sample-code/03/results/parser-retention-comparison/summary.md": {
+      "sha256": "277eb20b82831087d50e06ac54cdd703f7e5249fe25479563d639bc4b077b614",
+      "mode": 420
+    },
+    "sample-code/03/s3_event_pipeline.py": {
+      "sha256": "3a93e5dea5bd81c67e2b18daa72d2ec26c798e091add04fb657df7699f856705",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/APIレート制限規程.md": {
+      "sha256": "86eb4b5b0275ed500140391bf0ab0e7ba9e1c9dedfe652792c04241d89cf57bc",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/APIレート制限規程.md.metadata.json": {
+      "sha256": "6f1b60593c3738bee8b2a91c57cdb25addb5705500a535fc55f17e34b33c1f27",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/ユーザーFAQ_429への対処.md": {
+      "sha256": "30307ce05fc314b2bfe62c1887401f3d7bc12f7aa4ffbbce7afa32636d92e44a",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/ユーザーFAQ_429への対処.md.metadata.json": {
+      "sha256": "bbeca71a7339d617a26efe81729f3d45dc6f12a0e716439ed7ef3ae5ab44072d",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/変更履歴.md": {
+      "sha256": "56183854d6bd581d73a4c0278b919a344acf04ca1db860355f4d122cc5bf8267",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/変更履歴.md.metadata.json": {
+      "sha256": "f0d574f08ce9c1b70d9658953ddc021896d77146bc95e964be8b3a6582ff524f",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/既知の不具合.md": {
+      "sha256": "af1e71fa9bd56bc70828e7e16368f8defb11e5f1b955188fa8fbb64d0d2dd94a",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/既知の不具合.md.metadata.json": {
+      "sha256": "8f876d41cdc1a963a4a6f321e5d683bccba9870465ca51437bee52e62c5ba7ab",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/管理者ガイド_上限緩和とモニタリング.md": {
+      "sha256": "37e2985af19ee1458e516d84df46a6f1e98b69e2663cfb3d8252b82686b5a030",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/api_rate_limit/管理者ガイド_上限緩和とモニタリング.md.metadata.json": {
+      "sha256": "94c8d90eaee413680c3c00ca2714a700ac4fcb8183d4f29a043c31187fe5506e",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/ユーザーFAQ_自分の操作履歴.md": {
+      "sha256": "ae5ba15975b6725587d602d8b4b64b5760e81e06f72c4c32b692e77c19ab30c7",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/ユーザーFAQ_自分の操作履歴.md.metadata.json": {
+      "sha256": "daa52af3290427c1f677e50bb4190bf40ea98f9a0717588cc60f96e4560917ff",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/変更履歴.md": {
+      "sha256": "7d2b51296a13e274fa8543d7ea76fc86dc61c51f9b3915959ce087b6f78b98e0",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/変更履歴.md.metadata.json": {
+      "sha256": "8d02dd19f29671194df6d403e3543f1236c04a0e1c44d5ccc8f1492c80a0a550",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/既知の不具合.md": {
+      "sha256": "56334ffec5deb11a2faab30984d73226c838bdd41e1fc925b34073e180c1d106",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/既知の不具合.md.metadata.json": {
+      "sha256": "2e5516506600a621a031caafbfc1f4d4b9c0c3d732f2ab61bb00fc6793016e45",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/監査ログ規程.md": {
+      "sha256": "03054596d76bb4457d00eea7f646b8f120151e0fc422065f693c55aceae02025",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/監査ログ規程.md.metadata.json": {
+      "sha256": "0060e4670dd0d6bb1dc39322b573e9fc6e3d4b924ef5d586500b53d32dbf34f0",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/管理者ガイド_監査ログのエクスポートとSIEM連携.md": {
+      "sha256": "e4a11f3a781b98450e3c7dadbc88a351d2b59c3df1abc94b83d4f132089d4be7",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/audit_log/管理者ガイド_監査ログのエクスポートとSIEM連携.md.metadata.json": {
+      "sha256": "82a62d2a3fa0b9fbd6f2fa440b1508d4e9ce6f5a46379cecf3def682884daa4e",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/ユーザーFAQ_領収書と税務.md": {
+      "sha256": "539ad7a0fe0e09d3dc81066ea86ffaaa5bf3543cf3e61fd93845bf1dda77c347",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/ユーザーFAQ_領収書と税務.md.metadata.json": {
+      "sha256": "73f9a17dee088545ce24bad13967f2cc33f44006619c0ccff7677dbf7992776b",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/変更履歴.md": {
+      "sha256": "91c62b6fa9fa4c9ba8294771d5ea7f10a56f61eaae46a93f8fd499a1ccef60a2",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/変更履歴.md.metadata.json": {
+      "sha256": "968e28498a11fcc4bc79eb86cc51aeb12e448eebc11f657c721857ce0935534f",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/既知の不具合.md": {
+      "sha256": "6b3a0774fe0a12e9c7856a8f36bec135bedee3dbd7dbe6ea4ad51b3a1e1a0314",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/既知の不具合.md.metadata.json": {
+      "sha256": "ac70a5e5c771b1212ce665c5576dd38a0b19f6ab9cd662fbdae752c55f9d1c19",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/管理者ガイド_プラン変更と請求管理.md": {
+      "sha256": "504bb242c160dc795267fbf4fc80456765d3499fbd11bd8f5ddbff9ef7bc1b63",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/管理者ガイド_プラン変更と請求管理.md.metadata.json": {
+      "sha256": "bdac3da9688fbd81e295c0d678e6b112ac66b349bc4785f2d77cefd00b34972f",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/課金規程.md": {
+      "sha256": "abe2a6ea8d2d9ceeea75891e35520961a20fb4bf62d1e4444972b3140cd79930",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/billing/課金規程.md.metadata.json": {
+      "sha256": "3d38aba1c1364449dd83a931ea47a40c6fc16d477b32189d78f3af7db1275807",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/データ所在地規程.md": {
+      "sha256": "f2ebba668bdfcbb7e8f4390d2d525105be81b77692f84984b37bb449b5d97c10",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/データ所在地規程.md.metadata.json": {
+      "sha256": "34ba7503fe380352051ea151388ba85e7a0ed09c769ad982c5f91512eb0376f9",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/ユーザーFAQ_自分のデータはどこにある.md": {
+      "sha256": "fa291ebf74afb944064b12e9df63a4d61f345a62cb390e6e370cd21a35324106",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/ユーザーFAQ_自分のデータはどこにある.md.metadata.json": {
+      "sha256": "a427cff356e9580f8b60911392ace8d8f4656f6becd67d6c39132589186e0d7b",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/変更履歴.md": {
+      "sha256": "4cba095e47d72c302225c040797835c5cef94aa17547228693b09b0d29f85669",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/変更履歴.md.metadata.json": {
+      "sha256": "3fa90e783f863363c5971778dead320bb4ae787f0283ea617092a9a2a463f39d",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/既知の不具合.md": {
+      "sha256": "c0906225e79d76fd55626f1dc06ba53a263a02e0023d4c612104abbc390314b3",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/既知の不具合.md.metadata.json": {
+      "sha256": "39f4504ef63c77910f07938ec23efd8a2b065211237438e08b67a54a5fa85370",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/管理者ガイド_リージョン選択と移送申請.md": {
+      "sha256": "1f46b2a40c89112266201db354053b7280cd0eea8641a20639ad120e87880171",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/data_residency/管理者ガイド_リージョン選択と移送申請.md.metadata.json": {
+      "sha256": "add5726753d8320656e7f2440c31e7ddbd8c181d34836f105df4aee02b4a2607",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/SAMLSSO規程.md": {
+      "sha256": "390277f78a028a329b9ce615984a502744435c8d2fd6e578a5716810ad66791c",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/SAMLSSO規程.md.metadata.json": {
+      "sha256": "9fed8f398f04cdfd07106aa392b12ca421c30e3056f0c441a386e7ba33d72142",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/ユーザーFAQ_ログインの仕方.md": {
+      "sha256": "c677e7fe77c86da3aabfeb4283cb466eb14c5491e6ec466158dea81625c2baec",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/ユーザーFAQ_ログインの仕方.md.metadata.json": {
+      "sha256": "7750729cfb8eb7eb0aba3c562f1f13995e272b8c7674b958fb9f80b078732156",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/変更履歴.md": {
+      "sha256": "ea7937f2d56aecd817730da89a3d43507fb20590a5bf92fc90b606d3aba2283e",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/変更履歴.md.metadata.json": {
+      "sha256": "0b9562712f553c7e57c4c1bfd7845141981f154a5beb15a6a18bcb0bb68b0f6e",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/既知の不具合.md": {
+      "sha256": "f6524111054c569e9105f9d50d565141c2159ed73865055aa523ee9c39d028e6",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/既知の不具合.md.metadata.json": {
+      "sha256": "68864a58e8f06d43eac53b247ae0a3f24ae86dbff825b00a641ff6370d0387e4",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/管理者ガイド_IdP接続手順.md": {
+      "sha256": "92398c76ab77e90333edb247dcebf76de9762ad509a85ee9ac304bbc27576042",
+      "mode": 420
+    },
+    "sample-code/03/sample-data/topics/saml_sso/管理者ガイド_IdP接続手順.md.metadata.json": {
+      "sha256": "47a6de6f3da74cc6b4ae113a4c42f7c21b713580431722769e9581ac2326b483",
+      "mode": 420
+    },
+    "sample-code/03/sample-faq/sampleconnect-faq.md": {
+      "sha256": "a478fc0c22541af74bf505c54dfbc5228b83b9999602269653ce906e17fe7611",
+      "mode": 420
+    },
+    "sample-code/03/sample-pdfs/sampleconnect-architecture.diagram.png": {
+      "sha256": "d7002bcb3c9b0b38053aaf9ad529571c4fb1d3f0812ef1c167e2b7529fb4432f",
+      "mode": 420
+    },
+    "sample-code/03/sample-pdfs/sampleconnect-architecture.pdf": {
+      "sha256": "e1814f0577b64bd80740940b4953fdf9e727bfdaff035fcdcc4153cf89bb23af",
+      "mode": 420
+    },
+    "sample-code/03/sample-pdfs/sampleconnect-incident-report.pdf": {
+      "sha256": "49130cbd0e2706ab0fdc4467feff1c7679e42d6f802247f14b470daa9bfb0534",
+      "mode": 420
+    },
+    "sample-code/03/sample-pdfs/sampleconnect-plan-matrix.pdf": {
+      "sha256": "f235da2f678ea9b1e447c0569f4b30b281f33818b11a54f75050fd3fbd3e91aa",
+      "mode": 420
+    },
+    "sample-code/03/sample-pdfs/sampleconnect-retention-chart.chart.png": {
+      "sha256": "d8869b6ede3a853e4e725c88eecb8869a7a2c57ee53f63c4b0dafcc66cf12553",
+      "mode": 420
+    },
+    "sample-code/03/sample-pdfs/sampleconnect-retention-chart.pdf": {
+      "sha256": "179a3ed74dde8f249af2d6eccd547e82a40ff8b2bb737d31939f207869a4f384",
+      "mode": 420
+    },
+    "sample-code/03/test_cli_inputs.py": {
+      "sha256": "dad1dce4e8e99b74616a1ffa7b1be435e7b69f3d8d0389aaabb5b80f654925b6",
+      "mode": 420
+    },
+    "sample-code/03/uv.lock": {
+      "sha256": "e080137585dc8c4435a5a4a8ff4bacef92e0afd0d699ef3914f6a1203b8d148d",
+      "mode": 420
+    },
+    "sample-code/04/.gitkeep": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    "sample-code/04/README.md": {
+      "sha256": "dfd85c9018acba1e5b19073df84fce3b5f982e6d980a00de866ebe26fdc3ed1a",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/agent/Dockerfile": {
+      "sha256": "dc44671156a9b8fdbb60855997565003157d57340fdba42261ac9a27ec3921cc",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/agent/main.py": {
+      "sha256": "4f6e0c6eaecfbbfcb059cb35d9552915858918885e109878bca60884c684351d",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/agent/requirements.txt": {
+      "sha256": "b7aede9356d66cac1ab2583b25f2dc6d9e2e856b08ca0eb670dcdd2a3a9d4d53",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/agent/resource.ts": {
+      "sha256": "482a9684948f4eebf7ec1adb18a8048441dca5ec59f3fa638bcd70e5e5b0c2d4",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/auth/resource.ts": {
+      "sha256": "81749f144263309699f33f3b0354aafbfb216bb655fd8fd70366fde970ad1eac",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/backend.ts": {
+      "sha256": "4c4d78c977a415540af4cead238c3cc528f4c8351226bdb92f5fc8edd3492861",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/package.json": {
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/amplify/tsconfig.json": {
+      "sha256": "180815aaa647eff0b016c9d216d864a5dc01571e8744ae2c029571f0598f6d29",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/index.html": {
+      "sha256": "4a283dd368be0bf0237aa59fe13c127e81a84aeddc667a457d62a2df115140ee",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/mise.toml": {
+      "sha256": "f4e76711ff120302d3b0e45d941b8e2413f5be3604a6868a6e997edb36968251",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/package.json": {
+      "sha256": "b1f6019bff3931756cfddfce3540cfe8c531a5b891c94289fcdae37dff8c36d2",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/pnpm-lock.yaml": {
+      "sha256": "de778a9acf5860c4d15828c10061829d229cdcf49a42a8241bc569301a0408af",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/pnpm-workspace.yaml": {
+      "sha256": "99da4f338b77617c5a3911d84ff9915ca9977aaf35da5565f7c54c984111c244",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/App.tsx": {
+      "sha256": "29ca39a1f229231e24d1b67477e1b742150acb3468efa49afd9a933aff4774b9",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/api.ts": {
+      "sha256": "03aabccd347699e9212567f7804cfd1504ab87c15040dce02d8b17e9202caa56",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/AgentAvatar.tsx": {
+      "sha256": "c528a74a4bd2a89d741fc91eafcd1ce7f14db628496dbcf3ade5fa1888a39752",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/ChatPanel.tsx": {
+      "sha256": "0f2161c9360005780fed447a8e45711443512f12faff6f3d85f1216175e21127",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/Hero.tsx": {
+      "sha256": "c88e7e05f6d477c53ea5cdcbb4e4c9e10d152ab00a00a2f63c93b5c0f8663234",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/LoadingSpinner.tsx": {
+      "sha256": "4fc9a38558e6b4c7e14c95ae451cc9ffceecb29af5fa70c52a70e0bce25c4983",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/MessageBubble.tsx": {
+      "sha256": "3a35e2281f413c1c86c0fa1c8e53a2d571b2c66a88b52eb7cb3b917b2bef33a2",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/Sidebar.tsx": {
+      "sha256": "bfaa59d6fc4bc1ea32a73160a53f9dad6ee36db8c29b7d5f893d21a8573b0446",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/StatusBadge.tsx": {
+      "sha256": "81c66988542c17c3f0a44d65b8240f663d504788a47a0c6f39091b59df6b92a7",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/StreamingMessage.tsx": {
+      "sha256": "e945cb1a465d2048cd000d37656d9502a888caa8bbceb2ff989932dbb0a14975",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/ToolActivity.tsx": {
+      "sha256": "e8c327548745cd26624015991cc47760f6bca2cbec51b2a2106b79a596a024f6",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/TopBar.tsx": {
+      "sha256": "dafa772afdea4abaab995b51d88968b760eb9f84d39963ac70ab2f9191020faa",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/components/WorkspaceChrome.tsx": {
+      "sha256": "7072f6892bfdc8f2cb35c90a5079d8723166f15727a57269c4a70998d1914b2c",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/hooks/useStreamBuffer.ts": {
+      "sha256": "fa44460d052ebb8b2c64e59101e50ebeed7e1554f8bdfbe6901f4cb76d8ea34b",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/lib/streamdownPlugins.ts": {
+      "sha256": "1ba157d1f2bbbca4464a7daefc1a5e72e5ea615432929c5f19b2064bccfce944",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/main.tsx": {
+      "sha256": "452a99232e1012577ab824a97fea2b637deb0ae80209b6b6df7a08285d5b98bb",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/styles.css": {
+      "sha256": "18a3de4ebbc12f4c848cba2e2a9502688b7e07646fc6d2a954747a65a5855f24",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/types.ts": {
+      "sha256": "3d95f3b81b321fdc719e1eed4c415ebb024a92e431d524f7db125b035b8c173a",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/vite-env.d.ts": {
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/workspace.css": {
+      "sha256": "a28a515cb525d676a5095ba447aaf45e4f9325c303f33a6ffd4d99fda56cd4b4",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/src/workspace.ts": {
+      "sha256": "1a5fd6ee8f16453cdf58bffdbb79db3b0c2d355fafb173e90a08d32a4a7ac15d",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/tsconfig.json": {
+      "sha256": "d091ed9bda82474282ef062779102f4e751df388cfc89b78ddc5942749e3b38b",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/tsconfig.node.json": {
+      "sha256": "e82d87ed1e0613c7926731d8f54c9a3bbf23c074739e8e84ee50684a95455012",
+      "mode": 420
+    },
+    "sample-code/04/amplify-ui/vite.config.ts": {
+      "sha256": "bd4ebfa11cbaf8f571da438748af26b0f28c7d7721a0767b88ed2256162803b0",
+      "mode": 420
+    },
+    "sample-code/04/gateway-extensions/README.md": {
+      "sha256": "2a78fd4ac79c1c2c34d2e6761da41065b4cee05f0497e1294c19da49a156614f",
+      "mode": 420
+    },
+    "sample-code/04/gateway-extensions/gateway_inference_demo.py": {
+      "sha256": "b6cb479346799424ab2791897aea161f8be84f623d5d249dffa9766e680e19a9",
+      "mode": 420
+    },
+    "sample-code/04/gateway-extensions/pyproject.toml": {
+      "sha256": "651aecb60f8b377e794944f48a7d510213f6ca646c3500b542f4d01a241a3c72",
+      "mode": 420
+    },
+    "sample-code/04/gateway-extensions/test_gateway_inference_demo.py": {
+      "sha256": "ab8aa9b9287ec8689cc7213e1754b4659f2e37397d626cfca655c7a34ee2a42a",
+      "mode": 420
+    },
+    "sample-code/04/gateway-extensions/uv.lock": {
+      "sha256": "0fb5b9a0a82d5f44330775e494d253d0759ee03c87d1268be34516787f06892b",
+      "mode": 420
+    },
+    "sample-code/04/gateway-lambda/atlassian_gateway_handler.py": {
+      "sha256": "19cb48e2533ea434cc7dea1c32243cc9d3fe34dd4ce8189f2ad5b77403985a50",
+      "mode": 420
+    },
+    "sample-code/04/gateway-lambda/atlassian_tool_schema.json": {
+      "sha256": "d66c847ce926d13a608cdcb40c6ffc264b03ffa972bd3389e032b96a08f5861d",
+      "mode": 420
+    },
+    "sample-code/04/pyproject.toml": {
+      "sha256": "ae82f45ad4b5af3ef9a3805dda32a6725dca5ab9a8f69d9e448b53dc8da559ca",
+      "mode": 420
+    },
+    "sample-code/04/run_gateway_agent.py": {
+      "sha256": "3082be21c49c9d2a9ab88800b75e70bf6b7a79c83f4f94a8b99a29766987f585",
+      "mode": 420
+    },
+    "sample-code/04/scripts/setup_atlassian.py": {
+      "sha256": "433963f480f1bb449e2da4612b16c92d061ea58438c86859b905616fb560c84a",
+      "mode": 420
+    },
+    "sample-code/04/uv.lock": {
+      "sha256": "4ee3e664d06d421e607171087b1963894062b29350b3593415d9544b7e6c74cd",
+      "mode": 420
+    },
+    "sample-code/05/README.md": {
+      "sha256": "eb23c25ea538bd34f1c1c0102fb8be566fb4ad5317970cb44196907ef516a9a7",
+      "mode": 420
+    },
+    "sample-code/05/agent_common.py": {
+      "sha256": "6a5316d6429b47bd13ca61df3d31688082deb2198f95800576193a18e8a10300",
+      "mode": 420
+    },
+    "sample-code/05/agent_data/agent_eval_workbook.xlsx": {
+      "sha256": "7fbb0ce10ca0e70b2e300f105aa642d74b501b423c6613be09b6c5cf55e62bc4",
+      "mode": 420
+    },
+    "sample-code/05/agent_data/agent_histories_after.json": {
+      "sha256": "5a408bfd9439e80a61695a319be4b528d13409fa527ede8398b4ffece9f3d078",
+      "mode": 420
+    },
+    "sample-code/05/agent_data/agent_histories_before.json": {
+      "sha256": "2e8331cad8cb57e41fb8f796ca4770d76f5859670b2826a727543547e03de2a6",
+      "mode": 420
+    },
+    "sample-code/05/agentcore_eval.sh": {
+      "sha256": "e2b2ce20c6b076c2f80b8874e9130dcea3412d7ff52181647e17bdd3159dd20f",
+      "mode": 493
+    },
+    "sample-code/05/common.py": {
+      "sha256": "4afc43625e50821ec41be537a75e7de6e2480b432b4e9275c19f11c623fbd808",
+      "mode": 420
+    },
+    "sample-code/05/compare_answer_models.py": {
+      "sha256": "88d64ade20f8e0afb14c1df0e171483fdb9f3cbe74e33040d53c1aeae3c6dc11",
+      "mode": 420
+    },
+    "sample-code/05/create_agent_sample_data.py": {
+      "sha256": "6e50fe83c525ddfa01889e666980b765ffbe25fb014ae2834dcdc85b553c5ee8",
+      "mode": 420
+    },
+    "sample-code/05/create_sample_data.py": {
+      "sha256": "0002fe00caa60daf8ddc05cacdc6cf31d5a5058ff91bfbd8defb9c02c876026e",
+      "mode": 420
+    },
+    "sample-code/05/data/approved_updates.xlsx": {
+      "sha256": "5eef089c50bb080bd8b151218522753ee7b743392a24bdd4cf67e19bd2ec8f23",
+      "mode": 420
+    },
+    "sample-code/05/data/eval_workbook.xlsx": {
+      "sha256": "499d3d6a9fbb5f03dc62bfdd248aa22415a863d7f01fc6bad8b3e83f44871b4f",
+      "mode": 420
+    },
+    "sample-code/05/data/feedback_workbook.xlsx": {
+      "sha256": "b3c8dcd8a956eae0cee37e4f554b720e3ed2597781595c8acd56d9c7565ec8b6",
+      "mode": 420
+    },
+    "sample-code/05/extract_feedback_candidates.py": {
+      "sha256": "8efc902c2116d7f5393411263a2057d6d13b50f820ddf3089b2a553143da1e97",
+      "mode": 420
+    },
+    "sample-code/05/pyproject.toml": {
+      "sha256": "a9b40aaa5d68c771adad01ee9ea06097be0581f0185c06c6fd1ce1b3f4ba17e8",
+      "mode": 420
+    },
+    "sample-code/05/ragas_agent_eval.py": {
+      "sha256": "17c509f7dec2fd17d91d184434af0df7a46cefbd17790a64ac5d6eb631123c95",
+      "mode": 420
+    },
+    "sample-code/05/ragas_eval.py": {
+      "sha256": "461c7ba985571eb503d8c3fa771153b750b05371d0ce8464d3a005858c119dab",
+      "mode": 420
+    },
+    "sample-code/05/ragas_eval_collections.py": {
+      "sha256": "b7f677063f4d4f387b9f3f212bf56daae0bf2428b5f6bd01ed19f60510a44bd3",
+      "mode": 420
+    },
+    "sample-code/05/rejudge_eval.py": {
+      "sha256": "427aba7f8463c48505c0d8f1413a85dfab389577565df37e9acc5da7d8377085",
+      "mode": 420
+    },
+    "sample-code/05/run_agent_batch_eval.py": {
+      "sha256": "09db3870038aafc0f4eee654d9ac71d7ef12686ab1f3e7833ed6b6ce5542eb92",
+      "mode": 420
+    },
+    "sample-code/05/run_batch_eval.py": {
+      "sha256": "fdd93cc4bb7dd2acaef4ccd0bc2f617716cbd4d39391a67ae357463d6587f9ed",
+      "mode": 420
+    },
+    "sample-code/05/strands_eval.py": {
+      "sha256": "6dbba33c67040199da1ef2dd707d34111a93bbd6eff811a91eb356aaa0a6caa2",
+      "mode": 420
+    },
+    "sample-code/05/sync_approved_documents.py": {
+      "sha256": "586bbd855f98c8143b0d9c8e3f1a099e89624a841b93a11a854ad4f294574f8d",
+      "mode": 420
+    },
+    "sample-code/05/sync_feedback_from_dynamodb.py": {
+      "sha256": "1983c27dc8e92a7ed150887922a3ae193281d85c51651d596ca79a6135d3033f",
+      "mode": 420
+    },
+    "sample-code/05/test_ragas_agent_eval.py": {
+      "sha256": "c751f447b543137bc6fb982836bad08da29909b7e24da4c3d4369f06e6f6c577",
+      "mode": 420
+    },
+    "sample-code/05/test_ragas_eval.py": {
+      "sha256": "1cb88ac311c4962f973b0c230132489790438a9d6f635932cb88c886d530247e",
+      "mode": 420
+    },
+    "sample-code/05/test_run_agent_batch_eval.py": {
+      "sha256": "9e47348dfdc779b24d9879e56e372c7dd5a7093242b94d710950cb6085588073",
+      "mode": 420
+    },
+    "sample-code/05/test_strands_eval.py": {
+      "sha256": "75a9cdf98095466bb02b9a34d1bd25125927504fa620f642e575cb1bd9936c61",
+      "mode": 420
+    },
+    "sample-code/05/uv.lock": {
+      "sha256": "504c790b289560c82217931f13225271410b993ab1a64342801c9f9485810f71",
+      "mode": 420
+    },
+    "sample-code/06/.gitkeep": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mode": 420
+    },
+    "sample-code/06/README.md": {
+      "sha256": "43deaa95bc8b85e876269ed1c58723146a81d3fada5acf5ddd16689fc291f5dc",
+      "mode": 420
+    },
+    "sample-code/06/agent-registry/README.md": {
+      "sha256": "7a58f4700c0ca6f8755d87546d54ef9ed866ba0331de748334cf00631a276af8",
+      "mode": 420
+    },
+    "sample-code/06/agent-registry/pyproject.toml": {
+      "sha256": "84e89eca2c884625e93710ce2d7caaa8d5d27f596e841413532a8444ef22ea86",
+      "mode": 420
+    },
+    "sample-code/06/agent-registry/register_and_search_registry.py": {
+      "sha256": "098771be217653737d2e77eb0029e6b9049aa19c60ea5c159de570389aa884f8",
+      "mode": 420
+    },
+    "sample-code/06/agent-registry/registry_skill_loader.py": {
+      "sha256": "40fd831347ae2b37010e65827559e575ef36bbf2744273ca1d0d72bb8958950d",
+      "mode": 420
+    },
+    "sample-code/06/agent-registry/skills/障害一次対応/SKILL.md": {
+      "sha256": "1a618d48993374524d860bfb521001a027c9197131169f21ff3b7252130f3ae1",
+      "mode": 420
+    },
+    "sample-code/06/agent-registry/test_register_and_search_registry.py": {
+      "sha256": "769ed47888741226e5d2cc7364d04cb658a19881729ee8a1643c7b7fdba2680a",
+      "mode": 420
+    },
+    "sample-code/06/agent-registry/uv.lock": {
+      "sha256": "f4bd2ca044a1828a7a3e64a365b2d4c53f1441026eea8cccd9595d65d634d9ba",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/.env.sandbox.example": {
+      "sha256": "569ce3833d9050456524754f887d604b121bbc179fb847438b01b80d222583f1",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/README.md": {
+      "sha256": "f5b62bc7869105888ab2e2db6eec18fc79c9af9e1ff5d05bf5969ccccabb3de2",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/agent/Dockerfile": {
+      "sha256": "dc44671156a9b8fdbb60855997565003157d57340fdba42261ac9a27ec3921cc",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/agent/main.py": {
+      "sha256": "0be6dd2dfbefec9f81bdfa3131adcf41bceb2dd31b9e8ad7a4232c483a69efbb",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/agent/requirements.txt": {
+      "sha256": "ca3c0a879830a8cd301a0afb59c4104b554d0e8ca824f9df2a85ea5d00d12c70",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/agent/resource.ts": {
+      "sha256": "6abf4f3512248e2d69e0668603c25e017566d10e44350f7ddc3eea039e230f21",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/auth/resource.ts": {
+      "sha256": "81749f144263309699f33f3b0354aafbfb216bb655fd8fd70366fde970ad1eac",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/backend.ts": {
+      "sha256": "2ab28ff4ab554ca108365f7ee1962f8072dd32a54d2b6e296448d037d7aaa79e",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/constructs/support-ai-platform.ts": {
+      "sha256": "6e17c07fda4e175c2734a3bfb37781f9a033c3b17b5c0be4908065a60037fe8e",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/package.json": {
+      "sha256": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/amplify/tsconfig.json": {
+      "sha256": "180815aaa647eff0b016c9d216d864a5dc01571e8744ae2c029571f0598f6d29",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/index.html": {
+      "sha256": "4a283dd368be0bf0237aa59fe13c127e81a84aeddc667a457d62a2df115140ee",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/mise.toml": {
+      "sha256": "f4e76711ff120302d3b0e45d941b8e2413f5be3604a6868a6e997edb36968251",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/package.json": {
+      "sha256": "b281cdb4c77d099f9dd08a876b2e68022c95b521c02af06ae758e668c0eb1c4e",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/pnpm-lock.yaml": {
+      "sha256": "a3a57e86f91fb74e50d207ce7bb983d892e632a75835d12b9df5cc3eaca46850",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/pnpm-workspace.yaml": {
+      "sha256": "99da4f338b77617c5a3911d84ff9915ca9977aaf35da5565f7c54c984111c244",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/APIキーの発行上限.md": {
+      "sha256": "35fffdc454017288462615a6c8383d89f536a420fe5bd7d3ca458e3ff30f44cb",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/APIキーの発行上限.md.metadata.json": {
+      "sha256": "0315c831e5fda00f829fb2906fbb510221b603a82f6ff30c29fe757b09d0b93a",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/APIキー誤公開時の対応.md": {
+      "sha256": "bd0d4d43713c25aaf3b89c233103fa8184f931688560b4e8e68aab57ae7a4069",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/APIキー誤公開時の対応.md.metadata.json": {
+      "sha256": "51dc3ab025e72bdd56ee90a40aef05eb002775c4464494e8b045689d6a963d7a",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/APIレート制限に達した場合の挙動.md": {
+      "sha256": "4a1059111d33972efb4165062f18b0ba3d77752ddaa0ec752d8c2117b3ca2f29",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/APIレート制限に達した場合の挙動.md.metadata.json": {
+      "sha256": "90794a2d78ca3a94852eef699ea87643fd2ad002e540f60ad779479ccebd82ca",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/EnterpriseプランのAPIレート上限.md": {
+      "sha256": "fe16f9bdab7b7e4f990c11e85743a9edf5433d20e24238fd0b28dba94e27b6be",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/EnterpriseプランのAPIレート上限.md.metadata.json": {
+      "sha256": "0fa3ae1e27c1872e59002de1d27b113379d61df2b3607465fe86f48095d91f01",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/Enterpriseプランのサポート応答時間.md": {
+      "sha256": "8c7abfb07656e6740724f6ee5addfb55e014b1f511f7b80ff9e00122423bfbba",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/Enterpriseプランのサポート応答時間.md.metadata.json": {
+      "sha256": "fc25aab20774216f50610c73cb48b5edfcd6699987463010132b05317da4e59c",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/IPアドレス制限の設定範囲.md": {
+      "sha256": "936572de847e8a2207e0db518c935a445275b0bb8e9d4eca12066725f057bc6a",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/IPアドレス制限の設定範囲.md.metadata.json": {
+      "sha256": "ab91e22c390f1a07ced444c4c5a800ae6705ece2587ab49698ef62fc259a5b38",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SAML_SSOでログインできない場合の確認項目.md": {
+      "sha256": "9f0b29ce9dd9e0272f10ed8ab35714b333854a7b055edef469c42e157b4705c0",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SAML_SSOでログインできない場合の確認項目.md.metadata.json": {
+      "sha256": "fc9ee1c65e5d586202887eae62483c8848a89d90bf308f1953575badee1af8c1",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SAML_SSOで対応しているIdP.md": {
+      "sha256": "e362eb9452b584e64bf9a76f1416f6734088604e39216a4081062753d4a76076",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SAML_SSOで対応しているIdP.md.metadata.json": {
+      "sha256": "9b9cfb3135628846b3c0015670a3775711fe5079340f91ac9f13e835c8251bb9",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SAML証明書期限切れ時の対応.md": {
+      "sha256": "4829f3c6121d26747e004da2f1923221b49143cbe46c6e46eae50c4e2c415e38",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SAML証明書期限切れ時の対応.md.metadata.json": {
+      "sha256": "44123a5b13cc1b2580eea6e999066f980a5005cc4ccdb2717f0bc4bd1d2c5229",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SLA違反時のサービスクレジット.md": {
+      "sha256": "7ad95acb116ce1e73b3e29e144b204bdeec762eaed2d9c9747ee1a821c8c619d",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/SLA違反時のサービスクレジット.md.metadata.json": {
+      "sha256": "a3854cd12ba2d032039a0cc75c3c3d578357e90f109882d71611fe8aeb999d18",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/Standardプランのサポート営業時間.md": {
+      "sha256": "13e4dda68cb7cab96ee01831faa296081e35f694e0e0c8e6731d1a10d4eef1ee",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/Standardプランのサポート営業時間.md.metadata.json": {
+      "sha256": "de564368e86506daa369c378a2975d2d200cb8242b850ab81f4f0b5bb4397613",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/サービスクレジットの申請期限.md": {
+      "sha256": "792dd5087d1f04f98e1475decc8396855ce169a3c58763191a1fd116809f320a",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/サービスクレジットの申請期限.md.metadata.json": {
+      "sha256": "17eb8b60f353149c33290dbd338905be48753dbe5424118030c76af943f70ce3",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/プラン変更の反映タイミング.md": {
+      "sha256": "16eb5f065acdb12fd9a73889452b85d1f173b67e2f869f366f17fc6fd67760bb",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/プラン変更の反映タイミング.md.metadata.json": {
+      "sha256": "41120fddf7255926d7526458e7f2d6c373069ffa9937aecf34c5dd353d67d8a5",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/監査ログのエクスポート方法.md": {
+      "sha256": "5fbdbc587a4e60c7e7e572826ca72742b3f838534cc86823cff50e6e102d3b95",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/監査ログのエクスポート方法.md.metadata.json": {
+      "sha256": "369f306a0386d7447e2cb987fde1017fba86bddbd5865e82c55a139fd6d8584f",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/監査ログの保持期間.md": {
+      "sha256": "4bcac963c187fb3acea160538821bd6c80158e788beb29fbddd9f0ee893cc529",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/監査ログの保持期間.md.metadata.json": {
+      "sha256": "4aa17ae7880c25b8cbe2a95cfb33e5e961c9e1b71a64866ae57cfc0f22128fd4",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/緊急メンテナンスの通知方法.md": {
+      "sha256": "3e9d6c3921e115de9ae45f3f38a85a4fd2cc36167e3b7b1804cfa236a04732fa",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/緊急メンテナンスの通知方法.md.metadata.json": {
+      "sha256": "ebeaab59d0dd865d6e4750028c211756399d0462d184fd043073d192e6bd3fab",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/計画メンテナンスの通知方法.md": {
+      "sha256": "ea52e3a90007d03ce416e6ea05c066fa17a5cc27cac6f39bb54d67d436d7907a",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/計画メンテナンスの通知方法.md.metadata.json": {
+      "sha256": "1b724ebd2a23275e87c8f3660a4df4a1984444d25048f1f7f4bddc83d1b55eae",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/請求書払いの支払サイト.md": {
+      "sha256": "3d76cf2547d5531c7506fa3ccc1205877ebbaa5f4001acda5c21791a60ca04db",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/請求書払いの支払サイト.md.metadata.json": {
+      "sha256": "a30e37bc2814d7c5ce8eec70cc42bc2e1aa05c8b071f6ee631cd9d3091b4afd2",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/障害情報の確認方法.md": {
+      "sha256": "64a2aada6defb89cff6f3c17b5772077566a5f23aa5d0167847c706ac246b2e5",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/障害情報の確認方法.md.metadata.json": {
+      "sha256": "0f586af8a767ebf62ee326a9abb320f4f54ef2460df0f99f2a4a87b1fe2ee0c4",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/障害発生時の顧客向け初回案内.md": {
+      "sha256": "4f41a97e2e75a791cd8976795e977fc76b43c1837598d37bba4250511b83210e",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/faq/障害発生時の顧客向け初回案内.md.metadata.json": {
+      "sha256": "a9d182dbb78b04a73b9b2ef892b577d47c5cd1f794318eeb51edcf049a799e95",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/manuals/インシデント報告手順.md": {
+      "sha256": "729f33d5f1fe633cb304adc7a11d1d65a12a029e62e70ad8cd9ab202eac2d300",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/manuals/インシデント報告手順.md.metadata.json": {
+      "sha256": "cc45fdf507877d75f1033bbfbd5205f6279841f5774e9895bd887837f3c3b2e8",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/manuals/エスカレーション手順.md": {
+      "sha256": "e2c62f7ec430b0de1ba42998225b006d65166fd8c7267eee163263b7dfaa1a5e",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/manuals/エスカレーション手順.md.metadata.json": {
+      "sha256": "52e75e0b192ab6daae10e41b309f0a107723de659c8e76eecc5ccd9c0b58175e",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/manuals/障害一次対応手順.md": {
+      "sha256": "b4ac9552ad38358bf3722aa8f9885b0404311377a5a6d39645de267a007b044c",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/manuals/障害一次対応手順.md.metadata.json": {
+      "sha256": "823d7e075e4b289d907c73e1da7fff48fb867955ad506b93d60b05b99fc8d7f2",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/SLAポリシー2025年版.md": {
+      "sha256": "9673e0db7954b63d47d1b73e2cbed034167a93adb3cfd635a51574a9cba13815",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/SLAポリシー2025年版.md.metadata.json": {
+      "sha256": "664d84efed2b350c96bb0fbbb20b4650a650d3534129d1aac7fed151c32a2ae3",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/SLAポリシー2026年版.md": {
+      "sha256": "892a833c00790c2ea08da6bceba181ab12a9f9b18a8d8004d0d40ebbe3c214a5",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/SLAポリシー2026年版.md.metadata.json": {
+      "sha256": "04a8699cb017857c76a713bcd07c60186912b54208ef442cf1dadab6a0c72531",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/監査ログ保存ポリシー2025年版.md": {
+      "sha256": "0e055394cdfe366dc94bbd667cd9e45670cd90baceb6c64d798091d57cd1c4d1",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/監査ログ保存ポリシー2025年版.md.metadata.json": {
+      "sha256": "8dae667f19fb6950615937a83f6f48d7edc5bab8bdaada3f4b99111120437ac7",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/監査ログ保存ポリシー2026年版.md": {
+      "sha256": "f2123fec9c46d9dea2c9f7a63e2327ab1bd481edad9a8638d3aa4203494dfeb3",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/監査ログ保存ポリシー2026年版.md.metadata.json": {
+      "sha256": "622cfc81eec57c95126401593bc9bd7cc2eff94f9f030ae264a9548b01e7be3b",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/課金請求ポリシー2026年版.md": {
+      "sha256": "8e680691d4866e51ed43b0f480429cb2159fdafb3db8fda757e511868f53b178",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/policies/課金請求ポリシー2026年版.md.metadata.json": {
+      "sha256": "b96cc896eeaf8d4ab8c6e8b3a1de1e2de05b4c52aaf5a7a462609bbab8593b2d",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/API認証・監査ログ管理ガイド.md": {
+      "sha256": "e2fbd692566fd526133d5abbc0edbb8a4ae33e3f7519d00e4424a928b7fa9e1c",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/API認証・監査ログ管理ガイド.md.metadata.json": {
+      "sha256": "cd0a333d2866d59bf5f457fd40f3ba5e52be74a1005c8ba248c3d2d32a8f0614",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/Enterpriseプラン機能ガイド.md": {
+      "sha256": "5e4a90cba2fe88e64afc56e7bc93500cd95f2a582dd24c81e0a2fa02dbd2e510",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/Enterpriseプラン機能ガイド.md.metadata.json": {
+      "sha256": "81ed3b905f57a7be4a7a04a9de2702d81536d3207685c3de56231d6b0ab6be07",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/SAML認証設定ガイド.md": {
+      "sha256": "2fe79c0de3eb916c84299b0bb59683d57dbbcd08a1596f47ab319ff798cf3631",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/SAML認証設定ガイド.md.metadata.json": {
+      "sha256": "3a595c87b35fc2957f6193edb8d2e8d0240853b4bb531c8846135e50be8653c5",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/プラン別機能比較.md": {
+      "sha256": "fdfc6bde363cee3fb68c1607106928292a2cb16da43a5ba942c15b836b244687",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/プラン別機能比較.md.metadata.json": {
+      "sha256": "0f709668f083cbfe4b99bbbe67b70df1cad404fd386393e58942af227b8c0b35",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/リリースノート2026年4月.md": {
+      "sha256": "0c79f7377ca721edd2007cc1cc7dbc2c203ead8a5f34608ff284e95312b04f59",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/sample-data/product/リリースノート2026年4月.md.metadata.json": {
+      "sha256": "20e2dfe2936517b34b9e331b489065cc66f093bd73d0875586dc90113337046d",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/App.tsx": {
+      "sha256": "3a967ec2834d65b89e178fae207e493e2b639bf39cb7c0e375326816d34e8b2f",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/api.ts": {
+      "sha256": "03aabccd347699e9212567f7804cfd1504ab87c15040dce02d8b17e9202caa56",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/AgentAvatar.tsx": {
+      "sha256": "c528a74a4bd2a89d741fc91eafcd1ce7f14db628496dbcf3ade5fa1888a39752",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/ChatPanel.tsx": {
+      "sha256": "0f2161c9360005780fed447a8e45711443512f12faff6f3d85f1216175e21127",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/Hero.tsx": {
+      "sha256": "a73fd925c1d19296460cfbe46ff29bf171fe3dff5047a9feaef0f7eb4f8ec093",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/LoadingSpinner.tsx": {
+      "sha256": "4fc9a38558e6b4c7e14c95ae451cc9ffceecb29af5fa70c52a70e0bce25c4983",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/MessageBubble.tsx": {
+      "sha256": "efae87724f9bf941460abdf7a4dabbe4488c374332ca0ac0c779bd57397e2b23",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/Sidebar.tsx": {
+      "sha256": "646738e17234d54f220cbe2306e4c04668a603779baf79802f0a64345207d71a",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/StatusBadge.tsx": {
+      "sha256": "81c66988542c17c3f0a44d65b8240f663d504788a47a0c6f39091b59df6b92a7",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/StreamingMessage.tsx": {
+      "sha256": "4fe037767119e96367b1d2012987d37392ca4818a249da54046e1413ae113da3",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/ToolActivity.tsx": {
+      "sha256": "2d602d3258959bb3f67ec2a50db9b8ea28793933f08e1463803e6cd652bf366c",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/TopBar.tsx": {
+      "sha256": "dafa772afdea4abaab995b51d88968b760eb9f84d39963ac70ab2f9191020faa",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/components/WorkspaceChrome.tsx": {
+      "sha256": "7072f6892bfdc8f2cb35c90a5079d8723166f15727a57269c4a70998d1914b2c",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/hooks/useStreamBuffer.ts": {
+      "sha256": "fa44460d052ebb8b2c64e59101e50ebeed7e1554f8bdfbe6901f4cb76d8ea34b",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/lib/streamdownPlugins.ts": {
+      "sha256": "1ba157d1f2bbbca4464a7daefc1a5e72e5ea615432929c5f19b2064bccfce944",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/main.tsx": {
+      "sha256": "452a99232e1012577ab824a97fea2b637deb0ae80209b6b6df7a08285d5b98bb",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/styles.css": {
+      "sha256": "18a3de4ebbc12f4c848cba2e2a9502688b7e07646fc6d2a954747a65a5855f24",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/types.ts": {
+      "sha256": "0c1efa70986d4e1a82c6b9912351bb72637e903f3aea44ab27673bb593744d87",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/vite-env.d.ts": {
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/workspace.css": {
+      "sha256": "a7caff8d5e3fc9d64fb2d0c192e35254ae92949f00da3e146c319a17829c7180",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/src/workspace.ts": {
+      "sha256": "1a5fd6ee8f16453cdf58bffdbb79db3b0c2d355fafb173e90a08d32a4a7ac15d",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/tsconfig.json": {
+      "sha256": "d091ed9bda82474282ef062779102f4e751df388cfc89b78ddc5942749e3b38b",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/tsconfig.node.json": {
+      "sha256": "e82d87ed1e0613c7926731d8f54c9a3bbf23c074739e8e84ee50684a95455012",
+      "mode": 420
+    },
+    "sample-code/06/amplify-ui/vite.config.ts": {
+      "sha256": "bd4ebfa11cbaf8f571da438748af26b0f28c7d7721a0767b88ed2256162803b0",
+      "mode": 420
+    },
+    "sample-code/06/cdk/README.md": {
+      "sha256": "e14b7aaedce03a2954f5b2db7b6d46563041b8bce33669c9c29f90f6ab2617cd",
+      "mode": 420
+    },
+    "sample-code/06/cdk/bin/app.ts": {
+      "sha256": "000e470219f466f967f9db87e00a3337cfd3020bb4775b3cf36614c3237eba18",
+      "mode": 420
+    },
+    "sample-code/06/cdk/cdk.json": {
+      "sha256": "effddd85eb25b73aba7536dd2b58136657cf83b7b3951f3f0d3c798fedb6bdab",
+      "mode": 420
+    },
+    "sample-code/06/cdk/lib/interceptor.ts": {
+      "sha256": "d12349eca6a67fdca57244e826d92749c8a90b16977a572ce14d8fc415a19d2f",
+      "mode": 420
+    },
+    "sample-code/06/cdk/lib/kb-update-agent-stack.ts": {
+      "sha256": "3963495f45c99a596827b513501f129adac00fc8c8c846f5a6df462f8476d885",
+      "mode": 420
+    },
+    "sample-code/06/cdk/lib/kb-update-agent.ts": {
+      "sha256": "e8c3bc3274db700bd31eecf3cae9ef411949efec1b8d6654f040f693a824bb19",
+      "mode": 420
+    },
+    "sample-code/06/cdk/lib/monitoring.ts": {
+      "sha256": "de7dc056c92bf4ccfc5fe668b9b42cbec6565023108234b044e158b51bd8a4fa",
+      "mode": 420
+    },
+    "sample-code/06/cdk/lib/support-ai-platform.ts": {
+      "sha256": "6e17c07fda4e175c2734a3bfb37781f9a033c3b17b5c0be4908065a60037fe8e",
+      "mode": 420
+    },
+    "sample-code/06/cdk/lib/support-ai-stack.ts": {
+      "sha256": "62bf376812e3b015b0b26cc92af8b6b3c62c69a5fb16fb0569ed23a8a652df21",
+      "mode": 420
+    },
+    "sample-code/06/cdk/package.json": {
+      "sha256": "ff850b7d231550cc21130b169d10dd5e336273b8b46993163e4078f960689ee9",
+      "mode": 420
+    },
+    "sample-code/06/cdk/pnpm-lock.yaml": {
+      "sha256": "9f4a6bdd8191ad6d656a49a225adddbba62aa77aa553120944df66bf75a877f5",
+      "mode": 420
+    },
+    "sample-code/06/cdk/tsconfig.json": {
+      "sha256": "c030c6fd1e55d4b5a7518a0bc2eafefb6021f65e4ff2d06e6c54166ac2c66cdc",
+      "mode": 420
+    },
+    "sample-code/06/gateway-lambda/atlassian_gateway_handler.py": {
+      "sha256": "dd06ca8e7f9b9a52649981cab2a0cbe9341de748f50c8d41337c6253b2842559",
+      "mode": 420
+    },
+    "sample-code/06/gateway-lambda/atlassian_tool_schema.json": {
+      "sha256": "d66c847ce926d13a608cdcb40c6ffc264b03ffa972bd3389e032b96a08f5861d",
+      "mode": 420
+    },
+    "sample-code/06/gateway-policy/README.md": {
+      "sha256": "ccfd169cb95fe640ad5acc46fa720080fa41f4d0ab9a38bbadfd353d0e4e31fa",
+      "mode": 420
+    },
+    "sample-code/06/gateway-policy/gateway-execution-policy.json": {
+      "sha256": "d442d923746ddcd4983abf151e8162b82ae2ee92efcfd3ba24edab5ac7fcf81c",
+      "mode": 420
+    },
+    "sample-code/06/gateway-policy/jira.cedar": {
+      "sha256": "542867f3cf375bb8cfb322e509ac364080892e55c3ddd30a13e842bda264b874",
+      "mode": 420
+    },
+    "sample-code/06/gateway-policy/policy.cedar": {
+      "sha256": "5cdd15b5778a7a4cc1c0427af5908ad8e5c52359280ac068a24a27f301d8427f",
+      "mode": 420
+    },
+    "sample-code/06/gateway-policy/search.cedar": {
+      "sha256": "7405cd48f0fb8e98cf5c0f31d89776c650eb23d6a0fbcdd1ad4da554995cb4a4",
+      "mode": 420
+    },
+    "sample-code/06/gateway-policy/sequence.dogwood": {
+      "sha256": "e7e19295186c361db41321831e23041706eba3c4472b7862c3987151eefed3fe",
+      "mode": 420
+    },
+    "sample-code/06/interceptor/README.md": {
+      "sha256": "c6bdebd7994b65533b64e449dea0d88214c08ac9ae11a90c04342c48391dfa09",
+      "mode": 420
+    },
+    "sample-code/06/interceptor/request_handler.py": {
+      "sha256": "f38a73a8926172d1cf6432f295766667de2d9cc27adef8273e1df4d17486b7c7",
+      "mode": 420
+    },
+    "sample-code/06/interceptor/response_handler.py": {
+      "sha256": "34f5bf7beddb32e13b7e4d4ac9e9a5421982f3c6b19c0638228dee0fc62630bc",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/.dockerignore": {
+      "sha256": "d4f1068747c582f56df4d70b21535e062ec490926c81e37b2c178ba15efede02",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/Dockerfile": {
+      "sha256": "5326baf11f3e1389dcb3d44e10b0a1c8a109a3431b9d4619cfa7ceeedfe1b0c4",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/agent.py": {
+      "sha256": "0039e57f7d0cb4b666ff3d9f79838219fdfd6b4c2d464dd90af14e68f82e9e39",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/decide.py": {
+      "sha256": "516919ea89ffd73d48891cc2d30d6acf4bcbc32d86c70f1056cdcd67b2488d11",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/eval_cases.json": {
+      "sha256": "23765070b7863068f6d761a695c805092b76128a6e7afe6d889e1f8583d9406c",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/handler.py": {
+      "sha256": "c5db9ba9bb39a1f6697993b2d7be0b77d0435d09176b48a9c7ccf1f71c35aa2f",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/pyproject.toml": {
+      "sha256": "f8a8bbe821eba42539e26856350fa1440367327d06b4772b396916765979be86",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/quality_gate.py": {
+      "sha256": "d49f449364104fb6c07ebe1a65c7b635b8cf1fc4a66a12c546e15fd0e63c4102",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/requirements.txt": {
+      "sha256": "1f65f1b08915a1ca6dba2d819e96fdd037acd27493a2638770f2ecf1a1d13039",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/APIキー誤公開時の2026年4月最優先対応.md": {
+      "sha256": "a0526d911e970c9ff069460d9cc9ab8fc0f0af54e49aa26e7265ea441b320da2",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/APIキー誤公開時の2026年4月最優先対応.md.metadata.json": {
+      "sha256": "8eca868bf659ff6db3d4f2871f04751ea08a0adc7fe9492a311963d507b69e48",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SAML_SSOログイン_2026年4月最優先手順.md": {
+      "sha256": "a9499a3e6632d4de0fff3adc08fc937f589f9830df25ecd4fdd25dee9b0cc6f0",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SAML_SSOログイン_2026年4月最優先手順.md.metadata.json": {
+      "sha256": "136433d7329c5989938dc226c93fb78918a88af127f66c912119ed15b38fe4fc",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SAML_SSO最新案内ポリシー.md": {
+      "sha256": "77480140ce5abe080a3c3ab2124af24e88c4a7a1e52f681245506543ee9ebfc2",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SAML_SSO最新案内ポリシー.md.metadata.json": {
+      "sha256": "136433d7329c5989938dc226c93fb78918a88af127f66c912119ed15b38fe4fc",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SLA案内ポリシー_誤記入版.md": {
+      "sha256": "36bdd7943564d114daa641f3e8e48e346c702b79940094aea728bdcfeafd49a7",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SLA案内ポリシー_誤記入版.md.metadata.json": {
+      "sha256": "480b8dde44c4cb23edcb095d2a1f28d6f020941e7c34e15ec2e32281622314e2",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SampleConnectPlatform_2026年4月リリース更新事項.md": {
+      "sha256": "4c0c65428ebd788ab59d41dafe1efb2056ff3652cc7b221d663a887688139340",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/SampleConnectPlatform_2026年4月リリース更新事項.md.metadata.json": {
+      "sha256": "136433d7329c5989938dc226c93fb78918a88af127f66c912119ed15b38fe4fc",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/監査ログFAQ補足_2026-04.md": {
+      "sha256": "f71a070f1dbbcab5c3d973af77c6adef34869593a4086ded8739f37505957c1a",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test-docs/監査ログFAQ補足_2026-04.md.metadata.json": {
+      "sha256": "8eca868bf659ff6db3d4f2871f04751ea08a0adc7fe9492a311963d507b69e48",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test_handler.py": {
+      "sha256": "08025175c7d706b5ce86aa09278d2b2ad22a5ffbf65553d20daeebdd09321714",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test_quality_gate.py": {
+      "sha256": "d9de113d261779cfa14d1b065616c21fe21cfce0db8b4f2fc6864015f1a9d8af",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test_tools_rollback.py": {
+      "sha256": "5f112ab49cb4064d9121f530ad2c0f0f854fa3e951ce6129961675d81dd02ee1",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/test_tools_sync.py": {
+      "sha256": "b43df9976ad1a74648ab7d15e0770159986f65a4c29799bbf1c731ea61b5c7ce",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/tools.py": {
+      "sha256": "eac9de2c95bac29cb25dd554b5cb246bbc0b46bd48b98040e26697e23e199a69",
+      "mode": 420
+    },
+    "sample-code/06/kb-update-agent/uv.lock": {
+      "sha256": "b0ae1af3adb18cb5896db8cde06d9c457a768e758d0fd6054d61785beb612a26",
+      "mode": 420
+    },
+    "sample-code/06/lambdas/kb-update-trigger/README.md": {
+      "sha256": "0634fcba58e735c3bd1cbe8805bc11068b29bad6b20b1ae7564286b92a334999",
+      "mode": 420
+    },
+    "sample-code/06/lambdas/kb-update-trigger/handler.py": {
+      "sha256": "ea52995b5ed391589776be6a89a2ec0016ffab6038b3a4860e08891f682a0e5d",
+      "mode": 420
+    },
+    "sample-code/06/lambdas/kb-update-trigger/test_handler.py": {
+      "sha256": "149cea1c84de90c14fb59016e9f94db972792d421183f1674c0f2e158a912a7d",
+      "mode": 420
+    },
+    "sample-code/06/log-analyzer/README.md": {
+      "sha256": "f3777fb0dbcbad4c954b70bcc6009aea19fafbb48163a67b139eaf3e9e075fa3",
+      "mode": 420
+    },
+    "sample-code/06/log-analyzer/analyze_logs.py": {
+      "sha256": "cd77e2aaa1926ad0293d5e488e8b737d826de75a799007248f9a065080f0393f",
+      "mode": 420
+    },
+    "sample-code/06/log-analyzer/pyproject.toml": {
+      "sha256": "f6287018232d6cdb241e0e77328466400675c22ad65d96c1d5ed095dc7730479",
+      "mode": 420
+    },
+    "sample-code/06/log-analyzer/queries.py": {
+      "sha256": "e3ab2dfec47cd91895d6fc2a22f60fd1f3a8780f45fc197bf9bb045cc0da6e48",
+      "mode": 420
+    },
+    "sample-code/06/log-analyzer/uv.lock": {
+      "sha256": "c0d1c1f63acfb124f25fa7ce7ba728565b48c7b012fed94f69a3631d91076c8c",
+      "mode": 420
+    },
+    "sample-code/DEPENDENCY_SECURITY.md": {
+      "sha256": "73270822130064d9e8dd2fafe314bc638eb26d91c11e2895169f755ea92a83ab",
+      "mode": 420
+    },
+    "sample-code/README.md": {
+      "sha256": "448d330ea3587f63d71d5e13c6f060843c526d5bd06e1a0f5616bbf99dd35cf6",
+      "mode": 420
+    },
+    "sample-code/appendix/README.md": {
+      "sha256": "225de949c87925191bd9ace1e66c8b8982d964f53c5270eda7f125dbc22e6240",
+      "mode": 420
+    },
+    "sample-code/appendix/managed_kb_comparison.py": {
+      "sha256": "0a17d5b4f121c1248580669fb485feb4df56879dbb912dea6d309c422558da71",
+      "mode": 420
+    },
+    "sample-code/appendix/managed_kb_cross_search.py": {
+      "sha256": "f7404225cb8ea3c3c4f0aec25d341444ce8214647a14f7a755a12d4ebf92a047",
+      "mode": 420
+    },
+    "sample-code/appendix/managed_kb_full_test.py": {
+      "sha256": "5c628f536aa466b065bb0c42178c647c95384de0ff255f46c053c124edd20b03",
+      "mode": 420
+    },
+    "sample-code/appendix/pyproject.toml": {
+      "sha256": "326341fcd15e787c33b41a28d9214c316eb0ea21737a35a47028d0161be93f30",
+      "mode": 420
+    },
+    "sample-code/appendix/rag_answer_quality.py": {
+      "sha256": "eb3d832e9f8288455dd7b5d2e4808fd25aab261555ab4c66038fec141f315670",
+      "mode": 420
+    },
+    "sample-code/appendix/s3_vectors_rerank.py": {
+      "sha256": "0e3134bda425056260c64a56e9f71267d2a9389e952f2041187c71b7ea0ba09b",
+      "mode": 420
+    },
+    "sample-code/appendix/s3_vectors_standalone.py": {
+      "sha256": "fc1e6f5ef9db6a5d5572208dbd592186c4aabd2e594c29dc062069f565af5e14",
+      "mode": 420
+    },
+    "sample-code/appendix/s3vectors_opensearch_comparison.py": {
+      "sha256": "5535b0b3bd8e1c52725337fe6cb5ab68c63b3de89092c4feed088572b50a95df",
+      "mode": 420
+    },
+    "sample-code/appendix/test_managed_kb_cross_search.py": {
+      "sha256": "35e73b66dd9f5120f7e47b5de4ebda174bc5d8f393b253ace7ed5763ebc05703",
+      "mode": 420
+    },
+    "sample-code/appendix/tests/test_s3_vectors_standalone.py": {
+      "sha256": "6b11fdf1e3968e657486049c9de1fb606f270af76ed50dee6dcf9d256149295a",
+      "mode": 420
+    },
+    "sample-code/appendix/uv.lock": {
+      "sha256": "7d9cf54a2bafd60a0b23935495eec6b414d99c77b6c4ab88eb5b3b767a03c2bd",
+      "mode": 420
+    },
+    "sample-code/common/kb-ingestion.sh": {
+      "sha256": "b41f98a67a5186acb9da2319286f3c5a3cdb611a00ced4caa2dea86e57bcc7bf",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/.gitignore": {
+      "sha256": "6cde0584fbbdc067e6c8af36035065e76b4f47409298804e38a108fc90230b5b",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/README.md": {
+      "sha256": "287ef5051e9b4f4d6a7c6b7458de3e664fb95b68f6ec769cb130aefbc4874d51",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/aurora_kb.py": {
+      "sha256": "bcb59ff5fafc50d395401bab35c16735daed817c3f13f799c227372731393fcd",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/compare_saved_results.py": {
+      "sha256": "b6dfb45e306319dc072b959eea7405b65f5148aeac7c4ef0b48c202b768f016e",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/infrastructure.py": {
+      "sha256": "282e0062b450c07019f93db4034e5bd15ee94a0d0cbd2536a362f3f8e055e9c4",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/pyproject.toml": {
+      "sha256": "0ad0f1c1147f185d9a725cbd98beaaa629dcc2093c948eefca5b69558376169a",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/rescore.py": {
+      "sha256": "bc55711271c61a8d55d4e33aeaef9653c9642b1f9e4d17342cbb2c314e9d4e95",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/results/2026-09-19/README.md": {
+      "sha256": "9a5119214bb0909dc4813a60f54a3066c8112e46d760385a694bb70ebc9fdbee",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/results/2026-09-19/cross-store-evaluation.json": {
+      "sha256": "12aba86e61186fd996e7180f7f6b39b557fe8556417cd23ef3175265027b24ae",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/results/2026-09-19/cross-store-summary.json": {
+      "sha256": "cdd2301a61b2df2e9107826355eff8f38f00f02a6a3b843ba54d957755449107",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/results/2026-09-19/evaluation-summary.json": {
+      "sha256": "67e12035b2807f1fd6e48613a0917efbace8c62bec10db50882e60feccb57c06",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/results/2026-09-19/evaluation.json": {
+      "sha256": "90bb243442f6196d925106e484dc93c9de5fdcdfb545b2141a71330aca75b451",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/schema.sql": {
+      "sha256": "1ed7998a9b61641fcd48f86ca531601b6124e3777ca0f7b50623c53dc15a2314",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/test_aurora_kb.py": {
+      "sha256": "f79ab34ca318239c3a18b6ff3a29b102ddb2d0305e0a3ce8b3437c00842e264f",
+      "mode": 420
+    },
+    "sample-code/supplements/aurora-kb/uv.lock": {
+      "sha256": "f9e1fa3acb575025f663aa10b96e9de10408fa3a0a75e788c0b8ac8b63a53ae0",
+      "mode": 420
+    },
+    "sample-code/supplements/grounding-standard/README.md": {
+      "sha256": "9ffd8115571aa78566966fa1ae0f4ccf659508686c7a01ac55a72b0022dba639",
+      "mode": 420
+    },
+    "sample-code/supplements/grounding-standard/check_grounding.py": {
+      "sha256": "752269461574520f4e590ead64fd0827fa1a9a46a3bd64605f95145f196239aa",
+      "mode": 420
+    },
+    "sample-code/supplements/grounding-standard/check_multiturn.py": {
+      "sha256": "1bb287482d3ce60416dac2b0fda9e574c3bda261c625edace2782f15b5a7b989",
+      "mode": 420
+    },
+    "sample-code/supplements/grounding-standard/pyproject.toml": {
+      "sha256": "4d2c755d806ececa4a1e5db322ed4bafc928ea1758d19fd762af9925052504f0",
+      "mode": 420
+    },
+    "sample-code/supplements/grounding-standard/uv.lock": {
+      "sha256": "4d96eb1e1dd0366a4ed03862bcc16b32e8ccc131e325951533c20924e641a2fb",
+      "mode": 420
+    },
+    "sample-code/supplements/langfuse/README.md": {
+      "sha256": "2dc66bc6b16364bac754b1a21efd1b043f269ee501cfcb519b43ffaaf37f92e2",
+      "mode": 420
+    },
+    "sample-code/supplements/langfuse/observe_agent.py": {
+      "sha256": "24dffcc7a21e8ae258bdfb23aa089892e88a35634fcf96bf70050bc29fce9393",
+      "mode": 420
+    },
+    "sample-code/supplements/langfuse/pyproject.toml": {
+      "sha256": "a55e979c4f36019265f784d87a65b2b48de028835783135deb434102041b20fa",
+      "mode": 420
+    },
+    "sample-code/supplements/langfuse/results/2026-09-05-local-traces.jsonl": {
+      "sha256": "f7fa404423c739dd194dd562e1e5b8e15c5d14f7a00de532c61f671b395726cd",
+      "mode": 420
+    },
+    "sample-code/supplements/langfuse/test_observe_agent.py": {
+      "sha256": "5561e3845231b46313986a009b0dbceb1bbac902949c56eea57d172224055b82",
+      "mode": 420
+    },
+    "sample-code/supplements/langfuse/uv.lock": {
+      "sha256": "f85e83932c40842308a69e79bbff6e85c131c554d54130c73e05a6d2948fc38a",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/README.md": {
+      "sha256": "fed8d8a1eb36b40859da72ba68ed58d40da18828df5e509cd68fce8c2a405763",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/app.py": {
+      "sha256": "cb934ee76b332057c2efd9e335b01240cb63b5823cb32c789e664b9a85d3dcda",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/pyproject.toml": {
+      "sha256": "ea8d912bf8f4ff4d2668376adc73bbb4262d54e61c1d4b0caf8d4a1e149b12db",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/results/2026-10-07-agentic-managed.jsonl": {
+      "sha256": "7a39c997dc1381869befc62be9f20a74ac369d08245bd7fdc3a71ce24d00c923",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/results/2026-10-07-agentic-model.jsonl": {
+      "sha256": "4d98c588b17a758c0b8bd2c6ac3d4e4e23359f29ce9842c2162811fe9a838e75",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/results/2026-10-07-retrieve-model.jsonl": {
+      "sha256": "8bdf95f803635dda55b05c19e659b50617f1f3ba2332339144992af5794bba16",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/results/README.md": {
+      "sha256": "0a3b9ab4f476a5a4667bdab78cecd6d59ab42679aaffd85b166e847ff6f09686",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/retrieval.py": {
+      "sha256": "c665c7193e3507f149f67761092d671ca14289042a48c29d01f2be391c62b02e",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/test_retrieval.py": {
+      "sha256": "827d76224f4b5d68ea4018a51da9da34c9c929f479d903549c94c12d672d5a98",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/index.html": {
+      "sha256": "845e9b452da47175f7f90952ec1a019282344803682c4577e0bf07551312dd02",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/package.json": {
+      "sha256": "e56ccbd7da01df531a40c3197b6e2bb3456c987b13f9d0317b75ac151979ab00",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/pnpm-lock.yaml": {
+      "sha256": "212279fdf8c2e58ed5dabf6a06a7433704d1ba9243ef12b1111e45e7fa622faf",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/src/App.tsx": {
+      "sha256": "3324cb214afde571083bf4228e0619a49c3c936359c098ad0d4391417a2dc9a3",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/src/WorkspaceHeader.tsx": {
+      "sha256": "ff0986bda96d438d2c5e2ac1612a65d18cfa41e45575226138bf81cb664d0901",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/src/main.tsx": {
+      "sha256": "41ad61227871df55152ae13cd04354b77d23c2087892743f94044d0330c60f77",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/src/supplement.css": {
+      "sha256": "d17e2739dc31b63219f64a00f22b7692dacabc3ed662554f38a8c69df385eedc",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/src/workspace.css": {
+      "sha256": "26bf5923dbb435dcdd62af98af5bdf0762940a6fd752618c61b0b5bf97fb539d",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/tsconfig.json": {
+      "sha256": "14bbf6892d0439c75f22b7362f0c6b125a5c333b29b0b20b3b29888d92989f02",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/ui/vite.config.ts": {
+      "sha256": "99578e06035ee13c891a7f860698719e82b96b1aa0c571f2c24940fd953cbf62",
+      "mode": 420
+    },
+    "sample-code/supplements/managed-kb-app/uv.lock": {
+      "sha256": "c3c1a1c2dfce1d9016572f84a88c47dfc8e7f1fcf17d64591b0743127f349744",
+      "mode": 420
+    },
+    "scripts/verify_book_examples.py": {
+      "sha256": "c69ab06f844bf52cada90e63e23f749960f447609192a18d9ba22e1237b71a46",
+      "mode": 420
+    },
+    "supplements/README.md": {
+      "sha256": "0748f186e07e54fa253134f3a62b52242f032e0ebabfc11402b5e0543d9e28eb",
+      "mode": 420
+    },
+    "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
+      "sha256": "7ca9829fdc9a6fce3125ca9f81945d0d1893e928b1a7689d62d1f8a1fb15d193",
+      "mode": 420
+    },
+    "supplements/chapter01/images/agentcore-dev-inspector.png": {
+      "sha256": "273835c8ff987aa6751a5b79bc3dfe275a808e286866c6b8b308d5ad19a8cccc",
+      "mode": 420
+    },
+    "supplements/chapter01/images/effort-levels.png": {
+      "sha256": "57769127bb23afef07ec7704cc484ef03018626cdca995f0acf0d5973f7a671f",
+      "mode": 420
+    },
+    "supplements/chapter01/images/effort-levels.svg": {
+      "sha256": "5917ce7fbc8adb75f205aff484b2b19e90e11e71aa421903adb8662d7256c1ab",
+      "mode": 420
+    },
+    "supplements/chapter01/images/effort-output-limit.png": {
+      "sha256": "477142443da11dea6515e4200a1541c1a29ae5f87308ef5699da4f4f0ae503b8",
+      "mode": 420
+    },
+    "supplements/chapter01/images/effort-output-limit.svg": {
+      "sha256": "bfa236f94c06601f4a8b84ce79fd464eb0d541eb5d4dc7b32a0a0ddff7e38980",
+      "mode": 420
+    },
+    "supplements/chapter01/images/src/make_effort_figs.py": {
+      "sha256": "6c23a6b27b704d5f31b9331338627f5b5fd2a9bbd42f3ffe40e03ce50723f754",
+      "mode": 420
+    },
+    "supplements/chapter01/コンテキストグラウンディングチェックにStandardティアが追加された.md": {
+      "sha256": "e282138b13f65e43534e09eed9bdeab68cf903ccf98f9da756f68a7bb9677d4e",
+      "mode": 420
+    },
+    "supplements/chapter01/本編のコードで最新モデルを使う.md": {
+      "sha256": "d1c4b5ff18460af2658d1ff4ccb624b7d1c6a8ca4d84fb8ccbcd9e5dd422f3b2",
+      "mode": 420
+    },
+    "supplements/chapter02/Amplifyコンソールからアプリを公開する.md": {
+      "sha256": "90d2e60ba40391426194e5e7e29f43ef7fa9f2717f04c1afc08f46a637099047",
+      "mode": 420
+    },
+    "supplements/chapter02/AuroraでKnowledge-Basesの検索を検証する.md": {
+      "sha256": "f6d8c7aa866c6f9795c104be6b31ef95dc3fdd9b71682c36e03f70490d931d95",
+      "mode": 420
+    },
+    "supplements/chapter02/OpenSearch-Serverless-NextGenをKnowledge-Basesで使えるか試す.md": {
+      "sha256": "d2b9a2fe9bdfb4fb0473a60a93dde8fdee050f4697f2da3c363c438d738f0329",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-01-create-github.png": {
+      "sha256": "27c2b4c0012a3ee11024cc9d11878268de6980372230acc7a3857aa7a49f448f",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-02-github-repo-access.png": {
+      "sha256": "f8615f8fb365e34c12ddde13df1be0e5e2370876fa9edc4fcaa3ede41650ccfe",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-03-build-settings.png": {
+      "sha256": "1f92d4bc6d1fcbfd262b1f048754c409ff7fa8842d6e5c04a132d5fea0d8f585",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-04-env-vars.png": {
+      "sha256": "4d799322a8a0cbc0b9097f26f6450a604c348b5935a306525ffbe9d5a33da205",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-05-deployments.png": {
+      "sha256": "101fbe9dc842141eb5ee7dbc3ac9bf9c6179993bb8e36e6819fc4a460af11748",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-06-step2-repo.png": {
+      "sha256": "a183284a224fa19b01c14214d05830203aa5b76199d3cf9193cef89e7f782606",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-07-step3-settings.png": {
+      "sha256": "1a6a2bb95cb371a999e3cc69e43280a90f24ef7012521eff166d8b735704a3e8",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-08-step3-env.png": {
+      "sha256": "985e44dfee24466f53359b966c8b3b237da6c109c11d7fbb87dd33a998724feb",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-09-step4-review.png": {
+      "sha256": "7979ae867e16020917a57ac8ed76db3907bd0a57d961662e95c85f102e60b55d",
+      "mode": 420
+    },
+    "supplements/chapter02/images/amplify-hosting.png": {
+      "sha256": "9c678355c7be7b837b2e01a74068d49e2b775dab224d23f4975019639e5e4c4e",
+      "mode": 420
+    },
+    "supplements/chapter02/images/aurora-kb-architecture.png": {
+      "sha256": "0fb1bfa2f5854e7d8343d2ad1a53c42a9e9fa531f56bdbf12ee83f3eb57a8071",
+      "mode": 420
+    },
+    "supplements/chapter02/images/nextgen-direct-search.png": {
+      "sha256": "c14add9cfde1f80c325dfcff7cecc616580eb950c456d5066881ac4aee916137",
+      "mode": 420
+    },
+    "supplements/chapter03/images/agentcore-02-synthesize.png": {
+      "sha256": "97c8b98fc2f19588a6f28cabc3a9bbd460745ace7883194c897ed5c88d52294a",
+      "mode": 420
+    },
+    "supplements/chapter03/images/agentcore-04-policy-io.png": {
+      "sha256": "00cb60e6e51243156f42de47ae37609a3661473bb8cf98fee97b8aa22f248f5c",
+      "mode": 420
+    },
+    "supplements/chapter03/images/langfuse-01-tree.png": {
+      "sha256": "30c26b0309434e7ca8fa6217b39bf034116eba368ec768d1f671a5acc4d0c205",
+      "mode": 420
+    },
+    "supplements/chapter03/images/langfuse-02-policy.png": {
+      "sha256": "8d230b377919eec3770931035254d8513a8522c72d9e6ad8d2a3243ab2b151cb",
+      "mode": 420
+    },
+    "supplements/chapter03/images/rag-trace-destinations.png": {
+      "sha256": "ee9b9505023972350d5ddda3898fb0fb8824aac91d4f481d75012725f4ddd9fe",
+      "mode": 420
+    },
+    "supplements/chapter03/生成AIでPDFを解析して取り込む.md": {
+      "sha256": "ed2ae779f6cd826dad82c1ced0ce6b0ac462534cb48f8205c3a99832b3da60bd",
+      "mode": 420
+    },
+    "supplements/chapter03/第3章のRAGアプリで回答の過程を可視化する.md": {
+      "sha256": "3ad890e52f1cb9c5c06853b2ad650890e753012b878aac5874280eb5fbc4e189",
+      "mode": 420
+    },
+    "supplements/chapter03/部門フィルタの有無による回答全文.md": {
+      "sha256": "f3fd7184e9d35d14011d1f04337358371b0e275269486fa7c82cf0fd4a9d538a",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-3lo-consent-flow.png": {
+      "sha256": "6ea18af6138ff859b1e55fbffe3af995581047aa44d84148b9245d159998f5b1",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-3lo-consent-portal.png": {
+      "sha256": "16b79495501ae4c68f9e5c8b4b0fba14b95d7b750b1355d9145ce7af046ec5bf",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-bypass-boundary.png": {
+      "sha256": "305763189f35318f5bfb823e1d6d30cbafea43291731395c5fcc69484eb8624d",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-console-genai-gateways.png": {
+      "sha256": "1a2b856a8b4150f5246a1dd97b160e765cf1625c011b648fa53b5ae647d65455",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-console-genai-policies.png": {
+      "sha256": "6a2f178d5f731697aaac7e2888cc7b10927e4b4ed2372b55e3169c2ec4c77573",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-console-genai-policy-latency.png": {
+      "sha256": "e8c5d4d9948cd22f8b4470f3b7560710da543294f57aaefac162c0c7b0743899",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-console-genai-trace-allow.png": {
+      "sha256": "294f9d157914d58f440c8652a3916c77854640539d5a07d0132416b91059eaa7",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-console-genai-trace-deny.png": {
+      "sha256": "cebf272dd0ff1dc71eae19f1e5a64494e0eb93ae26928b14f8d6ec8413d7275c",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-console-logs-policy.png": {
+      "sha256": "092605247185f415b96ae121516fd0505ebf0f9d28ebcd7facbe3582e5485cdc",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-console-observability-settings.png": {
+      "sha256": "6589fb3ee0adbb54516e495f97e6b73173388c33f19413ab4d8220e1920e9944",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-control-layers.png": {
+      "sha256": "ce798d3c87c67767ab9dff7338948a7f7b6dbf76b4cd7f1e92b31db307aec12f",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-dogwood-credit.png": {
+      "sha256": "545dbd43dd36f5e9946de1b3ed21e41ea22f9fdccc8b92de57a522a1422b6e42",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-dogwood-credit.svg": {
+      "sha256": "4d7b474d574a5e1248b092d75b1b9c261e802d86c930e09155bbae6877045116",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-dogwood-sequence.png": {
+      "sha256": "5bae9e51348ee47649c6f8eb76ec4ebbbce0f1748a473ef8313be74ad6ce20ab",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-dogwood-sequence.svg": {
+      "sha256": "2a3268107ab2bce8aaa830c9e4053a164bd0b49321bc5730b977056d4eb2f56c",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-guardrail-prompt.png": {
+      "sha256": "44296d97acc3a972c27741bb9f4b339a3a99c84935d90410cfab78c13ab2fa9d",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-guardrail-tuning.png": {
+      "sha256": "9bd66d4a0f92fc9450c54e13d4c3e54ac9328edebda70fcee2df8906fbe4872d",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-http-runtime-target.png": {
+      "sha256": "b190cec9ab23676bcf0219b163ed1930a21d50add9b94e0b4cc3811b0cd8bab3",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-inference-routing.png": {
+      "sha256": "5338e31ac4b3755a6b705059f6b93212edb01a7f20766fba25e5a9e98a2d5a9a",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-interceptor-flow.png": {
+      "sha256": "398fca21affde8e069bec88e050a2f2b585164367a1af8aa6c86d3cbf2f98d4a",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-memory-per-user.png": {
+      "sha256": "640cd8b8123fdf060724d338d64c57ad3210424be64b951502526956164c96b2",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-memory-runtime-direct.png": {
+      "sha256": "47331190e5e64bf6bd107985ae5e6762688018c5accea690434b055c6e0fe90f",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-outbound-credentials.png": {
+      "sha256": "25f38fdf054c8122044191c1771fbe6c5f372107adb089f04a447071445326ff",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-single-vs-shared.png": {
+      "sha256": "e1b69d509b67967b0e3cbc98523d3c6809edc38b71f3e78888fac302165480d3",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-stacked-rate-limit.png": {
+      "sha256": "2e14daaeb3f45b730da5a392ef8292397e3489b816e0e00e3894d6ed9d037fba",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-target-types.png": {
+      "sha256": "f406ddcc0377f192c89d54cff82834644145f5bb87591c66e7dd6a09b1f55226",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-waf-policy.png": {
+      "sha256": "9f573d4b6f60b4b5eaa9b567f6888649e9410c23c9f7884c2b8f2a8270f1ec66",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-when-to-use.png": {
+      "sha256": "ebdda240ad63c393faa0e9d72100b34865d5876fcf055bd3eee80ed910da67ec",
+      "mode": 420
+    },
+    "supplements/chapter04/images/gateway-why-aggregate.png": {
+      "sha256": "0af38fb9d53c997153d57b351506afdb9b63c804caf54fab28fc50128947ece0",
+      "mode": 420
+    },
+    "supplements/chapter04/images/src/make_dogwood_figs.py": {
+      "sha256": "14482e2cc5ea73c147b180e1576787d3cf3ad60b3025c925a2065217b7dc66da",
+      "mode": 420
+    },
+    "supplements/chapter04/ツール・エージェント・モデルの入口をAgentCore-Gatewayで統制する.md": {
+      "sha256": "8d851fa22b629bbe1346a903e029d6d756a002ad1e81a03ce3eabc851ca42cf0",
+      "mode": 420
+    },
+    "supplements/chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md": {
+      "sha256": "23fb1c4813cfc6c6489e0a5de000f5d1e53f90c3355b5b1bf4e72a7f5359ac46",
+      "mode": 420
+    },
+    "supplements/chapter06/BedrockのコストをCost-Explorerでモデル別に見る.md": {
+      "sha256": "348f3f6f0773afff3dbdde739863eb3f6017eba056febb46d71bb3f4636f5e75",
+      "mode": 420
+    },
+    "supplements/chapter06/CloudWatch-Omniでエージェントを調べて改善する.md": {
+      "sha256": "ed64604ccaf010cea5c40a392a3970e93544f0b14dd3f3cfa1262efabca02a92",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-autodetected-provenance.png": {
+      "sha256": "a0c5e72b22811cbe19c8d2f743ec4956e6626678cf540332c54b49f9bb60d359",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-autodetected-records.png": {
+      "sha256": "bdf96206fb088cbbb0a83e2a2e898a7a3e4016b9f0438d26c64f31ef41142fc5",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-console-approve.png": {
+      "sha256": "1abc4d2e9497abfc5f918b96b5dc98df1cfae30354016823a0c1a367f2df6e6e",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-console-detail.png": {
+      "sha256": "1dc4c145661408dc4426bb70565e828f4d5c9a5666dbe1aa1660a32b7ec70930",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-console-directory.png": {
+      "sha256": "61d78f26700f022153d45d52981c2073e82cdfc83d41cbf49855f7916434da2a",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-dynamic-load.png": {
+      "sha256": "87be754f261814cc8e07ba650de7ad7a25afabf0b670bdb29f2cdc46653bc0e5",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-dynamic-load.svg": {
+      "sha256": "59e0711628975707d02fded55022f9167313efe9f0b0d64884d4d1489f55f28f",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-enterprise-flow.png": {
+      "sha256": "b3ca2c28b52e7e2415e0a64a482cf4ab01ea523f53bcee097346fc81310b05ea",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-mcp-client.png": {
+      "sha256": "6bc41eb3b08ae4f8028256e852f40f35a8123fd10d327deb6edb4c113de168f1",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-mcp-client.svg": {
+      "sha256": "d898face7cfa4ecba26f41285cfc719cdf4c4f32f3f6c9698d10d797315a3237",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-org-autodetect.png": {
+      "sha256": "7de0fbdcdc91bdd13e8ee73e749353fe9733e3850eb4e32b8408941d32505b3d",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-org-autodetect.svg": {
+      "sha256": "1fd6822862d90a7bae4a8e5c5c9c351e2cea0123083c0f0be9ec2e30317b4ad9",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-version-switch.png": {
+      "sha256": "c1819f153ef9b66ff09a69fdac79ceb0b3d33d4fa2fde39f9f258f3c3c0feec7",
+      "mode": 420
+    },
+    "supplements/chapter06/images/agent-registry-version-switch.svg": {
+      "sha256": "0435591d9074cf5bcbb73afd52da8bb9689ea60ff6d499cd52acc4fa6a220abc",
+      "mode": 420
+    },
+    "supplements/chapter06/images/cost-explorer-bedrock-attributes.png": {
+      "sha256": "4c25b9816c9b56ad40267528ad8e77526478eba88b1368cca8180623d3d4d472",
+      "mode": 420
+    },
+    "supplements/chapter06/images/cost-explorer-bedrock-budget-alert.png": {
+      "sha256": "1124baf2e1e3648084318e123826fb723cf7d5ce0eaa6dac90a27e77593a1053",
+      "mode": 420
+    },
+    "supplements/chapter06/images/cost-explorer-bedrock-by-model.png": {
+      "sha256": "582cc146bb4ce50fe92c2f9a041cd5e632fb4574044ef4fa8befd1fd48aafcbf",
+      "mode": 420
+    },
+    "supplements/chapter06/images/cost-explorer-bedrock-dashboard-provider.png": {
+      "sha256": "7761e723b02d0c096ea4e06da47ca98f2fcf88cb0cc4b54ba78b8c0c7d15de3b",
+      "mode": 420
+    },
+    "supplements/chapter06/images/cost-explorer-bedrock-inference-type.png": {
+      "sha256": "084e65229663f073c38b61ba74ef03b3ef4e0f513cdf087074cac9233f6a64d4",
+      "mode": 420
+    },
+    "supplements/chapter06/images/omni-dataset-version.jpg": {
+      "sha256": "1fb4ab927b03bb84778cc57f8d7cf99ace6103e7e0e3aa4c8474c73d2dd25d56",
+      "mode": 420
+    },
+    "supplements/chapter06/images/omni-evaluations.jpg": {
+      "sha256": "c1411eb005c4e570f870f6a2a31d03592785bbcd39f0278b2825a27a42f5dd77",
+      "mode": 420
+    },
+    "supplements/chapter06/images/omni-prompt-comparison.jpg": {
+      "sha256": "09c081258309545313b9e32a82d34655280d8cdb5e88a9e9507fa3828f275617",
+      "mode": 420
+    },
+    "supplements/chapter06/images/omni-setup-progress.png": {
+      "sha256": "ef1248207e2c1aff28e8643ecfdf9f5dca2816249bf308ef25f865f70951933e",
+      "mode": 420
+    },
+    "supplements/chapter06/images/omni-setup-space.png": {
+      "sha256": "79fa9c7fea234bb750168d32ee16eadc40307d69133a2333f2145124c4009b19",
+      "mode": 420
+    },
+    "supplements/chapter06/images/omni-tool-details.jpg": {
+      "sha256": "203c849133702b18d3f68d811813923bd50265833bf52ea756efd43117d00641",
+      "mode": 420
+    },
+    "supplements/chapter06/images/omni-trace-timeline.jpg": {
+      "sha256": "250f1c96775bafbe0ee93cb88c352b53a547b7a76d851a85e3ddb8aa3ae0f991",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/cost-explorer-bedrock-attributes.png": {
+      "sha256": "251d6bf8a47698e043112b75693eaefe5693997e395dddb408c05ff0c2ea98f6",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/cost-explorer-bedrock-budget-alert.png": {
+      "sha256": "cfba7465371f65b7969d3bd537c56f1c728fb5afe47298de043ff5c2795a68b9",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/cost-explorer-bedrock-by-model.png": {
+      "sha256": "eefe469402ec29259d17a72540f044bf716f8d328028df3e857aae9f963e1599",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/cost-explorer-bedrock-dashboard-provider.png": {
+      "sha256": "6760764c35a64a832af29a0d38f5854161550b18e3800c9530dd0e3627f0034c",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/cost-explorer-bedrock-inference-type.png": {
+      "sha256": "1f949baf59070b9c8eae4c16f415fba7c25c6fdae9ea722d032a7a5d09c1c5fc",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/publish/cost-explorer-bedrock-attributes.svg": {
+      "sha256": "d8b75771d2ee75ddfc20e04e441150d248b8a629eb910218e5c1fce9fe44871d",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/publish/cost-explorer-bedrock-budget-alert.svg": {
+      "sha256": "311bd0d26b704a3c811656d91ed32fbdf2fc7738c87bc348603083cd5c1d0b5e",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/publish/cost-explorer-bedrock-by-model.svg": {
+      "sha256": "2a57e0b6dba2c01e9608cabc3d4d22ebf5e8c596df747edf45c8ae79eff91905",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/publish/cost-explorer-bedrock-dashboard-provider.svg": {
+      "sha256": "569039720b232e40a315c07a82ed35adc3974243eefcd211a0109ddbba478d86",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/publish/cost-explorer-bedrock-inference-type.svg": {
+      "sha256": "53f8485653e6adaa47641313c1ee194735616f97d63df6a9f76d30b7d043b205",
+      "mode": 420
+    },
+    "supplements/chapter06/images/skitch/skitch-spec.json": {
+      "sha256": "e79e32b5a07eb9f4f0e8798d723e6c4f930aeca127c0a5f598f701ce7dcd6668",
+      "mode": 420
+    },
+    "supplements/chapter06/images/src/make_registry_figs.py": {
+      "sha256": "d4c61954b73512d84b28db484e145e1f4bfa943d634da054fea82776dc872ade",
+      "mode": 420
+    },
+    "supplements/chapter06/エージェントとスキルをAWS-Agent-Registryで組織管理する.md": {
+      "sha256": "511f0aab0991bf46c80c986f468dddeffdca03c772f12595cc1bdde57822d113",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/Managed-Knowledge-Baseのデータソースを定期同期する.md": {
+      "sha256": "e0e1ed4c50857f907d42798a712b0143d40d6a025df84211d33f558dbf398a28",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/Managed-Knowledge-Baseをアプリに組み込んでストリーミングする.md": {
+      "sha256": "a9dead2be1d160a0f4d93608cb3c64280c165e300f4aa13c6b709e99f7be58b7",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/images/managed-kb-app-answer.png": {
+      "sha256": "8e4b903f3ac4f3087cc865c8dc846ac5cf59b333c56db13b279979a18ecba8af",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/images/managed-kb-app-flow.png": {
+      "sha256": "d7dcc8067e9bf498caa18743b880ddabaeeed7f11b465ede06899a9007b9e3d1",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/images/managed-kb-app-streaming.gif": {
+      "sha256": "341754a24c4831d5b91063f94b812157ada8d57344d95710cfd41c135cb99f27",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/images/sync-schedule-options.png": {
+      "sha256": "544b8dd21ee43373111f4b8af7b77cdd068e0d14f415f0faf38acc0ef0a27fb3",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/images/sync-schedule-section.png": {
+      "sha256": "3730f5991d7bfda5a4ea0966ed1039a62e1b4e4b60c8560c89795df7361c3631",
+      "mode": 420
+    },
+    "supplements/managed-knowledge-bases/生成された回答の全文.md": {
+      "sha256": "0a8ab681d99117d5234b8acaaf83000f4edae9b7565b9e0c559cb4e3837d67bd",
+      "mode": 420
+    },
+    "supplements/s3-vectors/S3-Vectorsのメタデータフィルタが事前フィルタリングに対応.md": {
+      "sha256": "a2d23d5634ed4aa250d09efe8fb3f77231e7f544323b57bb9d9ede02093d1273",
+      "mode": 420
+    },
+    "supplements/s3-vectors/images/classic-vs-enhanced.svg": {
+      "sha256": "813d44f0ee6ea5757269b8e73620ef56913651aa1d6c957826b8334cc9b411af",
+      "mode": 420
+    },
+    "ハンズオンFAQ.md": {
+      "sha256": "8ec33c6712fc347305f23df8d611fda6a4b7982e8e014e544f90f42c9fce1168",
+      "mode": 420
+    },
+    "ハンズオン後のリソース削除手順.md": {
+      "sha256": "e3d5fcf19782afea9c9b69f479c30fd3e0ca2a0c5efe921ac281805873c667ee",
+      "mode": 420
+    },
+    "正誤表.md": {
+      "sha256": "79fc69a774d5710a3a34e11bc7f92722fb1e6587eed4d06b6bfe0926d67146e4",
+      "mode": 420
+    }
+  }
+}

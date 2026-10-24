@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "topic_id": "data_residency",
+    "department": "Support",
+    "audience": "user",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["data_residency", "user", "privacy"],
+    "contains_table": false
+  }
+}

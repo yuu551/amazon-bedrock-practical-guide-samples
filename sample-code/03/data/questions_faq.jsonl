@@ -1,0 +1,5 @@
+{"id":"faq01","intent":"ピンポイント事実（隣接FAQと似た数値が並ぶ）","question":"SampleConnectのEnterpriseプランでは、APIキーは1アカウントあたり同時に何本まで有効化できますか","expected_keywords":["50"],"expected_sources":["sampleconnect-faq"]}
+{"id":"faq02","intent":"固有名詞検索（他エントリに類似語が散在）","question":"SAML SSOで正式対応しているIdPを全て列挙してください","expected_keywords":["Okta","Azure AD","Google Workspace","OneLogin"],"expected_sources":["sampleconnect-faq"]}
+{"id":"faq03","intent":"1件完結（隣接FAQが紛れると数値が混ざる）","question":"Standardプランのサポート窓口の営業時間を教えてください","expected_keywords":["平日","9:00","18:00"],"expected_sources":["sampleconnect-faq"]}
+{"id":"faq04","intent":"手順と通知経路（固定長では次FAQに流れやすい）","question":"SampleConnectの緊急メンテナンスはどのような方法で通知されますか","expected_keywords":["バナー","メール","Slack"],"expected_sources":["sampleconnect-faq"]}
+{"id":"faq05","intent":"条件と上限値（1FAQに閉じた質問）","question":"SampleConnectで障害補償が発生した場合、翌月の料金からいくらまで減額されますか","expected_keywords":["10%","50%"],"expected_sources":["sampleconnect-faq"]}

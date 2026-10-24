@@ -1,0 +1,100 @@
+[
+  {
+    "name": "confluence_search",
+    "description": "Confluence Cloudから障害メモや暫定回避策を検索します。support-kbだけでは根拠が足りない場合に使います。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Confluenceで検索したい問い合わせ文またはキーワード"
+        },
+        "limit": {
+          "type": "integer",
+          "description": "取得する検索結果件数"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "excerpt": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "title",
+              "url",
+              "excerpt"
+            ]
+          }
+        }
+      },
+      "required": [
+        "count",
+        "results"
+      ]
+    }
+  },
+  {
+    "name": "create_jira_ticket",
+    "description": "回答を確定できない問い合わせをJira Cloudへ起票します。要約、根拠、未確定点をdescriptionへ含めます。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "summary": {
+          "type": "string",
+          "description": "チケットの要約"
+        },
+        "description": {
+          "type": "string",
+          "description": "確認済みの根拠、未確認点、一次回避策を含む詳細本文"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Jiraの優先度名。例: Highest, High, Medium"
+        }
+      },
+      "required": [
+        "summary",
+        "description"
+      ]
+    },
+    "outputSchema": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "issueKey": {
+          "type": "string"
+        },
+        "issueUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "issueKey",
+        "issueUrl"
+      ]
+    }
+  }
+]

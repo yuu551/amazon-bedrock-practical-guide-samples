@@ -1,0 +1,12 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "department": "Support",
+    "audience": "support",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["saml", "login", "sso"],
+    "topic_id": "saml_sso"
+  }
+}

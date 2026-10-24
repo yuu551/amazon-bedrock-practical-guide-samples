@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "change_log",
+    "topic_id": "data_residency",
+    "department": "IT",
+    "audience": "admin",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["data_residency", "changelog"],
+    "contains_table": false
+  }
+}
