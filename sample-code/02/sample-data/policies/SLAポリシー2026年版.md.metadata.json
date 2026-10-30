@@ -1,0 +1,12 @@
+{
+  "metadataAttributes": {
+    "document_type": "policy",
+    "department": "Billing",
+    "audience": "user",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["sla", "service_credit", "policy"],
+    "topic_id": "billing"
+  }
+}

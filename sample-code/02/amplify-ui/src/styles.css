@@ -1,0 +1,1013 @@
+/* ==========================================================================
+   Design Tokens
+   ========================================================================== */
+
+:root {
+  /* --- Colors --- */
+  --color-text-primary: #19212b;
+  --color-text-secondary: #5f6b78;
+  --color-text-muted: #697586;
+  --color-text-error: #b42318;
+  --color-accent: #8b5a2b;
+  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-surface-warm: #fffdf8;
+  --color-surface-empty: #f6f8fb;
+  --color-surface-user: #f9f3ea;
+  --color-surface-assistant: #f0f6fa;
+  --color-border: rgba(25, 33, 43, 0.1);
+  --color-border-medium: rgba(25, 33, 43, 0.12);
+  --color-border-light: rgba(25, 33, 43, 0.08);
+  --color-gradient-btn-start: #1d6b6a;
+  --color-gradient-btn-end: #285d8f;
+  --color-focus-ring: #1d6b6a;
+
+  /* --- Spacing --- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --space-4xl: 48px;
+
+  /* --- Typography --- */
+  --font-body: "Hiragino Sans", "Noto Sans JP", sans-serif;
+  --font-mono: "SF Mono", "Fira Code", monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.2rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(2rem, 4vw, 3.4rem);
+  --weight-normal: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+  --leading-tight: 1.05;
+  --leading-normal: 1.7;
+  --leading-relaxed: 1.8;
+
+  /* --- Border Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 2px 8px rgba(37, 54, 73, 0.06);
+  --shadow-md: 0 18px 40px rgba(37, 54, 73, 0.08);
+  --shadow-lg: 0 24px 56px rgba(37, 54, 73, 0.12);
+  --shadow-glow: 0 0 0 3px rgba(29, 107, 106, 0.18);
+
+  /* --- Transitions --- */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+
+  /* --- Root defaults --- */
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background:
+    radial-gradient(circle at top left, rgba(255, 235, 196, 0.9), transparent 34%),
+    linear-gradient(180deg, #fff9ef 0%, #eef3f8 100%);
+}
+
+/* ==========================================================================
+   Reset & Base
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+/* ==========================================================================
+   App Shell
+   ========================================================================== */
+
+.app-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-xl) var(--space-4xl);
+}
+
+/* ==========================================================================
+   Hero (simplified single-column for ch2)
+   ========================================================================== */
+
+.hero {
+  margin-bottom: var(--space-2xl);
+}
+
+.eyebrow {
+  margin: 0 0 var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero h1 {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-2xl);
+  line-height: var(--leading-tight);
+}
+
+.hero-copy {
+  margin: 0;
+  max-width: 60ch;
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr);
+  gap: var(--space-xl);
+}
+
+/* ==========================================================================
+   Panel (shared)
+   ========================================================================== */
+
+.panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--duration-normal) var(--ease-out);
+}
+
+.panel:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   Chat Panel
+   ========================================================================== */
+
+.panel-chat {
+  padding: var(--space-xl);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: var(--text-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ==========================================================================
+   Composer (Form)
+   ========================================================================== */
+
+.composer {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.composer textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 140px;
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  background: var(--color-surface-warm);
+  line-height: var(--leading-normal);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.composer textarea:focus {
+  outline: none;
+  border-color: var(--color-focus-ring);
+  box-shadow: var(--shadow-glow);
+}
+
+.composer textarea:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+  border-color: var(--color-focus-ring);
+  box-shadow: var(--shadow-glow);
+}
+
+.composer button {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  border: 0;
+  border-radius: var(--radius-full);
+  padding: var(--space-md) var(--space-xl);
+  background: linear-gradient(135deg, var(--color-gradient-btn-start) 0%, var(--color-gradient-btn-end) 100%);
+  color: white;
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.composer button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(29, 107, 106, 0.3);
+}
+
+.composer button:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.composer button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.composer button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* ==========================================================================
+   Timeline
+   ========================================================================== */
+
+.timeline {
+  margin-top: var(--space-xl);
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* ==========================================================================
+   Q&A Pair
+   ========================================================================== */
+
+.qa-pair {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+/* ==========================================================================
+   Empty State
+   ========================================================================== */
+
+.empty-state {
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl) var(--space-lg);
+  background: var(--color-surface-empty);
+  color: var(--color-text-secondary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.empty-state svg {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Message Bubble
+   ========================================================================== */
+
+.message {
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border-light);
+  animation: message-enter var(--duration-slow) var(--ease-out) both;
+}
+
+.message-role {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.06em;
+}
+
+.message p {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: var(--leading-normal);
+}
+
+.message-user {
+  background: var(--color-surface-user);
+}
+
+.message-user .message-role {
+  color: var(--color-accent);
+}
+
+.message-assistant {
+  background: var(--color-surface-assistant);
+}
+
+.message-assistant .message-role {
+  color: var(--color-gradient-btn-start);
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.panel-side {
+  display: grid;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  align-content: start;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.panel-side h2 {
+  margin: 0 0 var(--space-md);
+  font-size: var(--text-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* ==========================================================================
+   Source List (Citations)
+   ========================================================================== */
+
+.source-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--space-md);
+}
+
+.source-list li {
+  animation: source-fade-in var(--duration-slow) var(--ease-out) both;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border-light);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+
+.source-uri {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-gradient-btn-start);
+  font-weight: var(--weight-semibold);
+  margin-bottom: var(--space-sm);
+  word-break: break-all;
+}
+
+.source-snippet {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   Shared Text Styles
+   ========================================================================== */
+
+.placeholder-text {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+
+.error-text {
+  margin: var(--space-md) 0 0;
+  color: var(--color-text-error);
+  font-weight: var(--weight-bold);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  animation: shake var(--duration-normal) var(--ease-out);
+}
+
+/* ==========================================================================
+   Loading Spinner
+   ========================================================================== */
+
+.spinner {
+  animation: spin 0.8s linear infinite;
+}
+
+/* ==========================================================================
+   Keyframe Animations
+   ========================================================================== */
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes message-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes source-fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+/* ==========================================================================
+   Reduced Motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-side {
+    min-width: 0;
+  }
+
+  .top-bar {
+    padding-right: var(--space-md);
+  }
+}
+
+/* ==========================================================================
+   Top Bar (sign-out)
+   ========================================================================== */
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.sign-out-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 6px 14px;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border-medium);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.sign-out-button:hover {
+  color: var(--color-text-primary);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--color-border);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.sign-out-button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-glow);
+}
+
+.sign-out-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.sign-out-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--color-border-medium);
+}
+
+/* ==========================================================================
+   Streaming indicator
+   ========================================================================== */
+
+.message-role {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.streaming-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gradient-btn-start);
+  animation: streaming-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes streaming-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+/* ==========================================================================
+   Markdown content (Streamdown)
+   ========================================================================== */
+
+.markdown-content {
+  color: var(--color-text-primary);
+  font-size: 0.95rem;
+  line-height: var(--leading-relaxed);
+}
+
+.markdown-content > :first-child { margin-top: 0; }
+.markdown-content > :last-child { margin-bottom: 0; }
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  margin: var(--space-lg) 0 var(--space-sm);
+  line-height: 1.35;
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+}
+.markdown-content h1 { font-size: 1.25rem; }
+.markdown-content h2 { font-size: 1.12rem; }
+.markdown-content h3 { font-size: 1.02rem; }
+.markdown-content h4 { font-size: 0.95rem; color: var(--color-text-secondary); }
+
+.markdown-content p {
+  margin: var(--space-sm) 0;
+}
+
+.markdown-content strong {
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+}
+
+.markdown-content em {
+  font-style: italic;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin: var(--space-sm) 0;
+  padding-left: 1.4em;
+}
+
+.markdown-content li {
+  margin: 4px 0;
+}
+
+.markdown-content li > p {
+  margin: 2px 0;
+}
+
+.markdown-content blockquote {
+  margin: var(--space-md) 0;
+  padding: var(--space-sm) var(--space-md);
+  border-left: 3px solid var(--color-gradient-btn-start);
+  background: rgba(29, 107, 106, 0.05);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--color-text-secondary);
+}
+
+.markdown-content blockquote > p { margin: 0; }
+
+/* --- Inline code (Streamdown: data-streamdown="inline-code") --- */
+.markdown-content code,
+.markdown-content [data-streamdown="inline-code"] {
+  padding: 1px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: rgba(29, 107, 106, 0.08);
+  color: var(--color-accent);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  white-space: nowrap;
+}
+
+/* --- Fenced code block (Streamdown: data-streamdown="code-block") --- */
+.markdown-content pre {
+  margin: var(--space-md) 0;
+  padding: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  background: #fafafa;
+}
+
+.markdown-content pre code,
+.markdown-content [data-streamdown="code-block"] code,
+.markdown-content [data-streamdown="code-block"] pre code {
+  display: block;
+  padding: var(--space-md);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+  border: none;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.markdown-content [data-streamdown="code-block"] {
+  margin: var(--space-md) 0;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #fafafa;
+}
+
+.markdown-content [data-streamdown="code-block"] pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.markdown-content [data-streamdown="code-block-header"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  background: rgba(25, 33, 43, 0.03);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* code-block-body は Streamdown が overflow-x-auto/border/p-4 等を Tailwind で当てる
+   想定なので、Tailwind 未導入時は中の <pre>/<code> 側に寄せる */
+.markdown-content [data-streamdown="code-block-body"] {
+  background: transparent;
+  border: none;
+  padding: 0;
+  overflow-x: auto;
+}
+
+/* Copy/Download ボタンを内包する sticky オーバーレイ ── Tailwind の sticky/-mt-10
+   が効かないので、通常フローのアクションバーに見えるようリセット */
+.markdown-content [data-streamdown="code-block"] > div:has(> [data-streamdown="code-block-actions"]) {
+  position: static;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  height: auto;
+  padding: 4px 8px;
+  pointer-events: auto;
+  background: rgba(25, 33, 43, 0.03);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.markdown-content [data-streamdown="code-block-actions"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  pointer-events: auto;
+}
+
+/* button[data-streamdown=...] でブラウザ既定の <button> スタイルを確実に上書き */
+.markdown-content button[data-streamdown="code-block-copy-button"],
+.markdown-content button[data-streamdown="code-block-download-button"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  font: inherit;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.markdown-content button[data-streamdown="code-block-copy-button"]:hover,
+.markdown-content button[data-streamdown="code-block-download-button"]:hover {
+  color: var(--color-text-primary);
+  background: rgba(25, 33, 43, 0.08);
+}
+
+.markdown-content button[data-streamdown="code-block-copy-button"]:focus-visible,
+.markdown-content button[data-streamdown="code-block-download-button"]:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Streamdown 2.5.0: <div data-streamdown="table-wrapper"> が table を flex/border/bg
+   付きでラップする。Tailwind 未導入なので装飾を全てリセットし、横スクロール可能な
+   通常ブロックに戻す */
+.markdown-content [data-streamdown="table-wrapper"] {
+  display: block;
+  margin: var(--space-md) 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  overflow-x: auto;
+  gap: 0;
+}
+
+/* table-wrapper 直下にあるアクションバー（コピー／ダウンロード／フルスクリーン）。
+   コピー／ダウンロードは内部で <div.relative><button> 構造を持ち、フルスクリーン
+   だけ素の <button>。`:first-child` の中の任意ボタンを掴むことで両方を統一する */
+.markdown-content [data-streamdown="table-wrapper"] > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.markdown-content [data-streamdown="table-wrapper"] > div:first-child button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  font: inherit;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.markdown-content [data-streamdown="table-wrapper"] > div:first-child button:hover {
+  color: var(--color-text-primary);
+  background: rgba(25, 33, 43, 0.08);
+}
+
+.markdown-content [data-streamdown="table-wrapper"] > div:first-child button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Copy/Download コンポーネント内の <div className="relative"> ラッパー */
+.markdown-content [data-streamdown="table-wrapper"] > div:first-child > div {
+  position: relative;
+  display: inline-flex;
+}
+
+/* 全画面表示モーダル（フルスクリーンボタン押下時）── createPortal で document.body
+   直下に挿入されるので、`.markdown-content` スコープ外のフォールバックが必要 */
+[data-streamdown="table-fullscreen"] {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #ffffff;
+  overflow: auto;
+}
+
+[data-streamdown="table-fullscreen"] > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+[data-streamdown="table-fullscreen"] > div > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+[data-streamdown="table-fullscreen"] > div > div:first-child > div {
+  position: relative;
+  display: inline-flex;
+}
+
+[data-streamdown="table-fullscreen"] > div > div:not(:first-child) {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+}
+
+[data-streamdown="table-fullscreen"] button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 8px;
+  font: inherit;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+[data-streamdown="table-fullscreen"] button:hover {
+  color: var(--color-text-primary);
+  background: rgba(25, 33, 43, 0.08);
+}
+
+[data-streamdown="table-fullscreen"] button:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+[data-streamdown="table-fullscreen"] table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+[data-streamdown="table-fullscreen"] th,
+[data-streamdown="table-fullscreen"] td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+[data-streamdown="table-fullscreen"] th {
+  background: rgba(29, 107, 106, 0.08);
+  font-weight: var(--weight-semibold);
+}
+
+[data-streamdown="table-fullscreen"] tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-content table,
+.markdown-content [data-streamdown="table"] {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+.markdown-content [data-streamdown="table-wrapper"] > table,
+.markdown-content [data-streamdown="table-wrapper"] [data-streamdown="table"] {
+  margin: 0;
+}
+
+.markdown-content th,
+.markdown-content td,
+.markdown-content [data-streamdown="table-header-cell"],
+.markdown-content [data-streamdown="table-cell"] {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.markdown-content th,
+.markdown-content [data-streamdown="table-header-cell"] {
+  background: rgba(29, 107, 106, 0.08);
+  font-weight: var(--weight-semibold);
+}
+
+.markdown-content tr:last-child td,
+.markdown-content [data-streamdown="table-row"]:last-child [data-streamdown="table-cell"] {
+  border-bottom: none;
+}
+
+.markdown-content a {
+  color: var(--color-gradient-btn-start);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* --- Streamdown: link safety modal overlay (Tailwind非導入時のフォールバック) --- */
+[data-streamdown="link-safety-modal"] {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(25, 33, 43, 0.5);
+  backdrop-filter: blur(4px);
+  padding: var(--space-lg);
+}
+
+[data-streamdown="link-safety-modal"] > div {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+[data-streamdown="link-safety-modal"] button[title="Close"] {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  padding: 4px;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+[data-streamdown="link-safety-modal"] button[title="Close"]:hover {
+  color: var(--color-text-primary);
+  background: rgba(25, 33, 43, 0.06);
+}
+
+.markdown-content hr {
+  margin: var(--space-lg) 0;
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+}

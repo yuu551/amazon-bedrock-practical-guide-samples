@@ -1,0 +1,14 @@
+[project]
+name = "chapter-01-bedrock-basics"
+version = "0.1.0"
+description = "Chapter 1: Amazon Bedrockによる業務効率化の現在地と基礎知識"
+requires-python = ">=3.10"
+dependencies = [
+    "aws-bedrock-token-generator>=1.1.0",
+    "boto3[crt]>=1.42.0",
+    "openai>=2.44.0",
+    "strands-agents>=1.41.0",
+]
+
+[tool.uv]
+package = false

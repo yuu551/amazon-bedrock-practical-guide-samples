@@ -1,0 +1,13 @@
+[project]
+name = "chapter-02-rag-basics"
+version = "0.1.0"
+description = "Chapter 2: Knowledge Basesで始めるドキュメント活用RAGの構築"
+requires-python = ">=3.10"
+dependencies = [
+    "boto3[crt]>=1.42.0",
+    "opensearch-py>=2.8.0,<3.0.0",
+    "openpyxl>=3.1.0",
+]
+
+[tool.uv]
+package = false

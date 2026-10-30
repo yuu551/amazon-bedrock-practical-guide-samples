@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>基盤モデルパーサー比較 — 実行証跡</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #526173;
+      --line: #d5dce5;
+      --surface: #ffffff;
+      --canvas: #f3f5f7;
+      --default: #6b7280;
+      --default-bg: #f6f7f8;
+      --fm: #176b47;
+      --fm-bg: #eef8f2;
+      --accent: #245ea8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", sans-serif;
+    }
+
+    main {
+      width: 1780px;
+      min-height: 900px;
+      margin: 0 auto;
+      padding: 42px 54px 34px;
+    }
+
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 36px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      line-height: 1.28;
+      letter-spacing: .01em;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+
+    .run-badge {
+      flex: 0 0 auto;
+      border: 1px solid #9ec7b1;
+      border-radius: 8px;
+      background: var(--fm-bg);
+      color: #105b3a;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .run-badge strong {
+      display: block;
+      font-size: 26px;
+      line-height: 1.1;
+    }
+
+    .run-badge span {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+    }
+
+    .conditions {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      padding: 7px 13px;
+      color: #3e4c5d;
+      font-size: 14px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 430px 1fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+
+    .source,
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    .source {
+      padding: 18px;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .source img {
+      display: block;
+      width: 100%;
+      border: 1px solid #dfe4ea;
+      border-radius: 6px;
+      background: white;
+    }
+
+    .source h2 {
+      margin: 16px 0 8px;
+      font-size: 19px;
+    }
+
+    .source p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .question {
+      margin-top: 18px;
+      border-left: 4px solid var(--accent);
+      padding: 10px 12px;
+      background: #f4f8fd;
+      color: #213b5c;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .panel {
+      padding: 20px 22px;
+      min-width: 0;
+    }
+
+    .panel.default { border-top: 5px solid var(--default); }
+    .panel.fm { border-top: 5px solid var(--fm); }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .panel h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .status {
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 14px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .default .status { background: var(--default-bg); color: #4b5563; }
+    .fm .status { background: var(--fm-bg); color: var(--fm); }
+
+    .label {
+      margin: 16px 0 6px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    .answer {
+      min-height: 76px;
+      margin: 0;
+      border-radius: 7px;
+      padding: 12px 14px;
+      font-size: 16px;
+      line-height: 1.62;
+    }
+
+    .default .answer { background: var(--default-bg); }
+    .fm .answer { background: var(--fm-bg); color: #114c34; }
+
+    .excerpt {
+      margin: 0;
+      border: 1px solid #dfe4ea;
+      border-radius: 7px;
+      background: #fbfcfd;
+      padding: 12px 14px;
+      color: #334155;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    mark {
+      border-radius: 3px;
+      background: #d8f1e2;
+      color: #0c5133;
+      padding: 1px 3px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .metric strong {
+      display: block;
+      margin-top: 3px;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 18px;
+      color: #64748b;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>画像内ラベルを根拠にできるか、同じPDF・同じ質問で比較</h1>
+        <p class="lead">本文には具体値を書かず、棒グラフの画像内だけに正解を置いた条件で検証</p>
+      </div>
+      <div class="run-badge">
+        <strong>3 / 3 回</strong>
+        <span>同じ結果を確認</span>
+      </div>
+    </header>
+
+    <div class="conditions">
+      <span class="chip">us-east-1</span>
+      <span class="chip">対象PDF 1ファイルのみ</span>
+      <span class="chip">パーサー: Claude Haiku 4.5</span>
+      <span class="chip">回答生成: Claude Sonnet 4.6</span>
+      <span class="chip">実行日: 2026-08-22</span>
+    </div>
+
+    <section class="content">
+      <aside class="source">
+        <p class="eyebrow">Input document</p>
+        <img src="../../sample-pdfs/sampleconnect-retention-chart.chart.png" alt="監査ログ保持期間とAPIレート制限のグラフ">
+        <h2>sampleconnect-retention-chart.pdf</h2>
+        <p>本文はグラフの参照先だけを説明し、730日や100 req/secなどの具体値は画像内ラベルにだけ記載しています。</p>
+        <div class="question">Enterpriseプランの監査ログ保持期間は何日と記載されていますか</div>
+      </aside>
+
+      <div class="comparison">
+        <article class="panel default">
+          <div class="panel-head">
+            <h2>デフォルトパーサー</h2>
+            <span class="status">具体値を回答できず</span>
+          </div>
+
+          <p class="label">回答</p>
+          <p class="answer">検索結果には、Enterpriseプランの監査ログ保持期間の具体的な数値は記載されていません。</p>
+
+          <p class="label">取得チャンク</p>
+          <p class="excerpt">「数値は各棒の上部ラベルに記載」「具体的な保持日数は上の左側のグラフのラベルを参照」<br><br>画像内の 730日・100 req/sec は含まれない</p>
+
+          <div class="metrics">
+            <div class="metric">730日の回答<strong>0 / 3</strong></div>
+            <div class="metric">100 req/secの回答<strong>0 / 3</strong></div>
+          </div>
+        </article>
+
+        <article class="panel fm">
+          <div class="panel-head">
+            <h2>基盤モデルパーサー</h2>
+            <span class="status">画像内ラベルを取得</span>
+          </div>
+
+          <p class="label">回答</p>
+          <p class="answer">Enterpriseプランの監査ログ保持期間は<mark>730日</mark>と記載されています。</p>
+
+          <p class="label">取得チャンク</p>
+          <p class="excerpt">監査ログ保持期間: Free 30日 / Standard 90日 / <mark>Enterprise 730日</mark><br>APIレート制限: Free 10 / <mark>Standard 100 req/sec</mark> / Enterprise 1,000 req/sec</p>
+
+          <div class="metrics">
+            <div class="metric">730日の回答<strong>3 / 3</strong></div>
+            <div class="metric">100 req/secの回答<strong>3 / 3</strong></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      <span>回答・引用URI・取得チャンク本文を results.jsonl と questions/*.md に保存</span>
+      <span>evidence/run-1〜run-3</span>
+    </footer>
+  </main>
+</body>
+</html>

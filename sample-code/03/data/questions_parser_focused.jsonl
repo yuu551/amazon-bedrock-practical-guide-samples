@@ -1,0 +1,8 @@
+{"id":"f01","intent":"図の矢印ラベルのみに記載","question":"参考アーキテクチャ図で、Lambda関数からOpenSearch Serverlessへ伸びる矢印のラベルは何ですか","expected_keywords":["ベクトル検索"],"expected_sources":["sampleconnect-architecture"]}
+{"id":"f02","intent":"図の矢印ラベルのみに記載","question":"参考アーキテクチャ図で、API GatewayからKnowledge Basesへ伸びる矢印のラベルは何ですか","expected_keywords":["Retrieve"],"expected_sources":["sampleconnect-architecture"]}
+{"id":"f03","intent":"図の矢印ラベルのみに記載","question":"参考アーキテクチャ図で、S3（文書格納）からメタデータ生成へ伸びる矢印のラベルは何ですか","expected_keywords":["アップロード"],"expected_sources":["sampleconnect-architecture"]}
+{"id":"f04","intent":"図の箱にのみ記載（本文の表にはない）","question":"SampleConnect RAG参考アーキテクチャ図にはユーザー入力というコンポーネントが描かれていますか","expected_keywords":["はい","描かれ"],"expected_sources":["sampleconnect-architecture"]}
+{"id":"f05","intent":"棒グラフのバー上部ラベルのみに記載","question":"運用指標ダッシュボードの棒グラフで、Enterpriseプランの監査ログ保持期間は何日と記載されていますか","expected_keywords":["730"],"expected_sources":["sampleconnect-retention-chart"]}
+{"id":"f06","intent":"棒グラフのバー上部ラベルのみに記載","question":"運用指標ダッシュボードの棒グラフで、StandardプランのAPIレート制限は何 req/sec と記載されていますか","expected_keywords":["100"],"expected_sources":["sampleconnect-retention-chart"]}
+{"id":"f07","intent":"棒グラフの軸設定（キャプションと右図タイトルにのみ関連記載）","question":"運用指標ダッシュボードの棒グラフは、縦軸が何スケールで描かれていますか","expected_keywords":["対数"],"expected_sources":["sampleconnect-retention-chart"]}
+{"id":"f08","intent":"マージセルのカテゴリ列を正しく読めるかの確認","question":"プラン別機能一覧の表で、運用カテゴリに属する機能を3つ全て挙げてください","expected_keywords":["監査ログ保持期間","SLA","サポート応答時間"],"expected_sources":["sampleconnect-plan-matrix"]}

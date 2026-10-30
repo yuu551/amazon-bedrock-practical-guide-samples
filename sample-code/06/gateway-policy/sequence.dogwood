@@ -1,0 +1,17 @@
+// 利用前に <gateway-arn> を実環境のGateway ARNへ置き換える。
+// senior-operatorが30分以内にConfluence検索を完了した場合だけJira起票を許可する。
+permit(
+  principal is AgentCore::OAuthUser,
+  action == AgentCore::Action::"AtlassianOps___create_jira_ticket",
+  resource == AgentCore::Gateway::"<gateway-arn>"
+) when {
+  principal.hasTag("role") &&
+  principal.getTag("role") == "senior-operator" &&
+  temporal {
+    formerly within 30m (
+      AgentCore::Action::"AtlassianOps___confluence_search"::response{
+        eventResource: resource
+      }
+    )
+  }
+};

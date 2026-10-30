@@ -1,0 +1,63 @@
+{
+  "name": "chapter-02-rag-portal",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.34.5",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^6.15.7",
+    "@streamdown/code": "^1.1.1",
+    "@streamdown/mermaid": "^1.0.2",
+    "aws-amplify": "^6.16.3",
+    "aws4fetch": "^1.0.20",
+    "lucide-react": "^1.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "streamdown": "^2.5.0"
+  },
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.14.0",
+    "@aws-amplify/backend-cli": "^1.4.0",
+    "@aws-sdk/client-bedrock-agent-runtime": "^3.1032.0",
+    "@aws-sdk/client-s3": "^3.1116.0",
+    "@aws-sdk/s3-request-presigner": "3.1116.0",
+    "@types/aws-lambda": "^8.10.161",
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "aws-cdk-lib": "^2.180.0",
+    "constructs": "^10.4.0",
+    "esbuild": "^0.28.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.4.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "brace-expansion@^1": "1.1.21",
+      "brace-expansion@^2": "2.1.7",
+      "brace-expansion@^5": "5.0.12",
+      "fast-uri@^3": "3.1.8",
+      "handlebars@<4.7.10": "4.7.10",
+      "immutable@3.7.6": "4.3.9",
+      "lodash@4.17.23": "4.18.1",
+      "mysql2@^3": "3.23.1",
+      "nanoid@3.3.16": "3.3.18",
+      "dompurify@^3": "3.4.16",
+      "mermaid@11.16.0": "11.16.1",
+      "postcss@8.5.19": "8.5.23",
+      "csv-parse@<7.0.2": "7.0.3"
+    },
+    "auditConfig": {
+      "ignoreCves": [
+        "CVE-2026-93687",
+        "CVE-2026-104852"
+      ]
+    }
+  }
+}

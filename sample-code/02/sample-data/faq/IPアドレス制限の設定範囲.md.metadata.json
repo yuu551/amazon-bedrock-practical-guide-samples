@@ -1,0 +1,11 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "department": "Security",
+    "audience": "admin",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["ip_allowlist", "network", "security"]
+  }
+}

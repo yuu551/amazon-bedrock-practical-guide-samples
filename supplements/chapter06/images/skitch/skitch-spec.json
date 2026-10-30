@@ -1,0 +1,89 @@
+{
+  "output_dir": "publish",
+  "images": [
+    {
+      "src": "cost-explorer-bedrock-attributes.png",
+      "title": "グループ化の条件でProduct attributeを選ぶと、Feature・Inference type・Model・Model providerの4つが表示される",
+      "annotations": [
+        {
+          "rect": [
+            38,
+            167,
+            200,
+            100
+          ]
+        }
+      ]
+    },
+    {
+      "src": "cost-explorer-bedrock-by-model.png",
+      "title": "モデル別の内訳。Claude Sonnet 4.6、Rerank 3.5、Claude Haiku 4.5などモデルごとに金額が分かれる",
+      "annotations": [
+        {
+          "rect": [
+            12,
+            140,
+            240,
+            280
+          ]
+        }
+      ]
+    },
+    {
+      "src": "cost-explorer-bedrock-dashboard-provider.png",
+      "title": "ダッシュボードのCostウィジェットをModel providerで分けた日次の推移。プロバイダーごとに色分けされる",
+      "annotations": [
+        {
+          "rect": [
+            36,
+            278,
+            350,
+            50
+          ]
+        },
+        {
+          "rect": [
+            440,
+            183,
+            220,
+            30
+          ]
+        }
+      ]
+    },
+    {
+      "src": "cost-explorer-bedrock-budget-alert.png",
+      "title": "Claude Sonnet 4.6だけの予算のアラートメール。実績2.55ドルが、しきい値1.60ドルを超えたと通知される",
+      "annotations": [
+        {
+          "rect": [
+            1006,
+            502,
+            446,
+            70
+          ],
+          "label": "Sonnet 4.6だけの金額",
+          "label_at": [
+            1470,
+            548
+          ],
+          "arrow": "none"
+        }
+      ]
+    },
+    {
+      "src": "cost-explorer-bedrock-inference-type.png",
+      "title": "Inference typeで分けた9月の内訳。入力トークンが19.05ドル、出力トークンが7.53ドル",
+      "annotations": [
+        {
+          "rect": [
+            12,
+            133,
+            746,
+            62
+          ]
+        }
+      ]
+    }
+  ]
+}

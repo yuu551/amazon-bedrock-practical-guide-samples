@@ -1,0 +1,32 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PolicyEngineConfiguration",
+      "Effect": "Allow",
+      "Action": "bedrock-agentcore:GetPolicyEngine",
+      "Resource": "arn:aws:bedrock-agentcore:<region>:<account-id>:policy-engine/<policy-engine-id>"
+    },
+    {
+      "Sid": "PolicyEngineAuthorization",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agentcore:AuthorizeAction",
+        "bedrock-agentcore:PartiallyAuthorizeActions"
+      ],
+      "Resource": [
+        "arn:aws:bedrock-agentcore:<region>:<account-id>:policy-engine/<policy-engine-id>",
+        "arn:aws:bedrock-agentcore:<region>:<account-id>:gateway/<gateway-id>"
+      ]
+    },
+    {
+      "Sid": "PolicySessionWorkloadIdentity",
+      "Effect": "Allow",
+      "Action": "bedrock-agentcore:GetWorkloadAccessToken",
+      "Resource": [
+        "arn:aws:bedrock-agentcore:<region>:<account-id>:workload-identity-directory/default",
+        "arn:aws:bedrock-agentcore:<region>:<account-id>:workload-identity-directory/default/workload-identity/<gateway-id>*"
+      ]
+    }
+  ]
+}

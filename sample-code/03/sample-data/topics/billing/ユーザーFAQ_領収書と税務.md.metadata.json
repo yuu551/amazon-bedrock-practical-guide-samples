@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "topic_id": "billing",
+    "department": "Finance",
+    "audience": "user",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["billing", "invoice", "tax"],
+    "contains_table": false
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "description": "Topic-folder configuration for the comprehensive RAG sample (sample-code/03/orchestrate_topic_rag.py).",
+  "topics": [
+    {
+      "topic_id": "api_rate_limit",
+      "display_name": "APIレート制限",
+      "description": "SampleConnect API のレート制限まわり。プラン別の上限、上限緩和申請、429時の挙動、変更履歴、既知の不具合。"
+    },
+    {
+      "topic_id": "saml_sso",
+      "display_name": "SAML SSO",
+      "description": "Enterpriseプランで利用可能なSAML SSO。IdP接続、Just-in-Timeプロビジョニング、属性マッピング、過去のトラブル事例。"
+    },
+    {
+      "topic_id": "audit_log",
+      "display_name": "監査ログ",
+      "description": "管理コンソールおよびAPI操作の監査ログ。記録項目、保存期間、API経由でのエクスポート、コンプライアンス対応。"
+    },
+    {
+      "topic_id": "billing",
+      "display_name": "課金・請求",
+      "description": "プラン変更時の請求処理、領収書、消費税、支払い方法、解約・データ保持の取り扱い。"
+    },
+    {
+      "topic_id": "data_residency",
+      "display_name": "データ所在地",
+      "description": "顧客データの保存リージョン。東京・米国・EUの3拠点、リージョン間移送、各国法令への対応。"
+    }
+  ],
+  "document_types": [
+    {
+      "document_type": "policy",
+      "description": "契約上のルール・規程・SLA。"
+    },
+    {
+      "document_type": "admin_guide",
+      "description": "管理者向けの設定・運用手順。"
+    },
+    {
+      "document_type": "faq",
+      "description": "ユーザー向けのFAQ。"
+    },
+    {
+      "document_type": "change_log",
+      "description": "直近の変更履歴。"
+    },
+    {
+      "document_type": "known_issue",
+      "description": "既知の不具合と回避策。"
+    }
+  ]
+}

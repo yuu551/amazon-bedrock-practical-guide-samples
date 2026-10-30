@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "admin_guide",
+    "topic_id": "billing",
+    "department": "Finance",
+    "audience": "admin",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["billing", "plan", "invoice"],
+    "contains_table": true
+  }
+}

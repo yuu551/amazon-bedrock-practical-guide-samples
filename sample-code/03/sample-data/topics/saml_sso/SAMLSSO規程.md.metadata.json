@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "policy",
+    "topic_id": "saml_sso",
+    "department": "Sales",
+    "audience": "admin",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["saml", "sso", "policy", "enterprise"],
+    "contains_table": false
+  }
+}

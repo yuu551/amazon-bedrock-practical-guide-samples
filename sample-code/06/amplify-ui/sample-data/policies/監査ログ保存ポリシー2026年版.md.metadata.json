@@ -1,0 +1,12 @@
+{
+  "metadataAttributes": {
+    "document_type": "policy",
+    "department": "Security",
+    "audience": "admin",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["audit_log", "retention", "policy"],
+    "topic_id": "audit_log"
+  }
+}

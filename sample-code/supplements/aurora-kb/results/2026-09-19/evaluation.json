@@ -1,0 +1,2260 @@
+[
+  {
+    "id": "001",
+    "question": "SAML認証を有効化するときに設定すべき項目（ACS URL、Entity ID、属性マッピングなど）をすべて教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 1239.61,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "product/リリースノート2026年4月.md",
+      "product/SAML認証設定ガイド.md"
+    ],
+    "scores": [
+      0.48776657118405264,
+      0.449590230183476
+    ]
+  },
+  {
+    "id": "001",
+    "question": "SAML認証を有効化するときに設定すべき項目（ACS URL、Entity ID、属性マッピングなど）をすべて教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 640.34,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/SAML認証設定ガイド.md",
+      "product/リリースノート2026年4月.md"
+    ],
+    "scores": [
+      0.5,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "001",
+    "question": "SAML認証を有効化するときに設定すべき項目（ACS URL、Entity ID、属性マッピングなど）をすべて教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": {
+      "equals": {
+        "key": "audience",
+        "value": "admin"
+      }
+    },
+    "latency_ms": 528.46,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/SAML認証設定ガイド.md"
+    ],
+    "scores": [
+      0.4921380300192184
+    ]
+  },
+  {
+    "id": "001",
+    "question": "SAML認証を有効化するときに設定すべき項目（ACS URL、Entity ID、属性マッピングなど）をすべて教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": {
+      "equals": {
+        "key": "audience",
+        "value": "admin"
+      }
+    },
+    "latency_ms": 559.35,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/SAML認証設定ガイド.md"
+    ],
+    "scores": [
+      0.5
+    ]
+  },
+  {
+    "id": "002",
+    "question": "API呼び出しで`AccessDenied`エラーが返ってきたときの一次対応手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "manuals/障害一次対応手順"
+    ],
+    "filter": null,
+    "latency_ms": 681.55,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.3333333333333333,
+    "sources": [
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキー誤公開時の対応.md",
+      "manuals/障害一次対応手順.md",
+      "faq/APIキーの発行上限.md",
+      "faq/APIレート制限に達した場合の挙動.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "002",
+    "question": "API呼び出しで`AccessDenied`エラーが返ってきたときの一次対応手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "manuals/障害一次対応手順"
+    ],
+    "filter": {
+      "equals": {
+        "key": "document_type",
+        "value": "manual"
+      }
+    },
+    "latency_ms": 566.78,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.2,
+    "sources": [
+      "manuals/インシデント報告手順.md",
+      "manuals/エスカレーション手順.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.6809029103670845,
+      0.6784156518879976,
+      0.6710047525766338,
+      0.6591512560844421,
+      0.6044970515070581
+    ]
+  },
+  {
+    "id": "002",
+    "question": "API呼び出しで`AccessDenied`エラーが返ってきたときの一次対応手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "manuals/障害一次対応手順"
+    ],
+    "filter": {
+      "equals": {
+        "key": "document_type",
+        "value": "manual"
+      }
+    },
+    "latency_ms": 695.99,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "manuals/障害一次対応手順.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "manuals/エスカレーション手順.md",
+      "manuals/インシデント報告手順.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "002",
+    "question": "API呼び出しで`AccessDenied`エラーが返ってきたときの一次対応手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "manuals/障害一次対応手順"
+    ],
+    "filter": null,
+    "latency_ms": 692.77,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.3333333333333333,
+    "sources": [
+      "faq/APIレート制限に達した場合の挙動.md",
+      "faq/APIキーの発行上限.md",
+      "manuals/障害一次対応手順.md",
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキー誤公開時の対応.md"
+    ],
+    "scores": [
+      0.6457380826160981,
+      0.6338579495122467,
+      0.6044970515070581,
+      0.6036978363990784,
+      0.5139526401842802
+    ]
+  },
+  {
+    "id": "003",
+    "question": "APIキーを誤ってGitHubに公開してしまった場合の対処手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/APIキー誤公開時の対応",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 741.95,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/API認証・監査ログ管理ガイド.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "faq/APIキーの発行上限.md",
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキー誤公開時の対応.md"
+    ],
+    "scores": [
+      0.6334603547595636,
+      0.524271692465816,
+      0.43611767192446593,
+      0.4209301660227215,
+      0.21737810840327842
+    ]
+  },
+  {
+    "id": "003",
+    "question": "APIキーを誤ってGitHubに公開してしまった場合の対処手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/APIキー誤公開時の対応",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 575.17,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキーの発行上限.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "product/API認証・監査ログ管理ガイド.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "003",
+    "question": "APIキーを誤ってGitHubに公開してしまった場合の対処手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/APIキー誤公開時の対応",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 726.05,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/API認証・監査ログ管理ガイド.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "faq/APIキーの発行上限.md",
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキー誤公開時の対応.md"
+    ],
+    "scores": [
+      0.6334603547595636,
+      0.524271692465816,
+      0.43611767192446593,
+      0.4209301660227215,
+      0.21737810840327842
+    ]
+  },
+  {
+    "id": "003",
+    "question": "APIキーを誤ってGitHubに公開してしまった場合の対処手順を教えてください",
+    "tags": [
+      "hybrid"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/APIキー誤公開時の対応",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 768.15,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキー誤公開時の対応.md",
+      "faq/APIキーの発行上限.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "product/API認証・監査ログ管理ガイド.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "004",
+    "question": "EnterpriseプランでIPアドレス制限機能を有効化する手順を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "product/Enterpriseプラン機能ガイド",
+      "faq/IPアドレス制限の設定範囲"
+    ],
+    "filter": {
+      "equals": {
+        "key": "product",
+        "value": "sampleconnect-platform"
+      }
+    },
+    "latency_ms": 795.48,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/IPアドレス制限の設定範囲.md",
+      "faq/IPアドレス制限の設定範囲.md",
+      "faq/APIレート制限に達した場合の挙動.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/Enterpriseプラン機能ガイド.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "004",
+    "question": "EnterpriseプランでIPアドレス制限機能を有効化する手順を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "product/Enterpriseプラン機能ガイド",
+      "faq/IPアドレス制限の設定範囲"
+    ],
+    "filter": null,
+    "latency_ms": 602.42,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/APIレート制限に達した場合の挙動.md",
+      "faq/IPアドレス制限の設定範囲.md",
+      "faq/IPアドレス制限の設定範囲.md"
+    ],
+    "scores": [
+      0.6091154361378532,
+      0.5779727227098928,
+      0.568238614658719,
+      0.40456597222572743,
+      0.36225484418218645
+    ]
+  },
+  {
+    "id": "004",
+    "question": "EnterpriseプランでIPアドレス制限機能を有効化する手順を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "product/Enterpriseプラン機能ガイド",
+      "faq/IPアドレス制限の設定範囲"
+    ],
+    "filter": null,
+    "latency_ms": 711.4,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/IPアドレス制限の設定範囲.md",
+      "faq/IPアドレス制限の設定範囲.md",
+      "faq/APIレート制限に達した場合の挙動.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/Enterpriseプラン機能ガイド.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "004",
+    "question": "EnterpriseプランでIPアドレス制限機能を有効化する手順を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "product/Enterpriseプラン機能ガイド",
+      "faq/IPアドレス制限の設定範囲"
+    ],
+    "filter": {
+      "equals": {
+        "key": "product",
+        "value": "sampleconnect-platform"
+      }
+    },
+    "latency_ms": 562.31,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/APIレート制限に達した場合の挙動.md",
+      "faq/IPアドレス制限の設定範囲.md",
+      "faq/IPアドレス制限の設定範囲.md"
+    ],
+    "scores": [
+      0.6091154361378532,
+      0.5779727227098928,
+      0.568238614658719,
+      0.40456597222572743,
+      0.36225484418218645
+    ]
+  },
+  {
+    "id": "005",
+    "question": "Standardプランの月間稼働率の保証値はいくつですか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "product/プラン別機能比較",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 740.55,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "policies/SLAポリシー2025年版.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5907795415489876,
+      0.5080771436599287
+    ]
+  },
+  {
+    "id": "005",
+    "question": "Standardプランの月間稼働率の保証値はいくつですか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "product/プラン別機能比較",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 746.25,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "policies/SLAポリシー2025年版.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775
+    ]
+  },
+  {
+    "id": "005",
+    "question": "Standardプランの月間稼働率の保証値はいくつですか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "product/プラン別機能比較",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 734.51,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "policies/SLAポリシー2025年版.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5907795415489876,
+      0.5080771436599287
+    ]
+  },
+  {
+    "id": "005",
+    "question": "Standardプランの月間稼働率の保証値はいくつですか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "product/プラン別機能比較",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 680.28,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "policies/SLAポリシー2025年版.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775
+    ]
+  },
+  {
+    "id": "006",
+    "question": "サポート窓口の応答時間はプランごとにどう違いますか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "product/プラン別機能比較"
+    ],
+    "filter": null,
+    "latency_ms": 681.13,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/Enterpriseプランのサポート応答時間.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "006",
+    "question": "サポート窓口の応答時間はプランごとにどう違いますか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "product/プラン別機能比較"
+    ],
+    "filter": null,
+    "latency_ms": 825.97,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/Enterpriseプランのサポート応答時間.md",
+      "faq/Standardプランのサポート営業時間.md"
+    ],
+    "scores": [
+      0.5617760011358252,
+      0.5271265224889753,
+      0.4928195208467827,
+      0.3623359911632462,
+      0.3019400958871624
+    ]
+  },
+  {
+    "id": "006",
+    "question": "サポート窓口の応答時間はプランごとにどう違いますか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "product/プラン別機能比較"
+    ],
+    "filter": null,
+    "latency_ms": 736.28,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/Enterpriseプランのサポート応答時間.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "006",
+    "question": "サポート窓口の応答時間はプランごとにどう違いますか",
+    "tags": [
+      "rerank"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "product/プラン別機能比較"
+    ],
+    "filter": null,
+    "latency_ms": 744.42,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/Enterpriseプランのサポート応答時間.md",
+      "faq/Standardプランのサポート営業時間.md"
+    ],
+    "scores": [
+      0.5617760011358252,
+      0.5271265224889753,
+      0.4928195208467827,
+      0.3623359911632462,
+      0.3019400958871624
+    ]
+  },
+  {
+    "id": "007",
+    "question": "SAML SSOで動作確認済みのIdPを全て教えてください",
+    "tags": [
+      "rerank"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/SAML_SSOで対応しているIdP",
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 614.69,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "product/リリースノート2026年4月.md",
+      "product/SAML認証設定ガイド.md",
+      "faq/SAML_SSOで対応しているIdP.md"
+    ],
+    "scores": [
+      0.5012131625589549,
+      0.48522573533355806,
+      0.28095369793086444
+    ]
+  },
+  {
+    "id": "007",
+    "question": "SAML SSOで動作確認済みのIdPを全て教えてください",
+    "tags": [
+      "rerank"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/SAML_SSOで対応しているIdP",
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 772.88,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/SAML_SSOで対応しているIdP.md",
+      "product/SAML認証設定ガイド.md",
+      "product/リリースノート2026年4月.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "007",
+    "question": "SAML SSOで動作確認済みのIdPを全て教えてください",
+    "tags": [
+      "rerank"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/SAML_SSOで対応しているIdP",
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 808.46,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "product/リリースノート2026年4月.md",
+      "product/SAML認証設定ガイド.md",
+      "faq/SAML_SSOで対応しているIdP.md"
+    ],
+    "scores": [
+      0.5012131625589549,
+      0.48522573533355806,
+      0.28095369793086444
+    ]
+  },
+  {
+    "id": "007",
+    "question": "SAML SSOで動作確認済みのIdPを全て教えてください",
+    "tags": [
+      "rerank"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/SAML_SSOで対応しているIdP",
+      "product/SAML認証設定ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 757.13,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/SAML_SSOで対応しているIdP.md",
+      "product/SAML認証設定ガイド.md",
+      "product/リリースノート2026年4月.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "008",
+    "question": "SAML SSOを管理者として有効化する具体的な設定手順を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "product/SAML認証設定ガイド",
+      "faq/SAML証明書期限切れ時の対応"
+    ],
+    "filter": {
+      "equals": {
+        "key": "audience",
+        "value": "admin"
+      }
+    },
+    "latency_ms": 555.17,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/SAML認証設定ガイド.md"
+    ],
+    "scores": [
+      0.5
+    ]
+  },
+  {
+    "id": "008",
+    "question": "SAML SSOを管理者として有効化する具体的な設定手順を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "product/SAML認証設定ガイド",
+      "faq/SAML証明書期限切れ時の対応"
+    ],
+    "filter": null,
+    "latency_ms": 771.19,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/SAML認証設定ガイド.md"
+    ],
+    "scores": [
+      0.4687877651236242
+    ]
+  },
+  {
+    "id": "008",
+    "question": "SAML SSOを管理者として有効化する具体的な設定手順を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "product/SAML認証設定ガイド",
+      "faq/SAML証明書期限切れ時の対応"
+    ],
+    "filter": null,
+    "latency_ms": 546.86,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/SAML認証設定ガイド.md"
+    ],
+    "scores": [
+      0.5
+    ]
+  },
+  {
+    "id": "008",
+    "question": "SAML SSOを管理者として有効化する具体的な設定手順を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "product/SAML認証設定ガイド",
+      "faq/SAML証明書期限切れ時の対応"
+    ],
+    "filter": {
+      "equals": {
+        "key": "audience",
+        "value": "admin"
+      }
+    },
+    "latency_ms": 606.12,
+    "hit": 1,
+    "recall": 0.5,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/SAML認証設定ガイド.md"
+    ],
+    "scores": [
+      0.4687877651236242
+    ]
+  },
+  {
+    "id": "009",
+    "question": "障害発生時にサポート担当がエスカレーション判断する基準と権限を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "manuals/エスカレーション手順"
+    ],
+    "filter": null,
+    "latency_ms": 538.14,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.3333333333333333,
+    "sources": [
+      "policies/SLAポリシー2026年版.md",
+      "faq/障害情報の確認方法.md",
+      "manuals/エスカレーション手順.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.6569833551038574,
+      0.5738489373831392,
+      0.5356426611691774,
+      0.5226473483267065
+    ]
+  },
+  {
+    "id": "009",
+    "question": "障害発生時にサポート担当がエスカレーション判断する基準と権限を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "manuals/エスカレーション手順"
+    ],
+    "filter": null,
+    "latency_ms": 723.09,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "manuals/エスカレーション手順.md",
+      "manuals/障害一次対応手順.md",
+      "faq/障害情報の確認方法.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "009",
+    "question": "障害発生時にサポート担当がエスカレーション判断する基準と権限を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "manuals/エスカレーション手順"
+    ],
+    "filter": {
+      "equals": {
+        "key": "audience",
+        "value": "support"
+      }
+    },
+    "latency_ms": 730.13,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "manuals/エスカレーション手順.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.6709245726139788,
+      0.5226473483267065
+    ]
+  },
+  {
+    "id": "009",
+    "question": "障害発生時にサポート担当がエスカレーション判断する基準と権限を教えてください",
+    "tags": [
+      "metadata-filter:audience"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "manuals/エスカレーション手順"
+    ],
+    "filter": {
+      "equals": {
+        "key": "audience",
+        "value": "support"
+      }
+    },
+    "latency_ms": 621.63,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "manuals/エスカレーション手順.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775
+    ]
+  },
+  {
+    "id": "010",
+    "question": "2026年版SLAポリシーで、Enterpriseプランのサービスクレジット条件を教えてください",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 732.62,
+    "hit": 0,
+    "recall": 0.0,
+    "reciprocal_rank": 0,
+    "sources": [
+      "faq/SLA違反時のサービスクレジット.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "policies/SLAポリシー2025年版.md",
+      "faq/プラン変更の反映タイミング.md",
+      "faq/緊急メンテナンスの通知方法.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "010",
+    "question": "2026年版SLAポリシーで、Enterpriseプランのサービスクレジット条件を教えてください",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": {
+      "andAll": [
+        {
+          "equals": {
+            "key": "document_type",
+            "value": "policy"
+          }
+        },
+        {
+          "greaterThanOrEquals": {
+            "key": "effective_date",
+            "value": 20260101
+          }
+        }
+      ]
+    },
+    "latency_ms": 762.18,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "policies/課金請求ポリシー2026年版.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.6733599110460083,
+      0.6282516121864081
+    ]
+  },
+  {
+    "id": "010",
+    "question": "2026年版SLAポリシーで、Enterpriseプランのサービスクレジット条件を教えてください",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": {
+      "andAll": [
+        {
+          "equals": {
+            "key": "document_type",
+            "value": "policy"
+          }
+        },
+        {
+          "greaterThanOrEquals": {
+            "key": "effective_date",
+            "value": 20260101
+          }
+        }
+      ]
+    },
+    "latency_ms": 771.62,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "policies/SLAポリシー2026年版.md",
+      "policies/課金請求ポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "010",
+    "question": "2026年版SLAポリシーで、Enterpriseプランのサービスクレジット条件を教えてください",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 962.62,
+    "hit": 0,
+    "recall": 0.0,
+    "reciprocal_rank": 0,
+    "sources": [
+      "faq/緊急メンテナンスの通知方法.md",
+      "faq/プラン変更の反映タイミング.md",
+      "policies/SLAポリシー2025年版.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/SLA違反時のサービスクレジット.md"
+    ],
+    "scores": [
+      0.5133289879548796,
+      0.5011778179341003,
+      0.4467116542951932,
+      0.43162025778654933,
+      0.4288355452515853
+    ]
+  },
+  {
+    "id": "011",
+    "question": "2026年版の課金請求ポリシーで、請求書払いの締め日と支払期日はいつですか",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "policies/課金請求ポリシー2026年版"
+    ],
+    "filter": {
+      "andAll": [
+        {
+          "equals": {
+            "key": "document_type",
+            "value": "policy"
+          }
+        },
+        {
+          "greaterThanOrEquals": {
+            "key": "effective_date",
+            "value": 20260101
+          }
+        }
+      ]
+    },
+    "latency_ms": 739.7,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "policies/課金請求ポリシー2026年版.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.8038191369011076,
+      0.7945217208499544
+    ]
+  },
+  {
+    "id": "011",
+    "question": "2026年版の課金請求ポリシーで、請求書払いの締め日と支払期日はいつですか",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "policies/課金請求ポリシー2026年版"
+    ],
+    "filter": {
+      "andAll": [
+        {
+          "equals": {
+            "key": "document_type",
+            "value": "policy"
+          }
+        },
+        {
+          "greaterThanOrEquals": {
+            "key": "effective_date",
+            "value": 20260101
+          }
+        }
+      ]
+    },
+    "latency_ms": 741.76,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "policies/課金請求ポリシー2026年版.md",
+      "policies/SLAポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5,
+      0.4765625
+    ]
+  },
+  {
+    "id": "011",
+    "question": "2026年版の課金請求ポリシーで、請求書払いの締め日と支払期日はいつですか",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "policies/課金請求ポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 524.0,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "faq/プラン変更の反映タイミング.md",
+      "policies/課金請求ポリシー2026年版.md",
+      "faq/請求書払いの支払サイト.md"
+    ],
+    "scores": [
+      0.6571199297904871,
+      0.6195325197182531,
+      0.4536174372916454
+    ]
+  },
+  {
+    "id": "011",
+    "question": "2026年版の課金請求ポリシーで、請求書払いの締め日と支払期日はいつですか",
+    "tags": [
+      "metadata-filter:effective_date"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "policies/課金請求ポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 544.41,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "policies/課金請求ポリシー2026年版.md",
+      "faq/請求書払いの支払サイト.md",
+      "faq/プラン変更の反映タイミング.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "012",
+    "question": "Billing部門が管理するサービスクレジットの申請期限と必要情報を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/サービスクレジットの申請期限",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": {
+      "equals": {
+        "key": "department",
+        "value": "Billing"
+      }
+    },
+    "latency_ms": 719.94,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/サービスクレジットの申請期限.md",
+      "policies/SLAポリシー2026年版.md",
+      "policies/SLAポリシー2025年版.md",
+      "faq/SLA違反時のサービスクレジット.md",
+      "faq/プラン変更の反映タイミング.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "012",
+    "question": "Billing部門が管理するサービスクレジットの申請期限と必要情報を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/サービスクレジットの申請期限",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 533.69,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.25,
+    "sources": [
+      "faq/プラン変更の反映タイミング.md",
+      "faq/SLA違反時のサービスクレジット.md",
+      "policies/SLAポリシー2025年版.md",
+      "policies/SLAポリシー2026年版.md",
+      "faq/サービスクレジットの申請期限.md"
+    ],
+    "scores": [
+      0.5997923194371679,
+      0.505731434996414,
+      0.4388658854641003,
+      0.4058045874483781,
+      0.38069053773214245
+    ]
+  },
+  {
+    "id": "012",
+    "question": "Billing部門が管理するサービスクレジットの申請期限と必要情報を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/サービスクレジットの申請期限",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 581.42,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/サービスクレジットの申請期限.md",
+      "policies/SLAポリシー2026年版.md",
+      "policies/SLAポリシー2025年版.md",
+      "faq/SLA違反時のサービスクレジット.md",
+      "faq/プラン変更の反映タイミング.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "012",
+    "question": "Billing部門が管理するサービスクレジットの申請期限と必要情報を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/サービスクレジットの申請期限",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": {
+      "equals": {
+        "key": "department",
+        "value": "Billing"
+      }
+    },
+    "latency_ms": 641.96,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 0.25,
+    "sources": [
+      "faq/プラン変更の反映タイミング.md",
+      "faq/SLA違反時のサービスクレジット.md",
+      "policies/SLAポリシー2025年版.md",
+      "policies/SLAポリシー2026年版.md",
+      "faq/サービスクレジットの申請期限.md"
+    ],
+    "scores": [
+      0.5997923194371679,
+      0.505731434996414,
+      0.4388658854641003,
+      0.4058045874483781,
+      0.38069053773214245
+    ]
+  },
+  {
+    "id": "013",
+    "question": "Security部門が管理する監査ログの保持期間とエクスポート方法を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/監査ログの保持期間",
+      "faq/監査ログのエクスポート方法",
+      "policies/監査ログ保存ポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 544.98,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "policies/監査ログ保存ポリシー2026年版.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "policies/監査ログ保存ポリシー2025年版.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "faq/監査ログの保持期間.md"
+    ],
+    "scores": [
+      0.35096005493639537,
+      0.34298832923516,
+      0.33722285336899016,
+      0.324521638310433,
+      0.28278238362845476
+    ]
+  },
+  {
+    "id": "013",
+    "question": "Security部門が管理する監査ログの保持期間とエクスポート方法を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/監査ログの保持期間",
+      "faq/監査ログのエクスポート方法",
+      "policies/監査ログ保存ポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 551.27,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/監査ログの保持期間.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "policies/監査ログ保存ポリシー2025年版.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "policies/監査ログ保存ポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "013",
+    "question": "Security部門が管理する監査ログの保持期間とエクスポート方法を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/監査ログの保持期間",
+      "faq/監査ログのエクスポート方法",
+      "policies/監査ログ保存ポリシー2026年版"
+    ],
+    "filter": {
+      "equals": {
+        "key": "department",
+        "value": "Security"
+      }
+    },
+    "latency_ms": 599.4,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "policies/監査ログ保存ポリシー2026年版.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "policies/監査ログ保存ポリシー2025年版.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "faq/監査ログの保持期間.md"
+    ],
+    "scores": [
+      0.35096005493639537,
+      0.34298832923516,
+      0.33722285336899016,
+      0.324521638310433,
+      0.28278238362845476
+    ]
+  },
+  {
+    "id": "013",
+    "question": "Security部門が管理する監査ログの保持期間とエクスポート方法を教えてください",
+    "tags": [
+      "metadata-filter:department"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/監査ログの保持期間",
+      "faq/監査ログのエクスポート方法",
+      "policies/監査ログ保存ポリシー2026年版"
+    ],
+    "filter": {
+      "equals": {
+        "key": "department",
+        "value": "Security"
+      }
+    },
+    "latency_ms": 554.79,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/監査ログの保持期間.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "policies/監査ログ保存ポリシー2025年版.md",
+      "product/API認証・監査ログ管理ガイド.md",
+      "policies/監査ログ保存ポリシー2026年版.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "014",
+    "question": "Enterpriseプランで使える監査ログの機能と保持期間、APIレート制限の上限を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "product/API認証・監査ログ管理ガイド",
+      "product/Enterpriseプラン機能ガイド",
+      "product/プラン別機能比較"
+    ],
+    "filter": null,
+    "latency_ms": 527.23,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/APIレート制限に達した場合の挙動.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "014",
+    "question": "Enterpriseプランで使える監査ログの機能と保持期間、APIレート制限の上限を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "product/API認証・監査ログ管理ガイド",
+      "product/Enterpriseプラン機能ガイド",
+      "product/プラン別機能比較"
+    ],
+    "filter": {
+      "equals": {
+        "key": "product",
+        "value": "sampleconnect-platform"
+      }
+    },
+    "latency_ms": 526.11,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "faq/APIレート制限に達した場合の挙動.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md"
+    ],
+    "scores": [
+      0.3863136043348958,
+      0.3839010777118975,
+      0.34315495164626286,
+      0.3218816902494711,
+      0.2643242635917996
+    ]
+  },
+  {
+    "id": "014",
+    "question": "Enterpriseプランで使える監査ログの機能と保持期間、APIレート制限の上限を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "product/API認証・監査ログ管理ガイド",
+      "product/Enterpriseプラン機能ガイド",
+      "product/プラン別機能比較"
+    ],
+    "filter": {
+      "equals": {
+        "key": "product",
+        "value": "sampleconnect-platform"
+      }
+    },
+    "latency_ms": 568.57,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/APIレート制限に達した場合の挙動.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "014",
+    "question": "Enterpriseプランで使える監査ログの機能と保持期間、APIレート制限の上限を教えてください",
+    "tags": [
+      "hybrid",
+      "metadata-filter:product"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "product/API認証・監査ログ管理ガイド",
+      "product/Enterpriseプラン機能ガイド",
+      "product/プラン別機能比較"
+    ],
+    "filter": null,
+    "latency_ms": 508.49,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "faq/APIレート制限に達した場合の挙動.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md"
+    ],
+    "scores": [
+      0.3863136043348958,
+      0.3839010777118975,
+      0.34315495164626286,
+      0.3218816902494711,
+      0.2643242635917996
+    ]
+  },
+  {
+    "id": "015",
+    "question": "Standardプランと Enterpriseプランで、サポート応答時間とSLA保証値はそれぞれどう違いますか。また2026年版SLAポリシーでの差を教えてください",
+    "tags": [
+      "decomposition",
+      "metadata-filter:effective_date"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": {
+      "greaterThanOrEquals": {
+        "key": "effective_date",
+        "value": 20260101
+      }
+    },
+    "latency_ms": 684.86,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/緊急メンテナンスの通知方法.md",
+      "product/プラン別機能比較.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/Enterpriseプランのサポート応答時間.md"
+    ],
+    "scores": [
+      0.5285916379555597,
+      0.5039180068994055,
+      0.48318657980524315,
+      0.429607067295503,
+      0.3051575523051383
+    ]
+  },
+  {
+    "id": "015",
+    "question": "Standardプランと Enterpriseプランで、サポート応答時間とSLA保証値はそれぞれどう違いますか。また2026年版SLAポリシーでの差を教えてください",
+    "tags": [
+      "decomposition",
+      "metadata-filter:effective_date"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": {
+      "greaterThanOrEquals": {
+        "key": "effective_date",
+        "value": 20260101
+      }
+    },
+    "latency_ms": 572.57,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/Enterpriseプランのサポート応答時間.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "product/プラン別機能比較.md",
+      "faq/緊急メンテナンスの通知方法.md",
+      "faq/Standardプランのサポート営業時間.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "015",
+    "question": "Standardプランと Enterpriseプランで、サポート応答時間とSLA保証値はそれぞれどう違いますか。また2026年版SLAポリシーでの差を教えてください",
+    "tags": [
+      "decomposition",
+      "metadata-filter:effective_date"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 673.09,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/緊急メンテナンスの通知方法.md",
+      "product/プラン別機能比較.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "faq/Enterpriseプランのサポート応答時間.md"
+    ],
+    "scores": [
+      0.5285916379555597,
+      0.5039180068994055,
+      0.48318657980524315,
+      0.429607067295503,
+      0.3051575523051383
+    ]
+  },
+  {
+    "id": "015",
+    "question": "Standardプランと Enterpriseプランで、サポート応答時間とSLA保証値はそれぞれどう違いますか。また2026年版SLAポリシーでの差を教えてください",
+    "tags": [
+      "decomposition",
+      "metadata-filter:effective_date"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/Enterpriseプランのサポート応答時間",
+      "faq/Standardプランのサポート営業時間",
+      "policies/SLAポリシー2026年版"
+    ],
+    "filter": null,
+    "latency_ms": 559.73,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/Enterpriseプランのサポート応答時間.md",
+      "faq/Standardプランのサポート営業時間.md",
+      "product/プラン別機能比較.md",
+      "faq/緊急メンテナンスの通知方法.md",
+      "faq/Standardプランのサポート営業時間.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "016",
+    "question": "EnterpriseプランのAPIレート制限の上限、監査ログの保持期間、SAML認証の対応IdPをそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/EnterpriseプランのAPIレート上限",
+      "faq/監査ログの保持期間",
+      "faq/SAML_SSOで対応しているIdP"
+    ],
+    "filter": {
+      "equals": {
+        "key": "product",
+        "value": "sampleconnect-platform"
+      }
+    },
+    "latency_ms": 722.21,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 0.25,
+    "sources": [
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "faq/APIレート制限に達した場合の挙動.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "016",
+    "question": "EnterpriseプランのAPIレート制限の上限、監査ログの保持期間、SAML認証の対応IdPをそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/EnterpriseプランのAPIレート上限",
+      "faq/監査ログの保持期間",
+      "faq/SAML_SSOで対応しているIdP"
+    ],
+    "filter": null,
+    "latency_ms": 786.08,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "faq/APIレート制限に達した場合の挙動.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md"
+    ],
+    "scores": [
+      0.4231858081574915,
+      0.4161117076873738,
+      0.4037661059878358,
+      0.38334063887333114,
+      0.36667437950678117
+    ]
+  },
+  {
+    "id": "016",
+    "question": "EnterpriseプランのAPIレート制限の上限、監査ログの保持期間、SAML認証の対応IdPをそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/EnterpriseプランのAPIレート上限",
+      "faq/監査ログの保持期間",
+      "faq/SAML_SSOで対応しているIdP"
+    ],
+    "filter": null,
+    "latency_ms": 524.51,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 0.25,
+    "sources": [
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "faq/APIレート制限に達した場合の挙動.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "016",
+    "question": "EnterpriseプランのAPIレート制限の上限、監査ログの保持期間、SAML認証の対応IdPをそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/EnterpriseプランのAPIレート上限",
+      "faq/監査ログの保持期間",
+      "faq/SAML_SSOで対応しているIdP"
+    ],
+    "filter": {
+      "equals": {
+        "key": "product",
+        "value": "sampleconnect-platform"
+      }
+    },
+    "latency_ms": 564.51,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 0.5,
+    "sources": [
+      "faq/APIレート制限に達した場合の挙動.md",
+      "faq/EnterpriseプランのAPIレート上限.md",
+      "product/Enterpriseプラン機能ガイド.md",
+      "product/プラン別機能比較.md",
+      "product/Enterpriseプラン機能ガイド.md"
+    ],
+    "scores": [
+      0.4231858081574915,
+      0.4161117076873738,
+      0.4037661059878358,
+      0.38334063887333114,
+      0.36667437950678117
+    ]
+  },
+  {
+    "id": "017",
+    "question": "障害が発生した際の一次対応、エスカレーション、インシデント報告の3つの手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "manuals/障害一次対応手順",
+      "manuals/エスカレーション手順",
+      "manuals/インシデント報告手順"
+    ],
+    "filter": null,
+    "latency_ms": 723.21,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 0.3333333333333333,
+    "sources": [
+      "faq/障害発生時の顧客向け初回案内.md",
+      "faq/障害発生時の顧客向け初回案内.md",
+      "manuals/エスカレーション手順.md",
+      "faq/障害情報の確認方法.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.5150963239515292,
+      0.48525328626551667,
+      0.45201315534775866,
+      0.428700285348376,
+      0.37990528761493725
+    ]
+  },
+  {
+    "id": "017",
+    "question": "障害が発生した際の一次対応、エスカレーション、インシデント報告の3つの手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "manuals/障害一次対応手順",
+      "manuals/エスカレーション手順",
+      "manuals/インシデント報告手順"
+    ],
+    "filter": null,
+    "latency_ms": 789.27,
+    "hit": 1,
+    "recall": 0.6666666666666666,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "manuals/障害一次対応手順.md",
+      "faq/障害情報の確認方法.md",
+      "manuals/エスカレーション手順.md",
+      "faq/障害発生時の顧客向け初回案内.md",
+      "faq/障害発生時の顧客向け初回案内.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "017",
+    "question": "障害が発生した際の一次対応、エスカレーション、インシデント報告の3つの手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "manuals/障害一次対応手順",
+      "manuals/エスカレーション手順",
+      "manuals/インシデント報告手順"
+    ],
+    "filter": {
+      "equals": {
+        "key": "document_type",
+        "value": "manual"
+      }
+    },
+    "latency_ms": 609.39,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "manuals/障害一次対応手順.md",
+      "manuals/インシデント報告手順.md",
+      "manuals/障害一次対応手順.md",
+      "manuals/エスカレーション手順.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.5804870897676672,
+      0.5740916083209144,
+      0.5464079029814944,
+      0.45201315534775866,
+      0.37990528761493725
+    ]
+  },
+  {
+    "id": "017",
+    "question": "障害が発生した際の一次対応、エスカレーション、インシデント報告の3つの手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "manuals/障害一次対応手順",
+      "manuals/エスカレーション手順",
+      "manuals/インシデント報告手順"
+    ],
+    "filter": {
+      "equals": {
+        "key": "document_type",
+        "value": "manual"
+      }
+    },
+    "latency_ms": 703.06,
+    "hit": 1,
+    "recall": 1.0,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "manuals/障害一次対応手順.md",
+      "manuals/エスカレーション手順.md",
+      "manuals/障害一次対応手順.md",
+      "manuals/インシデント報告手順.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.48412698412698413,
+      0.4765625,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "018",
+    "question": "SAML SSOでログインできない顧客への一次確認項目と、その後の監査ログでの追跡手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "hybrid",
+    "expected_sources": [
+      "faq/SAML_SSOでログインできない場合の確認項目",
+      "faq/監査ログのエクスポート方法",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 780.03,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/SAML_SSOでログインできない場合の確認項目.md",
+      "product/SAML認証設定ガイド.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "018",
+    "question": "SAML SSOでログインできない顧客への一次確認項目と、その後の監査ログでの追跡手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "semantic_filter",
+    "expected_sources": [
+      "faq/SAML_SSOでログインできない場合の確認項目",
+      "faq/監査ログのエクスポート方法",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 531.04,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 0.3333333333333333,
+    "sources": [
+      "manuals/障害一次対応手順.md",
+      "product/SAML認証設定ガイド.md",
+      "faq/SAML_SSOでログインできない場合の確認項目.md"
+    ],
+    "scores": [
+      0.5171962421408243,
+      0.5157158374786067,
+      0.24027608161139735
+    ]
+  },
+  {
+    "id": "018",
+    "question": "SAML SSOでログインできない顧客への一次確認項目と、その後の監査ログでの追跡手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "hybrid_filter",
+    "expected_sources": [
+      "faq/SAML_SSOでログインできない場合の確認項目",
+      "faq/監査ログのエクスポート方法",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 742.98,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 1.0,
+    "sources": [
+      "faq/SAML_SSOでログインできない場合の確認項目.md",
+      "product/SAML認証設定ガイド.md",
+      "manuals/障害一次対応手順.md"
+    ],
+    "scores": [
+      0.5,
+      0.49193548387096775,
+      0.46923076923076923
+    ]
+  },
+  {
+    "id": "018",
+    "question": "SAML SSOでログインできない顧客への一次確認項目と、その後の監査ログでの追跡手順をそれぞれ教えてください",
+    "tags": [
+      "decomposition"
+    ],
+    "config": "semantic",
+    "expected_sources": [
+      "faq/SAML_SSOでログインできない場合の確認項目",
+      "faq/監査ログのエクスポート方法",
+      "product/API認証・監査ログ管理ガイド"
+    ],
+    "filter": null,
+    "latency_ms": 635.58,
+    "hit": 1,
+    "recall": 0.3333333333333333,
+    "reciprocal_rank": 0.3333333333333333,
+    "sources": [
+      "manuals/障害一次対応手順.md",
+      "product/SAML認証設定ガイド.md",
+      "faq/SAML_SSOでログインできない場合の確認項目.md"
+    ],
+    "scores": [
+      0.5171962421408243,
+      0.5157158374786067,
+      0.24027608161139735
+    ]
+  }
+]

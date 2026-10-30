@@ -1,0 +1,13 @@
+{
+  "metadataAttributes": {
+    "document_type": "change_log",
+    "topic_id": "api_rate_limit",
+    "department": "IT",
+    "audience": "admin",
+    "product": "SampleConnect",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["api", "rate_limit", "changelog"],
+    "contains_table": false
+  }
+}

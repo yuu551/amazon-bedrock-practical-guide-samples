@@ -1,0 +1,39 @@
+{
+  "k": 5,
+  "evaluated_at": "2026-09-19T11:40:30.005069+00:00",
+  "region": "us-east-1",
+  "engine_version": "16.14",
+  "pgvector_version": "0.8.2",
+  "embedding_model": "amazon.titan-embed-text-v2:0",
+  "dimensions": 1024,
+  "rank_unit": "chunk",
+  "questions_sha256": "9b8e57146d35b464f940e8cf87020c1421fec03f9960e9d31558a9c469ded5b9",
+  "configs": {
+    "hybrid": {
+      "questions": 18,
+      "hit_at_5": 0.9444444444444444,
+      "recall_at_5": 0.7407407407407408,
+      "mrr_at_5": 0.837962962962963
+    },
+    "hybrid_filter": {
+      "questions": 18,
+      "hit_at_5": 1.0,
+      "recall_at_5": 0.8148148148148148,
+      "mrr_at_5": 0.9305555555555556
+    },
+    "semantic": {
+      "questions": 18,
+      "hit_at_5": 0.9444444444444444,
+      "recall_at_5": 0.7407407407407408,
+      "mrr_at_5": 0.587962962962963
+    },
+    "semantic_filter": {
+      "questions": 18,
+      "hit_at_5": 1.0,
+      "recall_at_5": 0.8148148148148148,
+      "mrr_at_5": 0.7379629629629629
+    }
+  },
+  "original_questions_sha256": "33d4601c929cc3e33fe60573dab0859d2febf26de7c0aef82f1941f39933cf3d",
+  "rescored_at": "2026-09-19T12:14:48.588395+00:00"
+}

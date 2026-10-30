@@ -1,0 +1,12 @@
+{
+  "metadataAttributes": {
+    "document_type": "faq",
+    "department": "Product",
+    "audience": "admin",
+    "product": "sampleconnect-platform",
+    "effective_date": 20260401,
+    "language": "ja",
+    "tags": ["api_key", "limit"],
+    "topic_id": "api_rate_limit"
+  }
+}

@@ -1,0 +1,2 @@
+{"id":"retention01","intent":"棒グラフのバー上部ラベルのみに記載","question":"運用指標ダッシュボードの棒グラフで、Enterpriseプランの監査ログ保持期間は何日と記載されていますか","expected_keywords":["730日"],"expected_source_substring":"sampleconnect-retention-chart"}
+{"id":"retention02","intent":"棒グラフのバー上部ラベルのみに記載","question":"運用指標ダッシュボードの棒グラフで、StandardプランのAPIレート制限は何 req/sec と記載されていますか","expected_keywords":["100 req/sec"],"expected_source_substring":"sampleconnect-retention-chart"}

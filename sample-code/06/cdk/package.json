@@ -1,0 +1,24 @@
+{
+  "name": "support-ai-cdk",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.34.5",
+  "description": "第6章 サンプルコード: 問い合わせ対応AIの本番基盤 CDK スタック",
+  "scripts": {
+    "build": "tsc",
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy",
+    "diff": "cdk diff"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.255.0",
+    "constructs": "^10.4.2",
+    "@aws-cdk/aws-bedrock-alpha": "^2.255.0-alpha.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "~5.7.0",
+    "ts-node": "^10.9.2",
+    "aws-cdk": "^2.248.0"
+  }
+}

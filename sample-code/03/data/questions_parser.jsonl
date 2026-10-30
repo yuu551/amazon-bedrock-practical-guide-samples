@@ -1,0 +1,10 @@
+{"id":"p01","intent":"表の列関係に依存（プラン×機能の対応）","question":"Enterpriseプランの監査ログ保持期間とAPIレート制限の上限を教えてください","expected_keywords":["2年","1,000 req/sec"],"expected_sources":["sampleconnect-plan-matrix"]}
+{"id":"p02","intent":"表の列関係に依存（Standardプランの個別値）","question":"Standardプランのストレージ容量とSLA、監査ログ保持期間を教えてください","expected_keywords":["100GB","99.9%","90日"],"expected_sources":["sampleconnect-plan-matrix"]}
+{"id":"p03","intent":"表のチェックマーク有無に依存","question":"IPアドレス制限とSSO / SAML認証が使えるのはどのプランですか","expected_keywords":["Enterprise"],"expected_sources":["sampleconnect-plan-matrix"]}
+{"id":"p04","intent":"表の脚注情報（記号の意味）","question":"プラン別機能一覧の表で、丸印と横棒（ダッシュ）はそれぞれ何を意味していますか","expected_keywords":["標準提供","非対応"],"expected_sources":["sampleconnect-plan-matrix"]}
+{"id":"p05","intent":"料金表の縦横の対応関係","question":"Enterpriseプランの最低契約期間と支払い方法を教えてください","expected_keywords":["12ヶ月","請求書"],"expected_sources":["sampleconnect-plan-matrix"]}
+{"id":"p06","intent":"図中ラベルの読み取り（アーキテクチャ）","question":"SampleConnectの参考アーキテクチャでユーザー入力から回答生成までに登場する主要コンポーネントを順に教えてください","expected_keywords":["API Gateway","Knowledge Bases","OpenSearch","Bedrock"],"expected_sources":["sampleconnect-architecture"]}
+{"id":"p07","intent":"図中矢印ラベルの読み取り","question":"アーキテクチャ図で、Lambda関数からOpenSearch Serverlessへ向かう矢印には何と書かれていますか","expected_keywords":["ベクトル検索"],"expected_sources":["sampleconnect-architecture"]}
+{"id":"p08","intent":"グラフのバーラベルに依存（値が本文に書かれていない）","question":"EnterpriseプランとStandardプランで監査ログ保持期間は何日ずつですか","expected_keywords":["730日","90日"],"expected_sources":["sampleconnect-retention-chart"]}
+{"id":"p09","intent":"グラフのバーラベルに依存（APIレート制限）","question":"Freeプランで許可されるAPIレート制限の上限値はいくつですか","expected_keywords":["10 req/sec"],"expected_sources":["sampleconnect-retention-chart"]}
+{"id":"p10","intent":"複数文書にまたがる読み取り","question":"EnterpriseプランがStandardプランに対して監査ログ保持期間で何倍になるかを、数値根拠とともに教えてください","expected_keywords":["730","90"],"expected_sources":["sampleconnect-plan-matrix","sampleconnect-retention-chart"]}

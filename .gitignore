@@ -1,0 +1,114 @@
+excalidraw.log
+
+# AI エージェントツール設定（rulesync 生成物）
+# 読者向けのハンズオン用スキル（正本は .agents/skills、.claude と .kiro はそこへのリンク）だけは追跡する
+**/.claude/*
+!/.claude/skills/
+/.claude/skills/*
+!/.claude/skills/bedrock-handson
+!/publishing/samples/.claude/skills/
+.cursor
+CLAUDE.md
+AGENTS.md
+# 公開用リポジトリの読者向けハンズオン案内は追跡する
+!/publishing/samples/AGENTS.md
+.github/copilot-instructions.md
+.kiro/
+.agents
+.mcp.json
+.vscode
+.rulesync
+.codex
+.cursorignore
+rulesync.jsonc
+.aiignore
+
+# Python（uv.lockは再現性のため追跡）
+__pycache__/
+*.pyc
+.venv/
+
+# Node.js（pnpm-lock.yamlは再現性のため追跡）
+node_modules/
+dist/
+*.tsbuildinfo
+vite.config.d.ts
+vite.config.js
+package-lock.json
+yarn.lock
+
+# AWS CDK
+cdk.out/
+.cdk.staging/
+
+# Amplify Gen 2
+.amplify/
+amplifyconfiguration*
+amplify_outputs.json
+
+# Environment files
+.env
+.env.local
+.env.sandbox
+.env.s3vectors
+run_sandbox.sh
+
+# 第5章: スクリプトが毎回書き出す一時出力（logs/ 配下に保存済みのため未追跡）
+sample-code/05/output/
+
+# 第3章: スクリプトが毎回書き出す一時出力
+sample-code/03/output/
+
+# Office一時ロックファイル
+~$*
+
+# バックアップファイル
+*.bak
+
+# AgentCore Starter Toolkit のローカル設定（アカウントID・絶対パスを含む）
+.bedrock_agentcore.yaml
+.bedrock_agentcore/
+
+# 個人作業ログ
+_runtime-migration-procedure.md
+
+# プラン・実装計画・引き継ぎメモなどの作業ファイル
+plans/
+
+# devflow のローカルレビュー生成物
+.devflow/
+
+# Playwright
+/tests/e2e/playwright-report/
+/tests/e2e/playwright-report-live/
+/tests/e2e/test-results/
+/tests/e2e/test-results-live/
+
+# 校正PDFの再表示・監査用一時ファイル
+/tmp/pdfs/
+
+# 第4章: 図版撮影用モック（ローカルのみ）
+sample-code/04/amplify-ui/mock.html
+sample-code/04/amplify-ui/src/mock-main.tsx
+
+# macOS
+.DS_Store
+
+# Agent Registryの補足サンプルが作るレジストリのID
+sample-code/06/agent-registry/.registry_state.json
+
+# 図の編集用ファイルは公開しない（PNGだけを置く）
+supplements/**/*.drawio
+
+# 公開を保留している補足
+supplements/chapter02/OpenSearchのハイブリッド検索を日本語で使う.md
+
+# 読者向けスキルの正本とリンク（上の無視ルールより後ろに置く）
+!/publishing/samples/.agents/
+!/publishing/samples/.kiro/
+
+# 公開用リポジトリでは、読者向けのハンズオン案内とスキルを追跡する
+!/AGENTS.md
+!/.agents
+!/.kiro
+!/.claude/skills/bedrock-handson

@@ -1,0 +1,109 @@
+/* 第2章のworkspace.cssを使用。補足で追加した検索設定と経過表示だけを定義する。 */
+.workspace-app {
+  height: 100svh;
+}
+.option-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.7rem;
+  color: var(--workspace-muted);
+}
+select {
+  width: 100%;
+  padding: 9px 8px;
+  border: 1px solid var(--workspace-line-strong);
+  border-radius: 6px;
+  background: white;
+  color: var(--workspace-ink);
+  font-size: 0.73rem;
+}
+.request-note {
+  width: min(100%, 820px);
+  margin: 8px auto 0;
+  color: var(--workspace-muted);
+  font-size: 0.65rem;
+}
+.trace-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: grid;
+  gap: 12px;
+}
+.trace-list li {
+  display: grid;
+  gap: 4px;
+  font-size: 0.7rem;
+  color: var(--workspace-muted);
+}
+.trace-list strong {
+  font-weight: 600;
+  color: #445168;
+}
+.trace-list span {
+  overflow-wrap: anywhere;
+}
+.model-id {
+  font-size: 0.65rem;
+  overflow-wrap: anywhere;
+  color: var(--workspace-muted);
+}
+.citation-copy summary {
+  font-size: 0.74rem;
+  line-height: 1.6;
+  cursor: pointer;
+  color: #2c394e;
+}
+.citation-copy pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 0.75rem/1.8 var(--workspace-font);
+  color: var(--workspace-muted);
+}
+.supplement-note {
+  white-space: pre-wrap;
+  line-height: 1.7;
+}
+.demo-banner {
+  padding: 12px;
+  background: #fff0c4;
+  font-size: 0.8rem;
+}
+.markdown-content {
+  overflow-wrap: anywhere;
+}
+.markdown-content table {
+  border-collapse: collapse;
+  display: block;
+  max-width: 100%;
+  overflow: auto;
+}
+.markdown-content th,
+.markdown-content td {
+  border: 1px solid var(--workspace-line);
+  padding: 8px;
+}
+.markdown-content pre {
+  white-space: pre-wrap;
+}
+.markdown-content h1 {
+  font-size: 1.2rem;
+}
+.markdown-content h2 {
+  font-size: 1.1rem;
+}
+.markdown-content h3 {
+  font-size: 1rem;
+}
+@media (max-width: 900px) {
+  .workspace-app {
+    height: auto;
+  }
+  .thread-panel {
+    height: calc(100svh - 64px);
+    min-height: 540px;
+  }
+  .thread-timeline {
+    overflow-y: auto;
+  }
+}
