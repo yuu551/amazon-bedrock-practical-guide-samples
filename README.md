@@ -107,6 +107,7 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 | 第3章 | [生成AIでPDFを解析して取り込む](supplements/chapter03/生成AIでPDFを解析して取り込む.md) |
 | 第3章 | [第3章のRAGアプリで回答の過程を可視化する](supplements/chapter03/第3章のRAGアプリで回答の過程を可視化する.md) |
 | 第4章 | [ツール・エージェント・モデルの入口をAgentCore Gatewayで統制する](supplements/chapter04/ツール・エージェント・モデルの入口をAgentCore-Gatewayで統制する.md) |
+| 第4章 | [第4章のアプリをAmplifyからCDKへ移行する](supplements/chapter04/第4章のアプリをAmplifyからCDKへ移行する.md) |
 | 第5章 | [RAGASでエージェントのツール呼び出しと目的達成を評価する](supplements/chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md) |
 | 第6章 | [エージェントとスキルをAWS Agent Registryで組織管理する](supplements/chapter06/エージェントとスキルをAWS-Agent-Registryで組織管理する.md) |
 | 第6章 | [CloudWatch Omniでエージェントを調べて改善する](supplements/chapter06/CloudWatch-Omniでエージェントを調べて改善する.md) |
