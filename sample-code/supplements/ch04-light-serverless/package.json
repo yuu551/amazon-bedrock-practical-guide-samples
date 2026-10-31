@@ -1,0 +1,54 @@
+{
+  "name": "ch04-light-serverless",
+  "private": true,
+  "version": "0.0.1",
+  "packageManager": "pnpm@10.34.5",
+  "type": "module",
+  "scripts": {
+    "build:web": "vite build web",
+    "build:api": "node scripts/build-api.mjs",
+    "build:agent": "node scripts/build-agent.mjs",
+    "build": "pnpm run build:web && pnpm run build:api && pnpm run build:agent",
+    "test": "vitest run",
+    "typecheck": "tsc -p web && tsc -p api && tsc -p infra",
+    "deploy": "pnpm run build && cdk deploy --require-approval never",
+    "destroy": "cdk destroy --force",
+    "synth": "pnpm run build && cdk synth",
+    "deploy:cdkd": "pnpm run build && cdkd deploy --require-approval never",
+    "destroy:cdkd": "cdkd destroy --force"
+  },
+  "dependencies": {
+    "@aws-amplify/ui-react": "^6.15.7",
+    "@aws-sdk/client-bedrock-agentcore": "^3.1158.0",
+    "@hono/node-server": "^2.1.5",
+    "@streamdown/code": "^1.1.1",
+    "aws-amplify": "^6.16.3",
+    "aws-jwt-verify": "^5.2.1",
+    "hono": "^4.13.14",
+    "lucide-react": "^1.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "streamdown": "^2.5.0"
+  },
+  "devDependencies": {
+    "@cdklabs/deploy-time-build": "^0.1.6",
+    "@go-to-k/cdkd": "^0.307.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "aws-cdk": "^2.1146.1",
+    "aws-cdk-lib": "^2.275.0",
+    "constructs": "^10.8.1",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.3",
+    "vitest": "^5.0.5"
+  },
+  "pnpm": {
+    "overrides": {
+      "minimatch@^10": "11.0.3"
+    }
+  }
+}

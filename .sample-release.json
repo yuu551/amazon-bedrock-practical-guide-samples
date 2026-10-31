@@ -2469,6 +2469,242 @@
       "sha256": "f9e1fa3acb575025f663aa10b96e9de10408fa3a0a75e788c0b8ac8b63a53ae0",
       "mode": 420
     },
+    "sample-code/supplements/ch04-light-serverless/.gitignore": {
+      "sha256": "ce55ce60df6916a4e75c889dbe83811c19616923b54df65826b272a9209a2215",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/README.md": {
+      "sha256": "c1e893fb8ececa6585fc6fafc6954148376e575d1ed6ba2381336a2229412dbb",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/agent/.dockerignore": {
+      "sha256": "8d720eabc3cdb3e05fb9c47577241eea0807e232c4b3abd4a1179d7c6d3cbab1",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/agent/Dockerfile": {
+      "sha256": "dc44671156a9b8fdbb60855997565003157d57340fdba42261ac9a27ec3921cc",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/agent/main.py": {
+      "sha256": "ca8e8ee3122b0ec3b260ffce610fdb59a4c36d8266162ceacebe324970763c78",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/agent/requirements.txt": {
+      "sha256": "b7aede9356d66cac1ab2583b25f2dc6d9e2e856b08ca0eb670dcdd2a3a9d4d53",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/api/src/agent.ts": {
+      "sha256": "1520032b342fcd8652acb0f484d310d03a960b35a9806df82c6c72142a1d411e",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/api/src/app.test.ts": {
+      "sha256": "fd77402c60916cae81f64330ad479a323111d5d9a449cfc01e161a98eaf685ca",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/api/src/app.ts": {
+      "sha256": "3b1fc087ee5388f1cace3defe4e0ad4276d0f830ef7d1f1d178287a1fffdcc2f",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/api/src/auth.ts": {
+      "sha256": "db57bb826b856488d4fb57fe8e66417fd330c58993dcf8a2cacc436a680e72a9",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/api/src/server.ts": {
+      "sha256": "0a01814701b7d5d0effe8667960242609981fc74c24cab621d77e48a2e21dae1",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/api/src/version.ts": {
+      "sha256": "12102a517634f8330e5187548896f6a545f35a63f73cd0305785b7bb63637748",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/api/tsconfig.json": {
+      "sha256": "48a8933fbe2d5515dbf105f295ddf722557658e08f1ec86c759efffcea3109bb",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/cdk.json": {
+      "sha256": "106fe904e7932ce9a6894719fdffd0f253f49b520dfa9445beae94f4b4af1dce",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/gateway-stub/stub_gateway_handler.py": {
+      "sha256": "a7a3e8f5d7e9f5e19cfe18c12e498a985a62713232b10baaa59f1aa3db55e434",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/github-actions/deploy.yml": {
+      "sha256": "04c30e388374875737ad924e7fc4f64241f7f30153a48bf006a5e0fb961b4db9",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/infra/bin/app.ts": {
+      "sha256": "ace68f729389f6177fcc410f297132f50f0405df962fb58eb00e20102359e294",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/infra/lib/support-agent-stack.ts": {
+      "sha256": "dc385e0c94e6d7984423db4985abbdb58b35af581e4149661d6c476baa7d9ad1",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/infra/tsconfig.json": {
+      "sha256": "6a395fde2dcc2a0c49bf1f806c62138825fdb1f73a7881234045530ae8065deb",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/mise.toml": {
+      "sha256": "f4e76711ff120302d3b0e45d941b8e2413f5be3604a6868a6e997edb36968251",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/package.json": {
+      "sha256": "d3cca628bd89354713e85ebeedb07144c1542298e91066917bec64136a038e3e",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/pnpm-lock.yaml": {
+      "sha256": "406c5f27ec74bc5004864fffe85f90a31329046ca2f05294734f3fd37282c08c",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/pnpm-workspace.yaml": {
+      "sha256": "ac02d96368617c760f093cfe61fdec64b6244007ab3553e0d6621f706f54a353",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/results/deploy-times.jsonl": {
+      "sha256": "2d20092f0e0eee0dd464909944e0d341c20c47f9ad7866aa4dbd4ea04415b015",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/results/evidence/e2e-answer.png": {
+      "sha256": "d2d61f7ee743a31d851a5bfd60b297e1df38d7d8d9b7b72af9a1e1648a14697c",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/results/evidence/e2e-streaming.png": {
+      "sha256": "e788b7fc5dce804ec18a906006cb516501e5317c2fa394a6cae92a3414b8d949",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/results/summary.md": {
+      "sha256": "84292ecc00b3c41b05c61dee84731282c87872812c32c6e64600ecdbeab708a1",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/scripts/build-agent.mjs": {
+      "sha256": "bacb45bd9c6a201c6ad830099cdd8081ee12ed78d6df864734d5aad460112992",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/scripts/build-api.mjs": {
+      "sha256": "e89456abe4890a953a87b90aadf3dfe030cda0aa9ce03061ee254a0e133d4c69",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/scripts/measure-actions.mjs": {
+      "sha256": "51923e90f5bd78e8486def83377ab9a0547d5a13c11521389f0236ac21f62e12",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/scripts/measure-amplify-hosting.mjs": {
+      "sha256": "a2b22ef3d0f12985c5bee7ea516b6f599959a15a1824c9869f55b3b60848cd98",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/scripts/measure.mjs": {
+      "sha256": "beaee077b9b0453f09a6acf0166440ba544cd1c49824829a75e09b10c6ddb053",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/scripts/summarize.mjs": {
+      "sha256": "94b8b1b7bace5d518a2b3360fc77a3c247ee29bb6973edff9428dc54f4934d41",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/index.html": {
+      "sha256": "e0eb7355af29c4912252ee01ef174df5762ebc54c8ccf2d11ce125c647fcb9aa",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/App.tsx": {
+      "sha256": "4e6923c0d16c19ed9f38b156fe403030c8aff385a90258383932083c237e683f",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/api.ts": {
+      "sha256": "c3dc843e570477a5322a048ad2a0d332f8f3c79524affb86ef041106d52bb375",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/AgentAvatar.tsx": {
+      "sha256": "c528a74a4bd2a89d741fc91eafcd1ce7f14db628496dbcf3ade5fa1888a39752",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/ChatPanel.tsx": {
+      "sha256": "0f2161c9360005780fed447a8e45711443512f12faff6f3d85f1216175e21127",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/Hero.tsx": {
+      "sha256": "c88e7e05f6d477c53ea5cdcbb4e4c9e10d152ab00a00a2f63c93b5c0f8663234",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/LoadingSpinner.tsx": {
+      "sha256": "4fc9a38558e6b4c7e14c95ae451cc9ffceecb29af5fa70c52a70e0bce25c4983",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/MessageBubble.tsx": {
+      "sha256": "3a35e2281f413c1c86c0fa1c8e53a2d571b2c66a88b52eb7cb3b917b2bef33a2",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/Sidebar.tsx": {
+      "sha256": "bfaa59d6fc4bc1ea32a73160a53f9dad6ee36db8c29b7d5f893d21a8573b0446",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/StatusBadge.tsx": {
+      "sha256": "81c66988542c17c3f0a44d65b8240f663d504788a47a0c6f39091b59df6b92a7",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/StreamingMessage.tsx": {
+      "sha256": "e945cb1a465d2048cd000d37656d9502a888caa8bbceb2ff989932dbb0a14975",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/ToolActivity.tsx": {
+      "sha256": "e8c327548745cd26624015991cc47760f6bca2cbec51b2a2106b79a596a024f6",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/TopBar.tsx": {
+      "sha256": "dafa772afdea4abaab995b51d88968b760eb9f84d39963ac70ab2f9191020faa",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/components/WorkspaceChrome.tsx": {
+      "sha256": "7072f6892bfdc8f2cb35c90a5079d8723166f15727a57269c4a70998d1914b2c",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/config.ts": {
+      "sha256": "20dae98ac4d74f7ab48d13507644e1fe843ae4d330688f23077acd3c02bc1451",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/hooks/useStreamBuffer.ts": {
+      "sha256": "fa44460d052ebb8b2c64e59101e50ebeed7e1554f8bdfbe6901f4cb76d8ea34b",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/lib/streamdownPlugins.ts": {
+      "sha256": "1ba157d1f2bbbca4464a7daefc1a5e72e5ea615432929c5f19b2064bccfce944",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/main.tsx": {
+      "sha256": "6e4a9fae7f7cc25bba556b6c0adda610f03b7b1348b51b4eeea0c04cce60a730",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/styles.css": {
+      "sha256": "18a3de4ebbc12f4c848cba2e2a9502688b7e07646fc6d2a954747a65a5855f24",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/types.ts": {
+      "sha256": "3d95f3b81b321fdc719e1eed4c415ebb024a92e431d524f7db125b035b8c173a",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/vite-env.d.ts": {
+      "sha256": "65996936fbb042915f7b74a200fcdde7e410f32a669b1ab9597cfaa4b0faddb5",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/workspace.css": {
+      "sha256": "a28a515cb525d676a5095ba447aaf45e4f9325c303f33a6ffd4d99fda56cd4b4",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/src/workspace.ts": {
+      "sha256": "1a5fd6ee8f16453cdf58bffdbb79db3b0c2d355fafb173e90a08d32a4a7ac15d",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/tsconfig.json": {
+      "sha256": "ba8671be568ce535bf0c3cf9f8bc6003fcdf27ac3260edec45315b0cb8ecfed2",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/tsconfig.node.json": {
+      "sha256": "e82d87ed1e0613c7926731d8f54c9a3bbf23c074739e8e84ee50684a95455012",
+      "mode": 420
+    },
+    "sample-code/supplements/ch04-light-serverless/web/vite.config.ts": {
+      "sha256": "e4a1b85415ccdd28bbe043ebd0ef7507cb04449e3689591110939b0861f84cb0",
+      "mode": 420
+    },
     "sample-code/supplements/grounding-standard/README.md": {
       "sha256": "9ffd8115571aa78566966fa1ae0f4ccf659508686c7a01ac55a72b0022dba639",
       "mode": 420
@@ -2598,7 +2834,7 @@
       "mode": 420
     },
     "supplements/README.md": {
-      "sha256": "cc0fdd390b307f52e97b1532cb2599ebdc83d898595ecd95129a7f1c2aa17411",
+      "sha256": "7ba59232fceda77b2249e9d4499ead6089cbbeffa9e283dc731b23dc9eaaab4b",
       "mode": 420
     },
     "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
@@ -2729,6 +2965,30 @@
       "sha256": "f3fd7184e9d35d14011d1f04337358371b0e275269486fa7c82cf0fd4a9d538a",
       "mode": 420
     },
+    "supplements/chapter04/images/ch04-light-serverless-actions-oidc.png": {
+      "sha256": "61c831590a93a72e92a1a4d5470716542d87ee13592aa9fd57d98bec377fdbf5",
+      "mode": 420
+    },
+    "supplements/chapter04/images/ch04-light-serverless-answer.png": {
+      "sha256": "d2d61f7ee743a31d851a5bfd60b297e1df38d7d8d9b7b72af9a1e1648a14697c",
+      "mode": 420
+    },
+    "supplements/chapter04/images/ch04-light-serverless-api.png": {
+      "sha256": "c18656bfec509c4f5e91d61d7011dd2cdcf4c64fd3de240cc4865c3070012231",
+      "mode": 420
+    },
+    "supplements/chapter04/images/ch04-light-serverless-envs-actions.png": {
+      "sha256": "da2d02351f17a38783bc2a33398ce026129ec5b06c7657fa2ee9d95f0bdb4fc4",
+      "mode": 420
+    },
+    "supplements/chapter04/images/ch04-light-serverless-envs.png": {
+      "sha256": "2ffdc3f517ba51e8901d0cf01702a93bc51c94061fb39683b732100da192dfde",
+      "mode": 420
+    },
+    "supplements/chapter04/images/ch04-light-serverless.png": {
+      "sha256": "6a96a55d985005933b8407e0ee221baf462b6f40f0250f23be4b63af4a8a55ae",
+      "mode": 420
+    },
     "supplements/chapter04/images/gateway-3lo-consent-flow.png": {
       "sha256": "6ea18af6138ff859b1e55fbffe3af995581047aa44d84148b9245d159998f5b1",
       "mode": 420
@@ -2851,6 +3111,10 @@
     },
     "supplements/chapter04/ツール・エージェント・モデルの入口をAgentCore-Gatewayで統制する.md": {
       "sha256": "c8cefd10968dee77df1d2d0422f0acd854a80da3e18385454a44a8b427b421c7",
+      "mode": 420
+    },
+    "supplements/chapter04/第4章のアプリをAmplifyからCDKへ移行する.md": {
+      "sha256": "48b46c6a21cc32c4968520ba5bc0b0d6662681dbcc268b22d9cb07a35ee7f0c6",
       "mode": 420
     },
     "supplements/chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md": {

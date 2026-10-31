@@ -1,0 +1,54 @@
+# develop ブランチへのpushで開発環境（cdkd）、main へのpushで本番環境（cdk deploy）へデプロイする。
+# 使うときはリポジトリの .github/workflows/ に置き、リポジトリの変数（Settings → Variables）を設定する
+name: deploy
+
+on:
+  push:
+    branches: [develop, main]
+
+permissions:
+  id-token: write # OIDCでAWSのロールを引き受ける
+  contents: read
+
+concurrency:
+  group: deploy-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    # AgentCore RuntimeのコンテナはARM64なので、ARM64のランナーでそのままビルドする
+    runs-on: ubuntu-24.04-arm
+    defaults:
+      run:
+        working-directory: sample-code/supplements/ch04-light-serverless
+    env:
+      APP_PREFIX: ${{ github.ref_name == 'main' && vars.PROD_APP_PREFIX || vars.DEV_APP_PREFIX }}
+      KNOWLEDGE_BASE_ID: ${{ vars.KNOWLEDGE_BASE_ID }}
+      MODEL_ID: us.anthropic.claude-sonnet-4-6
+      KNOWLEDGE_BASE_SOURCE_BUCKET_NAME: ${{ vars.KNOWLEDGE_BASE_SOURCE_BUCKET_NAME }}
+      KNOWLEDGE_BASE_SOURCE_PREFIXES: sample-data
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v6
+        with:
+          package_json_file: sample-code/supplements/ch04-light-serverless/package.json
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+          cache-dependency-path: sample-code/supplements/ch04-light-serverless/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - uses: aws-actions/configure-aws-credentials@v6
+        with:
+          # 本番はCDKのbootstrapのロールを引き受けるロール、開発はcdkdがリソースを作れるロール
+          role-to-assume: ${{ github.ref_name == 'main' && vars.PROD_ROLE_ARN || vars.DEV_ROLE_ARN }}
+          aws-region: us-east-1
+      # ベースイメージは public.ecr.aws から取る。認証せずに取るとランナー間で共有の上限にかかり、429になることがある
+      - name: ECR Publicにログインする
+        run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+      - name: 開発環境へデプロイ（cdkd）
+        if: github.ref_name == 'develop'
+        run: pnpm run deploy:cdkd
+      - name: 本番環境へデプロイ（cdk deploy）
+        if: github.ref_name == 'main'
+        run: pnpm run deploy

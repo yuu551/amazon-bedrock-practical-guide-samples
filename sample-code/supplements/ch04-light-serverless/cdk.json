@@ -1,0 +1,7 @@
+{
+  "app": "npx tsx infra/bin/app.ts",
+  "output": "infra/cdk.out",
+  "watch": {
+    "include": ["infra/**", "api/src/**", "web/src/**", "agent/main.py"]
+  }
+}

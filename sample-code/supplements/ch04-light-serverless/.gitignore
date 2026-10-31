@@ -1,0 +1,10 @@
+agent/.build/
+api/dist/
+web/dist/
+infra/cdk.out/
+.cdkd/
+results/raw/
+# 検証環境のIDやURLを含むので配布しない
+infra/outputs.json
+results/target*.json
+scripts/env.measure.sh

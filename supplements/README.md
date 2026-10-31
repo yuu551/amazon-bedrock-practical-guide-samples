@@ -22,6 +22,7 @@ Codespacesの無料枠とAWSの費用の考え方はサンプルコードのREAD
 | 第1章 | [AgentCore CLI 1.0.0で第1章の手順を進める](chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md) | 最新版（1.0.0）での変更点。ウィザードとinvokeの読み替え、本書のバージョンのまま進める方法 |
 | 第1章 | [コンテキストグラウンディングチェックにStandardティアが追加された](chapter01/コンテキストグラウンディングチェックにStandardティアが追加された.md) | Standardティアの追加で変わる対応言語と会話調の回答。評価結果・複数ターンの会話での渡し方・設定のしかた |
 | 第4章 | [ツール・エージェント・モデルの入口をAgentCore Gatewayで統制する](chapter04/ツール・エージェント・モデルの入口をAgentCore-Gatewayで統制する.md) | ツールに加えてエージェントやモデルの接続先を管理する |
+| 第4章 | [第4章のアプリをAmplifyからCDKへ移行する](chapter04/第4章のアプリをAmplifyからCDKへ移行する.md) | 画面をS3とCloudFrontへ移してCDKでデプロイし、Amplifyとデプロイ時間を比べる。cdkd・GitHub Actions・Lambda Web Functionsも試す |
 | 第5章 | [RAGASでエージェントのツール呼び出しと目的達成を評価する](chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md) | エージェントの実行履歴を使って採点する |
 | 第6章 | [エージェントとスキルをAWS Agent Registryで組織管理する](chapter06/エージェントとスキルをAWS-Agent-Registryで組織管理する.md) | AWS Agent Registryで登録・承認・更新を試す |
 | 第4・5・6章 | [CloudWatch Omniでエージェントを調べて改善する](chapter06/CloudWatch-Omniでエージェントを調べて改善する.md) | 第4章のエージェントを題材に実トレースの評価とプロンプト比較を試す |
