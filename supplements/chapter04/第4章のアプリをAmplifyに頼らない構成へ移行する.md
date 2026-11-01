@@ -6,9 +6,9 @@
 
 ## 前提
 
-本書のハンズオンでは、本を手に取ってすぐにサクッと試せるようにCodespacesを使ってきました。Codespacesはx86_64のマシンなので、第4章ではエージェントのARM64のコンテナをCodeBuildでビルドしていました。
+本書のハンズオンでは、本を手に取ってすぐにサクッと試せるようにCodespacesを使ってきました。Codespacesはx86_64のマシンなので、第4章ではエージェントのARM64のコンテナをCodeBuildでビルドしていました。（AgentCoreはARMのイメージしか対応していないため）
 
-この補足では、自分の端末で本格的に開発していく場面を想定して、Apple SiliconのMacで試しています！エージェントのコンテナもARM64のまま、MacのDockerでビルドします。使った環境は次のとおりです。
+ただこの補足では、自分の端末で本格的に開発していく場面を想定して、Apple SiliconのMacで試しています！エージェントのコンテナもARM64のまま、MacのDockerでビルドし、後半ではGitHub ActionsのARM64のランナーから、同じようにデプロイする形も試しています。使った環境は次のとおりです。
 
 | 項目 | 使ったもの |
 |---|---|
@@ -17,13 +17,18 @@
 | Node.js・pnpm | Node.js 26.7、pnpm 10.34.5 |
 | CDK | AWS CDK CLI 2.1146.1、aws-cdk-lib 2.275.0、cdkd 0.307.0 |
 | AWS | 米国東部（バージニア北部） |
+| GitHub Actions | 非公開リポジトリの `ubuntu-24.04-arm`（2コア） |
 | モデルと資料 | Claude Sonnet 4.6（`us.anthropic.claude-sonnet-4-6`）、第2章で作ったKnowledge Base（S3 Vectors） |
 
-この補足のデプロイ時間は上の環境で2026年10月に測った一例です。端末の性能やネットワーク、GitHub Actionsのランナー、AWS側の状況によって変わるので、同じ時間で終わることを保証するものではなく、参考情報として理解ください。
+この補足のデプロイ時間は上の環境で2026年10月に測った一例です。
+
+端末の性能やネットワーク、GitHub Actionsのランナー、AWS側の状況によって変わるので、同じ時間で終わることを保証するものではなく、参考情報として理解ください。
 
 ## 先に結果
 
-開発環境はcdkdとローカルのDocker、本番環境は `cdk deploy` を使用する想定で検証してみました。エージェントを変えたときのデプロイはcdkdなら46秒で、Amplify Hostingの約6分（4〜8分とばらつきました）より大幅に短くなりました。GitHub Actionsから実行しても、Amplify Hostingの半分以下で終わります。
+開発環境はcdkdとローカルのDocker、本番環境は `cdk deploy` を使用する想定で検証してみました！
+
+エージェントを変えたときのデプロイはcdkdなら46秒で、Amplify Hostingの約6分（4〜8分とばらつきました）より大幅に短くなりました。GitHub Actionsから実行しても、Amplify Hostingの半分以下で終わります。
 
 同じ第4章のアプリで変更の種類ごとにデプロイの時間を測りました。エージェントのビルドはAmplify側が第4章と同じCodeBuild、CDK側がDocker（MacかGitHub Actionsのランナー）です。ビルドする場所も含めた、開発の流れ全体の比較です。単位は秒で、値は3回の中央値です。
 
@@ -36,11 +41,12 @@
 | GitHub Actionsから `cdk deploy` | 105 | 79 |
 | GitHub Actionsから `cdkd deploy` | 81 | 74 |
 
-Amplify Hostingはジョブの開始から終了まで、sandboxは `ampx sandbox --once` の実行時間、端末からはビルドからデプロイのコマンドが終わるまで、GitHub Actionsは非公開リポジトリのARM64ランナー（2コア）で、ジョブの開始から終了までを測定時間にしています。測り方が少し違うので単純な比較ではありませんが、Amplify Hostingよりは速くなっていますね！
+Amplify Hostingはジョブの開始から終了まで、sandboxは `ampx sandbox --once` の実行時間、端末からはビルドからデプロイのコマンドが終わるまで、GitHub Actionsは非公開リポジトリのARM64ランナー（2コア）で、ジョブの開始から終了までを測定時間にしています。
+測り方が少し違うので単純な比較ではありませんが、Amplify Hostingよりは速くなっていますね！
 
 エージェントを1行直して試すたびに、Amplify Hostingでは約6分、cdkdでは反映まで1分弱待ちます。10回直せば、Hostingでは1時間近く、cdkdでは10分ほどです。開発の始めのうちは何度もデプロイするので、この差は大きいですよね。
 
-cdkdは、AWS Heroの後藤さん（go-to-k）がOSSとして開発しているCDKのCLIです。CloudFormationを通さずにAWSのAPIを直接呼んでリソースを作るので速くデプロイすることを可能にしています！詳細はレポジトリやドキュメントをご参照ください！
+cdkdは、AWS Heroの後藤さん（go-to-k）がOSSとして開発しているCDKのCLIです。CloudFormationを通さずにAWSのAPIを直接呼んでリソースを作るので速くデプロイすることを可能にしています！詳細はレポジトリやドキュメントをご参照ください！今回ありがたく使わせてもらっています！
 
 [cdkd（GitHub）](https://github.com/go-to-k/cdkd)、[ドキュメント](https://cdkd.dev/)
 
@@ -189,7 +195,9 @@ pnpm exec cdkd bootstrap   # 初回だけ
 APP_PREFIX=ch04-cdkd pnpm run deploy:cdkd
 ```
 
-cdkdはCloudFormationとは別に状態をS3に持ちます。`cdk deploy` とcdkdで同じ名前のスタックを作るとリソースの名前が衝突するので`APP_PREFIX` を分けてください。
+cdkdはCloudFormationとは別に状態をS3に持っています。
+
+`cdk deploy` とcdkdで同じ名前のスタックを作るとリソースの名前が衝突するので`APP_PREFIX` を分けてください。
 
 ## デプロイ時間を比べる
 
@@ -323,7 +331,7 @@ Honoのコードを変えたときのデプロイは`cdk deploy` で88秒、cdkd
 
 ![developへのpushはGitHub ActionsからcdkdでCloudFormationを通さずに開発環境へ、mainへのpushはGitHub Actionsからcdk deployでCloudFormationを通して本番環境へデプロイする](images/ch04-light-serverless-envs-actions.png)
 
-サンプルの `github-actions/deploy.yml` をリポジトリの `.github/workflows/` に置き、Knowledge BaseのIDやロールのARNをリポジトリの環境変数に入れて使います。
+サンプルの `github-actions/deploy.yml` をリポジトリの `.github/workflows/` に置き、Knowledge BaseのIDやロールのARNをリポジトリの変数（Variables）に入れて使います。設定する変数の一覧とIAMロールに付ける権限は、サンプルのREADMEの[GitHub Actionsでデプロイする](../../sample-code/supplements/ch04-light-serverless/README.md#github-actionsでデプロイする)にまとめています。
 
 エージェントはARM64のランナー（`ubuntu-24.04-arm`）でそのままビルドします。
 
