@@ -130,7 +130,7 @@
       "mode": 420
     },
     "sample-code/01/uv.lock": {
-      "sha256": "f70e00e5391aaaa23374a88a9a6f7b7b7859d82a4a7aaa1fe4cc0b20f37f8799",
+      "sha256": "0258e693ef445edd974cf497bc9f5fa200c381f1dd00f2aae59b258abf962b60",
       "mode": 420
     },
     "sample-code/01/weatherDemo/README.md": {
@@ -198,11 +198,11 @@
       "mode": 420
     },
     "sample-code/01/weatherDemo/agentcore/cdk/package.json": {
-      "sha256": "fce06a66b67867ec6b2e9f5adf943c08707e6f62da7878850177b26b4027a753",
+      "sha256": "1fa03adaef21b487f9312b7068028be43726c514e411b9c5adba0b78c4299bf8",
       "mode": 420
     },
     "sample-code/01/weatherDemo/agentcore/cdk/pnpm-lock.yaml": {
-      "sha256": "49a4ee9138b05c9f6bb6ac96ce99d4cf2a8ae9e5d98f1c00430cf93e5378e430",
+      "sha256": "9234870f14ad6408003fdd9c9ba1f90359df8aa43fb68e7399db7a46e77d2048",
       "mode": 420
     },
     "sample-code/01/weatherDemo/agentcore/cdk/test/cdk.test.ts": {
@@ -262,7 +262,7 @@
       "mode": 420
     },
     "sample-code/01/weatherDemo/app/WeatherAgent/pyproject.toml": {
-      "sha256": "62fb069c3064e580e7d55b607ee7d1c920a253f96b7fd9bb9246b57d7ab98fda",
+      "sha256": "2b27a053ed612f4768d2fb8e448a33cd1684246f280614eec4ca008d93e9bdc5",
       "mode": 420
     },
     "sample-code/01/weatherDemo/app/WeatherAgent/skills/fetcher.py": {
@@ -270,7 +270,7 @@
       "mode": 420
     },
     "sample-code/01/weatherDemo/app/WeatherAgent/uv.lock": {
-      "sha256": "46055049c2bbd959071cce63e0f567b31be7069f82e0b6b9f9b39e04d0839080",
+      "sha256": "40ccbdb753657a5acafddf93d5760666681b9efedc189cd33a45b0caa03300ee",
       "mode": 420
     },
     "sample-code/02/.gitkeep": {
@@ -318,11 +318,11 @@
       "mode": 420
     },
     "sample-code/02/amplify-ui/package.json": {
-      "sha256": "f4fc887750818511f6e0139aa7d665d6b5d13e3131a175bd82432debed1905ad",
+      "sha256": "9803444936025c15a681aeafc0a09a2e8d08c20586675a52bf9d4023861cb452",
       "mode": 420
     },
     "sample-code/02/amplify-ui/pnpm-lock.yaml": {
-      "sha256": "0e2def927190b90a1aed5f605012126093f0a4cb2e4c5db6631a7213a77bba51",
+      "sha256": "85c3a3f733c63c5862bdff735148aa1ec85d485d0b8ecdba3f5ae67b5965151c",
       "mode": 420
     },
     "sample-code/02/amplify-ui/pnpm-workspace.yaml": {
@@ -722,7 +722,7 @@
       "mode": 420
     },
     "sample-code/02/uv.lock": {
-      "sha256": "7cd43ed30ea90e658736f8590071096546ac25f7527bf8bebb1939540a137a07",
+      "sha256": "8feae17a958fa1eb86309b93bbc6af6580b3fc5a8876ce64c55fd0926cd96fa1",
       "mode": 420
     },
     "sample-code/03/.gitkeep": {
@@ -782,11 +782,11 @@
       "mode": 420
     },
     "sample-code/03/amplify-ui/package.json": {
-      "sha256": "860a190b12d5d507f86d3890abe35497a96743a9487d7af1ee77c6f9950b0125",
+      "sha256": "89deb85d5003597ad6b8262a211570c9611b9cc20a962d35d81321849a4c2207",
       "mode": 420
     },
     "sample-code/03/amplify-ui/pnpm-lock.yaml": {
-      "sha256": "ef48d52fefcd5c743e61331c7a00031868363220d344187f90bd3bcacb7d95ce",
+      "sha256": "fa43f7624219ec9e992b6a65b6c881736f57f4ad4df62eeff979128d45d76a6f",
       "mode": 420
     },
     "sample-code/03/amplify-ui/pnpm-workspace.yaml": {
@@ -994,7 +994,7 @@
       "mode": 420
     },
     "sample-code/03/pyproject.toml": {
-      "sha256": "f1b8bb3f5a0df14debf0582de0b2f4fc62f1d9ca2f94f7f66d0c8aed10ac1da6",
+      "sha256": "8b058bf8f447dc2bd7beb69e84e74e4ee20e1a13f8aa7c430857ffca6fa20a50",
       "mode": 420
     },
     "sample-code/03/results/chunk-strategy-comparison/chunking-comparison-report.md": {
@@ -1342,7 +1342,7 @@
       "mode": 420
     },
     "sample-code/03/uv.lock": {
-      "sha256": "e080137585dc8c4435a5a4a8ff4bacef92e0afd0d699ef3914f6a1203b8d148d",
+      "sha256": "4f24bdf383bb27f0f095d8b4f636b00fdae5d16d200b193a558cc23bff511dd4",
       "mode": 420
     },
     "sample-code/04/.gitkeep": {
@@ -1394,11 +1394,11 @@
       "mode": 420
     },
     "sample-code/04/amplify-ui/package.json": {
-      "sha256": "b1f6019bff3931756cfddfce3540cfe8c531a5b891c94289fcdae37dff8c36d2",
+      "sha256": "9335ea85b3183804134ec04965f84f52331b74cf23cbf20569a3219e2bcdb921",
       "mode": 420
     },
     "sample-code/04/amplify-ui/pnpm-lock.yaml": {
-      "sha256": "de778a9acf5860c4d15828c10061829d229cdcf49a42a8241bc569301a0408af",
+      "sha256": "6de778f2e5b29bc933b18a93e71d3e206e586e1ff36b3bb6731489a72e298564",
       "mode": 420
     },
     "sample-code/04/amplify-ui/pnpm-workspace.yaml": {
@@ -1530,7 +1530,7 @@
       "mode": 420
     },
     "sample-code/04/pyproject.toml": {
-      "sha256": "ae82f45ad4b5af3ef9a3805dda32a6725dca5ab9a8f69d9e448b53dc8da559ca",
+      "sha256": "f0ca690feae296d90d1f120b08f7aa8018f5591e6d9ccba95bd54389f70f5402",
       "mode": 420
     },
     "sample-code/04/run_gateway_agent.py": {
@@ -1542,7 +1542,7 @@
       "mode": 420
     },
     "sample-code/04/uv.lock": {
-      "sha256": "4ee3e664d06d421e607171087b1963894062b29350b3593415d9544b7e6c74cd",
+      "sha256": "ccb445f6364d097571de8fa82022b972e2040c121fd5d67999acf94e383e669b",
       "mode": 420
     },
     "sample-code/05/README.md": {
@@ -1658,7 +1658,7 @@
       "mode": 420
     },
     "sample-code/05/uv.lock": {
-      "sha256": "504c790b289560c82217931f13225271410b993ab1a64342801c9f9485810f71",
+      "sha256": "ec86900469c708ddfafd3ae23c84e51d384d7c0ca0bf211545a8311c3c4f08da",
       "mode": 420
     },
     "sample-code/06/.gitkeep": {
@@ -1694,7 +1694,7 @@
       "mode": 420
     },
     "sample-code/06/agent-registry/uv.lock": {
-      "sha256": "f4bd2ca044a1828a7a3e64a365b2d4c53f1441026eea8cccd9595d65d634d9ba",
+      "sha256": "06367eeea4cd60cd03854e5485d9cf4a16468630d0b978461805fdb02fb111b0",
       "mode": 420
     },
     "sample-code/06/amplify-ui/.env.sandbox.example": {
@@ -1750,11 +1750,11 @@
       "mode": 420
     },
     "sample-code/06/amplify-ui/package.json": {
-      "sha256": "b281cdb4c77d099f9dd08a876b2e68022c95b521c02af06ae758e668c0eb1c4e",
+      "sha256": "4fa8f4c97ec4149ee33d7da5c5427936ef52eaf370d0b7d18830d366efbc77ef",
       "mode": 420
     },
     "sample-code/06/amplify-ui/pnpm-lock.yaml": {
-      "sha256": "a3a57e86f91fb74e50d207ce7bb983d892e632a75835d12b9df5cc3eaca46850",
+      "sha256": "74e7be7a02128f856053a16acce227809dc4b52b7029bb340a73fa1737a5c6ee",
       "mode": 420
     },
     "sample-code/06/amplify-ui/pnpm-workspace.yaml": {
@@ -2246,7 +2246,7 @@
       "mode": 420
     },
     "sample-code/06/kb-update-agent/requirements.txt": {
-      "sha256": "1f65f1b08915a1ca6dba2d819e96fdd037acd27493a2638770f2ecf1a1d13039",
+      "sha256": "fe534aff6e63a43ba2d105aeb6dbb94022ccbb8c5fc2bfbee68996c099a07e8b",
       "mode": 420
     },
     "sample-code/06/kb-update-agent/test-docs/APIキー誤公開時の2026年4月最優先対応.md": {
@@ -2318,7 +2318,7 @@
       "mode": 420
     },
     "sample-code/06/kb-update-agent/uv.lock": {
-      "sha256": "b0ae1af3adb18cb5896db8cde06d9c457a768e758d0fd6054d61785beb612a26",
+      "sha256": "ef297bbbd44ca5f660b70ea69aed8931e8cc43a28e15e24b4e12318b38d254eb",
       "mode": 420
     },
     "sample-code/06/lambdas/kb-update-trigger/README.md": {
@@ -2354,7 +2354,7 @@
       "mode": 420
     },
     "sample-code/DEPENDENCY_SECURITY.md": {
-      "sha256": "73270822130064d9e8dd2fafe314bc638eb26d91c11e2895169f755ea92a83ab",
+      "sha256": "6f8fefe2696f1bf9b29b0894ab1a6535ac9d1c571cce5f21e3f7648ef3976041",
       "mode": 420
     },
     "sample-code/README.md": {
@@ -2406,7 +2406,7 @@
       "mode": 420
     },
     "sample-code/appendix/uv.lock": {
-      "sha256": "7d9cf54a2bafd60a0b23935495eec6b414d99c77b6c4ab88eb5b3b767a03c2bd",
+      "sha256": "2b2586a6ac5d10ac18e3eea4cd4981d64d4e8774c1efe014bbd99560d1bf4d1c",
       "mode": 420
     },
     "sample-code/common/kb-ingestion.sh": {
@@ -2750,7 +2750,7 @@
       "mode": 420
     },
     "sample-code/supplements/langfuse/uv.lock": {
-      "sha256": "f85e83932c40842308a69e79bbff6e85c131c554d54130c73e05a6d2948fc38a",
+      "sha256": "2b2fdd6a4601a0d1815c9bca26bb843bb820e8d0dba16a90350dde8552ba52d6",
       "mode": 420
     },
     "sample-code/supplements/managed-kb-app/README.md": {
@@ -2794,11 +2794,11 @@
       "mode": 420
     },
     "sample-code/supplements/managed-kb-app/ui/package.json": {
-      "sha256": "e56ccbd7da01df531a40c3197b6e2bb3456c987b13f9d0317b75ac151979ab00",
+      "sha256": "8d137eeaaf44ab1b4bde628c1dfaad28533730050ff3ef967f79dcd9cd65ff66",
       "mode": 420
     },
     "sample-code/supplements/managed-kb-app/ui/pnpm-lock.yaml": {
-      "sha256": "212279fdf8c2e58ed5dabf6a06a7433704d1ba9243ef12b1111e45e7fa622faf",
+      "sha256": "41fc64add2e8cf71c3759084d50ef216abb01786ece08e7ee5e462492ea97531",
       "mode": 420
     },
     "sample-code/supplements/managed-kb-app/ui/src/App.tsx": {
@@ -2842,7 +2842,7 @@
       "mode": 420
     },
     "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
-      "sha256": "7ca9829fdc9a6fce3125ca9f81945d0d1893e928b1a7689d62d1f8a1fb15d193",
+      "sha256": "155abbe1d62bd2ed7334a83762839f6bd5b5bd6ceab5a6f27445803759c85330",
       "mode": 420
     },
     "supplements/chapter01/images/agentcore-dev-inspector.png": {
