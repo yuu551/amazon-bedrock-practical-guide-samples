@@ -66,7 +66,9 @@ cd amazon-bedrock-practical-guide-samples
 
 ## コーディングエージェントに手伝ってもらう
 
-このリポジトリにはハンズオンを手伝うエージェントスキル（`.agents/skills/bedrock-handson`）を用意しています。Agent Skillsに対応したコーディングエージェントでリポジトリを開き、「第2章を始めたい」「このエラーはどうすればいい？」「作ったリソースを片付けたい」と相談してください。準備の確認、エラーの切り分け、後片付けを案内します。料金がかかるコマンドは、実行の前にあなたの了承を得るよう指示済みです。
+このリポジトリにはハンズオンを手伝うエージェントスキル（`.agents/skills/bedrock-handson`）を用意しています。
+
+Agent Skillsに対応したコーディングエージェントでリポジトリを開き、「第2章を始めたい」「このエラーはどうすればいい？」「作ったリソースを片付けたい」と相談してください。準備の確認、エラーの切り分け、後片付けを案内します。料金がかかるコマンドは、実行の前にあなたの了承を得るよう指示済みです。
 
 Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills`から読み込みます。スキルを使えないエージェントには、`AGENTS.md`を読ませてください。
 
@@ -115,3 +117,13 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 | 付録 | [Managed Knowledge Baseをアプリに組み込んでストリーミングする](supplements/managed-knowledge-bases/Managed-Knowledge-Baseをアプリに組み込んでストリーミングする.md) |
 | 付録 | [Managed Knowledge Baseのデータソースを定期同期する](supplements/managed-knowledge-bases/Managed-Knowledge-Baseのデータソースを定期同期する.md) |
 | 付録 | [S3 Vectorsのメタデータフィルタが事前フィルタリングに対応](supplements/s3-vectors/S3-Vectorsのメタデータフィルタが事前フィルタリングに対応.md) |
+
+## 最新情報
+
+本書の執筆後のアップデートやAgentCore・Bedrockの新しい機能を試した記事はDevelopersIOの著者ページでも発信しています！
+
+本にも補足にもない最新の情報を追いたいときはぜひこちらものぞいてみてください！
+
+[神野 雄大 | DevelopersIO](https://dev.classmethod.jp/author/yjinn/)
+
+![DevelopersIOの著者ページ。月別の投稿数と、AgentCoreやBedrockの最新の記事が並んでいる](images/devio-author.png)

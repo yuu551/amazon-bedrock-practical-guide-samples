@@ -70,7 +70,11 @@
       "mode": 420
     },
     "README.md": {
-      "sha256": "81dcc16b6ec87424db14d1819c6ec4813062d507b9016b14aa47b459721f9419",
+      "sha256": "5efdcb35e2f23bc5dd4e1d5d502ec6a3b12a9473b523dd4f8b8fa0483539c295",
+      "mode": 420
+    },
+    "images/devio-author.png": {
+      "sha256": "a92f1b18dc5a062f8ec288e3c02d54d026060786deda4e2f3fc345d01fef733b",
       "mode": 420
     },
     "sample-code/01/.gitkeep": {
