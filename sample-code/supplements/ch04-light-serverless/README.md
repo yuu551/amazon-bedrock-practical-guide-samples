@@ -75,6 +75,54 @@ APP_PREFIX=ch04-cdkd pnpm run deploy:cdkd
 
 出力された `AppUrl` を開き、アカウントを作ってログインします。画面のサインアップは誰でも使えるので、試し終わったら環境を削除してください。
 
+## AWS WAFを付ける
+
+本番で公開するときのために、CloudFrontにAWS WAFを付けられます。既定では付けません。
+
+| 環境変数 | 内容 |
+|---|---|
+| `ENABLE_WAF=true` | Web ACLを作ってCloudFrontに付ける |
+| `WAF_ALLOWED_IPS` | カンマ区切りのCIDR（例: `203.0.113.0/24,2001:db8::/64`）。それ以外のIPからのアクセスを止める。マスクを省いたIPは1台だけを許可する |
+| `WAF_ALLOWED_COUNTRIES` | カンマ区切りの国コード（例: `JP`）。それ以外の国からのアクセスを止める |
+
+`WAF_ALLOWED_IPS` か `WAF_ALLOWED_COUNTRIES` を指定したときは、`ENABLE_WAF` がなくてもWAFを付けます。
+
+```bash
+ENABLE_WAF=true pnpm run deploy
+WAF_ALLOWED_COUNTRIES=JP pnpm run deploy   # 日本からのアクセスだけを通す
+```
+
+Web ACLに入るルールは次のとおりです。
+
+| 優先度 | ルール | 内容 |
+|---|---|---|
+| 0 | `AllowedIpsOnly` | `WAF_ALLOWED_IPS` を指定したときだけ。許可していないIPを止める |
+| 1 | `AllowedCountriesOnly` | `WAF_ALLOWED_COUNTRIES` を指定したときだけ。許可していない国を止める |
+| 2 | `AWSManagedRulesAmazonIpReputationList` | 攻撃に使われているIPを止める |
+| 3 | `AWSManagedRulesCommonRuleSet` | XSSなどのよくある攻撃を止める。8KBを超える本文を止める `SizeRestrictions_BODY` だけは数えるだけにしている |
+| 4 | `AWSManagedRulesKnownBadInputsRuleSet` | Log4Shellなどの既知の悪い入力を止める |
+| 5 | `RateLimitPerIp` | 同じIPから5分間に1,000回を超えるリクエストを止める |
+
+### 付けるときの注意
+
+- CloudFront用のWeb ACLは米国東部（バージニア北部）にしか作れないので、ほかのリージョンに作るスタックではエラーにしています
+- 画面から直接呼ぶ形（既定）では、AgentCore RuntimeへのリクエストはCloudFrontを通らないので、このWAFの対象になりません。IP制限や国の制限をかけても、トークンがあればRuntimeは呼べます。APIもまとめて守りたいときは、`AGENT_ACCESS=api` でHonoを挟む形にしてください
+- IP制限では、IPv6でつながる端末も考えて、IPv4とIPv6の両方の範囲を指定します。VPNなどで外に出ていくIPが変わる環境では、変わらない範囲を指定してください
+- `AWSManagedRulesCommonRuleSet` は、`<script>` のようなHTMLを含む本文を止めます。質問にコードを貼る使い方なら、`CrossSiteScripting_BODY` も数えるだけにしてください
+- 料金はWeb ACLが月5ドル、ルールが1つにつき月1ドル（このサンプルでは4〜6個）、リクエスト100万件ごとに0.6ドルです
+
+8KBを超える本文のルールを数えるだけにしているのは、Honoを挟む形で質問（最大4,000文字。日本語なら12KB前後）を送ると止まってしまうからです。
+
+### ほかにも付けたい場合
+
+`infra/lib/support-agent-stack.ts` の `createWebAcl` にルールを足します。たとえば次のようなものがあります。
+
+- SQLインジェクションを止める `AWSManagedRulesSQLiRuleSet`。このアプリにはSQLのデータベースがないので入れていません
+- ボットを見分ける `AWSManagedRulesBotControlRuleSet`。別料金がかかります
+- WAFのログを、名前が `aws-waf-logs-` で始まるCloudWatch LogsやS3へ出す
+- CognitoのユーザープールにリージョンのWeb ACLを付けて、サインインを守る
+- 国だけを制限するなら、CloudFrontの地理的制限でもできます。こちらは追加料金がかかりません
+
 ## GitHub Actionsでデプロイする
 
 `github-actions/deploy.yml` をリポジトリの `.github/workflows/` に置くと、`develop` へのpushで開発環境へ `cdkd deploy`、`main` へのpushで本番環境へ `cdk deploy` します。ランナーはARM64（`ubuntu-24.04-arm`）です。

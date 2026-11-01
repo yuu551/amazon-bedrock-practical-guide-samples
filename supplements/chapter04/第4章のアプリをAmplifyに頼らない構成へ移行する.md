@@ -8,7 +8,7 @@
 
 本書のハンズオンでは、本を手に取ってすぐにサクッと試せるようにCodespacesを使ってきました。Codespacesはx86_64のマシンなので、第4章ではエージェントのARM64のコンテナをCodeBuildでビルドしていました。（AgentCoreはARMのイメージしか対応していないため）
 
-ただこの補足では、自分の端末で本格的に開発していく場面を想定して、Apple SiliconのMacで試しています！エージェントのコンテナもARM64のまま、MacのDockerでビルドし、後半ではGitHub ActionsのARM64のランナーから、同じようにデプロイする形も試しています。使った環境は次のとおりです。
+ただこの補足では自分の端末で本格的に開発していく場面を想定して、Apple SiliconのMacで試しています！エージェントのコンテナもARM64のまま、MacのDockerでビルドし、後半ではGitHub ActionsのARM64のランナーから、同じようにデプロイする形も試しています。使った環境は次のとおりです。
 
 | 項目 | 使ったもの |
 |---|---|
@@ -28,9 +28,9 @@
 
 開発環境はcdkdとローカルのDocker、本番環境は `cdk deploy` を使用する想定で検証してみました！
 
-エージェントを変えたときのデプロイはcdkdなら46秒で、Amplify Hostingの約6分（4〜8分とばらつきました）より大幅に短くなりました。GitHub Actionsから実行しても、Amplify Hostingの半分以下で終わります。
+エージェントのコードを変えたときのデプロイはcdkdなら46秒で、Amplify Hostingの約6分（4〜8分とばらつきました）より大幅に短くなりました。GitHub Actionsから実行しても、Amplify Hostingの半分以下で終わります。
 
-同じ第4章のアプリで変更の種類ごとにデプロイの時間を測りました。エージェントのビルドはAmplify側が第4章と同じCodeBuild、CDK側がDocker（MacかGitHub Actionsのランナー）です。単位は秒で、値は3回の中央値です。
+同じ第4章のアプリで変更の種類ごとにデプロイの時間を測りました。エージェントのビルドはAmplify側が第4章と同じCodeBuild、CDK、cdkd側がDocker（MacかGitHub Actionsのランナー）です。単位は秒で、値は3回の中央値です。
 
 | デプロイの方法 | エージェント（`main.py`） | 画面 |
 |---|---|---|
@@ -42,7 +42,7 @@
 | GitHub Actionsから `cdkd deploy` | 81 | 74 |
 
 Amplify Hostingはジョブの開始から終了まで、sandboxは `ampx sandbox --once` の実行時間、端末からはビルドからデプロイのコマンドが終わるまで、GitHub Actionsは非公開リポジトリのARM64ランナー（2コア）で、ジョブの開始から終了までを測定時間にしています。
-測り方が少し違うので単純な比較ではありませんが、Amplify Hostingよりは速くなっていますね！
+構成や測り方が少し違うので単純な比較ではありませんが、マネージドなAmplify Hostingよりは速くなっていますね！
 
 エージェントを1行直して試すたびに、Amplify Hostingでは約6分、cdkdでは反映まで1分弱待ちます。10回直せば、Hostingでは1時間近く、cdkdでは10分ほどです。開発の始めのうちは何度もデプロイするので、この差は大きいですよね。
 
@@ -58,7 +58,7 @@ Amplify Hostingはジョブの開始から終了まで、sandboxは `ampx sandbo
 
 ![画面はS3とCloudFrontから配信し、ブラウザからCognitoのトークンでAgentCore Runtimeを直接呼ぶ](images/ch04-light-serverless.png)
 
-第4章でAmplifyに任せていたものと、移行後の置き換え先をまとめました。
+第4章でAmplifyに任せていたものと移行後の置き換え先をまとめました。
 
 | Amplifyでの役割 | 第4章での書き方 | 移行後 |
 |---|---|---|
@@ -368,6 +368,43 @@ jobs:
 デプロイ時間は「先に結果」の表のとおりです。ジョブの準備に毎回20秒ほどかかり、エージェントはランナーにDockerのキャッシュがないぶん長くなりますが、それでもAmplify Hostingの半分以下となりました！
 
 個人の端末では環境差分や属人化する可能性があるので、できるだけGitHub ActionsなどのCI/CDツールを活用していきたいですね！
+
+## （発展）WAFの利用
+
+本番で公開するならAWS WAFも付けておきたいところです。
+Amplify Hostingならコンソールの「ファイアウォール」から、推奨のルールなどを選ぶだけで付けられます。
+
+[Firewall support for Amplify hosted sites（Amplify Hostingのドキュメント）](https://docs.aws.amazon.com/amplify/latest/userguide/WAF-integration.html)
+
+このあたりはAmplifyはお手軽で羨ましいのですが、今回の構成ではCloudFrontのディストリビューションに、WAFのWeb ACLをCDKで自前で設定する必要があります。
+
+サンプルでは環境変数で付けられるようにしました。
+
+```bash
+ENABLE_WAF=true pnpm run deploy                  # マネージドルールとIPごとの回数制限
+WAF_ALLOWED_COUNTRIES=JP pnpm run deploy         # 日本からのアクセスだけを通す
+WAF_ALLOWED_IPS=203.0.113.0/24 pnpm run deploy   # 社内のIPからのアクセスだけを通す
+```
+
+Web ACLには攻撃に使われているIP、XSSなどのよくある攻撃、Log4Shellなどの既知の悪い入力を止めるAWSのマネージドルールと、IPごとの回数制限を設定します。実際にデプロイして、XSSやLog4Shellを含むリクエスト、許可していない国（米国）からのアクセスが403でブロックされます。
+
+```ts
+// infra/lib/support-agent-stack.ts（抜粋）
+const webAcl = props.waf.enabled ? this.createWebAcl(prefix, props.waf) : undefined
+
+const distribution = new cloudfront.Distribution(this, "Distribution", {
+  // ...
+  webAclId: webAcl?.attrArn,
+})
+```
+
+気をつけたいのは画面から直接呼んでいるAgentCore RuntimeがCloudFrontを通らない点です。
+
+RuntimeはJWTで認証しますが、直接呼ぶ形ではCloudFrontのWAFの対象外です。AgentCoreへの通信にも国やIPの制限、回数制限をかけたい場合は、Honoを挟んでCloudFront経由で呼ぶ形にできます。WAFを付けられるAgentCore Gatewayを経由して、Runtimeへリクエストを送る方法もあります。何を守りたいかによって適切なアーキテクチャを考えましょう！
+
+[Protecting your gateway with AWS WAF（AgentCore Gatewayのドキュメント）](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-waf.html)
+
+ルールの一覧や料金、IP制限の注意点は、サンプルのREADMEの[AWS WAFを付ける](../../sample-code/supplements/ch04-light-serverless/README.md#aws-wafを付ける)にまとめています。
 
 ## 片付け
 

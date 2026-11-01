@@ -16,6 +16,18 @@ if (!knowledgeBaseId) {
 }
 
 const prefix = env.APP_PREFIX ?? "ch04-light"
+
+// WAF_ALLOWED_IPS はカンマ区切りのCIDR。マスクを省いたIPは1台だけを許可する（/32、IPv6は/128）
+const allowedIps = (env.WAF_ALLOWED_IPS ?? "")
+  .split(",")
+  .map((v) => v.trim())
+  .filter(Boolean)
+  .map((ip) => (ip.includes("/") ? ip : `${ip}/${ip.includes(":") ? 128 : 32}`))
+// WAF_ALLOWED_COUNTRIES はカンマ区切りの国コード（例: JP）
+const allowedCountries = (env.WAF_ALLOWED_COUNTRIES ?? "")
+  .split(",")
+  .map((v) => v.trim().toUpperCase())
+  .filter(Boolean)
 const app = new App()
 
 new SupportAgentStack(app, `${prefix}-stack`, {
@@ -27,6 +39,11 @@ new SupportAgentStack(app, `${prefix}-stack`, {
   sourcePrefixes: list(env.KNOWLEDGE_BASE_SOURCE_PREFIXES),
   agentArtifact: env.AGENT_ARTIFACT === "zip" || env.AGENT_ARTIFACT === "codebuild" ? env.AGENT_ARTIFACT : "docker",
   agentAccess: env.AGENT_ACCESS === "api" ? "api" : "direct",
+  waf: {
+    enabled: env.ENABLE_WAF === "true" || allowedIps.length > 0 || allowedCountries.length > 0,
+    allowedIps,
+    allowedCountries,
+  },
   atlassian: {
     baseUrl: env.ATLASSIAN_BASE_URL,
     confluenceSpaceKey: env.CONFLUENCE_SPACE_KEY,

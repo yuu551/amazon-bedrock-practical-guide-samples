@@ -2482,7 +2482,7 @@
       "mode": 420
     },
     "sample-code/supplements/ch04-light-serverless/README.md": {
-      "sha256": "bf7cd8712ef3009d298f5f9717c97092badfa92be4c989bfec40dc6e1a243f57",
+      "sha256": "3b1d00c008f93ef6a35601ac685cab0d31fc67ff23f7feb29e7efb81bd184024",
       "mode": 420
     },
     "sample-code/supplements/ch04-light-serverless/agent/.dockerignore": {
@@ -2542,11 +2542,11 @@
       "mode": 420
     },
     "sample-code/supplements/ch04-light-serverless/infra/bin/app.ts": {
-      "sha256": "ace68f729389f6177fcc410f297132f50f0405df962fb58eb00e20102359e294",
+      "sha256": "e9c807b9b053dbd708021efad526d86bd21484795870598d9b4f8b1c79e95175",
       "mode": 420
     },
     "sample-code/supplements/ch04-light-serverless/infra/lib/support-agent-stack.ts": {
-      "sha256": "dc385e0c94e6d7984423db4985abbdb58b35af581e4149661d6c476baa7d9ad1",
+      "sha256": "a53febe49197e04301a41d634dfd90318de3578989a931a882b15afc6e95d355",
       "mode": 420
     },
     "sample-code/supplements/ch04-light-serverless/infra/tsconfig.json": {
@@ -2982,7 +2982,7 @@
       "mode": 420
     },
     "supplements/chapter04/images/ch04-light-serverless-api.png": {
-      "sha256": "c18656bfec509c4f5e91d61d7011dd2cdcf4c64fd3de240cc4865c3070012231",
+      "sha256": "5c0a8d936ab33c5f232d21777de91c24af20c03dc698d39d482f32d56b59f227",
       "mode": 420
     },
     "supplements/chapter04/images/ch04-light-serverless-envs-actions.png": {
@@ -2994,7 +2994,7 @@
       "mode": 420
     },
     "supplements/chapter04/images/ch04-light-serverless.png": {
-      "sha256": "6a96a55d985005933b8407e0ee221baf462b6f40f0250f23be4b63af4a8a55ae",
+      "sha256": "7396c132e4fc10703c1c87bfa490c2c650b7f8bfa980cded6343fa08ccc2c481",
       "mode": 420
     },
     "supplements/chapter04/images/gateway-3lo-consent-flow.png": {
@@ -3122,7 +3122,7 @@
       "mode": 420
     },
     "supplements/chapter04/第4章のアプリをAmplifyに頼らない構成へ移行する.md": {
-      "sha256": "d58f9255cab69dda0a54bd86c96ced68e319649283bf8129019f01fbc97a752d",
+      "sha256": "c85eee1ecf0e0d1b2efaeab79432732ac45271fbadb234217937433d79070082",
       "mode": 420
     },
     "supplements/chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md": {

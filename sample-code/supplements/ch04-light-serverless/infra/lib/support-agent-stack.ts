@@ -20,6 +20,7 @@ import * as lambda from "aws-cdk-lib/aws-lambda"
 import * as s3 from "aws-cdk-lib/aws-s3"
 import * as s3deploy from "aws-cdk-lib/aws-s3-deployment"
 import * as secretsmanager from "aws-cdk-lib/aws-secretsmanager"
+import * as wafv2 from "aws-cdk-lib/aws-wafv2"
 import type { Construct } from "constructs"
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..")
@@ -41,6 +42,14 @@ export type SupportAgentStackProps = StackProps & {
   //   direct: 画面から直接呼ぶ。RuntimeがCognitoのトークンを検証する（既定。第4章と同じ）
   //   api:    CloudFrontの /api/* をLambda Web Functions上のHonoへ渡し、HonoがIAMでRuntimeを呼ぶ
   agentAccess: "direct" | "api"
+  // CloudFrontにAWS WAFを付ける（既定は付けない）
+  //   allowedIps:       渡すと、それ以外のIPからのアクセスを止める
+  //   allowedCountries: 渡すと、それ以外の国からのアクセスを止める（ISO 3166の2文字の国コード。例: JP）
+  waf: {
+    enabled: boolean
+    allowedIps: string[]
+    allowedCountries: string[]
+  }
   atlassian: {
     baseUrl?: string
     confluenceSpaceKey?: string
@@ -246,6 +255,7 @@ export class SupportAgentStack extends Stack {
     // 5. CloudFront。/ は S3。api のときだけ /api/* をHonoへ渡す
     // -------------------------------------------------------------------------
     const api = direct ? undefined : this.createHonoApi({ prefix, userPool, userPoolClient, runtime })
+    const webAcl = props.waf.enabled ? this.createWebAcl(prefix, props.waf) : undefined
 
     const distribution = new cloudfront.Distribution(this, "Distribution", {
       defaultRootObject: "index.html",
@@ -255,6 +265,7 @@ export class SupportAgentStack extends Stack {
         cachePolicy: cloudfront.CachePolicy.CACHING_OPTIMIZED,
       },
       additionalBehaviors: api ? { "/api/*": api.behavior } : undefined,
+      webAclId: webAcl?.attrArn,
     })
     api?.allowFrom(distribution)
 
@@ -288,7 +299,98 @@ export class SupportAgentStack extends Stack {
     new CfnOutput(this, "UserPoolClientId", { value: userPoolClient.userPoolClientId })
     new CfnOutput(this, "AgentRuntimeArn", { value: runtime.agentRuntimeArn })
     if (api) new CfnOutput(this, "ApiEndpointDomain", { value: api.endpointDomain })
+    if (webAcl) new CfnOutput(this, "WebAclArn", { value: webAcl.attrArn })
     new CfnOutput(this, "AtlassianSecretName", { value: atlassianSecret.secretName })
+  }
+
+  // 本番向け: CloudFrontに付けるAWS WAFのWeb ACL。L2がないのでL1で書く
+  // 画面から直接呼ぶ形では、AgentCore RuntimeへのリクエストはCloudFrontを通らないので、このWeb ACLの対象外になる
+  private createWebAcl(prefix: string, { allowedIps, allowedCountries }: { allowedIps: string[]; allowedCountries: string[] }) {
+    // CloudFront用のWeb ACL（スコープ CLOUDFRONT）は米国東部（バージニア北部）にしか作れない
+    if (this.region !== "us-east-1") {
+      throw new Error("ENABLE_WAF、WAF_ALLOWED_IPS、WAF_ALLOWED_COUNTRIES は、米国東部（us-east-1）に作るスタックでだけ使えます")
+    }
+    const visibility = (name: string): wafv2.CfnWebACL.VisibilityConfigProperty => ({
+      cloudWatchMetricsEnabled: true,
+      metricName: `${prefix}-${name}`,
+      sampledRequestsEnabled: true,
+    })
+    const managed = (
+      name: string,
+      priority: number,
+      ruleActionOverrides?: wafv2.CfnWebACL.RuleActionOverrideProperty[],
+    ): wafv2.CfnWebACL.RuleProperty => ({
+      name,
+      priority,
+      overrideAction: { none: {} },
+      statement: { managedRuleGroupStatement: { vendorName: "AWS", name, ruleActionOverrides } },
+      visibilityConfig: visibility(name),
+    })
+
+    const rules: wafv2.CfnWebACL.RuleProperty[] = []
+
+    // 許可したIPの範囲だけを通す。IPv4とIPv6はIPセットを分ける
+    if (allowedIps.length > 0) {
+      const statements: wafv2.CfnWebACL.StatementProperty[] = []
+      for (const [version, cidrs] of [
+        ["IPV4", allowedIps.filter((cidr) => !cidr.includes(":"))],
+        ["IPV6", allowedIps.filter((cidr) => cidr.includes(":"))],
+      ] as const) {
+        if (cidrs.length === 0) continue
+        const ipSet = new wafv2.CfnIPSet(this, `AllowedIps${version}`, {
+          name: `${prefix}-allowed-${version.toLowerCase()}`,
+          scope: "CLOUDFRONT",
+          ipAddressVersion: version,
+          addresses: cidrs,
+        })
+        statements.push({ ipSetReferenceStatement: { arn: ipSet.attrArn } })
+      }
+      rules.push({
+        name: "AllowedIpsOnly",
+        priority: 0,
+        action: { block: {} },
+        statement: {
+          notStatement: {
+            statement: statements.length === 1 ? statements[0] : { orStatement: { statements } },
+          },
+        },
+        visibilityConfig: visibility("AllowedIpsOnly"),
+      })
+    }
+
+    // 許可した国からのアクセスだけを通す。国はリクエスト元のIPから判定される
+    if (allowedCountries.length > 0) {
+      rules.push({
+        name: "AllowedCountriesOnly",
+        priority: 1,
+        action: { block: {} },
+        statement: { notStatement: { statement: { geoMatchStatement: { countryCodes: allowedCountries } } } },
+        visibilityConfig: visibility("AllowedCountriesOnly"),
+      })
+    }
+
+    rules.push(managed("AWSManagedRulesAmazonIpReputationList", 2))
+    // 8KBを超える本文を止めるルールは数えるだけにする。Honoを挟む形では、長い質問（最大4,000文字）の送信が止まってしまうため
+    rules.push(
+      managed("AWSManagedRulesCommonRuleSet", 3, [{ name: "SizeRestrictions_BODY", actionToUse: { count: {} } }]),
+    )
+    rules.push(managed("AWSManagedRulesKnownBadInputsRuleSet", 4))
+    // 同じIPから5分間に1,000回を超えるリクエストを止める
+    rules.push({
+      name: "RateLimitPerIp",
+      priority: 5,
+      action: { block: {} },
+      statement: { rateBasedStatement: { limit: 1000, aggregateKeyType: "IP", evaluationWindowSec: 300 } },
+      visibilityConfig: visibility("RateLimitPerIp"),
+    })
+
+    return new wafv2.CfnWebACL(this, "WebAcl", {
+      name: `${prefix}-web-acl`,
+      scope: "CLOUDFRONT",
+      defaultAction: { allow: {} },
+      rules,
+      visibilityConfig: visibility("WebAcl"),
+    })
   }
 
   // 発展: 画面とRuntimeの間にLambda Web Functions上のHonoを挟む。L2がないのでL1で書く
