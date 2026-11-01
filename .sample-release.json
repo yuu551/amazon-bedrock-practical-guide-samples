@@ -70,7 +70,7 @@
       "mode": 420
     },
     "README.md": {
-      "sha256": "5efdcb35e2f23bc5dd4e1d5d502ec6a3b12a9473b523dd4f8b8fa0483539c295",
+      "sha256": "73b11da10f96aec53746ae19b4faba5b8b1795202a11a6d3774b79fb7385ab38",
       "mode": 420
     },
     "images/devio-author.png": {
@@ -2482,7 +2482,7 @@
       "mode": 420
     },
     "sample-code/supplements/ch04-light-serverless/README.md": {
-      "sha256": "c1e893fb8ececa6585fc6fafc6954148376e575d1ed6ba2381336a2229412dbb",
+      "sha256": "bf7cd8712ef3009d298f5f9717c97092badfa92be4c989bfec40dc6e1a243f57",
       "mode": 420
     },
     "sample-code/supplements/ch04-light-serverless/agent/.dockerignore": {
@@ -2842,7 +2842,7 @@
       "mode": 420
     },
     "supplements/README.md": {
-      "sha256": "7ba59232fceda77b2249e9d4499ead6089cbbeffa9e283dc731b23dc9eaaab4b",
+      "sha256": "7b9237fa260fb4b50ef8153ffe7f3886bd35518f46ecefc3ce5aa05730437f7a",
       "mode": 420
     },
     "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
@@ -3121,8 +3121,8 @@
       "sha256": "c8cefd10968dee77df1d2d0422f0acd854a80da3e18385454a44a8b427b421c7",
       "mode": 420
     },
-    "supplements/chapter04/第4章のアプリをAmplifyからCDKへ移行する.md": {
-      "sha256": "ae87c78834e4227ee76fa4ab35f921d388df39ceb8f133407a86932ccfb616a8",
+    "supplements/chapter04/第4章のアプリをAmplifyに頼らない構成へ移行する.md": {
+      "sha256": "6655de40d58c0ded9e2d8e6ea07cc176e58f7b259a786551e856fbe1000e2978",
       "mode": 420
     },
     "supplements/chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md": {

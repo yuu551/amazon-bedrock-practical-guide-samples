@@ -1,8 +1,8 @@
-# 第4章のアプリをAmplifyからCDKへ移行する
+# 第4章のアプリをAmplifyに頼らない構成へ移行する
 
 第4章の問い合わせ対応アプリを、Amplifyを使わずにCDKだけでデプロイするサンプルです。画面とエージェントは第4章と同じです。画面はS3とCloudFrontから配信し、第4章と同じく画面からAgentCore Runtimeを直接呼びます。`AGENT_ACCESS=api` を付けると、間にLambda Web Functions上のHonoを挟む形にもできます。
 
-詳しい説明とデプロイ時間の比較は[補足記事](../../../supplements/chapter04/第4章のアプリをAmplifyからCDKへ移行する.md)を参照してください。
+詳しい説明とデプロイ時間の比較は[補足記事](../../../supplements/chapter04/第4章のアプリをAmplifyに頼らない構成へ移行する.md)を参照してください。
 
 ## 構成
 
