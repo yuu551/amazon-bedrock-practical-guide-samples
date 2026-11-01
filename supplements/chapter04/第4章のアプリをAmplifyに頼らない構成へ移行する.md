@@ -30,7 +30,7 @@
 
 エージェントを変えたときのデプロイはcdkdなら46秒で、Amplify Hostingの約6分（4〜8分とばらつきました）より大幅に短くなりました。GitHub Actionsから実行しても、Amplify Hostingの半分以下で終わります。
 
-同じ第4章のアプリで変更の種類ごとにデプロイの時間を測りました。エージェントのビルドはAmplify側が第4章と同じCodeBuild、CDK側がDocker（MacかGitHub Actionsのランナー）です。ビルドする場所も含めた、開発の流れ全体の比較です。単位は秒で、値は3回の中央値です。
+同じ第4章のアプリで変更の種類ごとにデプロイの時間を測りました。エージェントのビルドはAmplify側が第4章と同じCodeBuild、CDK側がDocker（MacかGitHub Actionsのランナー）です。単位は秒で、値は3回の中央値です。
 
 | デプロイの方法 | エージェント（`main.py`） | 画面 |
 |---|---|---|
@@ -46,7 +46,7 @@ Amplify Hostingはジョブの開始から終了まで、sandboxは `ampx sandbo
 
 エージェントを1行直して試すたびに、Amplify Hostingでは約6分、cdkdでは反映まで1分弱待ちます。10回直せば、Hostingでは1時間近く、cdkdでは10分ほどです。開発の始めのうちは何度もデプロイするので、この差は大きいですよね。
 
-cdkdは、AWS Heroの後藤さん（go-to-k）がOSSとして開発しているCDKのCLIです。CloudFormationを通さずにAWSのAPIを直接呼んでリソースを作るので速くデプロイすることを可能にしています！詳細はレポジトリやドキュメントをご参照ください！今回ありがたく使わせてもらっています！
+ちなみにここで出てきたcdkdは、AWS Heroの後藤さん（go-to-k）がOSSとして開発しているCDKのCLIです。CloudFormationを通さずにAWSのAPIを直接呼んでリソースを作るので速くデプロイすることを可能にしています！詳細はレポジトリやドキュメントをご参照ください！今回ありがたく使わせてもらっています！
 
 [cdkd（GitHub）](https://github.com/go-to-k/cdkd)、[ドキュメント](https://cdkd.dev/)
 
@@ -331,7 +331,7 @@ Honoのコードを変えたときのデプロイは`cdk deploy` で88秒、cdkd
 
 ![developへのpushはGitHub ActionsからcdkdでCloudFormationを通さずに開発環境へ、mainへのpushはGitHub Actionsからcdk deployでCloudFormationを通して本番環境へデプロイする](images/ch04-light-serverless-envs-actions.png)
 
-サンプルの `github-actions/deploy.yml` をリポジトリの `.github/workflows/` に置き、Knowledge BaseのIDやロールのARNをリポジトリの変数（Variables）に入れて使います。設定する変数の一覧とIAMロールに付ける権限は、サンプルのREADMEの[GitHub Actionsでデプロイする](../../sample-code/supplements/ch04-light-serverless/README.md#github-actionsでデプロイする)にまとめています。
+サンプルの `github-actions/deploy.yml` をリポジトリの `.github/workflows/` に置き、Knowledge BaseのIDやロールのARNはリポジトリの変数（Variables）に入れておきます。ワークフローはこの値を読み、Knowledge BaseのIDなどは環境変数としてデプロイのコマンドへ渡します。設定する変数の一覧とIAMロールに付ける権限は、サンプルのREADMEの[GitHub Actionsでデプロイする](../../sample-code/supplements/ch04-light-serverless/README.md#github-actionsでデプロイする)にまとめています。
 
 エージェントはARM64のランナー（`ubuntu-24.04-arm`）でそのままビルドします。
 
