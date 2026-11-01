@@ -198,11 +198,15 @@
       "mode": 420
     },
     "sample-code/01/weatherDemo/agentcore/cdk/package.json": {
-      "sha256": "1fa03adaef21b487f9312b7068028be43726c514e411b9c5adba0b78c4299bf8",
+      "sha256": "fce06a66b67867ec6b2e9f5adf943c08707e6f62da7878850177b26b4027a753",
       "mode": 420
     },
     "sample-code/01/weatherDemo/agentcore/cdk/pnpm-lock.yaml": {
       "sha256": "9234870f14ad6408003fdd9c9ba1f90359df8aa43fb68e7399db7a46e77d2048",
+      "mode": 420
+    },
+    "sample-code/01/weatherDemo/agentcore/cdk/pnpm-workspace.yaml": {
+      "sha256": "0c3d3d1878518f32fb6b72236ba3fdb1ef66e7544eadb0118a7261458cdab220",
       "mode": 420
     },
     "sample-code/01/weatherDemo/agentcore/cdk/test/cdk.test.ts": {
@@ -2354,7 +2358,7 @@
       "mode": 420
     },
     "sample-code/DEPENDENCY_SECURITY.md": {
-      "sha256": "6f8fefe2696f1bf9b29b0894ab1a6535ac9d1c571cce5f21e3f7648ef3976041",
+      "sha256": "0f7de82de4d3f29a47d6adf05d1c333f69b98b8ad147e436567cd777490ce2bc",
       "mode": 420
     },
     "sample-code/README.md": {

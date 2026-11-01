@@ -31,7 +31,7 @@ overrideを削除する場合は、上流パッケージの依存先が同じ修
 ## そのほかのサンプルのoverride
 
 - 補足のManaged KBアプリの画面では、mermaidの推移依存の `dompurify` を `3.4.17` に固定しています
-- 第1章のAgentCore CDKでは、`@aws/agentcore-cdk` の推移依存の `zod` 4系を `4.6.7` に固定しています
+- 第1章のAgentCore CDKでは、`@aws/agentcore-cdk` の推移依存の `zod` 4系を `4.6.7` に固定しています。このディレクトリは `packageManager` を指定しないAgentCore CLIの生成物なので、pnpm 10と11のどちらでも読まれる `pnpm-workspace.yaml` に書いています
 - 補足の第4章のCDK移行サンプルでは、cdkdが使う `archiver` → `readdir-glob` の `minimatch` 10系を `11.0.3` に上げています。修正は11系だけで提供されており、`readdir-glob` が使う `Minimatch` クラスは11系でも同じなので、メジャーをまたいで固定しました
 
 ## 修正版待ちの依存関係
