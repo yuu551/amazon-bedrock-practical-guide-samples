@@ -6,9 +6,11 @@
 
 ## 前提
 
-本書のハンズオンでは、本を手に取ってすぐにサクッと試せるようにCodespacesを使ってきました。Codespacesはx86_64のマシンなので、第4章ではエージェントのARM64のコンテナをCodeBuildでビルドしていました。（AgentCoreはARMのイメージしか対応していないため）
+本書のハンズオンでは本を手に取ってすぐにサクッと試せるようにCodespacesを使ってきました。ただ、Codespacesはx86_64のマシンなので、第4章ではエージェントのARM64のコンテナをCodeBuildでビルドしていました。（AgentCoreはARMのイメージしか対応していないため）
 
-ただこの補足では自分の端末で本格的に開発していく場面を想定して、Apple SiliconのMacで試しています！エージェントのコンテナもARM64のまま、MacのDockerでビルドし、後半ではGitHub ActionsのARM64のランナーから、同じようにデプロイする形も試しています。使った環境は次のとおりです。
+そこでこの補足では自分の端末で本格的に開発していく場面を想定して、Apple SiliconのMacで試しています！エージェントのコンテナもARM64のまま、MacのDockerでビルドし、後半ではGitHub ActionsのARM64のランナーから同じようにデプロイする形も試しています！
+
+使った環境は次のとおりです。
 
 | 項目 | 使ったもの |
 |---|---|
@@ -22,7 +24,7 @@
 
 この補足のデプロイ時間は上の環境で2026年10月に測った一例です。
 
-端末の性能やネットワーク、GitHub Actionsのランナー、AWS側の状況によって変わるので、同じ時間で終わることを保証するものではなく、参考情報として理解ください。
+端末の性能やネットワーク、GitHub Actionsのランナー、AWS側の状況によって変わるので同じ時間で終わることを保証するものではなく、参考情報として理解ください。
 
 ## 先に結果
 
@@ -42,11 +44,12 @@
 | GitHub Actionsから `cdkd deploy` | 81 | 74 |
 
 Amplify Hostingはジョブの開始から終了まで、sandboxは `ampx sandbox --once` の実行時間、端末からはビルドからデプロイのコマンドが終わるまで、GitHub Actionsは非公開リポジトリのARM64ランナー（2コア）で、ジョブの開始から終了までを測定時間にしています。
+
 構成や測り方が少し違うので単純な比較ではありませんが、マネージドなAmplify Hostingよりは速くなっていますね！
 
-エージェントを1行直して試すたびに、Amplify Hostingでは約6分、cdkdでは反映まで1分弱待ちます。10回直せば、Hostingでは1時間近く、cdkdでは10分ほどです。開発の始めのうちは何度もデプロイするので、この差は大きいですよね。
+エージェントを1行直して試すたびに、Amplify Hostingでは約6分、cdkdでは反映まで1分弱待ちます。10回直すと、待ち時間の合計はHostingでは1時間近く、cdkdでは10分ほどまで積み上がります。開発の始めのうちは何度もデプロイするので、この差は大きいですよね。
 
-ちなみにここで出てきたcdkdは、AWS Heroの後藤さん（go-to-k）がOSSとして開発しているCDKのCLIです。CloudFormationを通さずにAWSのAPIを直接呼んでリソースを作るので速くデプロイすることを可能にしています！詳細はレポジトリやドキュメントをご参照ください！今回ありがたく使わせてもらっています！
+ちなみにここで出てきたcdkdはAWS Heroの後藤さん（go-to-k）がOSSとして開発しているCDKのCLIです。CloudFormationを通さずにAWSのAPIを直接呼んでリソースを作るので速くデプロイすることを可能にしています！詳細はレポジトリやドキュメントをご参照ください！今回ありがたく使わせてもらっています！
 
 [cdkd（GitHub）](https://github.com/go-to-k/cdkd)、[ドキュメント](https://cdkd.dev/)
 
@@ -205,7 +208,7 @@ cdkdはCloudFormationとは別に状態をS3に持っています。
 
 CDK側のエージェントを、第4章と同じCodeBuildでビルドした場合も測りました。`main.py` を変えたときの時間で、単位は秒です。
 
-| エージェントのビルド | `cdk deploy` | `cdkd deploy` |
+| エージェントのビルド方法 | `cdk deploy` | `cdkd deploy` |
 |---|---|---|
 | Docker（「先に結果」の値） | 77 | 46 |
 | CodeBuild（第4章と同じ） | 117 | 92 |
@@ -283,7 +286,9 @@ Web FunctionsのランタイムにはAWS SDKが入っていないので、esbuil
 
 2026年10月時点ではL2のコンストラクトがないので、L1の `CfnWebFunction`、`CfnWebFunctionRevision`、`CfnWebFunctionEndpoint` で書きます。aws-cdk-libは2.273.0以降が必要です（サンプルは2.275.0）。
 
-Web Functionsは3つのリソースでできています。`WebFunction` が関数そのもの、`WebFunctionRevision`（Revision）がコードと設定をまとめた版、`WebFunctionEndpoint` が呼び出し口です。Revisionは作ったあとに変えられないので、コードを変えるたびに新しいRevisionを作り、Endpointの向き先を切り替えます。
+Web Functionsは3つのリソースでできていて、`WebFunction` が関数そのもの、`WebFunctionRevision`（Revision）がコードと設定をまとめたバージョン、`WebFunctionEndpoint` が呼び出し口です。
+
+Revisionは作ったあとに変えられないのでコードを変えるたびに新しいRevisionを作り、Endpointの向き先を切り替える必要があります。
 
 ```ts
 // infra/lib/support-agent-stack.ts（抜粋）
@@ -323,11 +328,13 @@ Web Functionsのエンドポイントを直接呼ぶと403が返り、CloudFront
 
 ### APIを変えたときの時間と注意点
 
-Honoのコードを変えたときのデプロイは`cdk deploy` で88秒、cdkdで51秒でした。Web FunctionsのRevisionを作り直すので画面の変更より少し長くかかります。初回の作成もcdkdで313秒と、直接呼ぶ形より1分ほど長くなりました。
+Honoのコードを変えたときのデプロイは`cdk deploy` で88秒、cdkdで51秒でした。Web FunctionsのRevisionを作り直すので画面の変更より少し長くかかります。
+
+初回の作成もcdkdで313秒と直接呼ぶ形より1分ほど長くなりました。
 
 ## （発展）GitHub Actionsでデプロイする
 
-チームで開発するなら、ブランチへのpushでデプロイできると便利なんですよね。`develop` へのpushで開発環境へ `cdkd deploy`、`main` へのpushで本番環境へ `cdk deploy` するワークフローもGitHub Actionsを活用して試してみました！
+チームで開発するならブランチへのpushでデプロイできると便利ですよね。`develop` へのpushで開発環境へ `cdkd deploy`、`main` へのpushで本番環境へ `cdk deploy` するワークフローもGitHub Actionsを活用して試してみました！
 
 ![developへのpushはGitHub ActionsからcdkdでCloudFormationを通さずに開発環境へ、mainへのpushはGitHub Actionsからcdk deployでCloudFormationを通して本番環境へデプロイする](images/ch04-light-serverless-envs-actions.png)
 
