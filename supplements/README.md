@@ -34,7 +34,7 @@ Codespacesの無料枠とAWSの費用の考え方はサンプルコードのREAD
 |---|---|---|
 | 第2章 | [AuroraでKnowledge Basesの検索を検証する](chapter02/AuroraでKnowledge-Basesの検索を検証する.md) | テーブルの接続と文書取り込みの実装・18問での比較・日本語の全文検索とpg_bigm・保存先ごとの連携と費用の違い |
 | 第2章 | [OpenSearch Serverless NextGenをKnowledge Basesで使えるか試す](chapter02/OpenSearch-Serverless-NextGenをKnowledge-Basesで使えるか試す.md) | Knowledge Basesに接続できない理由と直接検索・ハイブリッド検索の実装 |
-| 第3章 | [生成AIでPDFを解析して取り込む](chapter03/生成AIでPDFを解析して取り込む.md) | 表や図を含むPDFをマークダウンへ変換する |
+| 第3章 | [生成AIでPDFを解析して取り込む](chapter03/生成AIでPDFを解析して取り込む.md) | 表や図を含むPDFをマークダウンへ変換する。Claude Haiku 5.5での結果も追加 |
 | 第3章 | [第3章のRAGアプリで回答の過程を可視化する](chapter03/第3章のRAGアプリで回答の過程を可視化する.md) | LangfuseとAgentCore Observabilityで質問・中間回答・引用元をたどる |
 | 付録 | [Managed Knowledge Baseをアプリに組み込んでストリーミングする](managed-knowledge-bases/Managed-Knowledge-Baseをアプリに組み込んでストリーミングする.md) | 本編と同じ画面で通常検索とAgentic Retrievalを試す |
 | 付録 | [データソースを定期同期する](managed-knowledge-bases/Managed-Knowledge-Baseのデータソースを定期同期する.md) | Managed Knowledge Baseに日次・週次・月次の同期を設定する |

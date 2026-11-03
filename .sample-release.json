@@ -1053,6 +1053,38 @@
       "sha256": "a97d32d510b1bcff2fc6a16c084c4832f196fc8f98a16335f553633e6f3c5a5a",
       "mode": 420
     },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-4-5/sampleconnect-architecture.md": {
+      "sha256": "40f368e445855e3646ab22ea91aeaafcc540c92b541fa87c2a789aa18edc6aee",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-4-5/sampleconnect-incident-report.md": {
+      "sha256": "70f21a8a742a0af8717fd309769b111123dad277a595275c026923e1eae5b49d",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-4-5/sampleconnect-plan-matrix.md": {
+      "sha256": "e89eb6d7986c2693a3c10efbf258daa8765f9ff7001a8b13557149206a9d42a6",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-4-5/sampleconnect-retention-chart.md": {
+      "sha256": "f2457c8b4671f1dda060aefc5281ff2f9cc79e1c8e6b8d9826b30532aeb8b5c4",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-5-5/sampleconnect-architecture.md": {
+      "sha256": "b960b9108d91be11d89d694201740b634275110249fd438ede2b6bbce543d8d2",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-5-5/sampleconnect-incident-report.md": {
+      "sha256": "7dbc78cf7c2436850ea68bafce0292aeb382fea0641041a18c3ca6f6a8a5b41b",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-5-5/sampleconnect-plan-matrix.md": {
+      "sha256": "f3c961bde9dfc3c560d9d0d0772026aa1d83ccb4e0c1ebde6b54d2dd78da8783",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/claude-haiku-5-5/sampleconnect-retention-chart.md": {
+      "sha256": "d660be0bf9b9e548e82b36bae9559ccc5aaf806364de9d6551427bc77c2b1423",
+      "mode": 420
+    },
     "sample-code/03/results/parser-retention-comparison/evidence.html": {
       "sha256": "cf695cb3144b6c50d774acb2695eae41c4f8455754abf98b1afb9896cdea2e6b",
       "mode": 420
@@ -2842,7 +2874,7 @@
       "mode": 420
     },
     "supplements/README.md": {
-      "sha256": "7b9237fa260fb4b50ef8153ffe7f3886bd35518f46ecefc3ce5aa05730437f7a",
+      "sha256": "863c0bb0b9b9c5ffda6b83a075d0aaa441b0623e77b9bbea1bd8bbb4b1fc072d",
       "mode": 420
     },
     "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
@@ -2962,7 +2994,7 @@
       "mode": 420
     },
     "supplements/chapter03/生成AIでPDFを解析して取り込む.md": {
-      "sha256": "ed2ae779f6cd826dad82c1ced0ce6b0ac462534cb48f8205c3a99832b3da60bd",
+      "sha256": "857ba3e07524b5908fd66a79633072272c4f22f6c4939d8a106052519c09ae7e",
       "mode": 420
     },
     "supplements/chapter03/第3章のRAGアプリで回答の過程を可視化する.md": {
