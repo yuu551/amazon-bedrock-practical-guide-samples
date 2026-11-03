@@ -288,6 +288,9 @@ Web FunctionsのランタイムにはAWS SDKが入っていないので、esbuil
 
 2026年10月時点ではL2のコンストラクトがないので、L1の `CfnWebFunction`、`CfnWebFunctionRevision`、`CfnWebFunctionEndpoint` で書きます。aws-cdk-libは2.273.0以降が必要です（サンプルは2.275.0）。
 
+> [!NOTE]
+> その後2026年11月3日にL2のコンストラクトを追加するPRがマージされました（[aws/aws-cdk#39210](https://github.com/aws/aws-cdk/pull/39210)）。リリースされたらL2で書き直した形も試してみます！
+
 Web Functionsは3つのリソースでできていて、`WebFunction` が関数そのもの、`WebFunctionRevision`（Revision）がコードと設定をまとめたバージョン、`WebFunctionEndpoint` が呼び出し口です。
 
 Revisionは作ったあとに変えられないのでコードを変えるたびに新しいRevisionを作り、Endpointの向き先を切り替える必要があります。
