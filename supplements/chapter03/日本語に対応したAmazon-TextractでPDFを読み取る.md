@@ -38,6 +38,46 @@ Textract側のスクリプトは[textract_document_parse.py](../../sample-code/0
 
 Textractは句読点のあとや日本語と英数字の間に空白を入れて返すため（「本資料では、 Sample Connect の…」）、4つ目の処理で詰めています。
 
+<details>
+<summary>変換の処理を見る</summary>
+
+Textractの`LAYOUT_*`のブロックは読む順に返るので、種類ごとに見出し・表・箇条書きへ振り分けています。表は`LAYOUT_TABLE`と位置が最も重なる`TABLE`を探し、`table_markdown()`でセルを行と列の番号どおりに並べ直します。
+
+```python
+# sample-code/03/textract_document_parse.py（抜粋）
+def tidy(text: str) -> str:
+    """日本語の前後に入る空白を詰める。英数字どうしの空白は残す。"""
+    return SPACE_AROUND_CJK.sub("", text).strip()
+
+
+def layout_markdown(response: dict[str, Any]) -> str:
+    blocks = {b["Id"]: b for b in response["Blocks"]}
+    tables = [b for b in response["Blocks"] if b["BlockType"] == "TABLE"]
+    parts = []
+    for block in response["Blocks"]:  # LAYOUT_* は読む順に並んで返る
+        kind = block["BlockType"]
+        if not kind.startswith("LAYOUT_") or kind in SKIP_LAYOUT:
+            continue
+        text = tidy(" ".join(line_text(block, blocks)))
+        if kind == "LAYOUT_TITLE":
+            parts.append(f"# {text}")
+        elif kind == "LAYOUT_SECTION_HEADER":
+            parts.append(f"## {text}")
+        elif kind == "LAYOUT_TABLE":
+            box = block["Geometry"]["BoundingBox"]
+            best = max(tables, key=lambda t: overlap(box, t["Geometry"]["BoundingBox"]), default=None)
+            parts.append(table_markdown(best, blocks) if best else text)
+        elif kind == "LAYOUT_FIGURE":
+            labels = [tidy(t) for t in line_text(block, blocks)]
+            if labels:
+                parts.append("図中の文字:\n" + "\n".join(f"- {t}" for t in labels))
+        elif text:
+            parts.append(text)
+    return "\n\n".join(p for p in parts if p)
+```
+
+</details>
+
 ```bash
 cd sample-code/03
 uv sync --frozen
