@@ -1,0 +1,132 @@
+{
+  "note": "正解はPDFの文字レイヤー。空白・記号・句読点を除いて比較。Textractは文字の検出のみ（DetectDocumentText）、Haiku 5.5はjp.推論プロファイル（東京）。スキャン風は150dpi・1.5度回転・ぼかし・ノイズ。 coverage=正解の文字のうち出力と一致した割合（句読点も除く）。出力に余分な文字が増えても下がらない（extra_charsを参照）。",
+  "incident_report_3pages": {
+    "pdf": {
+      "textract": {
+        "seconds": 3.14,
+        "char_similarity": 0.9972,
+        "numbers": 37,
+        "numbers_ok": 36,
+        "numbers_missed": [
+          "18.4%"
+        ],
+        "pages": 3,
+        "coverage": 0.9973,
+        "extra_chars": 7
+      },
+      "haiku-5-5": {
+        "seconds": 10.93,
+        "char_similarity": 1.0,
+        "numbers": 37,
+        "numbers_ok": 37,
+        "numbers_missed": [],
+        "input_tokens": 7715,
+        "output_tokens": 3099,
+        "coverage": 1.0,
+        "extra_chars": 0
+      }
+    },
+    "scan": {
+      "textract": {
+        "seconds": 4.76,
+        "char_similarity": 0.9956,
+        "numbers": 37,
+        "numbers_ok": 37,
+        "numbers_missed": [],
+        "pages": 3,
+        "coverage": 0.9952,
+        "extra_chars": 11
+      },
+      "haiku-5-5": {
+        "seconds": 18.41,
+        "char_similarity": 0.9955,
+        "numbers": 37,
+        "numbers_ok": 37,
+        "numbers_missed": [],
+        "input_tokens": 5008,
+        "output_tokens": 5875,
+        "coverage": 0.9956,
+        "extra_chars": 7
+      }
+    }
+  },
+  "long_15pages": {
+    "pdf": {
+      "textract": {
+        "seconds": 17.45,
+        "coverage": 0.985,
+        "extra_chars": 47,
+        "gt_chars": 13567
+      },
+      "haiku-5-5": {
+        "seconds": 45.3,
+        "input_tokens": 36178,
+        "output_tokens": 13842,
+        "coverage": 0.9969,
+        "extra_chars": 625,
+        "gt_chars": 13567
+      }
+    },
+    "scan": {
+      "textract": {
+        "seconds": 18.84,
+        "coverage": 0.9263,
+        "extra_chars": 123,
+        "gt_chars": 13567,
+        "omissions_20chars_or_more": {
+          "count": 15,
+          "chars": 750
+        }
+      },
+      "haiku-5-5": {
+        "seconds": 81.18,
+        "input_tokens": 24054,
+        "output_tokens": 25592,
+        "coverage": 0.9905,
+        "extra_chars": 5,
+        "gt_chars": 13567
+      }
+    },
+    "note": "scanは同じ埋め込み版のPDFから作成。正解は埋め込み版の文字レイヤー。",
+    "arrows_dropped_by_textract": {
+      "pdf": "32/32",
+      "scan": "30/32"
+    }
+  },
+  "speed_4docs_sequential_seconds": {
+    "textract-text": [
+      7.36,
+      7.35,
+      9.67
+    ],
+    "textract-layout": [
+      9.4,
+      9.82,
+      10.86
+    ],
+    "haiku-5-5": [
+      24.26,
+      26.68,
+      59.23
+    ]
+  },
+  "speed_4docs_parallel6_seconds": {
+    "textract-text": 7.72,
+    "textract-layout": 16.79,
+    "haiku-5-5": 10.72
+  },
+  "textract_parallel_15pages_seconds": {
+    "workers1": 17.45,
+    "workers4": 25.69,
+    "workers8": 23.55
+  },
+  "detect_document_text_8_concurrent_no_retry": {
+    "ok": 6,
+    "ProvisionedThroughputExceededException": 2
+  },
+  "pdf_without_embedded_japanese_font": {
+    "textract_coverage": 0.1909,
+    "haiku-5-5_coverage": 0.9981
+  },
+  "haiku_code": "llm_document_parse.py（出力上限64,000トークン・読み取りのタイムアウト900秒）"
+}

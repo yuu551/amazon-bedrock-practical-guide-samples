@@ -4,7 +4,10 @@
 
 本書の執筆後も試してみたいモデルや機能が増えています。本編のサンプルで試した結果や紙面に収まらなかった手順をこちらにまとめていきます。気になる記事から読んでみてください。
 
-補足を読んで本編も気になった方はぜひ『Amazon Bedrock実践ガイド』も手に取っていただけるとうれしいです。本編では問い合わせ対応のアプリを作りながらRAGやAIエージェントの実装を順に学べます。
+補足を読んで本編も気になった方はぜひ『Amazon Bedrock実践ガイド』も手に取っていただけるとうれしいです。本編では問い合わせ対応のアプリを作りながらRAGやAIエージェントの実装を順に学べます！
+
+> [!NOTE]
+> オンライン補足は著者がベストエフォートで検証して書いています。検証した時点の結果なので、サービスの更新で手順や結果が変わることもあります。参考程度に読んでいただき実際に使うときはAWSの公式ドキュメントもあわせて確認してください。
 
 ## 実行前に確認すること
 
@@ -35,6 +38,7 @@ Codespacesの無料枠とAWSの費用の考え方はサンプルコードのREAD
 | 第2章 | [AuroraでKnowledge Basesの検索を検証する](chapter02/AuroraでKnowledge-Basesの検索を検証する.md) | テーブルの接続と文書取り込みの実装・18問での比較・日本語の全文検索とpg_bigm・保存先ごとの連携と費用の違い |
 | 第2章 | [OpenSearch Serverless NextGenをKnowledge Basesで使えるか試す](chapter02/OpenSearch-Serverless-NextGenをKnowledge-Basesで使えるか試す.md) | Knowledge Basesに接続できない理由と直接検索・ハイブリッド検索の実装 |
 | 第3章 | [生成AIでPDFを解析して取り込む](chapter03/生成AIでPDFを解析して取り込む.md) | 表や図を含むPDFをマークダウンへ変換する。Claude Haiku 5.5での結果も追加 |
+| 第3章 | [日本語に対応したAmazon TextractでPDFを読み取る](chapter03/日本語に対応したAmazon-TextractでPDFを読み取る.md) | TextractとClaude Haiku 5.5で図表入りのPDF・本文だけの文書・スキャンを読み、精度と速さ・費用を比べる |
 | 第3章 | [第3章のRAGアプリで回答の過程を可視化する](chapter03/第3章のRAGアプリで回答の過程を可視化する.md) | LangfuseとAgentCore Observabilityで質問・中間回答・引用元をたどる |
 | 付録 | [Managed Knowledge Baseをアプリに組み込んでストリーミングする](managed-knowledge-bases/Managed-Knowledge-Baseをアプリに組み込んでストリーミングする.md) | 本編と同じ画面で通常検索とAgentic Retrievalを試す |
 | 付録 | [データソースを定期同期する](managed-knowledge-bases/Managed-Knowledge-Baseのデータソースを定期同期する.md) | Managed Knowledge Baseに日次・週次・月次の同期を設定する |

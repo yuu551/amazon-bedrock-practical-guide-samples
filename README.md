@@ -93,6 +93,9 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 
 ## オンライン補足
 
+> [!NOTE]
+> オンライン補足は著者がベストエフォートで検証して書いています。検証した時点の結果なので、サービスの更新で手順や結果が変わることもあります。参考程度に読んでいただき実際に使うときはAWSの公式ドキュメントもあわせて確認してください。
+
 本書の執筆後に登場したモデルや機能を紹介する内容です。
 
 関心のある記事からぜひ読んで理解を深めるのに活用いただけると嬉しいです。
@@ -107,6 +110,7 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 | 第2章 | [OpenSearch Serverless NextGenをKnowledge Basesで使えるか試す](supplements/chapter02/OpenSearch-Serverless-NextGenをKnowledge-Basesで使えるか試す.md) |
 | 第2章 | [Amplifyコンソールからアプリを公開する](supplements/chapter02/Amplifyコンソールからアプリを公開する.md) |
 | 第3章 | [生成AIでPDFを解析して取り込む](supplements/chapter03/生成AIでPDFを解析して取り込む.md) |
+| 第3章 | [日本語に対応したAmazon TextractでPDFを読み取る](supplements/chapter03/日本語に対応したAmazon-TextractでPDFを読み取る.md) |
 | 第3章 | [第3章のRAGアプリで回答の過程を可視化する](supplements/chapter03/第3章のRAGアプリで回答の過程を可視化する.md) |
 | 第4章 | [ツール・エージェント・モデルの入口をAgentCore Gatewayで統制する](supplements/chapter04/ツール・エージェント・モデルの入口をAgentCore-Gatewayで統制する.md) |
 | 第4章 | [第4章のアプリをAmplifyに頼らない構成へ移行する](supplements/chapter04/第4章のアプリをAmplifyに頼らない構成へ移行する.md) |

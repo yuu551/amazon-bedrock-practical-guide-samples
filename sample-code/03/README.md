@@ -24,6 +24,7 @@
 | `llm_document_parse.py` | Converse APIでPDFを読み取り、確認・修正できるマークダウンへ変換 |
 | `orchestrate_topic_rag.py` | トピックフォルダ単位のMapReduce型RAG。質問分析 → Knowledge BaseのRetrieveでトピック特定 → トピック内ファイル全読み + Haiku並列抽出 → Sonnet統合 |
 | `s3_event_pipeline.py` | S3アップロードイベントからメタデータ生成→Knowledge Baseへの取り込みを自動化するLambdaサンプル |
+| `textract_document_parse.py` | Amazon TextractでPDFを読み取り、表とレイアウトをマークダウンへ変換 |
 | `common.py` | プロンプト構築、レスポンスパーサー、出典抽出、各種メトリクス、軽量ジャッジなどの共通ヘルパー |
 
 ### データ（`data/`）
@@ -73,6 +74,8 @@
 |---|---|
 | チャンク戦略ごとの回答 | [chunk-strategy-comparison](results/chunk-strategy-comparison/) |
 | パーサーごとの回答 | [parser-retention-comparison](results/parser-retention-comparison/) |
+| PDFの読み取り方ごとの変換結果（Claude Haiku 4.5・5.5とTextract） | [document-parse-comparison](results/document-parse-comparison/) |
+| 本文だけの文書とスキャンでのTextractとHaiku 5.5の比較 | [textract-text-only](results/textract-text-only/) |
 
 ### RAGポータル（`amplify-ui/`）
 
@@ -412,5 +415,26 @@ LambdaからLangfuseへ送る際は、APIキーをSecrets Managerへ保存し、
 通常検索は`MODEL_ID`で検索後の回答を生成します。資料横断モードでは、`MODEL_ID`を質問分析・最終統合に、`ROUTE_MODEL_ARN`を資料種別ごとの中間回答に使います。`ROUTE_MODEL_ARN`が未指定・空文字なら`MODEL_ID`を使います。
 
 GPT-6 Sol／LunaはKnowledge Basesの回答生成で温度指定のエラーになるため、資料横断モードで中間回答にSonnet 4.6を組み合わせます。6モデルの実行結果と設定例は[本編のコードで最新モデルを使う](../../supplements/chapter01/本編のコードで最新モデルを使う.md)に載せています。
+
+
+## Amazon TextractでPDFをマークダウンへ変換（補足）
+
+`sample-pdfs/`にあるPDFをAmazon Textractで読み取り、見出し・表・図の中の文字をマークダウンへ変換します。同期APIは1ページずつ受け付けるので、PDFをページに分けてから送ります。
+
+```bash
+uv run python textract_document_parse.py \
+  --input-dir sample-pdfs \
+  --output-dir output/textract-markdown
+```
+
+| オプション | 用途 | デフォルト |
+|---|---|---|
+| `--input-dir` | 変換するPDFがあるディレクトリ | `sample-pdfs` |
+| `--output-dir` | 変換したマークダウンの保存先 | `output/textract-markdown` |
+| `--mode` | `layout`は表とレイアウトも分析し、`text`は文字だけを検出する | `layout` |
+| `--region` | Textractを呼ぶリージョン | `ap-northeast-1` |
+| `--force` | 保存済みのファイルも変換し直す | オフ |
+
+実行するIAMユーザーやロールには`textract:AnalyzeDocument`（`--mode text`なら`textract:DetectDocumentText`）の権限が必要です。生成AIでの変換との比べ方は[第3章の補足「日本語に対応したAmazon TextractでPDFを読み取る」](../../supplements/chapter03/日本語に対応したAmazon-TextractでPDFを読み取る.md)を参照してください。
 
 [第4章のエージェント構築へ](../04/README.md)・[第5章の評価へ](../05/README.md)・[作業後のリソース削除](../../ハンズオン後のリソース削除手順.md)

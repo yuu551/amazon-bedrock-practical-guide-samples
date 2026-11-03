@@ -70,7 +70,7 @@
       "mode": 420
     },
     "README.md": {
-      "sha256": "73b11da10f96aec53746ae19b4faba5b8b1795202a11a6d3774b79fb7385ab38",
+      "sha256": "96d54a739bba58f890e15d69e12033aff3924718f3b3ec21d8f71a2f270315aa",
       "mode": 420
     },
     "images/devio-author.png": {
@@ -734,7 +734,7 @@
       "mode": 420
     },
     "sample-code/03/README.md": {
-      "sha256": "93b3acfed13de2367a009b9ae492ef521351a8b9ae5e91e7732a0ff8b6ae13f0",
+      "sha256": "bb7907ab36bab7beb3edb60313fc6d9e53e7fdd6c05691c5050ca065cf26b599",
       "mode": 420
     },
     "sample-code/03/amplify-ui/.gitignore": {
@@ -998,7 +998,7 @@
       "mode": 420
     },
     "sample-code/03/pyproject.toml": {
-      "sha256": "8b058bf8f447dc2bd7beb69e84e74e4ee20e1a13f8aa7c430857ffca6fa20a50",
+      "sha256": "65843b30c64018a68e12dc41ded3da3d4c19026fef6dfa82b80ab59f62451a78",
       "mode": 420
     },
     "sample-code/03/results/chunk-strategy-comparison/chunking-comparison-report.md": {
@@ -1085,6 +1085,38 @@
       "sha256": "d660be0bf9b9e548e82b36bae9559ccc5aaf806364de9d6551427bc77c2b1423",
       "mode": 420
     },
+    "sample-code/03/results/document-parse-comparison/textract-text/sampleconnect-architecture.md": {
+      "sha256": "492a76e3b08b0305cf3fcf7c6d03a9da5cb91780635f5e45550bbe9c28457364",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/textract-text/sampleconnect-incident-report.md": {
+      "sha256": "46adfd7ae0eab2e3c560c6d51a63108f73e47d0a2023622e7e00eee6d520666d",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/textract-text/sampleconnect-plan-matrix.md": {
+      "sha256": "a0b4293b3e138cfaa412e94597467cf965d8c87266d8642d69a2db2c00d8e409",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/textract-text/sampleconnect-retention-chart.md": {
+      "sha256": "aaefab1b949c1c547664fabc47b6cf938e7ca70db5e251a83460c41f633d5525",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/textract/sampleconnect-architecture.md": {
+      "sha256": "0ff3d65b27586db145b7946131a2251648fa2c38aba605dfc93b97f74fd81466",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/textract/sampleconnect-incident-report.md": {
+      "sha256": "9203a5e552c10c856da997e5a50942749d364822a95f32a0664ecbabe9a9fbc1",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/textract/sampleconnect-plan-matrix.md": {
+      "sha256": "dd45a676e789d45e320f2cfaca76394cdff9d6c5f2fc0b7cb6e2ece1a3562f08",
+      "mode": 420
+    },
+    "sample-code/03/results/document-parse-comparison/textract/sampleconnect-retention-chart.md": {
+      "sha256": "b68125b9f7f39e9562a816968783003aa1602b69f209219bc4aa0abb8703a652",
+      "mode": 420
+    },
     "sample-code/03/results/parser-retention-comparison/evidence.html": {
       "sha256": "cf695cb3144b6c50d774acb2695eae41c4f8455754abf98b1afb9896cdea2e6b",
       "mode": 420
@@ -1139,6 +1171,42 @@
     },
     "sample-code/03/results/parser-retention-comparison/summary.md": {
       "sha256": "277eb20b82831087d50e06ac54cdd703f7e5249fe25479563d639bc4b077b614",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/incident-report-pdf-haiku-5-5.md": {
+      "sha256": "a845a82a02c8df1d4b761ed63007312730124f6b2f7b84681a36d4478435b10a",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/incident-report-pdf-textract.md": {
+      "sha256": "cacea82222a5ad77e0182f976552194506f045632378436d6f87c72b2f51d94b",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/incident-report-scan-haiku-5-5.md": {
+      "sha256": "8bacae9c741fbf980bea3ccfd5e8ec53233485b8ceb5d831535618cbad1b3b65",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/incident-report-scan-textract.md": {
+      "sha256": "51e56bf7884b2718ca040df569698a0660425487bf0cbd570ef860ffccbedaae",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/long15-pdf-haiku-5-5.md": {
+      "sha256": "1240aa8dc690ff053d7431ab3f41f550ae47618c7656e6a73e1bd350b93ca643",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/long15-pdf-textract.md": {
+      "sha256": "2b179725aea31aeb9df1cbc838dba7ca85f7422ffc6b09f39ee324e661ee334e",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/long15-scan-haiku-5-5.md": {
+      "sha256": "723d589fc9c8c89ac32269c73ed66956d05455772b56fcf6a4e4ca2ea71c12e4",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/long15-scan-textract.md": {
+      "sha256": "1c7b0fc96a7e09edd46fefc515c2eaf573c90fd51b55137b311cb64e4252423e",
+      "mode": 420
+    },
+    "sample-code/03/results/textract-text-only/results.json": {
+      "sha256": "598ae7625b5d8757f1ddf55e8f92f2e95d0fb7b78ef2ed829107118d94408fe1",
       "mode": 420
     },
     "sample-code/03/s3_event_pipeline.py": {
@@ -1377,8 +1445,12 @@
       "sha256": "76d09b152a283f79f3ef7ef94f6de8be1df1373465b9cd02a61e63c28035c123",
       "mode": 420
     },
+    "sample-code/03/textract_document_parse.py": {
+      "sha256": "732a338f174a208ff241cc5cfb9eb09d46d5116011c2a662ec8a1f337bf54a22",
+      "mode": 420
+    },
     "sample-code/03/uv.lock": {
-      "sha256": "4f24bdf383bb27f0f095d8b4f636b00fdae5d16d200b193a558cc23bff511dd4",
+      "sha256": "ca54d7e8ae9852e6552064747fde309f1de3a7a757272d1382dca6a43099da5d",
       "mode": 420
     },
     "sample-code/04/.gitkeep": {
@@ -2874,7 +2946,7 @@
       "mode": 420
     },
     "supplements/README.md": {
-      "sha256": "863c0bb0b9b9c5ffda6b83a075d0aaa441b0623e77b9bbea1bd8bbb4b1fc072d",
+      "sha256": "c317910bbb9a9093b1a1881311aae2092aa1fc42959d29aa5417d3277f0e39b0",
       "mode": 420
     },
     "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
@@ -2991,6 +3063,18 @@
     },
     "supplements/chapter03/images/rag-trace-destinations.png": {
       "sha256": "ee9b9505023972350d5ddda3898fb0fb8824aac91d4f481d75012725f4ddd9fe",
+      "mode": 420
+    },
+    "supplements/chapter03/images/textract-routes.png": {
+      "sha256": "d086aa2a8c2f4d7af7b3392bfbbc6583da37f6e43276ec2806d2614bce829763",
+      "mode": 420
+    },
+    "supplements/chapter03/images/textract-sample-pdfs.png": {
+      "sha256": "c9c28a4fa738bbc2e942a835d4a0414e196d024193b87c60b7548d15c349c216",
+      "mode": 420
+    },
+    "supplements/chapter03/日本語に対応したAmazon-TextractでPDFを読み取る.md": {
+      "sha256": "fb65ffedc0106bb89d162fb294e1a53d5880d40872facb925d4f16bc239f36ca",
       "mode": 420
     },
     "supplements/chapter03/生成AIでPDFを解析して取り込む.md": {
