@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Any
 
 import boto3
+from botocore.config import Config
 from botocore.exceptions import ClientError
 
 from common import (
@@ -31,6 +32,10 @@ EXTRACTION_PROMPT = """添付されたドキュメントをマークダウンへ
 - 画像から読み取れた情報だけを記載し、推測で補完しない
 - 前置きや説明、コードフェンスを付けず、変換した本文だけを返す
 """
+# Haiku 4.5 (the default model) can return up to 64K output tokens.
+MAX_OUTPUT_TOKENS = 64000
+# Long outputs take minutes, so wait longer than boto3's 60-second default.
+READ_TIMEOUT_SECONDS = 900
 MAX_THROTTLE_RETRIES = 5
 INITIAL_BACKOFF_SECONDS = 2.0
 RETRYABLE_ERROR_CODES = {"ThrottlingException", "TooManyRequestsException"}
@@ -156,8 +161,13 @@ def convert_document(
                 ],
             }
         ],
-        inferenceConfig=converse_inference_config(model_id, 8192, 0.0),
+        inferenceConfig=converse_inference_config(model_id, MAX_OUTPUT_TOKENS, 0.0),
     )
+    if response.get("stopReason") == "max_tokens":
+        raise RuntimeError(
+            f"Output for {source_path} reached the {MAX_OUTPUT_TOKENS}-token limit; "
+            "split the PDF into smaller files and run again"
+        )
     markdown = extract_text_from_converse_response(response)
     if not markdown:
         raise RuntimeError(f"Model returned no text for {source_path}")
@@ -200,7 +210,11 @@ def main() -> None:
         return
 
     region = os.environ.get("AWS_REGION", "us-east-1")
-    runtime_client = boto3.client("bedrock-runtime", region_name=region)
+    runtime_client = boto3.client(
+        "bedrock-runtime",
+        region_name=region,
+        config=Config(read_timeout=READ_TIMEOUT_SECONDS),
+    )
 
     def run(item: tuple[Path, Path, str]) -> None:
         source_path, output_path, document_format = item

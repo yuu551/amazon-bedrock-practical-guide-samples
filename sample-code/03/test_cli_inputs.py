@@ -2,7 +2,7 @@ from argparse import Namespace
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest import TestCase
-from unittest.mock import MagicMock, patch
+from unittest.mock import ANY, MagicMock, patch
 
 from botocore.exceptions import ClientError
 
@@ -78,7 +78,7 @@ class CliInputValidationTests(TestCase):
                 (output_dir / "料金表.md").read_text(encoding="utf-8"),
                 "# 料金表\n\n| プラン | 料金 |\n|---|---|\n| Enterprise | 100円 |\n",
             )
-            client.assert_called_once_with("bedrock-runtime", region_name="us-east-1")
+            client.assert_called_once_with("bedrock-runtime", region_name="us-east-1", config=ANY)
             request = runtime_client.converse.call_args.kwargs
             self.assertEqual(request["modelId"], "test-model")
             self.assertEqual(
@@ -223,6 +223,25 @@ class CliInputValidationTests(TestCase):
         self.assertEqual(response, {"ok": True})
         self.assertEqual(runtime_client.converse.call_count, 3)
         self.assertEqual([c.args[0] for c in sleep.call_args_list], [2.0, 4.0])
+
+    def test_document_parse_rejects_output_cut_at_max_tokens(self) -> None:
+        with TemporaryDirectory() as temp_dir:
+            source = Path(temp_dir) / "long.pdf"
+            source.write_bytes(b"test-pdf")
+            runtime_client = MagicMock()
+            runtime_client.converse.return_value = {
+                "output": {"message": {"content": [{"text": "# 途中まで"}]}},
+                "stopReason": "max_tokens",
+                "usage": {"inputTokens": 1, "outputTokens": 64000},
+            }
+
+            with self.assertRaisesRegex(RuntimeError, "split the PDF"):
+                llm_document_parse.convert_document(
+                    runtime_client,
+                    model_id="test-model",
+                    source_path=source,
+                    document_format="pdf",
+                )
 
     def test_document_parse_does_not_retry_other_errors(self) -> None:
         denied = ClientError(

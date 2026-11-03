@@ -4,7 +4,7 @@
 
 ## どういうときに向いているか
 
-基盤モデルパーサーは取り込みのたびにKnowledge Bases側で変換が走り、次のようなケースで有用です。
+変換結果を確認・修正してから取り込みたい場合など、次のようなケースではConverse APIで事前にマークダウンへ変換する方法が向いています。
 
 
 | 状況                             | 自前変換が向く理由                   |
@@ -160,11 +160,11 @@ Claude Haiku 4.5でサンプルPDFの4件を変換しました。
 
 ## Claude Haiku 5.5で変換する
 
-`--model-id`にClaude Haiku 5.5を渡すと同じスクリプトでHaiku 5.5に変換させられます。
-東京リージョンなら`jp.`推論プロファイルを使います。
+`--model-id`にClaude Haiku 5.5を渡すと同じスクリプトでHaiku 5.5に変換可能です。
+東京リージョンなら`jp.`推論プロファイルを使い、スクリプトは`AWS_REGION`が未設定だと`us-east-1`を呼ぶので先頭で東京リージョンを指定します。
 
 ```bash
-uv run python llm_document_parse.py \
+AWS_REGION=ap-northeast-1 uv run python llm_document_parse.py \
   --input-dir sample-pdfs \
   --output-dir output/parsed-markdown-haiku-5-5 \
   --model-id jp.anthropic.claude-haiku-5-5
@@ -225,6 +225,8 @@ Haiku 5.5ではHaiku 4.5であったアーキテクチャ図の読み違いが�
 このスクリプトはPDFを1件ずつ送るのでConverseの文書入力は[1件4.5 MBまで](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Message.html)、Claudeへ渡すPDFは[1リクエストあたり100ページまで](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-api-restrictions.html)なので、どちらかを超えるPDFは先に分割してから入力ディレクトリへ配置します。
 
 Claude Haiku 5.5を使う場合はもう1つ目安があります。1リクエストのプロンプトが10万トークンを超えると、そのリクエストの入力と出力の全体が5倍の単価になります（[Anthropicの料金ページ](https://platform.claude.com/docs/en/about-claude/pricing#long-context-pricing)）。本のサンプルPDFは1ページあたり約2,300〜2,600トークンだったので、40ページ前後で超える見込みで、Haiku 5.5で変換するなら40ページを目安に分割するとよいかもしれません。
+
+出力にも上限があり、1件の出力をHaiku 4.5の上限と同じ64,000トークンまでにしています。本のサンプルPDFではHaiku 5.5の出力が1ページあたり平均約1,100トークンだったので、今回のサンプルと同程度の出力なら40ページでも約44,000トークンで収まる計算です。文字の多い資料で上限に届いた場合はスクリプトが途中までの結果を保存せずにエラーで止まるのでさらに小さく分割してください。
 
 PDFはページ画像も入力トークンとして消費するため、費用は本文の文字数から見積もるより、スクリプトが記録した入力・出力トークン数で計算すると、図表の多い資料も含めて把握できます。
 
