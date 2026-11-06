@@ -27,6 +27,7 @@ Codespacesの無料枠とAWSの費用の考え方はサンプルコードのREAD
 | 第4章 | [ツール・エージェント・モデルの入口をAgentCore Gatewayで統制する](chapter04/ツール・エージェント・モデルの入口をAgentCore-Gatewayで統制する.md) | ツールに加えてエージェントやモデルの接続先を管理する |
 | 第4章 | [第4章のアプリをAmplifyに頼らない構成へ移行する](chapter04/第4章のアプリをAmplifyに頼らない構成へ移行する.md) | 画面をS3とCloudFrontへ移してCDKでデプロイし、Amplifyとデプロイ時間を比べる。cdkd・GitHub Actions・Lambda Web Functionsも試す |
 | 第5章 | [RAGASでエージェントのツール呼び出しと目的達成を評価する](chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md) | エージェントの実行履歴を使って採点する |
+| 第5章 | [Strands Evalsの新しいバージョンと新機能](chapter05/Strands-Evalsの新しいバージョンと新機能.md) | 最新バージョン（1.9.0）で第5章の評価の傾向が変わらないことの確認と、増えた機能 |
 | 第6章 | [エージェントとスキルをAWS Agent Registryで組織管理する](chapter06/エージェントとスキルをAWS-Agent-Registryで組織管理する.md) | AWS Agent Registryで登録・承認・更新を試す |
 | 第4・5・6章 | [CloudWatch Omniでエージェントを調べて改善する](chapter06/CloudWatch-Omniでエージェントを調べて改善する.md) | 第4章のエージェントを題材に実トレースの評価とプロンプト比較を試す |
 | 第6章 | [BedrockのコストをCost Explorerでモデル別に見る](chapter06/BedrockのコストをCost-Explorerでモデル別に見る.md) | モデル・プロバイダー・推論タイプ・機能でコストを分ける。コンソールとAPIでの見方 |

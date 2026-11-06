@@ -70,7 +70,7 @@
       "mode": 420
     },
     "README.md": {
-      "sha256": "96d54a739bba58f890e15d69e12033aff3924718f3b3ec21d8f71a2f270315aa",
+      "sha256": "3b3691709d032a27672b072f5fdc8662815da019d4f3ae7c15d6199c42f16712",
       "mode": 420
     },
     "images/devio-author.png": {
@@ -2946,7 +2946,7 @@
       "mode": 420
     },
     "supplements/README.md": {
-      "sha256": "c317910bbb9a9093b1a1881311aae2092aa1fc42959d29aa5417d3277f0e39b0",
+      "sha256": "49ded53b5d43067b75fc6b3529390e764704f166fa02a7c97cd8dbb2a8979c74",
       "mode": 420
     },
     "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
@@ -3243,6 +3243,10 @@
     },
     "supplements/chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md": {
       "sha256": "23fb1c4813cfc6c6489e0a5de000f5d1e53f90c3355b5b1bf4e72a7f5359ac46",
+      "mode": 420
+    },
+    "supplements/chapter05/Strands-Evalsの新しいバージョンと新機能.md": {
+      "sha256": "98c61c728946e6b9a9c387f13f2409a7ca71f073bad9ee972f6e8a576ca3e1f4",
       "mode": 420
     },
     "supplements/chapter06/BedrockのコストをCost-Explorerでモデル別に見る.md": {

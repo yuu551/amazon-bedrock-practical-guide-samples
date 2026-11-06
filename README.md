@@ -115,6 +115,7 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 | 第4章 | [ツール・エージェント・モデルの入口をAgentCore Gatewayで統制する](supplements/chapter04/ツール・エージェント・モデルの入口をAgentCore-Gatewayで統制する.md) |
 | 第4章 | [第4章のアプリをAmplifyに頼らない構成へ移行する](supplements/chapter04/第4章のアプリをAmplifyに頼らない構成へ移行する.md) |
 | 第5章 | [RAGASでエージェントのツール呼び出しと目的達成を評価する](supplements/chapter05/RAGASでエージェントのツール呼び出しと目的達成を評価する.md) |
+| 第5章 | [Strands Evalsの新しいバージョンと新機能](supplements/chapter05/Strands-Evalsの新しいバージョンと新機能.md) |
 | 第6章 | [エージェントとスキルをAWS Agent Registryで組織管理する](supplements/chapter06/エージェントとスキルをAWS-Agent-Registryで組織管理する.md) |
 | 第6章 | [CloudWatch Omniでエージェントを調べて改善する](supplements/chapter06/CloudWatch-Omniでエージェントを調べて改善する.md) |
 | 第6章 | [BedrockのコストをCost Explorerでモデル別に見る](supplements/chapter06/BedrockのコストをCost-Explorerでモデル別に見る.md) |
