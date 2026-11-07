@@ -87,9 +87,9 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 
 本文の訂正と、執筆後の機能追加で本文の記述が変わった箇所は、[正誤表](正誤表.md)に載せています。
 
-現在、本文の誤りとして訂正する項目はありません。
+現在、本文の誤りとして訂正する項目はありませんが、執筆後に機能やモデルが変わり本文の記述と合わなくなった箇所も載せています。
 
-執筆後の機能追加やモデルの追加による変更として、第1章の3件（コンテキストグラウンディングチェック、GPT-5.5のAPI、Claudeの最新世代）を掲載しています。
+現在は、コンテキストグラウンディングチェックのStandardティア追加、GPT-5.5のBedrock Runtime API対応、Claudeの新モデル追加（第1章）と、Customer-managed Knowledge BasesでPreview提供だったSharePointなどのデータソースの新規作成不可（第2章）です。
 
 ## オンライン補足
 
