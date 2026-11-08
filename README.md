@@ -132,3 +132,13 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 [神野 雄大 | DevelopersIO](https://dev.classmethod.jp/author/yjinn/)
 
 ![DevelopersIOの著者ページ。月別の投稿数と、AgentCoreやBedrockの最新の記事が並んでいる](images/devio-author.png)
+
+## 書評
+
+本書の素敵な書評を皆様にありがたく書いていただきました！！
+いつも本当にありがとうございます・・・！！！
+
+- [【宇宙最速書評】AWSでRAGとAIエージェントをがっつり業務実践できる名著「Amazon Bedrock実践ガイド」](https://qiita.com/minorun365/items/84cd50fda97df62cff88)（みのるんさん）
+- [【書評】「Amazon Bedrock実践ガイド」を読みながらRAGの精度改善をしてみた](https://dev.classmethod.jp/articles/bedrock-practical-guide-book-review/)（よなみねさん）
+
+本を手に取るときの参考になればうれしいです！！
