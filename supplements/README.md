@@ -44,6 +44,7 @@ Codespacesの無料枠とAWSの費用の考え方はサンプルコードのREAD
 | 付録 | [Managed Knowledge Baseをアプリに組み込んでストリーミングする](managed-knowledge-bases/Managed-Knowledge-Baseをアプリに組み込んでストリーミングする.md) | 本編と同じ画面で通常検索とAgentic Retrievalを試す |
 | 付録 | [データソースを定期同期する](managed-knowledge-bases/Managed-Knowledge-Baseのデータソースを定期同期する.md) | Managed Knowledge Baseに日次・週次・月次の同期を設定する |
 | 付録 | [S3 Vectorsのメタデータフィルタが事前フィルタリングに対応](s3-vectors/S3-Vectorsのメタデータフィルタが事前フィルタリングに対応.md) | 既存インデックスのモード確認と切り替え・`$startsWith`と条件数の上限 |
+| 付録 | [S3 Vectorsがハイブリッド検索に対応](s3-vectors/S3-Vectorsがハイブリッド検索に対応.md) | 付録で自作したキーワード検索の置き換え・全文検索だけの実行例・日本語のアナライザー・23問でのOpenSearchやManaged KBとの比較 |
 
 ## 本文で抜粋した回答を読む
 

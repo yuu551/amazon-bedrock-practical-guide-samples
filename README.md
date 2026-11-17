@@ -89,7 +89,7 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 
 現在、本文の誤りとして訂正する項目はありませんが、執筆後に機能やモデルが変わり本文の記述と合わなくなった箇所も載せています。
 
-現在は、コンテキストグラウンディングチェックのStandardティア追加、GPT-5.5のBedrock Runtime API対応、Claudeの新モデル追加（第1章）と、Customer-managed Knowledge BasesでPreview提供だったSharePointなどのデータソースの新規作成不可（第2章）です。
+現在は、コンテキストグラウンディングチェックのStandardティア追加、GPT-5.5のBedrock Runtime API対応、Claudeの新モデル追加（第1章）と、Customer-managed Knowledge BasesでPreview提供だったSharePointなどのデータソースの新規作成不可（第2章）、S3 Vectorsのハイブリッド検索対応（付録）です。
 
 ## オンライン補足
 
@@ -122,6 +122,7 @@ Claude Codeは`.claude/skills`、Codexは`.agents/skills`、Kiroは`.kiro/skills
 | 付録 | [Managed Knowledge Baseをアプリに組み込んでストリーミングする](supplements/managed-knowledge-bases/Managed-Knowledge-Baseをアプリに組み込んでストリーミングする.md) |
 | 付録 | [Managed Knowledge Baseのデータソースを定期同期する](supplements/managed-knowledge-bases/Managed-Knowledge-Baseのデータソースを定期同期する.md) |
 | 付録 | [S3 Vectorsのメタデータフィルタが事前フィルタリングに対応](supplements/s3-vectors/S3-Vectorsのメタデータフィルタが事前フィルタリングに対応.md) |
+| 付録 | [S3 Vectorsがハイブリッド検索に対応](supplements/s3-vectors/S3-Vectorsがハイブリッド検索に対応.md) |
 
 ## 最新情報
 

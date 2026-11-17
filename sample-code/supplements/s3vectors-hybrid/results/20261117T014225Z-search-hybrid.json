@@ -1,0 +1,106 @@
+{
+  "run_at": "20261117T014225Z",
+  "region": "us-east-1",
+  "request": {
+    "vectorBucketName": "ch02-kbsv-vectors-hyb1117",
+    "indexName": "ch02-kbsv-index",
+    "topK": 3,
+    "returnMetadata": true,
+    "returnScores": true,
+    "queryTexts": [
+      {
+        "text": "Retry-After",
+        "metadataKey": "AMAZON_BEDROCK_TEXT"
+      }
+    ],
+    "queryVector": {
+      "float32": "<1024次元のベクトル>"
+    }
+  },
+  "mode": "hybrid",
+  "text": "Retry-After",
+  "latency_ms": 931.2,
+  "response": {
+    "vectors": [
+      {
+        "scores": {
+          "fused": 0.03333333507180214,
+          "bm25Scores": [
+            {
+              "metadataKey": "AMAZON_BEDROCK_TEXT",
+              "score": 7.78154993057251
+            }
+          ],
+          "vectorDistance": 0.7843024730682373
+        },
+        "key": "e8680b8c-15c1-4c78-8bd3-9ea5e948ddd8",
+        "metadata": {
+          "document_type": "faq",
+          "tags": [
+            "api",
+            "rate_limit",
+            "429",
+            "X-RateLimit"
+          ],
+          "topic_id": "api_rate_limit",
+          "department": "Product",
+          "audience": "admin",
+          "product": "sampleconnect-platform",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "effective_date": 20260401.0,
+          "AMAZON_BEDROCK_TEXT": "# APIレート制限に達した場合の挙動 質問: APIレート制限に達した場合、どのような応答になりますか。 回答: レート制限に達したリクエストは、HTTPステータス`429 Too Many Requests`を返します。レスポンスヘッダーには、再試行までの推奨待機秒数を示す`Retry-After`、現在のウィンドウでの残り回数を示す`X-RateLimit-Remaining`、ウィンドウのリセット時刻を示す`X-RateLimit-Reset`が含まれます。直近24時間のレート超過が累計1万回を超えた場合は、テナント単位で1時間の一時停止が自動適用されます。停止が発生すると、管理者宛てに警告メールが送信されます。 補足: 上限値はプランごとに異なります。",
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:46Z\",\"modifiedDate\":\"2026-11-17T00:12:46Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/faq/APIレート制限に達した場合の挙動.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"vrctaBe4TpHzO96Lq78YrzkcEMmRstcVviLYVv1hNF3sAz90lzho8sVb3e8DdunC\",\"additionalMetadata\":null}",
+          "language": "ja"
+        }
+      },
+      {
+        "scores": {
+          "fused": 0.016393441706895828,
+          "vectorDistance": 0.7915218472480774
+        },
+        "key": "3fa69f77-6625-4701-a60d-efef44ef5d61",
+        "metadata": {
+          "AMAZON_BEDROCK_TEXT": "**対応内容**: 実施した復旧作業の詳細を記載します。 4. **再発防止策**: 短期（1週間以内）と中長期（1ヶ月以内）に分けて記載します。各防止策にはJiraの改善チケット（プロジェクト: IMP）を紐付けてください。 5. **教訓**: 今回のインシデント対応から得られた学びを記載します。 ## 報告先と共有範囲 インシデントの重大度に応じて報告先が異なります。 - **Critical**: CTO、VP of Engineering、関連部門長へSlackダイレクトメッセージで即時報告。顧客向けStatusPageの更新も実施。 - **Major**: 部門長へSlackで報告。",
+          "product": "sampleconnect-platform",
+          "department": "Support",
+          "tags": [
+            "incident",
+            "report"
+          ],
+          "language": "ja",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "document_type": "manual",
+          "effective_date": 20260401.0,
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:47Z\",\"modifiedDate\":\"2026-11-17T00:12:47Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/manuals/インシデント報告手順.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"LemDIoRQKzwMV5OtR82OlHadvM2XZxCTL+WPXScHhlUlWvY2yd3chqk1tTo5mmEK\",\"additionalMetadata\":null}",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "audience": "support"
+        }
+      },
+      {
+        "scores": {
+          "fused": 0.016129031777381897,
+          "vectorDistance": 0.7985939979553223
+        },
+        "key": "b8125d66-ecaa-4995-981a-03d6a9f337a6",
+        "metadata": {
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "audience": "support",
+          "document_type": "manual",
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:47Z\",\"modifiedDate\":\"2026-11-17T00:12:47Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/manuals/障害一次対応手順.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"ZIUeRlKCtdKdhB/EWwKluTB5DQQAKcPYOKhjLcKvWaL48myHgPBXCYVvlvoRwVwJ\",\"additionalMetadata\":null}",
+          "department": "Support",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "AMAZON_BEDROCK_TEXT": "影響範囲の特定結果は、Slackの#incident-responseチャンネルに以下の形式で投稿してください。 ``` 【影響範囲】 - 影響サービス: （例: API全般 / 管理画面のレポート機能） - 影響顧客数: （例: 全顧客 / テナントA, B, Cの3社） - 影響度: （例: サービス完全停止 / 一部機能劣化） - 推定開始時刻: （例: 2026-04-01 14:30 JST） ``` ## ステップ4: 一次対応の実施 影響範囲に応じて、以下の一次対応を実施します。 - **既知の問題の場合**: ナレッジベース（Confluenceの「障害対応ナレッジ」スペース）を検索し、過去の対応手順に従ってください。",
+          "product": "sampleconnect-platform",
+          "effective_date": 20260401.0,
+          "tags": [
+            "incident",
+            "first_response"
+          ],
+          "language": "ja"
+        }
+      }
+    ],
+    "distanceMetric": "cosine"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "run_at": "20261117T013050Z",
+  "region": "us-east-1",
+  "request": {
+    "vectorBucketName": "ch02-kbsv-vectors-hyb1117",
+    "indexName": "ch02-kbsv-index",
+    "topK": 3,
+    "returnMetadata": true,
+    "returnScores": true,
+    "queryTexts": [
+      {
+        "text": "730日",
+        "metadataKey": "AMAZON_BEDROCK_TEXT"
+      }
+    ]
+  },
+  "mode": "text",
+  "latency_ms": 677.2,
+  "hits": 33,
+  "response": {
+    "vectors": [
+      {
+        "scores": {
+          "bm25Scores": [
+            {
+              "metadataKey": "AMAZON_BEDROCK_TEXT",
+              "score": 7.026947021484375
+            }
+          ]
+        },
+        "key": "a6293725-6481-44cd-9986-e9d039378101",
+        "metadata": {
+          "department": "Security",
+          "language": "ja",
+          "document_type": "policy",
+          "AMAZON_BEDROCK_TEXT": "## エクスポートと長期保管 EnterpriseプランはAmazon Kinesis Data Firehose連携が追加され、SIEMへのニアリアルタイム取り込みが容易になります。Standardプランも、本版からCloudWatch Logs連携が標準提供範囲に含まれます。730日を超える長期保管は、Amazon S3連携を用いた顧客側の保管ポリシーで実現してください。 ## 改訂履歴 - 2026年4月1日 改訂。Enterpriseの保持期間を365日から730日へ延長、Standardの保持期間を30日から90日へ延長、CloudWatch Logs連携をStandardへ拡大、Kinesis Data Firehose連携をEnterpriseに追加。",
+          "topic_id": "audit_log",
+          "product": "sampleconnect-platform",
+          "tags": [
+            "audit_log",
+            "retention",
+            "policy"
+          ],
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:48Z\",\"modifiedDate\":\"2026-11-17T00:12:48Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/policies/監査ログ保存ポリシー2026年版.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":\"# SampleConnect Platform 監査ログ保存ポリシー（2026年4月適用版）\\n本ポリシーは、SampleConnect Platformで生成される監査ログの保持期間、エクスポート可否、削除条件を定めます。本版は2026年4月1日以降の利用月に適用され、前版を置き換えます。\\n## 対象ログ\\nSampleConnect管理コンソールへのログイン、APIキーの発行・失効、SSO設定の変更、IPアドレス制限の更新、Enterprise機能の有効化に加え、本版から、参照系APIのうちテナント横断で重要となる読み取り操作（監査ログのエクスポート、データ所在地ポリシーの参照など）も対象に追加されます。\\n## プラン別の保持期間\\n| プラン | 保持期間 | エクスポート |\\n|-|-|-|\\n| Free | 7日 | 不可（コンソール閲覧のみ） |\\n| Standard | 90日 | CSV/JSON Linesエクスポート、Amazon S3連携、Amazon CloudWatch Logs連携 |\\n| Enterprise | 730日（24ヶ月） | CSV/JSON Lines、Amazon S3連携、Amazon CloudWatch Logs連携、Amazon Kinesis Data Firehose連携 |\\n## エクスポートと長期保管\\nEnterpriseプランはAmazon Kinesis Data Firehose連携が追加され、SIEMへのニアリアルタイム取り込みが容易になります。Standardプランも、本版からCloudWatch Logs連携が標準提供範囲に含まれます。730日を超える長期保管は、Amazon S3連携を用いた顧客側の保管ポリシーで実現してください。\\n## 改訂履歴\\n- 2026年4月1日 改訂。Enterpriseの保持期間を365日から730日へ延長、Standardの保持期間を30日から90日へ延長、CloudWatch Logs連携をStandardへ拡大、Kinesis Data Firehose連携をEnterpriseに追加。\\n\",\"relatedContents\":null,\"sourceDocumentId\":\"dKReMm0W9MF7Nvm2hrf8L7p0AmvOn+vGQFBzoOFSyGRHlIEvYYYrS/zAH7Hk9qDF\",\"additionalMetadata\":null}",
+          "effective_date": 20260401.0,
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "audience": "admin"
+        }
+      },
+      {
+        "scores": {
+          "bm25Scores": [
+            {
+              "metadataKey": "AMAZON_BEDROCK_TEXT",
+              "score": 5.420921325683594
+            }
+          ]
+        },
+        "key": "12d71d26-2b42-48f0-90a5-0152afec950f",
+        "metadata": {
+          "department": "Security",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "AMAZON_BEDROCK_TEXT": "prise機能の有効化に加え、本版から、参照系APIのうちテナント横断で重要となる読み取り操作（監査ログのエクスポート、データ所在地ポリシーの参照など）も対象に追加されます。\n## プラン別の保持期間\nプラン 保持期間 エクスポート\nFree 7日 不可（コンソール閲覧のみ） Standard 90日 CSV/JSON Linesエクスポート、Amazon S3連携、Amazon CloudWatch Logs連携 Enterprise 730日（24ヶ月） CSV/JSON Lines、Amazon S3連携、Amazon CloudWatch Logs連携、Amazon Kinesis Data Firehose連携",
+          "audience": "admin",
+          "topic_id": "audit_log",
+          "tags": [
+            "audit_log",
+            "retention",
+            "policy"
+          ],
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:48Z\",\"modifiedDate\":\"2026-11-17T00:12:48Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/policies/監査ログ保存ポリシー2026年版.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":\"# SampleConnect Platform 監査ログ保存ポリシー（2026年4月適用版）\\n本ポリシーは、SampleConnect Platformで生成される監査ログの保持期間、エクスポート可否、削除条件を定めます。本版は2026年4月1日以降の利用月に適用され、前版を置き換えます。\\n## 対象ログ\\nSampleConnect管理コンソールへのログイン、APIキーの発行・失効、SSO設定の変更、IPアドレス制限の更新、Enterprise機能の有効化に加え、本版から、参照系APIのうちテナント横断で重要となる読み取り操作（監査ログのエクスポート、データ所在地ポリシーの参照など）も対象に追加されます。\\n## プラン別の保持期間\\n| プラン | 保持期間 | エクスポート |\\n|-|-|-|\\n| Free | 7日 | 不可（コンソール閲覧のみ） |\\n| Standard | 90日 | CSV/JSON Linesエクスポート、Amazon S3連携、Amazon CloudWatch Logs連携 |\\n| Enterprise | 730日（24ヶ月） | CSV/JSON Lines、Amazon S3連携、Amazon CloudWatch Logs連携、Amazon Kinesis Data Firehose連携 |\\n## エクスポートと長期保管\\nEnterpriseプランはAmazon Kinesis Data Firehose連携が追加され、SIEMへのニアリアルタイム取り込みが容易になります。Standardプランも、本版からCloudWatch Logs連携が標準提供範囲に含まれます。730日を超える長期保管は、Amazon S3連携を用いた顧客側の保管ポリシーで実現してください。\\n## 改訂履歴\\n- 2026年4月1日 改訂。Enterpriseの保持期間を365日から730日へ延長、Standardの保持期間を30日から90日へ延長、CloudWatch Logs連携をStandardへ拡大、Kinesis Data Firehose連携をEnterpriseに追加。\\n\",\"relatedContents\":null,\"sourceDocumentId\":\"dKReMm0W9MF7Nvm2hrf8L7p0AmvOn+vGQFBzoOFSyGRHlIEvYYYrS/zAH7Hk9qDF\",\"additionalMetadata\":null}",
+          "product": "sampleconnect-platform",
+          "language": "ja",
+          "document_type": "policy",
+          "effective_date": 20260401.0,
+          "x-amz-bedrock-kb-source-file-modality": "TEXT"
+        }
+      },
+      {
+        "scores": {
+          "bm25Scores": [
+            {
+              "metadataKey": "AMAZON_BEDROCK_TEXT",
+              "score": 4.322317123413086
+            }
+          ]
+        },
+        "key": "ad9ee1d9-b6ce-4ac0-b033-ecd063a285bf",
+        "metadata": {
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "language": "ja",
+          "document_type": "faq",
+          "effective_date": 20260401.0,
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:47Z\",\"modifiedDate\":\"2026-11-17T00:12:47Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/faq/監査ログの保持期間.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"Z5r2UUhVlRX/eGaKqCMowN7lQKm62Zi0EsDyl4IWlQ2atPlJ6C4b7Xsnr8p10Kty\",\"additionalMetadata\":null}",
+          "department": "Security",
+          "tags": [
+            "audit_log",
+            "retention"
+          ],
+          "product": "sampleconnect-platform",
+          "AMAZON_BEDROCK_TEXT": "# 監査ログの保持期間 質問: 監査ログはプランごとに何日保存されますか。 回答: SampleConnect Platformの監査ログ保持期間は、プランによって異なります。Freeプランは7日間、Standardプランは90日間、Enterpriseプランは730日間（24ヶ月）です。保持期間を超えたログは、自動的に削除されます。保持期間内のログは、SampleConnect管理コンソールの「セキュリティ」→「監査ログ」から閲覧でき、長期保管が必要な場合は監査ログのエクスポート機能でCSVまたはJSON Lines形式に書き出せます。 補足: 保持期間の正式な根拠は「監査ログ保存ポリシー」、エクスポートやSIEM連携の方法は「監査ログのエクスポート方法」を参照してください。",
+          "topic_id": "audit_log",
+          "audience": "user",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT"
+        }
+      }
+    ],
+    "distanceMetric": "cosine"
+  }
+}

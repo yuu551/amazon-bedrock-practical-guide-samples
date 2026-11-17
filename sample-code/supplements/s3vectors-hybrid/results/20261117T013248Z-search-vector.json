@@ -1,0 +1,81 @@
+{
+  "run_at": "20261117T013248Z",
+  "region": "us-east-1",
+  "request": {
+    "vectorBucketName": "ch02-kbsv-vectors-hyb1117",
+    "indexName": "ch02-kbsv-index",
+    "topK": 3,
+    "returnMetadata": true,
+    "returnScores": true
+  },
+  "mode": "vector",
+  "text": "AccessDenied",
+  "latency_ms": 927.5,
+  "response": {
+    "vectors": [
+      {
+        "key": "1ea81d3a-d83e-4d4b-bc5d-f543d2476f94",
+        "metadata": {
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:46Z\",\"modifiedDate\":\"2026-11-17T00:12:46Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/faq/APIキー誤公開時の対応.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"43bYnTDeOUfgKWnhE5YW/17PlqB5yXUPyDf1KQy50zTwE8AmN7hyQHqddq4ZXFEo\",\"additionalMetadata\":null}",
+          "department": "Security",
+          "topic_id": "audit_log",
+          "tags": [
+            "api_key",
+            "incident",
+            "leak"
+          ],
+          "document_type": "faq",
+          "AMAZON_BEDROCK_TEXT": "# APIキー誤公開時の対応 質問: APIキーを誤って公開した場合、どう対応しますか。 回答: 公開を検知したら、まずSampleConnect管理コンソールの「API設定」→「APIキー」から該当キーを即時失効してください。失効はリアルタイムで反映され、以降の認証は失敗します。続いて、新しいAPIキーを発行し、利用中のシステムへ差し替えます。GitHubなど公開リポジトリへ漏えいした場合は、コミット履歴の書き換えではなくキー失効・再発行を優先してください。失効後は、監査ログ（`api.key.used`イベント）から漏えい期間中の不正利用有無を確認し、必要に応じてサポート窓口へインシデントとして連絡します。",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "effective_date": 20260401.0,
+          "product": "sampleconnect-platform",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "audience": "support",
+          "language": "ja"
+        }
+      },
+      {
+        "key": "ae209125-5811-4eb8-b1ac-e86c8268e336",
+        "metadata": {
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:47Z\",\"modifiedDate\":\"2026-11-17T00:12:47Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/faq/障害情報の確認方法.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"ceFQB8cgwT3vmwvkWS2JxmoioPf93TMGlv3m2X6h6tax607C1lAM64xv0tfj1nAk\",\"additionalMetadata\":null}",
+          "AMAZON_BEDROCK_TEXT": "# 障害情報の確認方法 質問: SampleConnectで障害が起きているか確認する方法は何ですか。 回答: SampleConnect Platformの稼働状況は、3つの経路で確認できます。1つ目は公開ステータスページ（status.sampleconnect.example.com）で、障害発生中・調査中・復旧済みの状態と、影響範囲・更新履歴を時系列で確認できます。2つ目はSampleConnect管理コンソールの「お知らせ」セクションで、契約テナントに影響する事象のみが表示されます。3つ目はサポート窓口で、ステータスページ未掲載の小規模事象や、テナント単位の状況確認に対応します。",
+          "document_type": "faq",
+          "department": "Support",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "effective_date": 20260401.0,
+          "product": "sampleconnect-platform",
+          "tags": [
+            "statuspage",
+            "incident",
+            "outage"
+          ],
+          "language": "ja",
+          "audience": "user"
+        }
+      },
+      {
+        "key": "3f523689-cc1c-45eb-80a1-1519fbeaff14",
+        "metadata": {
+          "effective_date": 20260401.0,
+          "AMAZON_BEDROCK_TEXT": "「SSO設定」→「SAMLログ」から直近のSAMLレスポンスを確認し、IdP側の属性名とSampleConnect側のマッピング設定が一致しているか確認してください。 ### リダイレクトループ ログイン時にリダイレクトが繰り返される場合、ACS URLの設定に誤りがある可能性があります。IdP側に登録したACS URLがSampleConnect管理画面に表示されているURLと完全に一致しているか確認してください。末尾のスラッシュの有無やHTTPS指定の違いも原因となります。 ログインの問題が解決しない場合は、enterprise-support@sampleconnect.example.co.jpまでお問い合わせください。",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "language": "ja",
+          "topic_id": "saml_sso",
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:48Z\",\"modifiedDate\":\"2026-11-17T00:12:48Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/product/SAML認証設定ガイド.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":\"# SAML認証設定ガイド\\n## 概要\\n本ガイドでは、SampleConnect PlatformでSAML 2.0によるシングルサインオン（SSO）を設定する手順を説明します。SAML認証を有効化することで、企業の既存のIdP（Identity Provider）を利用した一元的な認証管理が実現できます。\\n## 前提条件\\nSAML認証の設定には以下の条件を満たしている必要があります。\\n- SampleConnect PlatformのEnterpriseプランを契約していること\\n- SampleConnect管理画面で「組織管理者」ロールを持つアカウントでログインしていること\\n- 連携先のIdPの管理者権限を持っていること\\n対応しているIdPは以下のとおりです。\\n- Microsoft Entra ID（旧Azure AD）\\n- Okta\\n- Google Workspace\\n- OneLogin\\n- その他SAML 2.0準拠のIdP\\n## 設定手順\\n### ステップ1: SSO設定画面を開く\\nSampleConnect管理画面にログインし、左メニューから「セキュリティ」→「SSO設定」を選択します。SSO設定画面が表示されたら「SAML 2.0」タブをクリックしてください。\\n### ステップ2: SampleConnect側のSAML情報を確認する\\nSSO設定画面に表示される以下の情報を控えてください。IdP側でSAMLアプリケーションを作成する際に必要になります。\\n- **Entity ID（発行者）**: `https://auth.sampleconnect.example.co.jp/saml/metadata/{テナントID}`\\n- **ACS URL（Assertion Consumer Service URL）**: `https://auth.sampleconnect.example.co.jp/saml/acs/{テナントID}`\\n- **SLO URL（Single Logout URL）**: `https://auth.sampleconnect.example.co.jp/saml/slo/{テナントID}`\\n「メタデータXMLをダウンロード」ボタンから、SampleConnect側のSPメタデータをXML形式でダウンロードすることもできます。IdPがメタデータのインポートに対応している場合は、このファイルを使用すると設定が簡略化されます。\\n### ステップ3: IdP側でSAMLアプリケーションを作成する\\nIdPの管理画面で新しいSAMLアプリケーションを作成し、ステップ2で確認したEntity IDとACS URLを入力します。IdPごとの設定方法は以下を参考にしてください。\\n**Microsoft Entra IDの場合**: 「エンタープライズ アプリケーション」→「新しいアプリケーション」→「独自のアプリケーションの作成」から設定します。「シングルサインオン」→「SAML」を選択し、基本的なSAML構成にEntity IDとACS URLを入力してください。\\n**Oktaの場合**: 「Applications」→「Create App Integration」→「SAML 2.0」を選択し、Single sign-on URLにACS URL、Audience URI（SP Entity ID）にEntity IDを入力してください。\\n**Google Workspaceの場合**: 管理コンソールの「アプリ」→「ウェブアプリとモバイルアプリ」→「アプリを追加」→「カスタムSAMLアプリの追加」から設定します。\\n### ステップ4: IdPメタデータをSampleConnectに登録する\\nIdP側の設定が完了したら、SampleConnect管理画面のSSO設定画面に戻り、IdPの情報を登録します。登録方法は2通りあります。\\n**メタデータXMLによる一括登録（推奨）**: 「IdPメタデータXMLをアップロード」からIdPが提供するメタデータXMLファイルをアップロードします。必要な情報が自動的に読み取られます。2026年4月のアップデートにより、メタデータURLを指定して自動取得する機能も追加されました。\\n**手動登録**: 以下の情報を個別に入力します。\\n- **IdP Entity ID**: IdPの識別子URL\\n- **IdP SSO URL**: IdPのSAMLログインエンドポイントURL\\n- **IdP証明書**: IdPが発行するX.509署名証明書（PEM形式）\\n### ステップ5: 属性マッピングを設定する\\nIdPからSampleConnectに送信されるSAMLアサーションの属性をマッピングします。以下の属性は必須です。\\n| SAML属性名 | SampleConnectフィールド | 説明 |\\n|-|-|-|\\n| email | メールアドレス | ユーザーの一意識別に使用（必須） |\\n| displayName | 表示名 | ユーザーの表示名（必須） |\\n| department | 部署 | 組織内の部署名（任意） |\\n| role | ロール | SampleConnect上のロール（任意） |\\n属性名はIdPの設定に合わせてカスタマイズ可能です。たとえばMicrosoft Entra IDでは`user.mail`、`user.displayname`、`user.department`といった属性名が使われます。\\n### ステップ6: 接続テストを実施する\\n「テスト接続」ボタンをクリックして、IdPとの接続テストを実施します。テスト用のIdPアカウントでログインし、SampleConnect側でユーザー情報が正しく取得されることを確認してください。テスト結果は画面上に表示され、属性の受信状況やエラーの詳細を確認できます。\\n### ステップ7: 強制SSOの有効化（オプション）\\nすべてのユーザーにSAML認証を強制する場合は、「強制SSOを有効化」をオンにします。この設定を有効にすると、パスワードによる直接ログインが無効化され、IdP経由でのログインのみが許可されます。\\n緊急時のアクセス手段として、組織管理者にはバイパスURLが提供されます。このURLは「SSO設定」→「緊急アクセス」から確認できます。IdPの障害時などにこのURLを使用してログインしてください。\\n## トラブルシューティング\\n### 証明書の期限切れ\\nIdP証明書の有効期限が切れると、SAML認証が失敗します。SampleConnectは証明書の有効期限を監視し、期限の30日前から管理者にメール通知を送信します。証明書を更新する場合は、IdP側で新しい証明書を発行し、SampleConnect管理画面で証明書を差し替えてください。\\n### 属性マッピングの不一致\\nSAMLアサーションに必須属性（emailまたはdisplayName）が含まれていない場合、ログインに失敗します。「SSO設定」→「SAMLログ」から直近のSAMLレスポンスを確認し、IdP側の属性名とSampleConnect側のマッピング設定が一致しているか確認してください。\\n### リダイレクトループ\\nログイン時にリダイレクトが繰り返される場合、ACS URLの設定に誤りがある可能性があります。IdP側に登録したACS URLがSampleConnect管理画面に表示されているURLと完全に一致しているか確認してください。末尾のスラッシュの有無やHTTPS指定の違いも原因となります。\\nログインの問題が解決しない場合は、enterprise-support@sampleconnect.example.co.jpまでお問い合わせください。\\n\",\"relatedContents\":null,\"sourceDocumentId\":\"oZghpPNKVZ0jQS41Y7mFnqN2bRcSJPh9r44lCQ3ay6N+DzwoU0nl7YIEneCt+NMe\",\"additionalMetadata\":null}",
+          "product": "sampleconnect-platform",
+          "department": "Product",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "tags": [
+            "saml",
+            "sso",
+            "authentication"
+          ],
+          "audience": "admin",
+          "document_type": "manual"
+        }
+      }
+    ],
+    "distanceMetric": "cosine"
+  }
+}

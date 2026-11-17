@@ -1,0 +1,79 @@
+{
+  "run_at": "20261117T013241Z",
+  "region": "us-east-1",
+  "request": {
+    "vectorBucketName": "ch02-kbsv-vectors-hyb1117",
+    "indexName": "ch02-kbsv-index",
+    "topK": 3,
+    "returnMetadata": true,
+    "returnScores": true
+  },
+  "mode": "vector",
+  "text": "730日",
+  "latency_ms": 1047.7,
+  "response": {
+    "vectors": [
+      {
+        "key": "c0fbf1d1-6cd9-42a3-862a-8c3ddd8051a8",
+        "metadata": {
+          "audience": "user",
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:47Z\",\"modifiedDate\":\"2026-11-17T00:12:47Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/faq/障害情報の確認方法.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"ceFQB8cgwT3vmwvkWS2JxmoioPf93TMGlv3m2X6h6tax607C1lAM64xv0tfj1nAk\",\"additionalMetadata\":null}",
+          "AMAZON_BEDROCK_TEXT": "3つ目はサポート窓口で、ステータスページ未掲載の小規模事象や、テナント単位の状況確認に対応します。サポート担当者の社内一次対応手順はFAQには含めず、「障害一次対応手順」マニュアルを参照してください。 補足: 既知障害かどうかの判別、影響範囲の特定、エスカレーション経路は「障害一次対応手順」「エスカレーション手順」を参照してください。",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "language": "ja",
+          "effective_date": 20260401.0,
+          "document_type": "faq",
+          "tags": [
+            "statuspage",
+            "incident",
+            "outage"
+          ],
+          "product": "sampleconnect-platform",
+          "department": "Support",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT"
+        }
+      },
+      {
+        "key": "b069de97-71e3-4484-a872-d12b5848ce0c",
+        "metadata": {
+          "audience": "support",
+          "language": "ja",
+          "department": "Support",
+          "product": "sampleconnect-platform",
+          "effective_date": 20260401.0,
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:47Z\",\"modifiedDate\":\"2026-11-17T00:12:47Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/manuals/インシデント報告手順.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"LemDIoRQKzwMV5OtR82OlHadvM2XZxCTL+WPXScHhlUlWvY2yd3chqk1tTo5mmEK\",\"additionalMetadata\":null}",
+          "tags": [
+            "incident",
+            "report"
+          ],
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "AMAZON_BEDROCK_TEXT": "以下のテンプレートを使用してください。 ``` 【速報】 ■ 発生日時: YYYY-MM-DD HH:MM JST ■ 検知日時: YYYY-MM-DD HH:MM JST ■ 検知経路: （自動監視 / 顧客報告 / 社内報告） ■ 影響範囲: （影響を受けたサービス・機能・顧客数） ■ 影響度: （サービス停止 / 一部機能障害 / パフォーマンス低下） ■ 現在のステータス: （調査中 / 対応中 / 復旧済み） ■ 暫定対応: （実施した対応内容、または対応予定） ■ 次回更新予定: YYYY-MM-DD HH:MM JST ``` 速報は社内の関係者（経営層、営業部門、カスタマーサクセス部門）への情報共有にも使用されます。",
+          "document_type": "manual",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT"
+        }
+      },
+      {
+        "key": "a558c2b1-1bbf-4077-a112-d93e73dbf3f8",
+        "metadata": {
+          "audience": "user",
+          "product": "sampleconnect-platform",
+          "tags": [
+            "sla",
+            "support",
+            "standard",
+            "business_hours"
+          ],
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:46Z\",\"modifiedDate\":\"2026-11-17T00:12:46Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/faq/Standardプランのサポート営業時間.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"slmCgZFCECt5l9TaQs1dV5GUQxItQsC5LWI87Tx71VQZMQbCWqe/y99JPeTSr72Z\",\"additionalMetadata\":null}",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "document_type": "faq",
+          "language": "ja",
+          "effective_date": 20260401.0,
+          "department": "Support",
+          "AMAZON_BEDROCK_TEXT": "# Standardプランのサポート営業時間 質問: Standardプランのサポート窓口は何時から何時までですか。 回答: Standardプランのサポート窓口は、平日（月曜〜金曜、日本の祝祭日と年末年始を除く）の9:00〜18:00 JSTで対応しています。Freeプランでは、人によるサポート窓口は提供しておらず、ヘルプセンターのドキュメントとコミュニティフォーラムでの相互支援に限られます。営業時間外に発生した問い合わせは翌営業日に順次対応しますが、ステータスページ上の重大障害は24時間365日で更新されます。"
+        }
+      }
+    ],
+    "distanceMetric": "cosine"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "run_at": "20261117T015823Z",
+  "region": "us-east-1",
+  "knowledge_base": "<Knowledge Base ID>",
+  "question": "APIエラーコード一覧",
+  "results": {
+    "SEMANTIC": {
+      "latency_ms": 1267.0,
+      "files": [
+        "APIキーの発行上限.md",
+        "APIキー誤公開時の対応.md",
+        "APIレート制限に達した場合の挙動.md",
+        "APIキーの発行上限.md",
+        "API認証・監査ログ管理ガイド.md"
+      ]
+    },
+    "HYBRID": {
+      "error": {
+        "Message": "HYBRID search type is not supported for search operation on index <Knowledge Base ID>. Retry your request with a different search type.",
+        "Code": "ValidationException"
+      }
+    }
+  }
+}

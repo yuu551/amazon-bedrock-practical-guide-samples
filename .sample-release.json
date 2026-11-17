@@ -70,7 +70,7 @@
       "mode": 420
     },
     "README.md": {
-      "sha256": "214a600aec7c45d265d91fcc8f171072837730dbd59354d10aef8b0be19ae814",
+      "sha256": "ddd092b78d48539b6989f8019ef5501561d0836e2ee5fbf07e1eb0c33d4c66ae",
       "mode": 420
     },
     "images/devio-author.png": {
@@ -386,7 +386,7 @@
       "mode": 420
     },
     "sample-code/02/infra/README.md": {
-      "sha256": "f33304009b03e573f12314e549f54b79fba0813c3eeeac0b26cb2956b54ebc6c",
+      "sha256": "7c1407159c9d686894a04330d61961217a1d440243bd3cecccc5ce1382afcd09",
       "mode": 420
     },
     "sample-code/02/infra/setup-s3vectors.sh": {
@@ -962,7 +962,7 @@
       "mode": 493
     },
     "sample-code/03/infra/spin-up-cheap-rag.sh": {
-      "sha256": "a815d784d5e750bf82f855137c092daff7a5f7b22899c62cda09f12c85f6a4da",
+      "sha256": "daaee2656f4ff48a5adfb2e558fa2d04fbaf9385002db8de18267dccf2ffebf0",
       "mode": 493
     },
     "sample-code/03/infra/sync-topic-data.sh": {
@@ -2470,7 +2470,7 @@
       "mode": 420
     },
     "sample-code/appendix/README.md": {
-      "sha256": "225de949c87925191bd9ace1e66c8b8982d964f53c5270eda7f125dbc22e6240",
+      "sha256": "40e14cc9872ae27c0359de84cfdc7ba7b4c72b4a02c6501651cfe89859d3e979",
       "mode": 420
     },
     "sample-code/appendix/managed_kb_comparison.py": {
@@ -2941,12 +2941,76 @@
       "sha256": "c3c1a1c2dfce1d9016572f84a88c47dfc8e7f1fcf17d64591b0743127f349744",
       "mode": 420
     },
+    "sample-code/supplements/s3vectors-hybrid/pyproject.toml": {
+      "sha256": "49a05ae8a8635f4cf2aa755f66b3e1c7af2e073d065e97500d1eea8867e68c33",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T001547Z-enable.log": {
+      "sha256": "d952afdb4916cfbd32e5d19fbc6c61a555fb59242746fa969e3e32b7f5247b62",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T001713Z-keywords.json": {
+      "sha256": "b90277c907311e9ffcdfb51408a1f80e881a16a31569e17530bf2f69add4f398",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T002723Z-evaluate.json": {
+      "sha256": "fdadc6429225fbef491314e743ef6410c2255f717eb2be469a012cea9313a182",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T002951Z-evaluate.json": {
+      "sha256": "d8ad885f9d857991fb0f2c8a76133f225c70b76daf0f869423230db56238d674",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T013050Z-search-text.json": {
+      "sha256": "ef4502cf3bde45468331bf7fa8539e69244a01f21badeb2701234cce9c414280",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T013101Z-search-hybrid.json": {
+      "sha256": "8b9cb5b2884899535f418f5d18e31d14b49e1e8a4eb54a2e8bc492c62ae20bb0",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T013103Z-search-text.json": {
+      "sha256": "aebd3176ffa4956c0eca6e7c121425fc2482cb0140cc96fe3d4044400176086b",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T013220Z-search-text.json": {
+      "sha256": "fca938bef5d8367d0570008a25954ad274bc5e5fc77eea9bf891c19918e9c9bf",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T013241Z-search-vector.json": {
+      "sha256": "6eaa197e6e2ba469f454101caafcf72473f7f699eb02246479f092c8dcbd78d0",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T013244Z-search-vector.json": {
+      "sha256": "5a7c3f001279aac2c6eecf09b63f2ce632c864db24a875907ddd8615b8b42c75",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T013248Z-search-vector.json": {
+      "sha256": "d93c1dc33cac9d1cff9072e36cc71a4acb0da4f7f914d8f7e19a26273f7f3d0f",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T014225Z-search-hybrid.json": {
+      "sha256": "fd5faab4f8fbe1a1a4254438a2ded776b6a6861afb598326bf5b0338d7084b57",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T015823Z-kb-hybrid.json": {
+      "sha256": "e3c868afa7b808b3edce16e84d93e5e0002d14e584bdf6fdaa5fae7324534ab5",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/s3vectors_hybrid.py": {
+      "sha256": "3f21e3e98deae76a62f3ee8d6a801f90f7f9c1e5fa916e35a87a5b0134ba376c",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/uv.lock": {
+      "sha256": "f82e7747bc2376d2df35b537a6ff01d9c4420f6cbcf3eac1417dfb59a2665eff",
+      "mode": 420
+    },
     "scripts/verify_book_examples.py": {
       "sha256": "c69ab06f844bf52cada90e63e23f749960f447609192a18d9ba22e1237b71a46",
       "mode": 420
     },
     "supplements/README.md": {
-      "sha256": "49ded53b5d43067b75fc6b3529390e764704f166fa02a7c97cd8dbb2a8979c74",
+      "sha256": "d167484dd3c712b9073a7e2a5d94d58afe2ce343a02c730803b5f921270d0b79",
       "mode": 420
     },
     "supplements/chapter01/AgentCore-CLI-1.0.0で第1章の手順を進める.md": {
@@ -2990,7 +3054,7 @@
       "mode": 420
     },
     "supplements/chapter02/AuroraでKnowledge-Basesの検索を検証する.md": {
-      "sha256": "f6d8c7aa866c6f9795c104be6b31ef95dc3fdd9b71682c36e03f70490d931d95",
+      "sha256": "47a2ae3ebf9a9b2860f4030c0000fc4c06f6790ca45e95f4a0f5dc1aa70fee37",
       "mode": 420
     },
     "supplements/chapter02/OpenSearch-Serverless-NextGenをKnowledge-Basesで使えるか試す.md": {
@@ -3445,12 +3509,24 @@
       "sha256": "0a8ab681d99117d5234b8acaaf83000f4edae9b7565b9e0c559cb4e3837d67bd",
       "mode": 420
     },
+    "supplements/s3-vectors/S3-Vectorsがハイブリッド検索に対応.md": {
+      "sha256": "e74d0a3399f88a5a84848d7ad09116e7a3bf48b2ff7dceb8dad7d1838ee1180e",
+      "mode": 420
+    },
     "supplements/s3-vectors/S3-Vectorsのメタデータフィルタが事前フィルタリングに対応.md": {
       "sha256": "a2d23d5634ed4aa250d09efe8fb3f77231e7f544323b57bb9d9ede02093d1273",
       "mode": 420
     },
     "supplements/s3-vectors/images/classic-vs-enhanced.svg": {
       "sha256": "813d44f0ee6ea5757269b8e73620ef56913651aa1d6c957826b8334cc9b411af",
+      "mode": 420
+    },
+    "supplements/s3-vectors/images/handmade-vs-native-hybrid.svg": {
+      "sha256": "500e5bf7b0b8475a97417fd5f50a2f82a0e86cb5f0f517b7fe575fb8957afc88",
+      "mode": 420
+    },
+    "supplements/s3-vectors/images/kb-ingest-queryvectors-search.svg": {
+      "sha256": "014585879f9746f0138df5dd3a0b3f804982bd0cc5513f5c04dd75803f14f7ba",
       "mode": 420
     },
     "ハンズオンFAQ.md": {
@@ -3462,7 +3538,7 @@
       "mode": 420
     },
     "正誤表.md": {
-      "sha256": "4ef376a325ee0ac5ba895baaf9b838eb8bba2fc55ca57975c660dbd629eecdf2",
+      "sha256": "738451ff0c1e28edb055173e7173e96fd3836ef4fb7e79e2b111938c405f5275",
       "mode": 420
     }
   }

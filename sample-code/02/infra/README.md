@@ -73,7 +73,7 @@ bash setup-s3vectors.sh
 - AOSS版と比べてベクトルインデックスの準備が早く、常駐課金もないため検証用途向き
 - 内容が重複する変換元の`faq.xlsx`は検索対象から除外
 - 完了時の`export`の表示はOpenSearch Serverless版と同じ。第3章以降も同じ変数で進められる
-- S3 Vectorsはハイブリッド検索に対応していないため、第3章の比較ではハイブリッド検索が自動で飛ばされる。リランキングも試す場合は下の`ENABLE_RERANKING=true`で作る
+- Knowledge Bases経由ではS3 Vectorsのハイブリッド検索を使えないため、第3章の比較ではハイブリッド検索が自動で飛ばされる。リランキングも試す場合は下の`ENABLE_RERANKING=true`で作る
 
 Knowledge BasesのリランキングをこのKnowledge Baseで使う場合だけ、サービスロールへ必要な権限を追加します。
 
@@ -106,7 +106,7 @@ bash teardown-s3vectors.sh
 
 | 項目 | S3 Vectors版で確認すること |
 |---|---|
-| 検索タイプ | S3 Vectorsの一次取得はセマンティック検索のみ。ハイブリッド検索は使えないが、Knowledge Basesの`rerankingConfiguration`によるリランキングは使える |
+| 検索タイプ | Knowledge Bases経由の一次取得はセマンティック検索のみ。ハイブリッド検索は使えないが、Knowledge Basesの`rerankingConfiguration`によるリランキングは使える。`QueryVectors`を直接呼び出す場合のハイブリッド検索は[オンライン補足](../../../supplements/s3-vectors/S3-Vectorsがハイブリッド検索に対応.md)を参照 |
 | メタデータ制約 | Knowledge Basesに付けるカスタムメタデータは、ベクトル1件あたり1KB、最大35キーです。これはS3 Vectors全体のメタデータ上限とは異なります。[Knowledge Basesとの連携条件](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-vectors-bedrock-kb.html)を確認してください |
 | インデックス設定 | `AMAZON_BEDROCK_TEXT`と`AMAZON_BEDROCK_METADATA`をnon-filterableにする。OpenSearch Serverlessの`AMAZON_BEDROCK_TEXT_CHUNK`と混同しない |
 | 応答時間 | データ量や検索条件によって変わります。検索時間と回答生成時間を分けて測り、アプリに必要な応答時間を満たすか確認してください |

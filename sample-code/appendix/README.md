@@ -56,7 +56,7 @@ uv run s3_vectors_standalone.py cleanup
 
 ### ハイブリッド検索
 
-S3 Vectorsはキーワード検索に対応していないため、このサンプルでは、セマンティック検索と、文字3-gramのBM25検索を別々に実行し、Reciprocal Rank Fusion（RRF）で順位を統合します。BM25は仕組みを確認するための小規模な実装で、本番ではキーワード検索の基盤を別に用意します。
+本書の執筆時点ではS3 Vectorsがキーワード検索に対応していなかったため、このサンプルでは、セマンティック検索と、文字3-gramのBM25検索を別々に実行し、Reciprocal Rank Fusion（RRF）で順位を統合します。BM25は仕組みを確認するための小規模な実装です。2026年11月からは`QueryVectors`だけで全文検索とハイブリッド検索ができるので、使い方はオンライン補足の[S3 Vectorsがハイブリッド検索に対応](../../supplements/s3-vectors/S3-Vectorsがハイブリッド検索に対応.md)を参照してください。
 
 ```bash
 uv run s3_vectors_standalone.py hybrid --question "Enterpriseプランの監査ログは何日保存されますか"

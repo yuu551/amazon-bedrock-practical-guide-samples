@@ -1,0 +1,55 @@
+{
+  "run_at": "20261117T013220Z",
+  "region": "us-east-1",
+  "request": {
+    "vectorBucketName": "ch02-kbsv-vectors-hyb1117",
+    "indexName": "ch02-kbsv-index",
+    "topK": 3,
+    "returnMetadata": true,
+    "returnScores": true,
+    "queryTexts": [
+      {
+        "text": "Retry-After",
+        "metadataKey": "AMAZON_BEDROCK_TEXT"
+      }
+    ]
+  },
+  "mode": "text",
+  "latency_ms": 930.7,
+  "hits": 1,
+  "response": {
+    "vectors": [
+      {
+        "scores": {
+          "bm25Scores": [
+            {
+              "metadataKey": "AMAZON_BEDROCK_TEXT",
+              "score": 7.78154993057251
+            }
+          ]
+        },
+        "key": "e8680b8c-15c1-4c78-8bd3-9ea5e948ddd8",
+        "metadata": {
+          "AMAZON_BEDROCK_TEXT": "# APIレート制限に達した場合の挙動 質問: APIレート制限に達した場合、どのような応答になりますか。 回答: レート制限に達したリクエストは、HTTPステータス`429 Too Many Requests`を返します。レスポンスヘッダーには、再試行までの推奨待機秒数を示す`Retry-After`、現在のウィンドウでの残り回数を示す`X-RateLimit-Remaining`、ウィンドウのリセット時刻を示す`X-RateLimit-Reset`が含まれます。直近24時間のレート超過が累計1万回を超えた場合は、テナント単位で1時間の一時停止が自動適用されます。停止が発生すると、管理者宛てに警告メールが送信されます。 補足: 上限値はプランごとに異なります。",
+          "x-amz-bedrock-kb-source-file-modality": "TEXT",
+          "effective_date": 20260401.0,
+          "product": "sampleconnect-platform",
+          "document_type": "faq",
+          "x-amz-bedrock-kb-data-source-id": "40RRC6SCLB",
+          "AMAZON_BEDROCK_METADATA": "{\"text\":null,\"author\":null,\"createDate\":\"2026-11-17T00:12:46Z\",\"modifiedDate\":\"2026-11-17T00:12:46Z\",\"source\":{\"sourceLocation\":\"s3://ch02-kbsv-sample-data-hyb1117/sample-data/faq/APIレート制限に達した場合の挙動.md\",\"sourceType\":null},\"descriptionText\":null,\"pageNumber\":null,\"pageSizes\":null,\"graphDocument\":{\"entities\":[]},\"parentText\":null,\"relatedContents\":null,\"sourceDocumentId\":\"vrctaBe4TpHzO96Lq78YrzkcEMmRstcVviLYVv1hNF3sAz90lzho8sVb3e8DdunC\",\"additionalMetadata\":null}",
+          "language": "ja",
+          "audience": "admin",
+          "department": "Product",
+          "tags": [
+            "api",
+            "rate_limit",
+            "429",
+            "X-RateLimit"
+          ],
+          "topic_id": "api_rate_limit"
+        }
+      }
+    ],
+    "distanceMetric": "cosine"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "run_at": "20261117T001713Z",
+  "region": "us-east-1",
+  "chunks": 126,
+  "keywords": [
+    {
+      "keyword": "監査ログ",
+      "contains": 30,
+      "ja": {
+        "hits": 38,
+        "missed": 0,
+        "top_n_contains": 29
+      },
+      "standard": {
+        "hits": 42,
+        "missed": 0,
+        "top_n_contains": 29
+      }
+    },
+    {
+      "keyword": "保持期間",
+      "contains": 12,
+      "ja": {
+        "hits": 21,
+        "missed": 0,
+        "top_n_contains": 12
+      },
+      "standard": {
+        "hits": 79,
+        "missed": 0,
+        "top_n_contains": 11
+      }
+    },
+    {
+      "keyword": "エスカレーション",
+      "contains": 14,
+      "ja": {
+        "hits": 14,
+        "missed": 0,
+        "top_n_contains": 14
+      },
+      "standard": {
+        "hits": 14,
+        "missed": 0,
+        "top_n_contains": 14
+      }
+    },
+    {
+      "keyword": "サービスクレジット",
+      "contains": 18,
+      "ja": {
+        "hits": 33,
+        "missed": 0,
+        "top_n_contains": 18
+      },
+      "standard": {
+        "hits": 18,
+        "missed": 0,
+        "top_n_contains": 18
+      }
+    },
+    {
+      "keyword": "IPアドレス制限",
+      "contains": 7,
+      "ja": {
+        "hits": 15,
+        "missed": 0,
+        "top_n_contains": 6
+      },
+      "standard": {
+        "hits": 47,
+        "missed": 0,
+        "top_n_contains": 6
+      }
+    },
+    {
+      "keyword": "一次対応",
+      "contains": 9,
+      "ja": {
+        "hits": 43,
+        "missed": 0,
+        "top_n_contains": 8
+      },
+      "standard": {
+        "hits": 79,
+        "missed": 0,
+        "top_n_contains": 7
+      }
+    },
+    {
+      "keyword": "請求書払い",
+      "contains": 4,
+      "ja": {
+        "hits": 31,
+        "missed": 0,
+        "top_n_contains": 4
+      },
+      "standard": {
+        "hits": 102,
+        "missed": 0,
+        "top_n_contains": 4
+      }
+    },
+    {
+      "keyword": "申請",
+      "contains": 13,
+      "ja": {
+        "hits": 13,
+        "missed": 0,
+        "top_n_contains": 13
+      },
+      "standard": {
+        "hits": 25,
+        "missed": 0,
+        "top_n_contains": 9
+      }
+    }
+  ]
+}

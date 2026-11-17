@@ -1,0 +1,24 @@
+{
+  "run_at": "20261117T013103Z",
+  "region": "us-east-1",
+  "request": {
+    "vectorBucketName": "ch02-kbsv-vectors-hyb1117",
+    "indexName": "ch02-kbsv-index",
+    "topK": 3,
+    "returnMetadata": true,
+    "returnScores": true,
+    "queryTexts": [
+      {
+        "text": "AccessDenied",
+        "metadataKey": "AMAZON_BEDROCK_TEXT"
+      }
+    ]
+  },
+  "mode": "text",
+  "latency_ms": 874.5,
+  "hits": 0,
+  "response": {
+    "vectors": [],
+    "distanceMetric": "cosine"
+  }
+}
