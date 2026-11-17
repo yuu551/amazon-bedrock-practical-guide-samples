@@ -2997,8 +2997,20 @@
       "sha256": "e3c868afa7b808b3edce16e84d93e5e0002d14e584bdf6fdaa5fae7324534ab5",
       "mode": 420
     },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T023410Z-kb-hybrid.json": {
+      "sha256": "98f6995c31e935bf6f00167cf3dc56fe83d770af524df424a4c0d20f0cee1888",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T023418Z-rag.json": {
+      "sha256": "d3ef961c023c7014fbc0349d2d1c46a9b634843ad030714530b797cd25e301e8",
+      "mode": 420
+    },
+    "sample-code/supplements/s3vectors-hybrid/results/20261117T024230Z-kb-update-check.json": {
+      "sha256": "a84647dfe3749b3986bcb2df4ee3ab0d282437e32d7808913de5775698372ead",
+      "mode": 420
+    },
     "sample-code/supplements/s3vectors-hybrid/s3vectors_hybrid.py": {
-      "sha256": "3f21e3e98deae76a62f3ee8d6a801f90f7f9c1e5fa916e35a87a5b0134ba376c",
+      "sha256": "6c782aa3ed8bf7e02c3ed47e45e2d34b1edf1e8230c928aa80d0997e2394c696",
       "mode": 420
     },
     "sample-code/supplements/s3vectors-hybrid/uv.lock": {
@@ -3510,7 +3522,7 @@
       "mode": 420
     },
     "supplements/s3-vectors/S3-Vectorsがハイブリッド検索に対応.md": {
-      "sha256": "8d8a294885828aa5b18bb9a10b651e9d58dd97d2beac29976eaa92b2a62cdf79",
+      "sha256": "0a82f7178d1f46a14e90901b47cb5dd219a9ed309817b90de5829ea7c09e3e7d",
       "mode": 420
     },
     "supplements/s3-vectors/S3-Vectorsのメタデータフィルタが事前フィルタリングに対応.md": {
@@ -3526,7 +3538,7 @@
       "mode": 420
     },
     "supplements/s3-vectors/images/kb-ingest-queryvectors-search.svg": {
-      "sha256": "014585879f9746f0138df5dd3a0b3f804982bd0cc5513f5c04dd75803f14f7ba",
+      "sha256": "8f8d58c20780cd0a563474072e1729c787584bf811b3f1ff556f0f566aa6041e",
       "mode": 420
     },
     "ハンズオンFAQ.md": {

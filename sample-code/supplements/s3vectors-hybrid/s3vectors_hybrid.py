@@ -9,6 +9,7 @@
     uv run s3vectors_hybrid.py search --text "730日"           # 全文検索だけ
     uv run s3vectors_hybrid.py search --text "730日" --mode hybrid
     uv run s3vectors_hybrid.py query --question "429"            # 検索方式ごとの上位5件
+    uv run s3vectors_hybrid.py rag --question "..."              # ハイブリッド検索の結果から回答を生成
     uv run s3vectors_hybrid.py keywords          # キーワードのヒット件数を比べる
     uv run s3vectors_hybrid.py evaluate          # 付録と同じ23問で採点
     uv run s3vectors_hybrid.py cleanup           # copy-standardで作ったインデックスを削除
@@ -36,13 +37,25 @@ RESULTS = HERE / "results"
 # 付録の比較と同じ質問・採点関数と、付録で自作したハイブリッド検索の関数を使う
 sys.path.insert(0, str(ROOT / "appendix"))
 from managed_kb_comparison import HARD_CASES  # noqa: E402
-from s3_vectors_standalone import keyword_search, reciprocal_rank_fusion  # noqa: E402
+from s3_vectors_standalone import REASONING_MODELS, keyword_search, reciprocal_rank_fusion  # noqa: E402
 from s3vectors_opensearch_comparison import EXTRA_QUESTIONS, score_results  # noqa: E402
 
 TEXT_KEY = "AMAZON_BEDROCK_TEXT"  # Knowledge Basesがチャンク本文を入れる欄
 EMBED_MODEL_ID = "amazon.titan-embed-text-v2:0"
 KEYWORD_MODEL_ID = "us.anthropic.claude-haiku-4-5-20251001-v1:0"
 KEYWORD_PROMPT = "次の質問を社内文書の全文検索にかけます。検索語として有効な名詞・固有名詞・数字・記号だけをスペース区切りで出力してください。説明は不要です。\n質問: "
+ANSWER_MODEL_ID = "us.anthropic.claude-sonnet-4-6"  # 本編と同じ回答生成モデル
+# 付録のs3_vectors_standalone.pyのragと同じシステムプロンプト
+SYSTEM_PROMPT = (
+    "あなたはSampleConnect PlatformサポートFAQ用の回答アシスタントです。"
+    "顧客サポート担当者を支援する立場で、SAML、APIキー、APIレート制限、"
+    "監査ログ、SLAなどの問い合わせに、社内ナレッジを根拠として回答します。"
+    "検索結果に根拠がある場合だけ回答してください。"
+    "検索結果に根拠がない質問には"
+    "「このシステムでは回答できません。サポート窓口で確認してください。」"
+    "と答えてください。"
+    "一般知識で補完しないでください。推測しないでください。"
+)
 SAVED_LOGS = ROOT / "appendix" / "logs" / "20260825-answer-quality-comparison"
 KEYWORDS = ["監査ログ", "保持期間", "エスカレーション", "サービスクレジット", "IPアドレス制限", "一次対応", "請求書払い", "申請"]
 
@@ -230,8 +243,58 @@ def kb_hybrid(args: argparse.Namespace) -> None:
         except ClientError as e:
             record["results"][search_type] = {"error": e.response["Error"]}
         print(search_type, json.dumps(record["results"][search_type], ensure_ascii=False))
-    text = json.dumps(record, ensure_ascii=False).replace(ENV["KB_ID"], "<Knowledge Base ID>")
+    # 回答生成までKnowledge Basesに任せるRetrieveAndGenerateも同じ検索設定を使う
+    account = boto3.client("sts", region_name=REGION).get_caller_identity()["Account"]
+    model_arn = f"arn:aws:bedrock:{REGION}:{account}:inference-profile/{ANSWER_MODEL_ID}"
+    try:
+        res = kb.retrieve_and_generate(
+            input={"text": args.question},
+            retrieveAndGenerateConfiguration={
+                "type": "KNOWLEDGE_BASE",
+                "knowledgeBaseConfiguration": {
+                    "knowledgeBaseId": ENV["KB_ID"],
+                    "modelArn": model_arn,
+                    "retrievalConfiguration": {
+                        "vectorSearchConfiguration": {"numberOfResults": 5, "overrideSearchType": "HYBRID"}
+                    },
+                },
+            },
+        )
+        record["results"]["RetrieveAndGenerate（HYBRID）"] = {"answer": res["output"]["text"]}
+    except ClientError as e:
+        record["results"]["RetrieveAndGenerate（HYBRID）"] = {"error": e.response["Error"]}
+    print("RetrieveAndGenerate（HYBRID）", json.dumps(record["results"]["RetrieveAndGenerate（HYBRID）"], ensure_ascii=False))
+    text = json.dumps(record, ensure_ascii=False).replace(ENV["KB_ID"], "<Knowledge Base ID>").replace(account, "<account-id>")
     dump("kb-hybrid.json", json.loads(text))
+
+
+def rag(args: argparse.Namespace) -> None:
+    """ハイブリッド検索で取った5チャンクをConverseに渡して回答を作る。"""
+    vector = embed(args.question)
+    keywords = extract_keywords(args.question)
+    hits, _ = query(INDEX, keywords, "hybrid", vector)
+    context = "\n\n".join(f"[{i}] {h['file']}\n{h['text']}" for i, h in enumerate(hits, 1))
+    res = bedrock.converse(
+        modelId=args.model_id,
+        system=[{"text": SYSTEM_PROMPT}],
+        messages=[{"role": "user", "content": [{"text": f"質問:\n{args.question}\n\n参照情報:\n{context}"}]}],
+        inferenceConfig=(
+            {"maxTokens": 4096} if args.model_id.endswith(REASONING_MODELS)
+            else {"maxTokens": 600, "temperature": 0.1}
+        ),
+    )
+    # 思考ブロックが先頭に来るモデルもあるため、テキストだけをつなぐ
+    answer = "".join(b.get("text", "") for b in res["output"]["message"]["content"])
+    sources = [h["file"] for h in hits]
+    print("検索語:", keywords)
+    print("参照したチャンク:", json.dumps(sources, ensure_ascii=False))
+    print("回答:")
+    print(answer)
+    dump("rag.json", {
+        "question": args.question, "keywords": keywords, "model_id": args.model_id,
+        "sources": [{"file": h["file"], "scores": h["scores"]} for h in hits],
+        "answer": answer, "usage": res.get("usage"),
+    })
 
 
 def run_query(args: argparse.Namespace) -> None:
@@ -421,6 +484,9 @@ def main() -> None:
     p.add_argument("--text", required=True)
     p.add_argument("--mode", choices=["text", "hybrid", "vector"], default="text")
     p.add_argument("--top-k", type=int, default=3)
+    p = sub.add_parser("rag")
+    p.add_argument("--question", required=True)
+    p.add_argument("--model-id", default=ANSWER_MODEL_ID)
     p = sub.add_parser("query")
     p.add_argument("--question", required=True)
     sub.add_parser("keywords")
@@ -432,6 +498,7 @@ def main() -> None:
         "copy-standard": copy_standard,
         "kb-hybrid": kb_hybrid,
         "search": search,
+        "rag": rag,
         "query": run_query,
         "keywords": keywords,
         "evaluate": evaluate,

@@ -18,19 +18,19 @@
 
 ## Knowledge Bases経由ではまだ使えない
 
-残念ながらKnowledge Bases経由ではまだ使えませんでした。
+残念ながらKnowledge Bases経由ではまだ使えませんでした・・・
 
-付録の`setup-s3vectors.sh`で作ったKnowledge Baseで`overrideSearchType`に`HYBRID`を指定すると、次のエラーになりました。後述の全文検索を有効にした後も同じです。
+付録の`setup-s3vectors.sh`で作ったKnowledge Baseで`overrideSearchType`に`HYBRID`を指定すると、次のエラーになります。後述の全文検索を有効にした後も同じです。
 
 ```text
 ValidationException: HYBRID search type is not supported for search operation on index <Knowledge Base ID>. Retry your request with a different search type.
 ```
 
-サンプルの`kb-hybrid`で同じ結果を確かめられます（[実行記録](../../sample-code/supplements/s3vectors-hybrid/results/20261117T015823Z-kb-hybrid.json)）。
+回答の生成までKnowledge Basesに任せる`RetrieveAndGenerate`も、`HYBRID`を指定すると同じエラーになりました。
 
-[S3 Vectorsのドキュメント](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-vectors-bedrock-kb.html)でもKnowledge Basesとの連携は「Semantic search only」のままです（2026年11月17日時点）。そこで取り込みはKnowledge Basesに任せ、検索だけアプリケーションから`QueryVectors`を呼び出します。
+[S3 Vectorsのドキュメント](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-vectors-bedrock-kb.html)でもKnowledge Basesとの連携は「Semantic search only」のままです（2026年11月17日時点）。そこで取り込みはKnowledge Basesに任せ、検索だけアプリケーションから`QueryVectors`を呼び出します！
 
-![取り込みはKnowledge Basesに任せ、検索はアプリケーションからS3 VectorsのQueryVectorsにベクトルと検索語を渡す。Knowledge BasesのRetrieveでHYBRIDを指定するとエラーになる](images/kb-ingest-queryvectors-search.svg)
+![取り込みはKnowledge Basesに任せ、検索はアプリケーションからS3 VectorsのQueryVectorsにベクトルと検索語を渡す。回答はConverseで生成する。Knowledge BasesのRetrieveとRetrieveAndGenerateでHYBRIDを指定するとエラーになる](images/kb-ingest-queryvectors-search.svg)
 
 ## 既存のインデックスに全文検索を追加する
 
@@ -68,7 +68,6 @@ s3v.create_index(
 全文検索は`ENHANCED`のインデックスだけで使用可能です。2026年9月30日より前に作ったインデックスは`CLASSIC`のままなので、[事前フィルタリングの補足](S3-Vectorsのメタデータフィルタが事前フィルタリングに対応.md)の手順で先に切り替えてください。
 
 既存のインデックスに追加するとすでに入っているデータの取り込みが始まります。状態は`GetIndex`で確認可能です。
-`BUILDING`から`ACTIVE`に変わりました。
 
 ```python
 index = s3v.get_index(vectorBucketName=BUCKET, indexName=INDEX)["index"]
@@ -78,12 +77,14 @@ print(index["metadataConfiguration"]["textSearchConfigurations"])
 
 今回の126チャンクでは15秒ほどで`ACTIVE`になりました（[実行記録](../../sample-code/supplements/s3vectors-hybrid/results/20261117T001547Z-enable.log)）。追加した後もKnowledge Basesの同期とセマンティック検索はそのまま使え、同期した文書はすぐに全文検索の対象になります。
 
+ちなみに、削除して同期した文書は全文検索からも消え、Knowledge Baseやデータソースの設定を更新しても全文検索の設定はそのままであることも確認できました！
+
 ここまでの手順と後半の比較は`sample-code/supplements/s3vectors-hybrid/s3vectors_hybrid.py`にまとめています。付録の環境を作ってから実行します。実行記録は[`results/`](../../sample-code/supplements/s3vectors-hybrid/results/)に保存しています。
 
 ```bash
 AWS_REGION=us-east-1 bash sample-code/02/infra/setup-s3vectors.sh
 cd sample-code/supplements/s3vectors-hybrid
-uv run s3vectors_hybrid.py kb-hybrid       # Knowledge BasesのRetrieveでHYBRIDを試す
+uv run s3vectors_hybrid.py kb-hybrid       # Knowledge BasesでHYBRIDを指定してみる
 uv run s3vectors_hybrid.py enable          # 全文検索を追加してACTIVEまで待つ
 uv run s3vectors_hybrid.py copy-standard   # 比較用に標準アナライザーのインデックスを作る
 uv run s3vectors_hybrid.py keywords        # キーワードのヒット件数を比べる
@@ -94,10 +95,11 @@ uv run s3vectors_hybrid.py evaluate        # 23問で採点する
 
 | サブコマンド | 呼び出すAPI |
 |---|---|
-| `kb-hybrid` | `Retrieve` |
+| `kb-hybrid` | `Retrieve`・`RetrieveAndGenerate` |
 | `enable` | `GetIndex`・`UpdateMetadataConfiguration` |
 | `copy-standard` | `CreateIndex`・`ListVectors`・`PutVectors`・`GetIndex` |
 | `search` | `QueryVectors`（ハイブリッドとベクトル検索では`InvokeModel`も） |
+| `rag` | `InvokeModel`・`Converse`・`QueryVectors` |
 | `keywords` | `ListVectors`・`QueryVectors` |
 | `evaluate` | `InvokeModel`・`Converse`・`QueryVectors`・`ListVectors`・`Retrieve` |
 | `cleanup` | `DeleteIndex` |
@@ -184,6 +186,50 @@ uv run s3vectors_hybrid.py search --text "Retry-After" --mode hybrid
 `fused`がRRFで統合した点数でこの値の大きい順に並んでいます。
 
 1件目は全文検索とベクトル検索の両方で1位だったので、`bm25Scores`と`vectorDistance`が両方付いて、`fused`も2つ分の0.0333となっています。2件目はベクトル検索だけで拾われたので`vectorDistance`だけが付き、`fused`もベクトル検索の順位1つ分の点数です。
+
+## 回答の生成は別に呼び出す
+
+`RetrieveAndGenerate`が使えないので、ハイブリッド検索の結果から回答を作るときは生成も自分で呼び出します。第2章の`retrieve_and_converse.py`は`Retrieve`で取ったチャンクを`Converse`に渡していました。ここでは`Retrieve`の代わりにハイブリッド検索の結果を渡します。
+
+サンプルの`rag`コマンドは次の順に処理します。
+
+1. 質問をTitan Text Embeddings V2でベクトルにし、Claude Haiku 4.5で検索語を抜き出す
+2. ベクトルと検索語で`QueryVectors`のハイブリッド検索を呼び、上位5チャンクを取る
+3. チャンクに番号を振って参照情報にまとめ、質問と一緒に`Converse`へ渡す
+4. 回答と、参照したチャンクの文書名を表示する
+
+3と4の部分は次のとおりです。
+
+```python
+context = "\n\n".join(f"[{i}] {h['file']}\n{h['text']}" for i, h in enumerate(hits, 1))
+res = bedrock.converse(
+    modelId="us.anthropic.claude-sonnet-4-6",
+    system=[{"text": SYSTEM_PROMPT}],
+    messages=[{"role": "user", "content": [{"text": f"質問:\n{question}\n\n参照情報:\n{context}"}]}],
+    inferenceConfig={"maxTokens": 600, "temperature": 0.1},
+)
+answer = "".join(b.get("text", "") for b in res["output"]["message"]["content"])
+```
+
+`SYSTEM_PROMPT`は付録の`s3_vectors_standalone.py`の`rag`と同じで、検索結果に根拠がある場合だけ答えるよう指示しています。回答のモデルは本編と同じClaude Sonnet 4.6です。
+
+```bash
+uv run s3vectors_hybrid.py rag --question "2026年4月適用のポリシーでは、Enterpriseプランの監査ログは何日保存されますか"
+```
+
+実行結果は次のとおりです（抜粋）。全体は[実行記録](../../sample-code/supplements/s3vectors-hybrid/results/20261117T023418Z-rag.json)にあります。
+
+```text
+検索語: 2026年 4月 ポリシー Enterprise プラン 監査ログ 日 保存
+参照したチャンク: ["監査ログ保存ポリシー2026年版.md", "監査ログ保存ポリシー2025年版.md", "Enterpriseプラン機能ガイド.md", "監査ログ保存ポリシー2025年版.md", "API認証・監査ログ管理ガイド.md"]
+回答:
+## 2026年4月適用ポリシーにおけるEnterpriseプランの監査ログ保存期間
+（中略）
+### 保存期間：**2年間（730日）**
+```
+
+2026年版のポリシーが1件目に入り730日という回答が返りました！
+画面に出典を出すなら、参照したチャンクの文書名をそのまま使えます。
 
 ## 全文検索だけでも使える
 

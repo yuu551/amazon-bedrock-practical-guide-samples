@@ -1,0 +1,40 @@
+{
+  "run_at": "20261117T024230Z",
+  "region": "us-east-1",
+  "before": [
+    {
+      "metadataKey": "AMAZON_BEDROCK_TEXT",
+      "language": "ja",
+      "status": "ACTIVE"
+    }
+  ],
+  "deleted_doc_hits": 0,
+  "after_update": [
+    {
+      "metadataKey": "AMAZON_BEDROCK_TEXT",
+      "language": "ja",
+      "status": "ACTIVE"
+    }
+  ],
+  "sync": {
+    "status": "COMPLETE",
+    "statistics": {
+      "numberOfDocumentsScanned": 33,
+      "numberOfMetadataDocumentsScanned": 33,
+      "numberOfNewDocumentsIndexed": 0,
+      "numberOfModifiedDocumentsIndexed": 0,
+      "numberOfMetadataDocumentsModified": 0,
+      "numberOfDocumentsDeleted": 0,
+      "numberOfDocumentsFailed": 0,
+      "numberOfDocumentsSkipped": 0
+    }
+  },
+  "after_sync": [
+    {
+      "metadataKey": "AMAZON_BEDROCK_TEXT",
+      "language": "ja",
+      "status": "ACTIVE"
+    }
+  ],
+  "fulltext_730_hits": 33
+}

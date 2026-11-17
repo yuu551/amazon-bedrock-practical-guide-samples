@@ -1,0 +1,74 @@
+{
+  "run_at": "20261117T023418Z",
+  "region": "us-east-1",
+  "question": "2026年4月適用のポリシーでは、Enterpriseプランの監査ログは何日保存されますか",
+  "keywords": "2026年 4月 ポリシー Enterprise プラン 監査ログ 日 保存",
+  "model_id": "us.anthropic.claude-sonnet-4-6",
+  "sources": [
+    {
+      "file": "監査ログ保存ポリシー2026年版.md",
+      "scores": {
+        "fused": 0.03333333507180214,
+        "bm25Scores": [
+          {
+            "metadataKey": "AMAZON_BEDROCK_TEXT",
+            "score": 20.536209106445312
+          }
+        ],
+        "vectorDistance": 0.3064216375350952
+      }
+    },
+    {
+      "file": "監査ログ保存ポリシー2025年版.md",
+      "scores": {
+        "fused": 0.032522473484277725,
+        "bm25Scores": [
+          {
+            "metadataKey": "AMAZON_BEDROCK_TEXT",
+            "score": 19.143251419067383
+          }
+        ],
+        "vectorDistance": 0.3271719217300415
+      }
+    },
+    {
+      "file": "Enterpriseプラン機能ガイド.md",
+      "scores": {
+        "fused": 0.016393441706895828,
+        "vectorDistance": 0.31508123874664307
+      }
+    },
+    {
+      "file": "監査ログ保存ポリシー2025年版.md",
+      "scores": {
+        "fused": 0.016129031777381897,
+        "bm25Scores": [
+          {
+            "metadataKey": "AMAZON_BEDROCK_TEXT",
+            "score": 18.545591354370117
+          }
+        ]
+      }
+    },
+    {
+      "file": "API認証・監査ログ管理ガイド.md",
+      "scores": {
+        "fused": 0.01587301678955555,
+        "bm25Scores": [
+          {
+            "metadataKey": "AMAZON_BEDROCK_TEXT",
+            "score": 13.337764739990234
+          }
+        ]
+      }
+    }
+  ],
+  "answer": "## 2026年4月適用ポリシーにおけるEnterpriseプランの監査ログ保存期間\n\n参照情報に基づき、以下のとおり回答します。\n\n---\n\n### 保存期間：**2年間（730日）**\n\n**根拠：**\n- 参照情報[3]「Enterpriseプラン機能ガイド」に、「Enterpriseプランでは、監査ログの保持期間は**2年間**です」と明記されています。\n- 参照情報[1]「監査ログ保存ポリシー2026年4月適用版」においても、この保持期間を変更する記載はありません。\n\n---\n\n### 補足情報\n\n| プラン | 保持期間 |\n|---|---|\n| Enterprise | **2年間** |\n| Standard | 90日 |\n| Free | 30日 |\n\nまた、2026年4月適用版では、**保存対象ログの範囲が拡張**されており、従来の構成変更操作に加え、「監査ログのエクスポート」「データ所在地ポリシーの参照」などの**重要な読み取り操作（参照系API）も対象**に追加されています（参照情報[1]）。\n\n---\n\nご不明な点があれば、引き続きご確認ください。",
+  "usage": {
+    "inputTokens": 1466,
+    "outputTokens": 377,
+    "totalTokens": 1843,
+    "cacheReadInputTokens": 0,
+    "cacheWriteInputTokens": 0
+  }
+}
